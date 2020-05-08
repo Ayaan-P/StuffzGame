@@ -8,4 +8,4 @@
 
 ## Credits
 
-Anand Desai, Ayaan Khan, Ayaan Pupala, Kyrus Mama
+Anand Desai, Ayaan Khan, Ayaan Pupala
