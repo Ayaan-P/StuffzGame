@@ -9,8 +9,8 @@ public class PlayerPokemonInventory : MonoBehaviour
 
     private void Start()
     {
-        givePokemon(0);
-        removePokemon(0);
+        //givePokemon(0);
+       //removePokemon(0);
     }
         
 //gives item to player based
