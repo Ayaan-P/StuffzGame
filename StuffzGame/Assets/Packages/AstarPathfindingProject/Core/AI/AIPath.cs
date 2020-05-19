@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -269,6 +270,7 @@ namespace Pathfinding {
 		/// </summary>
 		public virtual void OnTargetReached () {
 			//animator.SetInt("speed",0);
+			//SceneManager.LoadScene(1);
 		}
 
 		/// <summary>

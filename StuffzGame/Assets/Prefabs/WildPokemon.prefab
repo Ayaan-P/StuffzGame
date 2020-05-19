@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 0.5
+  radius: 1
   height: 2
   repathRate: 0.5
   canSearch: 1
@@ -193,7 +193,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  endReachedDistance: 0.6
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
@@ -213,6 +213,8 @@ MonoBehaviour:
   version: 1
   target: {fileID: 0}
   animator: {fileID: -4377718976546452255}
+  radius: 3
+  attackradius: 1.6
 --- !u!95 &-4377718976546452255
 Animator:
   serializedVersion: 3
