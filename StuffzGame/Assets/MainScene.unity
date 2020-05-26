@@ -502,7 +502,7 @@ MonoBehaviour:
   - {fileID: 6296408988439223172, guid: b25996ae827e50e4ea4dbe96d9a7f842, type: 3}
   rate: 2
   currmobs: 0
-  maxmobs: 3
+  maxmobs: 4
 --- !u!4 &290765539
 Transform:
   m_ObjectHideFlags: 0
