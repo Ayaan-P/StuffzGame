@@ -1,0 +1,428 @@
+fileFormatVersion: 2
+guid: 071d568157f8ad447a8338630cb3517c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8381667132321955560
+    second: Salamence overworld_0
+  - first:
+      213: 6262572258892689160
+    second: Salamence overworld_1
+  - first:
+      213: 4726551110084746872
+    second: Salamence overworld_2
+  - first:
+      213: 7465618533970474970
+    second: Salamence overworld_3
+  - first:
+      213: -3025775652343743469
+    second: Salamence overworld_4
+  - first:
+      213: 7921686232275610651
+    second: Salamence overworld_5
+  - first:
+      213: -8697075235453190422
+    second: Salamence overworld_6
+  - first:
+      213: -8689096628347293782
+    second: Salamence overworld_7
+  - first:
+      213: 7945891026570871348
+    second: Salamence overworld_8
+  - first:
+      213: 1001960909102218790
+    second: Salamence overworld_9
+  - first:
+      213: -8754759742366890266
+    second: Salamence overworld_10
+  - first:
+      213: -177412660716632156
+    second: Salamence overworld_11
+  - first:
+      213: 2947523898837346143
+    second: Salamence overworld_12
+  - first:
+      213: -6602413443043880093
+    second: Salamence overworld_13
+  - first:
+      213: -341935926366252593
+    second: Salamence overworld_14
+  - first:
+      213: -3346061658609011481
+    second: Salamence overworld_15
+  - first:
+      213: -3591068100365111591
+    second: Salamence overworld_16
+  - first:
+      213: -2855459731447094140
+    second: Salamence overworld_17
+  - first:
+      213: 5870231350454453096
+    second: Salamence overworld_18
+  - first:
+      213: 8150960462780242335
+    second: Salamence overworld_19
+  - first:
+      213: 8820639416760469145
+    second: Salamence overworld_20
+  - first:
+      213: 7502064102464559471
+    second: Salamence overworld_21
+  - first:
+      213: -3912995373945474856
+    second: Salamence overworld_22
+  - first:
+      213: 5707598303631992467
+    second: Salamence overworld_23
+  - first:
+      213: -1966866962241522987
+    second: Salamence overworld_24
+  - first:
+      213: 4360933297308874206
+    second: Salamence overworld_25
+  - first:
+      213: -4585118826241440738
+    second: Salamence overworld_26
+  - first:
+      213: -1960240851095910473
+    second: Salamence overworld_27
+  - first:
+      213: 1862689708676653145
+    second: Salamence overworld_28
+  - first:
+      213: -4825415512866997651
+    second: Salamence overworld_29
+  - first:
+      213: -1576481670412872967
+    second: Salamence overworld_30
+  - first:
+      213: 2507089178144261115
+    second: Salamence overworld_31
+  - first:
+      213: -4959798419569911612
+    second: Salamence_0
+  - first:
+      213: -5918742722446374195
+    second: Salamence_1
+  - first:
+      213: -8872709911961005437
+    second: Salamence_2
+  - first:
+      213: -7945432853868714399
+    second: Salamence_3
+  - first:
+      213: 6296408988439223172
+    second: Salamence_4
+  - first:
+      213: -2596162649353113060
+    second: Salamence_5
+  - first:
+      213: 2141690557201753116
+    second: Salamence_6
+  - first:
+      213: 7690972751086142061
+    second: Salamence_7
+  - first:
+      213: 7572345090357835009
+    second: Salamence_0
+  - first:
+      213: 1900408177408203256
+    second: Salamence_1
+  - first:
+      213: -8375911182413009911
+    second: Salamence_2
+  - first:
+      213: 2352826228096562535
+    second: Salamence_3
+  - first:
+      213: 4356563469935647827
+    second: Salamence_4
+  - first:
+      213: -6566367930714678076
+    second: Salamence_5
+  - first:
+      213: 5466452086961657852
+    second: Salamence_6
+  - first:
+      213: -554947174872511503
+    second: Salamence_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Salamence_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105b37b5dbf561960800000000000000
+      internalID: 7572345090357835009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salamence_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9d9a62b2b9f5a10800000000000000
+      internalID: 1900408177408203256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salamence_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cec063829c2cb80800000000000000
+      internalID: -8375911182413009911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salamence_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765fae71dfae6a020800000000000000
+      internalID: 2352826228096562535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salamence_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c15f2d46f957c30800000000000000
+      internalID: 4356563469935647827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salamence_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc1c3938239fd4a0800000000000000
+      internalID: -6566367930714678076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salamence_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7da09e53dbcdb40800000000000000
+      internalID: 5466452086961657852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salamence_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb0e941c7e6c48f0800000000000000
+      internalID: -554947174872511503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 using System.Collections;
 
 namespace Pathfinding {
@@ -18,6 +19,8 @@ namespace Pathfinding {
 		/// <summary>The object that the AI should move to</summary>
 		public Transform target;
 		public Animator animator;
+		public GameObject d;
+		public string pokemon_n;
 		public float radius = 3f;
 		public float attackradius = 1f;
 		IAstarAI ai;
@@ -44,6 +47,10 @@ namespace Pathfinding {
 			float distance = Vector2.Distance(target.position,transform.position);
 				if(distance<=attackradius)
 				{
+					GameObject Encounter_Data = Instantiate(d);
+					DontDestroyOnLoad(Encounter_Data);
+					// Encounter_Data.GetComponent<EncounterData>().pokemon_name = gameObject.GetComponent<SpriteSwap>().pokemon_name;
+					 Encounter_Data.GetComponent<EncounterData>().pokemon_name = pokemon_n;
 					SceneManager.LoadScene(1);
 				}
 				if (target != null && ai != null && distance<=radius) 

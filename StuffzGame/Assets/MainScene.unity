@@ -497,9 +497,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WildPokemon: {fileID: 405380924508126511, guid: b87143c78b180ea4eaca3222e849d9e3,
     type: 3}
+  sprites:
+  - {fileID: 21300000, guid: 57856c41886aa0646b54d7657024fb04, type: 3}
+  - {fileID: 6296408988439223172, guid: b25996ae827e50e4ea4dbe96d9a7f842, type: 3}
   rate: 2
   currmobs: 0
-  maxmobs: 0
+  maxmobs: 3
 --- !u!4 &290765539
 Transform:
   m_ObjectHideFlags: 0
@@ -4229,6 +4232,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Loader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761780232842281814, guid: 9854fbe5ac0d9bc40926d50802beec29,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9854fbe5ac0d9bc40926d50802beec29, type: 3}
