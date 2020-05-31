@@ -633,6 +633,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -646,10 +647,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: fac99897-3a83-45e2-bd44-4a0f70500848
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: StuffzGame
+  organizationId: quirkyturtle57
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

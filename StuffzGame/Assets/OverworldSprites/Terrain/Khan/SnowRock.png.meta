@@ -1,0 +1,440 @@
+fileFormatVersion: 2
+guid: 31ddcde41525b724a9302d144b880bd1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5997450455265922925
+    second: SnowRock_0
+  - first:
+      213: -2486968078727112381
+    second: SnowRock_1
+  - first:
+      213: -6887419620701316581
+    second: SnowRock_2
+  - first:
+      213: -2706833951222616613
+    second: SnowRock_3
+  - first:
+      213: -6162851935531776788
+    second: SnowRock_4
+  - first:
+      213: 5458455477895666557
+    second: SnowRock_5
+  - first:
+      213: -6736158032917562835
+    second: SnowRock_6
+  - first:
+      213: 2150783069550608246
+    second: SnowRock_7
+  - first:
+      213: -4802965525463844757
+    second: SnowRock_8
+  - first:
+      213: -6376074802112599670
+    second: SnowRock_9
+  - first:
+      213: 1579961455524597218
+    second: SnowRock_10
+  - first:
+      213: 4382060825594478692
+    second: SnowRock_11
+  - first:
+      213: -8185380961284750972
+    second: SnowRock_12
+  - first:
+      213: 2470920649163495695
+    second: SnowRock_13
+  - first:
+      213: 1253368594697995035
+    second: SnowRock_14
+  - first:
+      213: -2634612487699975279
+    second: SnowRock_15
+  - first:
+      213: -6357628603159163347
+    second: SnowRock_16
+  - first:
+      213: 6791945983060969387
+    second: SnowRock_17
+  - first:
+      213: -708955864060482144
+    second: SnowRock_18
+  - first:
+      213: -3830887744105463993
+    second: SnowRock_19
+  - first:
+      213: -3214844947406680914
+    second: SnowRock_20
+  - first:
+      213: -2547905487105725214
+    second: SnowRock_21
+  - first:
+      213: 709154466122199958
+    second: SnowRock_22
+  - first:
+      213: 14967269107306670
+    second: SnowRock_23
+  - first:
+      213: 1632148321709081488
+    second: SnowRock_24
+  - first:
+      213: 9003073970193258326
+    second: SnowRock_25
+  - first:
+      213: 8824531107709143335
+    second: SnowRock_26
+  - first:
+      213: 9194866284606529615
+    second: SnowRock_27
+  - first:
+      213: 6929845100731079329
+    second: SnowRock_28
+  - first:
+      213: -2793707541652150484
+    second: SnowRock_29
+  - first:
+      213: -4937193429256829352
+    second: SnowRock_30
+  - first:
+      213: -1108508010942428146
+    second: SnowRock_31
+  - first:
+      213: -6904264658423010676
+    second: SnowRock_32
+  - first:
+      213: 2370838345185091536
+    second: SnowRock_33
+  - first:
+      213: 348358475268795685
+    second: SnowRock_34
+  - first:
+      213: -1512589014701521850
+    second: SnowRock_35
+  - first:
+      213: -6013277260282253460
+    second: SnowRock_0
+  - first:
+      213: -9148841580567248598
+    second: SnowRock_1
+  - first:
+      213: -4458650919307513382
+    second: SnowRock_2
+  - first:
+      213: -8327047852847052495
+    second: SnowRock_3
+  - first:
+      213: 732931280770882430
+    second: SnowRock_4
+  - first:
+      213: -6218667745563813548
+    second: SnowRock_5
+  - first:
+      213: -7371779745709894482
+    second: SnowRock_6
+  - first:
+      213: -1042655114298630410
+    second: SnowRock_7
+  - first:
+      213: -858510228003830680
+    second: SnowRock_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SnowRock_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f21f4013c8c8ca0800000000000000
+      internalID: -6013277260282253460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowRock_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2147fb1e09c80180800000000000000
+      internalID: -9148841580567248598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowRock_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1f431ac90bf12c0800000000000000
+      internalID: -4458650919307513382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowRock_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1394f5fa812607c80800000000000000
+      internalID: -8327047852847052495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowRock_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bde1bdd15eb2a00800000000000000
+      internalID: 732931280770882430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowRock_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4595d7122aad2b9a0800000000000000
+      internalID: -6218667745563813548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowRock_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4da8ee06d22b990800000000000000
+      internalID: -7371779745709894482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowRock_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe5cf0a2beb781f0800000000000000
+      internalID: -1042655114298630410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowRock_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864cac70f75f514f0800000000000000
+      internalID: -858510228003830680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

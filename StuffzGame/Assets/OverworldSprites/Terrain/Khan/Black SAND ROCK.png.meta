@@ -1,0 +1,440 @@
+fileFormatVersion: 2
+guid: 9270f99315444f6488c842aba619f7a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7381420908024548886
+    second: Black SAND ROCK_0
+  - first:
+      213: -525990623481245915
+    second: Black SAND ROCK_1
+  - first:
+      213: -4239718626123050443
+    second: Black SAND ROCK_2
+  - first:
+      213: -6517157740061472919
+    second: Black SAND ROCK_3
+  - first:
+      213: 329390120536588790
+    second: Black SAND ROCK_4
+  - first:
+      213: 2923264584682096167
+    second: Black SAND ROCK_5
+  - first:
+      213: -1044811892522732475
+    second: Black SAND ROCK_6
+  - first:
+      213: -155139236084215760
+    second: Black SAND ROCK_7
+  - first:
+      213: 3253887950227153250
+    second: Black SAND ROCK_8
+  - first:
+      213: 1272952794563294883
+    second: Black SAND ROCK_9
+  - first:
+      213: 3863092529278295327
+    second: Black SAND ROCK_10
+  - first:
+      213: 1309630891265634780
+    second: Black SAND ROCK_11
+  - first:
+      213: -6112235187451465005
+    second: Black SAND ROCK_12
+  - first:
+      213: -5110885414801825841
+    second: Black SAND ROCK_13
+  - first:
+      213: 2291088158275944159
+    second: Black SAND ROCK_14
+  - first:
+      213: 6225212829354903805
+    second: Black SAND ROCK_15
+  - first:
+      213: -7281501534909231131
+    second: Black SAND ROCK_16
+  - first:
+      213: 1024273817921431150
+    second: Black SAND ROCK_17
+  - first:
+      213: -697811776675059632
+    second: Black SAND ROCK_18
+  - first:
+      213: 1736702623975454358
+    second: Black SAND ROCK_19
+  - first:
+      213: -602576377828339813
+    second: Black SAND ROCK_20
+  - first:
+      213: -4386142789287128533
+    second: Black SAND ROCK_21
+  - first:
+      213: -3436339250265614846
+    second: Black SAND ROCK_22
+  - first:
+      213: 8418137129219655157
+    second: Black SAND ROCK_23
+  - first:
+      213: 4032067012863724842
+    second: Black SAND ROCK_24
+  - first:
+      213: 6219550260208536570
+    second: Black SAND ROCK_25
+  - first:
+      213: -8093009268389000381
+    second: Black SAND ROCK_26
+  - first:
+      213: -42554419971003950
+    second: Black SAND ROCK_27
+  - first:
+      213: -4382088609538793798
+    second: Black SAND ROCK_28
+  - first:
+      213: 5837708189127729438
+    second: Black SAND ROCK_29
+  - first:
+      213: -1278286587454464475
+    second: Black SAND ROCK_30
+  - first:
+      213: -8690751678734490916
+    second: Black SAND ROCK_31
+  - first:
+      213: 3995374118722823725
+    second: Black SAND ROCK_32
+  - first:
+      213: 8601566063595486533
+    second: Black SAND ROCK_33
+  - first:
+      213: -1238264691216088990
+    second: Black SAND ROCK_34
+  - first:
+      213: -1189664798260114976
+    second: Black SAND ROCK_35
+  - first:
+      213: 4940954545654128821
+    second: Black SAND ROCK_0
+  - first:
+      213: 1537340667943980027
+    second: Black SAND ROCK_1
+  - first:
+      213: 6309132053143484187
+    second: Black SAND ROCK_2
+  - first:
+      213: 2273303365519194720
+    second: Black SAND ROCK_3
+  - first:
+      213: 7443951201214909977
+    second: Black SAND ROCK_4
+  - first:
+      213: -5403184952619178601
+    second: Black SAND ROCK_5
+  - first:
+      213: 4047166439883032328
+    second: Black SAND ROCK_6
+  - first:
+      213: -4868972489380889651
+    second: Black SAND ROCK_7
+  - first:
+      213: -362535140744563797
+    second: Black SAND ROCK_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Black SAND ROCK_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0e0112bfbc19440800000000000000
+      internalID: 4940954545654128821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black SAND ROCK_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb009b313bb55510800000000000000
+      internalID: 1537340667943980027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black SAND ROCK_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17f5a4dc2a8e8750800000000000000
+      internalID: 6309132053143484187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black SAND ROCK_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ab870dd556c8f10800000000000000
+      internalID: 2273303365519194720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black SAND ROCK_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ec1c18d2a3e4760800000000000000
+      internalID: 7443951201214909977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black SAND ROCK_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795e563b9e70405b0800000000000000
+      internalID: -5403184952619178601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black SAND ROCK_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8074c1c2f6c6a2830800000000000000
+      internalID: 4047166439883032328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black SAND ROCK_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb7d4d515fed6cb0800000000000000
+      internalID: -4868972489380889651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black SAND ROCK_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3f255d53408faf0800000000000000
+      internalID: -362535140744563797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

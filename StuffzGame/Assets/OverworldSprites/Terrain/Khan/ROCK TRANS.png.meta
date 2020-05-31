@@ -1,0 +1,437 @@
+fileFormatVersion: 2
+guid: 3e6f6c316acacc4438dce92f91e1e93d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1826107619815695686
+    second: ROCK TRANS_0
+  - first:
+      213: 6321520067988889862
+    second: ROCK TRANS_1
+  - first:
+      213: -6496274513758592558
+    second: ROCK TRANS_2
+  - first:
+      213: -799994978099604768
+    second: ROCK TRANS_3
+  - first:
+      213: 1188311851912008023
+    second: ROCK TRANS_4
+  - first:
+      213: -6373930579420356837
+    second: ROCK TRANS_5
+  - first:
+      213: -325879440586968862
+    second: ROCK TRANS_6
+  - first:
+      213: 4747725891589106641
+    second: ROCK TRANS_7
+  - first:
+      213: -3862161173342360228
+    second: ROCK TRANS_8
+  - first:
+      213: -6819155093229602521
+    second: ROCK TRANS_9
+  - first:
+      213: -1387023295936196466
+    second: ROCK TRANS_10
+  - first:
+      213: 9200958157737821314
+    second: ROCK TRANS_11
+  - first:
+      213: 7459783333206877762
+    second: ROCK TRANS_12
+  - first:
+      213: 6812104663220089149
+    second: ROCK TRANS_13
+  - first:
+      213: -6929483952565553559
+    second: ROCK TRANS_14
+  - first:
+      213: 220647928766133286
+    second: ROCK TRANS_15
+  - first:
+      213: -2724238383909234305
+    second: ROCK TRANS_16
+  - first:
+      213: 4277544655799428007
+    second: ROCK TRANS_17
+  - first:
+      213: 5683310333448701321
+    second: ROCK TRANS_18
+  - first:
+      213: -6617476654379523625
+    second: ROCK TRANS_19
+  - first:
+      213: 8941936087473661865
+    second: ROCK TRANS_20
+  - first:
+      213: -7031976079861741598
+    second: ROCK TRANS_21
+  - first:
+      213: -2522926942726824248
+    second: ROCK TRANS_22
+  - first:
+      213: 2497663302085573623
+    second: ROCK TRANS_23
+  - first:
+      213: -1351031113136854483
+    second: ROCK TRANS_24
+  - first:
+      213: 1173008526012563480
+    second: ROCK TRANS_25
+  - first:
+      213: 831320363682359991
+    second: ROCK TRANS_26
+  - first:
+      213: 3484598002378429245
+    second: ROCK TRANS_27
+  - first:
+      213: 7418890591460732298
+    second: ROCK TRANS_28
+  - first:
+      213: 9203302748982611450
+    second: ROCK TRANS_29
+  - first:
+      213: -2863821432825069138
+    second: ROCK TRANS_30
+  - first:
+      213: 7167165097209705981
+    second: ROCK TRANS_31
+  - first:
+      213: -3721846516596302193
+    second: ROCK TRANS_32
+  - first:
+      213: -6094283806004805198
+    second: ROCK TRANS_33
+  - first:
+      213: 7147250301263391351
+    second: ROCK TRANS_34
+  - first:
+      213: -1843669611884793852
+    second: ROCK TRANS_0
+  - first:
+      213: 6516328434195702709
+    second: ROCK TRANS_1
+  - first:
+      213: 1303196932973217321
+    second: ROCK TRANS_2
+  - first:
+      213: 5425520723001230652
+    second: ROCK TRANS_3
+  - first:
+      213: 1892019204259101741
+    second: ROCK TRANS_4
+  - first:
+      213: 153987678443215078
+    second: ROCK TRANS_5
+  - first:
+      213: 6883815853529768412
+    second: ROCK TRANS_6
+  - first:
+      213: 6217890074024625976
+    second: ROCK TRANS_7
+  - first:
+      213: 822918716559906933
+    second: ROCK TRANS_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ROCK TRANS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400bc649148f966e0800000000000000
+      internalID: -1843669611884793852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROCK TRANS_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b323089f26ae6a50800000000000000
+      internalID: 6516328434195702709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROCK TRANS_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9264f36b4b2e51210800000000000000
+      internalID: 1303196932973217321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROCK TRANS_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3542081a525b4b40800000000000000
+      internalID: 5425520723001230652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROCK TRANS_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cb412217dc14a10800000000000000
+      internalID: 1892019204259101741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROCK TRANS_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e815694af2132200800000000000000
+      internalID: 153987678443215078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROCK TRANS_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd128d8fb0a388f50800000000000000
+      internalID: 6883815853529768412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROCK TRANS_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8374aaa14126a4650800000000000000
+      internalID: 6217890074024625976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROCK TRANS_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578d29376389b6b00800000000000000
+      internalID: 822918716559906933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
