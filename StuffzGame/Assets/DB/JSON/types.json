@@ -1,0 +1,940 @@
+{
+  "types": [{
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }],
+      "double_damage_to": [],
+      "half_damage_from": [],
+      "half_damage_to": [{
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }],
+      "no_damage_from": [{
+        "id": 8,
+        "name": "ghost"
+      }],
+      "no_damage_to": [{
+        "id": 8,
+        "name": "ghost"
+      }]
+    },
+    "id": 1,
+    "move_damage_class": "physical",
+    "name": "normal"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 14,
+        "name": "psychic"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "double_damage_to": [{
+        "id": 1,
+        "name": "normal"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }, {
+        "id": 17,
+        "name": "dark"
+      }],
+      "half_damage_from": [{
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 17,
+        "name": "dark"
+      }],
+      "half_damage_to": [{
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 14,
+        "name": "psychic"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": [{
+        "id": 8,
+        "name": "ghost"
+      }]
+    },
+    "id": 2,
+    "move_damage_class": "physical",
+    "name": "fighting"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 13,
+        "name": "electric"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }],
+      "double_damage_to": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }],
+      "half_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }],
+      "half_damage_to": [{
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 13,
+        "name": "electric"
+      }],
+      "no_damage_from": [{
+        "id": 5,
+        "name": "ground"
+      }],
+      "no_damage_to": []
+    },
+    "id": 3,
+    "move_damage_class": "physical",
+    "name": "flying"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 14,
+        "name": "psychic"
+      }],
+      "double_damage_to": [{
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "half_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "half_damage_to": [{
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 8,
+        "name": "ghost"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": [{
+        "id": 9,
+        "name": "steel"
+      }]
+    },
+    "id": 4,
+    "move_damage_class": "physical",
+    "name": "poison"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 11,
+        "name": "water"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }],
+      "double_damage_to": [{
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 13,
+        "name": "electric"
+      }],
+      "half_damage_from": [{
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }],
+      "half_damage_to": [{
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }],
+      "no_damage_from": [{
+        "id": 13,
+        "name": "electric"
+      }],
+      "no_damage_to": [{
+        "id": 3,
+        "name": "flying"
+      }]
+    },
+    "id": 5,
+    "move_damage_class": "physical",
+    "name": "ground"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 11,
+        "name": "water"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }],
+      "double_damage_to": [{
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }],
+      "half_damage_from": [{
+        "id": 1,
+        "name": "normal"
+      }, {
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }],
+      "half_damage_to": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": []
+    },
+    "id": 6,
+    "move_damage_class": "physical",
+    "name": "rock"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }],
+      "double_damage_to": [{
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 14,
+        "name": "psychic"
+      }, {
+        "id": 17,
+        "name": "dark"
+      }],
+      "half_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }],
+      "half_damage_to": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 8,
+        "name": "ghost"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": []
+    },
+    "id": 7,
+    "move_damage_class": "physical",
+    "name": "bug"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 8,
+        "name": "ghost"
+      }, {
+        "id": 17,
+        "name": "dark"
+      }],
+      "double_damage_to": [{
+        "id": 8,
+        "name": "ghost"
+      }, {
+        "id": 14,
+        "name": "psychic"
+      }],
+      "half_damage_from": [{
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }],
+      "half_damage_to": [{
+        "id": 17,
+        "name": "dark"
+      }],
+      "no_damage_from": [{
+        "id": 1,
+        "name": "normal"
+      }, {
+        "id": 2,
+        "name": "fighting"
+      }],
+      "no_damage_to": [{
+        "id": 1,
+        "name": "normal"
+      }]
+    },
+    "id": 8,
+    "move_damage_class": "physical",
+    "name": "ghost"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }],
+      "double_damage_to": [{
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "half_damage_from": [{
+        "id": 1,
+        "name": "normal"
+      }, {
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 14,
+        "name": "psychic"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }, {
+        "id": 16,
+        "name": "dragon"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "half_damage_to": [{
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 11,
+        "name": "water"
+      }, {
+        "id": 13,
+        "name": "electric"
+      }],
+      "no_damage_from": [{
+        "id": 4,
+        "name": "poison"
+      }],
+      "no_damage_to": []
+    },
+    "id": 9,
+    "move_damage_class": "physical",
+    "name": "steel"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 11,
+        "name": "water"
+      }],
+      "double_damage_to": [{
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }],
+      "half_damage_from": [{
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "half_damage_to": [{
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 11,
+        "name": "water"
+      }, {
+        "id": 16,
+        "name": "dragon"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": []
+    },
+    "id": 10,
+    "move_damage_class": "special",
+    "name": "fire"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 13,
+        "name": "electric"
+      }],
+      "double_damage_to": [{
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }],
+      "half_damage_from": [{
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 11,
+        "name": "water"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }],
+      "half_damage_to": [{
+        "id": 11,
+        "name": "water"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 16,
+        "name": "dragon"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": []
+    },
+    "id": 11,
+    "move_damage_class": "special",
+    "name": "water"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }],
+      "double_damage_to": [{
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 11,
+        "name": "water"
+      }],
+      "half_damage_from": [{
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 11,
+        "name": "water"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 13,
+        "name": "electric"
+      }],
+      "half_damage_to": [{
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 16,
+        "name": "dragon"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": []
+    },
+    "id": 12,
+    "move_damage_class": "special",
+    "name": "grass"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 5,
+        "name": "ground"
+      }],
+      "double_damage_to": [{
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 11,
+        "name": "water"
+      }],
+      "half_damage_from": [{
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 13,
+        "name": "electric"
+      }],
+      "half_damage_to": [{
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 13,
+        "name": "electric"
+      }, {
+        "id": 16,
+        "name": "dragon"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": [{
+        "id": 5,
+        "name": "ground"
+      }]
+    },
+    "id": 13,
+    "move_damage_class": "special",
+    "name": "electric"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 8,
+        "name": "ghost"
+      }, {
+        "id": 17,
+        "name": "dark"
+      }],
+      "double_damage_to": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 4,
+        "name": "poison"
+      }],
+      "half_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 14,
+        "name": "psychic"
+      }],
+      "half_damage_to": [{
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 14,
+        "name": "psychic"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": [{
+        "id": 17,
+        "name": "dark"
+      }]
+    },
+    "id": 14,
+    "move_damage_class": "special",
+    "name": "psychic"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 6,
+        "name": "rock"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }],
+      "double_damage_to": [{
+        "id": 3,
+        "name": "flying"
+      }, {
+        "id": 5,
+        "name": "ground"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 16,
+        "name": "dragon"
+      }],
+      "half_damage_from": [{
+        "id": 15,
+        "name": "ice"
+      }],
+      "half_damage_to": [{
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 11,
+        "name": "water"
+      }, {
+        "id": 15,
+        "name": "ice"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": []
+    },
+    "id": 15,
+    "move_damage_class": "special",
+    "name": "ice"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 15,
+        "name": "ice"
+      }, {
+        "id": 16,
+        "name": "dragon"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "double_damage_to": [{
+        "id": 16,
+        "name": "dragon"
+      }],
+      "half_damage_from": [{
+        "id": 10,
+        "name": "fire"
+      }, {
+        "id": 11,
+        "name": "water"
+      }, {
+        "id": 12,
+        "name": "grass"
+      }, {
+        "id": 13,
+        "name": "electric"
+      }],
+      "half_damage_to": [{
+        "id": 9,
+        "name": "steel"
+      }],
+      "no_damage_from": [],
+      "no_damage_to": [{
+        "id": 18,
+        "name": "fairy"
+      }]
+    },
+    "id": 16,
+    "move_damage_class": "special",
+    "name": "dragon"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "double_damage_to": [{
+        "id": 8,
+        "name": "ghost"
+      }, {
+        "id": 14,
+        "name": "psychic"
+      }],
+      "half_damage_from": [{
+        "id": 8,
+        "name": "ghost"
+      }, {
+        "id": 17,
+        "name": "dark"
+      }],
+      "half_damage_to": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 17,
+        "name": "dark"
+      }, {
+        "id": 18,
+        "name": "fairy"
+      }],
+      "no_damage_from": [{
+        "id": 14,
+        "name": "psychic"
+      }],
+      "no_damage_to": []
+    },
+    "id": 17,
+    "move_damage_class": "special",
+    "name": "dark"
+  }, {
+    "damage_relations": {
+      "double_damage_from": [{
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }],
+      "double_damage_to": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 16,
+        "name": "dragon"
+      }, {
+        "id": 17,
+        "name": "dark"
+      }],
+      "half_damage_from": [{
+        "id": 2,
+        "name": "fighting"
+      }, {
+        "id": 7,
+        "name": "bug"
+      }, {
+        "id": 17,
+        "name": "dark"
+      }],
+      "half_damage_to": [{
+        "id": 4,
+        "name": "poison"
+      }, {
+        "id": 9,
+        "name": "steel"
+      }, {
+        "id": 10,
+        "name": "fire"
+      }],
+      "no_damage_from": [{
+        "id": 16,
+        "name": "dragon"
+      }],
+      "no_damage_to": []
+    },
+    "id": 18,
+    "move_damage_class": null,
+    "name": "fairy"
+  }],
+  "count": 18
+}
