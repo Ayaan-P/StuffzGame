@@ -52,3 +52,7 @@
 *.meta linguist-generated
 *.prefab linguist-generated
 *.unity linguist-generated
+
+*.unity binary diff=unity
+*.prefab binary diff=unity
+*.asset binary diff=unity
