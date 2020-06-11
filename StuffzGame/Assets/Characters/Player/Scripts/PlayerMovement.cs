@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rigidBody;
 	public Animator animator;
     Vector2 movementVector;
-
+    public Vector2 lookingin;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
                 current_axis = 0;
             }
         }*/
+
 			movementVector.x = Input.GetAxisRaw("Horizontal");
 			movementVector.y = Input.GetAxisRaw("Vertical");
 			 if (movementVector != Vector2.zero)
@@ -62,6 +63,27 @@ public class PlayerMovement : MonoBehaviour
 				animator.SetFloat("Vertical", movementVector.y);
 			}
 			animator.SetFloat("Speed", movementVector.sqrMagnitude);
+            
+            int lookAxis;
+			if(Mathf.Abs(movementVector.x)>Mathf.Abs(movementVector.y))
+				lookAxis = 0;
+			else
+				lookAxis = 1;
+			if(lookAxis==1)
+			{
+				if(movementVector.y>=0)
+					lookingin.y = 1f;
+				else
+					lookingin.y = -1f;
+			}
+			else
+			{
+				if(movementVector.x>=0)
+					lookingin.x = 1f;
+				else
+					lookingin.x = -1f;
+			}
+            
     }
 
     // Like Update() but executed on fixed timer (independent of framerate)
