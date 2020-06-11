@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace Pathfinding {
 	/// <summary>
@@ -17,7 +17,10 @@ namespace Pathfinding {
 		/// <summary>The object that the AI should move to</summary>
 		public Transform target;
 		public Animator animator;
-
+		public GameObject d;
+		public string pokemon_n;
+		public float radius = 3f;
+		public float attackradius = 1f;
 		IAstarAI ai;
 		void Start()
 		{
@@ -38,31 +41,43 @@ namespace Pathfinding {
 
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
-			if (target != null && ai != null) 
-			{
-				ai.destination = target.position;
-				int lookAxis;
-				if(Mathf.Abs(target.position.x-transform.position.x)>Mathf.Abs(target.position.y-transform.position.y))
-					lookAxis = 0;
-				else
-					lookAxis = 1;
-				if(lookAxis==1)
-				{
-					if(target.position.y>transform.position.y)
-						animator.SetInteger("Direction", 1);
-					else
-						animator.SetInteger("Direction", 0);
-				}
-				else
-				{
-					if(target.position.x>transform.position.x)
-						animator.SetInteger("Direction", 3);
-					else
-						animator.SetInteger("Direction", 4);
-				}
-				
 
-			}
+			float distance = Vector2.Distance(target.position,transform.position);
+				if(distance<=attackradius)
+				{
+					GameObject Encounter_Data = Instantiate(d);
+					DontDestroyOnLoad(Encounter_Data);
+					// Encounter_Data.GetComponent<EncounterData>().pokemon_name = gameObject.GetComponent<SpriteSwap>().pokemon_name;
+					 Encounter_Data.GetComponent<EncounterData>().pokemon_name = pokemon_n;
+					SceneManager.LoadScene(1);
+				}
+				if (target != null && ai != null && distance<=radius) 
+				{
+					ai.destination = target.position;
+					int lookAxis;
+					if(Mathf.Abs(target.position.x-transform.position.x)>Mathf.Abs(target.position.y-transform.position.y))
+						lookAxis = 0;
+					else
+						lookAxis = 1;
+					if(lookAxis==1)
+					{
+						if(target.position.y>transform.position.y)
+							animator.SetInteger("Direction", 1);
+						else
+							animator.SetInteger("Direction", 0);
+					}
+					else
+					{
+						if(target.position.x>transform.position.x)
+							animator.SetInteger("Direction", 3);
+						else
+							animator.SetInteger("Direction", 4);
+					}
+					
+
+				}
+
+			
 			
 		}
 	}

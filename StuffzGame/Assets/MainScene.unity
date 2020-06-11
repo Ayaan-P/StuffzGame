@@ -492,14 +492,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 290765537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d9e9ad8c66fda7478de3138b186964e, type: 3}
+  m_Script: {fileID: 11500000, guid: b88f4d63ed5fd23498fe040bae12c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WildPokemon: {fileID: 405380924508126511, guid: b87143c78b180ea4eaca3222e849d9e3,
-    type: 3}
+  WildPokemon: {fileID: 364452459}
+  sprites: []
   rate: 2
   currmobs: 0
-  maxmobs: 0
+  maxmobs: 2
 --- !u!4 &290765539
 Transform:
   m_ObjectHideFlags: 0
@@ -634,6 +634,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342354612}
   m_CullTransparentMesh: 0
+--- !u!1 &364452459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 405380924508126511, guid: b87143c78b180ea4eaca3222e849d9e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1253230296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &422857232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,10 +2737,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  current_axis: 0
+  currentAxis: 0
   rigidBody: {fileID: 1617124654}
   animator: {fileID: 1617124659}
-  lookingin: {x: 0, y: 0}
+  lookingInDirection: {x: 0, y: 0}
 --- !u!50 &1617124654
 Rigidbody2D:
   serializedVersion: 4
@@ -3302,7 +3308,7 @@ PrefabInstance:
     - target: {fileID: 423746891821774023, guid: d240e8178e5ff014092d70ff15b35a55,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 423746891821774023, guid: d240e8178e5ff014092d70ff15b35a55,
         type: 3}
