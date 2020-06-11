@@ -1,96 +1,56 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public float moveSpeed = 5f;
-    public int current_axis = 0;
+    public int currentAxis = 0;
     public Rigidbody2D rigidBody;
-	public Animator animator;
-    Vector2 movementVector;
-    public Vector2 lookingin;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public Animator animator;
+    private Vector2 movementVector;
+    public Vector2 lookingInDirection;
 
+    // Start is called before the first frame update
+    private void Start()
+    {
     }
 
     // Update is called once per frame (don't put anything physics related here)
-    void Update()
+    private void Update()
     {
-        // Input
-        //if (current_axis == 1)
-        //{
-            /*if (movementVector.x != Input.GetAxisRaw("Horizontal"))
-            {
-                movementVector.y = 0;
-                movementVector.x = Input.GetAxisRaw("Horizontal");
-                current_axis = 0;
-            }
-            if (movementVector.y != Input.GetAxisRaw("Vertical"))
-            {
-                movementVector.x = 0;
-                movementVector.y = Input.GetAxisRaw("Vertical");
-                current_axis = 1;
-            }
-			*/
-	
-        /*}
-        if (current_axis == 0)
+        movementVector.x = Input.GetAxisRaw("Horizontal");
+        movementVector.y = Input.GetAxisRaw("Vertical");
+        if (movementVector != Vector2.zero)
         {
-            if (movementVector.y != Input.GetAxisRaw("Vertical"))
-            {
-                movementVector.x = 0;
-                movementVector.y = Input.GetAxisRaw("Vertical");
-                current_axis = 1;
-            }
-            if (movementVector.x != Input.GetAxisRaw("Horizontal"))
-            {
-                movementVector.y = 0;
-                movementVector.x = Input.GetAxisRaw("Horizontal");
-                current_axis = 0;
-            }
-        }*/
+            animator.SetFloat("Horizontal", movementVector.x);
+            animator.SetFloat("Vertical", movementVector.y);
+        }
+        animator.SetFloat("Speed", movementVector.sqrMagnitude);
 
-			movementVector.x = Input.GetAxisRaw("Horizontal");
-			movementVector.y = Input.GetAxisRaw("Vertical");
-			 if (movementVector != Vector2.zero)
-			{
-				animator.SetFloat("Horizontal", movementVector.x);
-				animator.SetFloat("Vertical", movementVector.y);
-			}
-			animator.SetFloat("Speed", movementVector.sqrMagnitude);
-            
-            int lookAxis;
-			if(Mathf.Abs(movementVector.x)>Mathf.Abs(movementVector.y))
-				lookAxis = 0;
-			else
-				lookAxis = 1;
-			if(lookAxis==1)
-			{
-				if(movementVector.y>=0)
-					lookingin.y = 1f;
-				else
-					lookingin.y = -1f;
-			}
-			else
-			{
-				if(movementVector.x>=0)
-					lookingin.x = 1f;
-				else
-					lookingin.x = -1f;
-			}
-            
+        int lookAxis;
+        if (Mathf.Abs(movementVector.x) > Mathf.Abs(movementVector.y))
+            lookAxis = 0;
+        else
+            lookAxis = 1;
+        if (lookAxis == 1)
+        {
+            if (movementVector.y >= 0)
+                lookingInDirection.y = 1f;
+            else
+                lookingInDirection.y = -1f;
+        }
+        else
+        {
+            if (movementVector.x >= 0)
+                lookingInDirection.x = 1f;
+            else
+                lookingInDirection.x = -1f;
+        }
     }
 
     // Like Update() but executed on fixed timer (independent of framerate)
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         // Movement
         rigidBody.MovePosition(rigidBody.position + movementVector * moveSpeed * Time.fixedDeltaTime);
-
     }
 }

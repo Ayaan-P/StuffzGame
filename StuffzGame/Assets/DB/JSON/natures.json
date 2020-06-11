@@ -1,0 +1,419 @@
+{
+  "natures": [{
+    "decreased_stat": null,
+    "hates_flavor": null,
+    "id": 1,
+    "increased_stat": null,
+    "likes_flavor": null,
+    "name": "hardy"
+  }, {
+    "decreased_stat": {
+      "id": 2,
+      "name": "attack"
+    },
+    "hates_flavor": {
+      "id": 1,
+      "name": "spicy"
+    },
+    "id": 2,
+    "increased_stat": {
+      "id": 3,
+      "name": "defense"
+    },
+    "likes_flavor": {
+      "id": 5,
+      "name": "sour"
+    },
+    "name": "bold"
+  }, {
+    "decreased_stat": {
+      "id": 2,
+      "name": "attack"
+    },
+    "hates_flavor": {
+      "id": 1,
+      "name": "spicy"
+    },
+    "id": 3,
+    "increased_stat": {
+      "id": 4,
+      "name": "special-attack"
+    },
+    "likes_flavor": {
+      "id": 2,
+      "name": "dry"
+    },
+    "name": "modest"
+  }, {
+    "decreased_stat": {
+      "id": 2,
+      "name": "attack"
+    },
+    "hates_flavor": {
+      "id": 1,
+      "name": "spicy"
+    },
+    "id": 4,
+    "increased_stat": {
+      "id": 5,
+      "name": "special-defense"
+    },
+    "likes_flavor": {
+      "id": 4,
+      "name": "bitter"
+    },
+    "name": "calm"
+  }, {
+    "decreased_stat": {
+      "id": 2,
+      "name": "attack"
+    },
+    "hates_flavor": {
+      "id": 1,
+      "name": "spicy"
+    },
+    "id": 5,
+    "increased_stat": {
+      "id": 6,
+      "name": "speed"
+    },
+    "likes_flavor": {
+      "id": 3,
+      "name": "sweet"
+    },
+    "name": "timid"
+  }, {
+    "decreased_stat": {
+      "id": 3,
+      "name": "defense"
+    },
+    "hates_flavor": {
+      "id": 5,
+      "name": "sour"
+    },
+    "id": 6,
+    "increased_stat": {
+      "id": 2,
+      "name": "attack"
+    },
+    "likes_flavor": {
+      "id": 1,
+      "name": "spicy"
+    },
+    "name": "lonely"
+  }, {
+    "decreased_stat": null,
+    "hates_flavor": null,
+    "id": 7,
+    "increased_stat": null,
+    "likes_flavor": null,
+    "name": "docile"
+  }, {
+    "decreased_stat": {
+      "id": 3,
+      "name": "defense"
+    },
+    "hates_flavor": {
+      "id": 5,
+      "name": "sour"
+    },
+    "id": 8,
+    "increased_stat": {
+      "id": 4,
+      "name": "special-attack"
+    },
+    "likes_flavor": {
+      "id": 2,
+      "name": "dry"
+    },
+    "name": "mild"
+  }, {
+    "decreased_stat": {
+      "id": 3,
+      "name": "defense"
+    },
+    "hates_flavor": {
+      "id": 5,
+      "name": "sour"
+    },
+    "id": 9,
+    "increased_stat": {
+      "id": 5,
+      "name": "special-defense"
+    },
+    "likes_flavor": {
+      "id": 4,
+      "name": "bitter"
+    },
+    "name": "gentle"
+  }, {
+    "decreased_stat": {
+      "id": 3,
+      "name": "defense"
+    },
+    "hates_flavor": {
+      "id": 5,
+      "name": "sour"
+    },
+    "id": 10,
+    "increased_stat": {
+      "id": 6,
+      "name": "speed"
+    },
+    "likes_flavor": {
+      "id": 3,
+      "name": "sweet"
+    },
+    "name": "hasty"
+  }, {
+    "decreased_stat": {
+      "id": 4,
+      "name": "special-attack"
+    },
+    "hates_flavor": {
+      "id": 2,
+      "name": "dry"
+    },
+    "id": 11,
+    "increased_stat": {
+      "id": 2,
+      "name": "attack"
+    },
+    "likes_flavor": {
+      "id": 1,
+      "name": "spicy"
+    },
+    "name": "adamant"
+  }, {
+    "decreased_stat": {
+      "id": 4,
+      "name": "special-attack"
+    },
+    "hates_flavor": {
+      "id": 2,
+      "name": "dry"
+    },
+    "id": 12,
+    "increased_stat": {
+      "id": 3,
+      "name": "defense"
+    },
+    "likes_flavor": {
+      "id": 5,
+      "name": "sour"
+    },
+    "name": "impish"
+  }, {
+    "decreased_stat": null,
+    "hates_flavor": null,
+    "id": 13,
+    "increased_stat": null,
+    "likes_flavor": null,
+    "name": "bashful"
+  }, {
+    "decreased_stat": {
+      "id": 4,
+      "name": "special-attack"
+    },
+    "hates_flavor": {
+      "id": 2,
+      "name": "dry"
+    },
+    "id": 14,
+    "increased_stat": {
+      "id": 5,
+      "name": "special-defense"
+    },
+    "likes_flavor": {
+      "id": 4,
+      "name": "bitter"
+    },
+    "name": "careful"
+  }, {
+    "decreased_stat": {
+      "id": 5,
+      "name": "special-defense"
+    },
+    "hates_flavor": {
+      "id": 4,
+      "name": "bitter"
+    },
+    "id": 15,
+    "increased_stat": {
+      "id": 4,
+      "name": "special-attack"
+    },
+    "likes_flavor": {
+      "id": 2,
+      "name": "dry"
+    },
+    "name": "rash"
+  }, {
+    "decreased_stat": {
+      "id": 4,
+      "name": "special-attack"
+    },
+    "hates_flavor": {
+      "id": 2,
+      "name": "dry"
+    },
+    "id": 16,
+    "increased_stat": {
+      "id": 6,
+      "name": "speed"
+    },
+    "likes_flavor": {
+      "id": 3,
+      "name": "sweet"
+    },
+    "name": "jolly"
+  }, {
+    "decreased_stat": {
+      "id": 5,
+      "name": "special-defense"
+    },
+    "hates_flavor": {
+      "id": 4,
+      "name": "bitter"
+    },
+    "id": 17,
+    "increased_stat": {
+      "id": 2,
+      "name": "attack"
+    },
+    "likes_flavor": {
+      "id": 1,
+      "name": "spicy"
+    },
+    "name": "naughty"
+  }, {
+    "decreased_stat": {
+      "id": 5,
+      "name": "special-defense"
+    },
+    "hates_flavor": {
+      "id": 4,
+      "name": "bitter"
+    },
+    "id": 18,
+    "increased_stat": {
+      "id": 3,
+      "name": "defense"
+    },
+    "likes_flavor": {
+      "id": 5,
+      "name": "sour"
+    },
+    "name": "lax"
+  }, {
+    "decreased_stat": null,
+    "hates_flavor": null,
+    "id": 19,
+    "increased_stat": null,
+    "likes_flavor": null,
+    "name": "quirky"
+  }, {
+    "decreased_stat": {
+      "id": 5,
+      "name": "special-defense"
+    },
+    "hates_flavor": {
+      "id": 4,
+      "name": "bitter"
+    },
+    "id": 20,
+    "increased_stat": {
+      "id": 6,
+      "name": "speed"
+    },
+    "likes_flavor": {
+      "id": 3,
+      "name": "sweet"
+    },
+    "name": "naive"
+  }, {
+    "decreased_stat": {
+      "id": 6,
+      "name": "speed"
+    },
+    "hates_flavor": {
+      "id": 3,
+      "name": "sweet"
+    },
+    "id": 21,
+    "increased_stat": {
+      "id": 2,
+      "name": "attack"
+    },
+    "likes_flavor": {
+      "id": 1,
+      "name": "spicy"
+    },
+    "name": "brave"
+  }, {
+    "decreased_stat": {
+      "id": 6,
+      "name": "speed"
+    },
+    "hates_flavor": {
+      "id": 3,
+      "name": "sweet"
+    },
+    "id": 22,
+    "increased_stat": {
+      "id": 3,
+      "name": "defense"
+    },
+    "likes_flavor": {
+      "id": 5,
+      "name": "sour"
+    },
+    "name": "relaxed"
+  }, {
+    "decreased_stat": {
+      "id": 6,
+      "name": "speed"
+    },
+    "hates_flavor": {
+      "id": 3,
+      "name": "sweet"
+    },
+    "id": 23,
+    "increased_stat": {
+      "id": 4,
+      "name": "special-attack"
+    },
+    "likes_flavor": {
+      "id": 2,
+      "name": "dry"
+    },
+    "name": "quiet"
+  }, {
+    "decreased_stat": {
+      "id": 6,
+      "name": "speed"
+    },
+    "hates_flavor": {
+      "id": 3,
+      "name": "sweet"
+    },
+    "id": 24,
+    "increased_stat": {
+      "id": 5,
+      "name": "special-defense"
+    },
+    "likes_flavor": {
+      "id": 4,
+      "name": "bitter"
+    },
+    "name": "sassy"
+  }, {
+    "decreased_stat": null,
+    "hates_flavor": null,
+    "id": 25,
+    "increased_stat": null,
+    "likes_flavor": null,
+    "name": "serious"
+  }],
+  "count": 25
+}

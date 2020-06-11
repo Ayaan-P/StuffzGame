@@ -1,0 +1,44 @@
+{
+  "stats": [{
+    "id": 1,
+    "is_battle_only": false,
+    "move_damage_class": null,
+    "name": "hp"
+  }, {
+    "id": 2,
+    "is_battle_only": false,
+    "move_damage_class": "physical",
+    "name": "attack"
+  }, {
+    "id": 3,
+    "is_battle_only": false,
+    "move_damage_class": "physical",
+    "name": "defense"
+  }, {
+    "id": 4,
+    "is_battle_only": false,
+    "move_damage_class": "special",
+    "name": "special-attack"
+  }, {
+    "id": 5,
+    "is_battle_only": false,
+    "move_damage_class": "special",
+    "name": "special-defense"
+  }, {
+    "id": 6,
+    "is_battle_only": false,
+    "move_damage_class": null,
+    "name": "speed"
+  }, {
+    "id": 7,
+    "is_battle_only": true,
+    "move_damage_class": null,
+    "name": "accuracy"
+  }, {
+    "id": 8,
+    "is_battle_only": true,
+    "move_damage_class": null,
+    "name": "evasion"
+  }],
+  "count": 8
+}

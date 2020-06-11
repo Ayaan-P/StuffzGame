@@ -1,32 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpriteSwapBattle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    
-    public string pokemon_name;
+    public string POKEMON_NAME;
 
-    void LateUpdate()
+    private void LateUpdate()
     {
-        var sprite = Resources.Load<Sprite>("BattleFront/" + pokemon_name);
-        Sprite new_sprite;
-        // foreach( var renderer in GetComponentsInChildren<SpriteRenderer>())
-        // {
-        //     string sprite_name = renderer.sprite.name;
-        //     new_sprite = renderer.sprite;
-        //    foreach( var sp in sprites)
-        //    {
-        //        if(sp.name==sprite_name)
-        //        {
-        //            new_sprite = sp;
-        //            break;
-        //        }
-        //    }
-            var renderer = GetComponent<SpriteRenderer>();
-            renderer.sprite = sprite;
-        
-       
+        var sprite = Resources.Load<Sprite>("BattleFront/" + POKEMON_NAME);
+        var renderer = GetComponent<SpriteRenderer>();
+        renderer.sprite = sprite;
     }
 }

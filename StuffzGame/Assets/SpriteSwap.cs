@@ -1,33 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
-
-   
+﻿using UnityEngine;
 
 public class SpriteSwap : MonoBehaviour
 {
-    public string pokemon_name;
+    public string POKEMON_NAME;
 
-    void LateUpdate()
+    private void LateUpdate()
     {
-        var sprites = Resources.LoadAll<Sprite>("OverworldPokemon/" + pokemon_name);
-        Sprite new_sprite;
-        foreach( var renderer in GetComponentsInChildren<SpriteRenderer>())
+        var sprites = Resources.LoadAll<Sprite>("OverworldPokemon/" + POKEMON_NAME);
+        Sprite newSprite;
+        foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
         {
-            string sprite_name = renderer.sprite.name;
-            new_sprite = renderer.sprite;
-           foreach( var sp in sprites)
-           {
-               if(sp.name==sprite_name)
-               {
-                   new_sprite = sp;
-                   break;
-               }
-           }
-        
-            renderer.sprite = new_sprite;
+            string spriteName = renderer.sprite.name;
+            newSprite = renderer.sprite;
+            foreach (var sp in sprites)
+            {
+                if (sp.name == spriteName)
+                {
+                    newSprite = sp;
+                    break;
+                }
+            }
+
+            renderer.sprite = newSprite;
         }
-       
     }
 }
