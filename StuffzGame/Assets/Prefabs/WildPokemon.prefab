@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: -8606430478278329877}
   - component: {fileID: -645248857175956573}
   - component: {fileID: -4377718976546452255}
-  - component: {fileID: -3182303355010987982}
   m_Layer: 0
   m_Name: WildPokemon
   m_TagString: Untagged
@@ -176,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 1
+  radius: 0.5
   height: 2
   repathRate: 0.5
   canSearch: 1
@@ -194,7 +193,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
-  endReachedDistance: 0.6
+  endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
@@ -214,10 +213,6 @@ MonoBehaviour:
   version: 1
   target: {fileID: 0}
   animator: {fileID: -4377718976546452255}
-  d: {fileID: 3829344956810180101, guid: 663744b22e793cb42964387099e941ec, type: 3}
-  pokemon_n: 
-  radius: 3
-  attackradius: 1.6
 --- !u!95 &-4377718976546452255
 Animator:
   serializedVersion: 3
@@ -237,16 +232,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-3182303355010987982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405380924508126511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fdb21ef2ad026a469d5a8fb33c4c6b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pokemon_name: 
