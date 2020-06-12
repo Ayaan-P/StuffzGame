@@ -14,12 +14,12 @@ public class SpriteSwap : MonoBehaviour
         var sprites = Resources.LoadAll<Sprite>("OverworldPokemon/" + pokemon_name);
         Sprite new_sprite;
         foreach( var renderer in GetComponentsInChildren<SpriteRenderer>())
-        {
+        {          
             string sprite_name = renderer.sprite.name;
             new_sprite = renderer.sprite;
            foreach( var sp in sprites)
            {
-               if(sp.name==sprite_name)
+               if(sp.name[sp.name.Length-1]==sprite_name[sprite_name.Length-1])
                {
                    new_sprite = sp;
                    break;

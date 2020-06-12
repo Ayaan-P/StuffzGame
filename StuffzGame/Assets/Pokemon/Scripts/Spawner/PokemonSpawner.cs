@@ -6,7 +6,8 @@ using Pathfinding;
 public class PokemonSpawner : MonoBehaviour
 {
     public GameObject WildPokemon;
-    public Sprite[] sprites;
+    public GameObject player;
+    public Sprite s;
     float randX, randY;
     int randpkmn;
     Vector2 spawnpoint;
@@ -31,16 +32,20 @@ public class PokemonSpawner : MonoBehaviour
             randY = Random.Range(-5.0f, 5.0f);
             spawnpoint = new Vector2(randX, randY);
             GameObject go = Instantiate(WildPokemon, spawnpoint, Quaternion.identity);
-
+            go.GetComponent<PkmnController>().player = player;
+            // go.GetComponent<AIDestinationSetter>().target = player.transform;
             if (randpkmn == 0)
             {
+                
                 go.GetComponent<SpriteSwap>().pokemon_name = "Blaziken";
-                go.GetComponent<AIDestinationSetter>().pokemon_n = "Blaziken";
+                go.GetComponent<PkmnController>().pokemon_name = "Blaziken";
+               // go.GetComponent<AIDestinationSetter>().target = player;
+              
             }
             else
             {
                 go.GetComponent<SpriteSwap>().pokemon_name = "Salamence";
-                go.GetComponent<AIDestinationSetter>().pokemon_n = "Salamence";
+                go.GetComponent<PkmnController>().pokemon_name = "Salamence";
             }
             currmobs++;
         }
