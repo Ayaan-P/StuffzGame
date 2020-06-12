@@ -4,7 +4,7 @@ using System.Linq;
 
 public class PokemonFactory
 {
-    private int SEED = new System.Random().Next();
+    private int SEED = 69;
     private readonly System.Random random;
     private readonly BasePokemonFactory basePokemonFactory;
 
