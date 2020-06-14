@@ -186,7 +186,7 @@ MonoBehaviour:
     type: 3}
   pokemon_name: 
   radius: 3
-  attack_radius: 1
+  attack_radius: 1.6
   escape_radius: 3
 --- !u!114 &666127971030820483
 MonoBehaviour:
