@@ -83,7 +83,7 @@ namespace Pathfinding {
 
 		/// <summary>Distance from the end of the path where the AI will start to slow down</summary>
 		public float slowdownDistance = 0.6F;
-		//public Animator animator;
+
 		/// <summary>
 		/// How far the AI looks ahead along the path to determine the point it moves to.
 		/// In world units.
@@ -268,7 +268,6 @@ namespace Pathfinding {
 		/// So when the agent is close to the destination this method will typically be called every <see cref="repathRate"/> seconds.
 		/// </summary>
 		public virtual void OnTargetReached () {
-			//animator.SetInt("speed",0);
 		}
 
 		/// <summary>
@@ -355,8 +354,7 @@ namespace Pathfinding {
 			// Update which point we are moving towards
 			interpolator.MoveToCircleIntersection2D(currentPosition, pickNextWaypointDist, movementPlane);
 			var dir = movementPlane.ToPlane(steeringTarget - currentPosition);
-			
-			//animator.SetInt("direction", dir);
+
 			// Calculate the distance to the end of the path
 			float distanceToEnd = dir.magnitude + Mathf.Max(0, interpolator.remainingDistance);
 
@@ -374,12 +372,10 @@ namespace Pathfinding {
 				// How fast to move depending on the distance to the destination.
 				// Move slower as the character gets closer to the destination.
 				// This is always a value between 0 and 1.
-				
 				slowdown = distanceToEnd < slowdownDistance? Mathf.Sqrt (distanceToEnd / slowdownDistance) : 1;
 
 				if (reachedEndOfPath && whenCloseToDestination == CloseToDestinationMode.Stop) {
 					// Slow down as quickly as possible
-					
 					velocity2D -= Vector2.ClampMagnitude(velocity2D, currentAcceleration * deltaTime);
 				} else {
 					velocity2D += MovementUtilities.CalculateAccelerationToReachPoint(dir, dir.normalized*maxSpeed, velocity2D, currentAcceleration, rotationSpeed, maxSpeed, forwards) * deltaTime;
