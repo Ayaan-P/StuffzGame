@@ -26,7 +26,7 @@ public class PokemonSpawner : MonoBehaviour
         if (Time.time > nextspawn && currmobs <= maxmobs)
         {
             
-            randpkmn = Random.Range(0, 2);
+            randpkmn = Random.Range(1, 649);
             int randlvl = Random.Range(60, 70);
             nextspawn = Time.time + rate;
             randX = Random.Range(-5.0f, 5.0f);
@@ -39,19 +39,23 @@ public class PokemonSpawner : MonoBehaviour
             Pokemon pkmn ;
             // go.GetComponent<AIDestinationSetter>().target = player.transform;
             GameObject go = Instantiate(WildPokemon, spawnpoint, Quaternion.identity);  
-            if (randpkmn == 0)
-            {
-                pkmn = factory.CreatePokemon(257,randlvl);
-                go.GetComponent<SpriteSwap>().id = "445s";
+           
+                pkmn = factory.CreatePokemon(randpkmn,randlvl);
+                if(randpkmn<10)
+                {
+                    go.GetComponent<SpriteSwap>().id = "00"+randpkmn;
+                }
+                else if(randpkmn<100)
+                {
+                    go.GetComponent<SpriteSwap>().id = "0"+randpkmn;
+                }
+                else
+                    go.GetComponent<SpriteSwap>().id = ""+randpkmn;
+                
                // go.GetComponent<AIDestinationSetter>().target = player;
               
-            }
-            else
-            {
-                 pkmn = factory.CreatePokemon(373,randlvl);
-                 go.GetComponent<SpriteSwap>().id = "715";
-              
-            }
+           
+            
                            
                 go.GetComponent<PkmnController>().player = player;
                 

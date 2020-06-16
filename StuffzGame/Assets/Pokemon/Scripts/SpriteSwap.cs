@@ -47,7 +47,7 @@ public class SpriteSwap : MonoBehaviour
                    new_sprite = sp;
                    break;
                }
-           }
+            }
             
                 renderer.sprite = new_sprite;
             }

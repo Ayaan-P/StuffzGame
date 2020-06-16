@@ -29,7 +29,7 @@ public class BattleSystem : MonoBehaviour
         wild_data = GameObject.Find("CurrentEncounter(Clone)");
         GameObject enemy_fab = Instantiate(enemy_unit, enemy_platform);
         GameObject player_fab = Instantiate(player_unit, player_platform);
-        enemy_fab.GetComponent<SpriteSwapBattle>().pokemon_name = wild_data.GetComponent<EncounterData>().current_enemy.BasePokemon.Name;
+        enemy_fab.GetComponent<SpriteSwapBattle>().id = wild_data.GetComponent<EncounterData>().current_enemy.BasePokemon.Id;
         Debug.Log(wild_data.GetComponent<EncounterData>().pokemon_name +"x" );
         player = player_fab.GetComponent<unit>();
         enemy = enemy_fab.GetComponent<unit>();
