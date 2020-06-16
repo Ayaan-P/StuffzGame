@@ -10,7 +10,7 @@ using Pathfinding;
 		public float radius = 3f;
 		public float attack_radius = 1f;
 		public float escape_radius = 3f;
-	
+		public Pokemon wild_pokemon {get; set;}
 
 		void Update ()
 		{
@@ -44,7 +44,7 @@ using Pathfinding;
 					GameObject Encounter_Data = Instantiate(encounter_data);
 					DontDestroyOnLoad(Encounter_Data);
 					// Encounter_Data.GetComponent<EncounterData>().pokemon_name = gameObject.GetComponent<SpriteSwap>().pokemon_name;
-					 Encounter_Data.GetComponent<EncounterData>().pokemon_name = pokemon_name;
+					Encounter_Data.GetComponent<EncounterData>().current_enemy = wild_pokemon;
 					SceneManager.LoadScene(1);
 				}
 			}

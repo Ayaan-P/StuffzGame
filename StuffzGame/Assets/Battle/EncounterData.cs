@@ -6,8 +6,8 @@ using UnityEngine;
     {
     // Start is called before the first frame update
     
-
-        public string pokemon_name;
+        public Pokemon current_enemy { get; set; }
+        public string pokemon_name ;
 
    
     }   
