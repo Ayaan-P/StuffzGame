@@ -45,7 +45,7 @@ public class PokemonFactory
     public Pokemon CreateRandomPokemon(int level)
     {   /*TODO: Fix pokemon Id count via json*/
         /*DataMapper pokemonMapper = MapperFactory.GetInstance().GetMapper(MapperName.POKEMON_MAPPER);
-        int maxId = pokemonMapper.GetJSONObjectCount();     <-- doesn't work because ID > 807 exist, but are numbered 10001 through 10157 */      
+        int maxId = pokemonMapper.GetJSONObjectCount();     <-- doesn't work because ID > 807 exist, but are numbered 10001 through 10157 */
         int MAX_ID = 807;
         int randomId = random.Next(1, MAX_ID + 1);
         UnityEngine.Debug.Log($"Creating random pokemon with id: {randomId}");
@@ -104,7 +104,7 @@ public class PokemonFactory
             //Calculate gender if not a special case:
             int randomNumber = random.Next(LOWER_LIMIT, UPPER_LIMIT + 1);
             int scaledNumber = (int)(randomNumber / UPPER_LIMIT_FLOAT * GENDER_RATE_MAX_VALUE);
-
+            //            UnityEngine.Debug.LogError($"gender random num: {randomNumber}. scaled: {scaledNumber}. gender thresh: {genderRate}");
             if (scaledNumber >= (int)genderRate)
             {
                 return Gender.MALE;
@@ -175,7 +175,7 @@ public class PokemonFactory
         int HIDDEN_ABILITY_THRESHOLD = 21845;
         int LOWER_LIMIT = 0;
         int UPPER_LIMIT = 65535;
-        
+
         int randomNumber = random.Next(LOWER_LIMIT, UPPER_LIMIT + 1);
         PokemonAbility hiddenAbility = pokemon.Abilities.Where(it => it.IsHidden == true).SingleOrDefault();
 
@@ -196,6 +196,5 @@ public class PokemonFactory
         int randomIndex = random.Next(remainingAbilityCount);
 
         return pokemon.Abilities[randomIndex];
-
     }
 }

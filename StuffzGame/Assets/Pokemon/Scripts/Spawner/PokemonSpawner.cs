@@ -15,9 +15,14 @@ public class PokemonSpawner : MonoBehaviour
     float nextspawn = 0.0f;
     public int currmobs = 0;
     public int maxmobs;
+    private PokemonFactory factory;
     // Start is called before the first frame update
     void Start()
     {
+        factory = new PokemonFactory();
+        Debug.Log("Generating trash value for Pokemon to preload JSON.");
+        //Single pokemon creation to load the JSON and keep it cached.
+        Pokemon trashValue = factory.CreatePokemon(1,1);
     }
 
     // Update is called once per frame
@@ -32,10 +37,7 @@ public class PokemonSpawner : MonoBehaviour
             randX = Random.Range(-5.0f, 5.0f);
             randY = Random.Range(-5.0f, 5.0f);
             spawnpoint = new Vector2(randX, randY);
-            
-
-            PokemonFactory factory = new PokemonFactory();
-            Pokemon trash = factory.CreatePokemon(257,randlvl);
+           
             Pokemon pkmn ;
             // go.GetComponent<AIDestinationSetter>().target = player.transform;
             if (randpkmn == 0)
