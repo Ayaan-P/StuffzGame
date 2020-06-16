@@ -380,8 +380,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268756034}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9123673, y: -0.9411565, z: -44.191113}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.912367, y: -0.9411564, z: -44.191116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1880931387}
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88f4d63ed5fd23498fe040bae12c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WildPokemon: {fileID: 67327089145450229, guid: b87143c78b180ea4eaca3222e849d9e3,
+  WildPokemon: {fileID: 7579254951464329679, guid: b87143c78b180ea4eaca3222e849d9e3,
     type: 3}
   player: {fileID: 1617124652}
   s: {fileID: 0}

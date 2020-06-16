@@ -38,21 +38,23 @@ public class PokemonSpawner : MonoBehaviour
             Pokemon trash = factory.CreatePokemon(257,randlvl);
             Pokemon pkmn ;
             // go.GetComponent<AIDestinationSetter>().target = player.transform;
+            GameObject go = Instantiate(WildPokemon, spawnpoint, Quaternion.identity);  
             if (randpkmn == 0)
             {
                 pkmn = factory.CreatePokemon(257,randlvl);
-             
+                go.GetComponent<SpriteSwap>().id = "445s";
                // go.GetComponent<AIDestinationSetter>().target = player;
               
             }
             else
             {
                  pkmn = factory.CreatePokemon(373,randlvl);
+                 go.GetComponent<SpriteSwap>().id = "715";
               
             }
-               GameObject go = Instantiate(WildPokemon, spawnpoint, Quaternion.identity);              
+                           
                 go.GetComponent<PkmnController>().player = player;
-                go.GetComponent<SpriteSwap>().pokemon_name = pkmn.BasePokemon.Name;
+                
                 go.GetComponent<PkmnController>().pokemon_name = pkmn.BasePokemon.Name;
                 go.GetComponent<PkmnController>().wild_pokemon = pkmn;
                 
