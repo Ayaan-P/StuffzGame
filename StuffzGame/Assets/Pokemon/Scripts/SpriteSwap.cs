@@ -15,7 +15,7 @@ public class SpriteSwap : MonoBehaviour
     public bool done ;
     void Start()
     {
-        AsyncOperationHandle<Sprite[]> spriteHandle = Addressables.LoadAssetAsync<Sprite[]>("Assets/Pokemon/Sprites/Ovworld/"+id+".png");
+        AsyncOperationHandle<Sprite[]> spriteHandle = Addressables.LoadAssetAsync<Sprite[]>("Assets/Pokemon/Sprites/Overworld/"+id+".png");
         spriteHandle.Completed += LoadSpritesWhenReady;
         done=false;
     }   

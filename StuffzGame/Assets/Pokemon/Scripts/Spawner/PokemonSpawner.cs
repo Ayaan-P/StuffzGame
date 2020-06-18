@@ -35,7 +35,7 @@ public class PokemonSpawner : MonoBehaviour
             
 
             PokemonFactory factory = new PokemonFactory();
-            Pokemon trash = factory.CreatePokemon(257,randlvl);
+            //Pokemon trash = factory.CreatePokemon(257,randlvl);
             Pokemon pkmn ;
             // go.GetComponent<AIDestinationSetter>().target = player.transform;
             GameObject go = Instantiate(WildPokemon, spawnpoint, Quaternion.identity);  

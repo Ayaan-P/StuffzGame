@@ -38,7 +38,7 @@ public class EditorHelper : MonoBehaviour
                      SpriteMetaData smd = new SpriteMetaData();
                      smd.pivot = new Vector2(0.5f, 0.5f);
                      smd.alignment = 9;
-                     smd.name = (spriteSheet.height - j) / sliceHeight + ", " + i / sliceWidth;
+                     smd.name = (spriteSheet.height - j) / sliceHeight + ", " + (i / sliceWidth)*2;//naming changed remove x2 for original
                      smd.rect = new Rect(i, j - sliceHeight, sliceWidth, sliceHeight);
  
                      newData.Add(smd);
