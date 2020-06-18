@@ -29,7 +29,8 @@ public class PokemonFactory
                 Nickname = null,
                 LearnedMoves = GenerateMovesetForLevel(basePokemon, level),
                 CurrentAbility = GenerateAbility(basePokemon),
-                HeldItem = null
+                HeldItem = null,
+                IsFainted = false
             };
 
             pokemon.CalculateStats();
@@ -104,7 +105,7 @@ public class PokemonFactory
             //Calculate gender if not a special case:
             int randomNumber = random.Next(LOWER_LIMIT, UPPER_LIMIT + 1);
             int scaledNumber = (int)(randomNumber / UPPER_LIMIT_FLOAT * GENDER_RATE_MAX_VALUE);
-            //            UnityEngine.Debug.LogError($"gender random num: {randomNumber}. scaled: {scaledNumber}. gender thresh: {genderRate}");
+
             if (scaledNumber >= (int)genderRate)
             {
                 return Gender.MALE;

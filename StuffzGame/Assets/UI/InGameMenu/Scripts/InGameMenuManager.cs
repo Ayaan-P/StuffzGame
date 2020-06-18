@@ -16,7 +16,7 @@ public class InGameMenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Boolean menuToggle = !menu.gameObject.activeSelf;
+            bool menuToggle = !menu.gameObject.activeSelf;
             Debug.Log("Escape key was pressed. Menu toggled: " + menuToggle);
 
             int timeScale = menuToggle ? 0 : 1;
@@ -25,7 +25,7 @@ public class InGameMenuManager : MonoBehaviour
         }
     }
 
-    private void PauseOrContinue(Boolean toggle, int timescale)
+    private void PauseOrContinue(bool toggle, int timescale)
     {
         Time.timeScale = timescale;
         menu.gameObject.SetActive(toggle);

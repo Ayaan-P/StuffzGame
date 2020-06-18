@@ -26,11 +26,8 @@ public class PlayerMovement : MonoBehaviour
         }
         animator.SetFloat("Speed", movementVector.sqrMagnitude);
 
-        int lookAxis;
-        if (Mathf.Abs(movementVector.x) > Mathf.Abs(movementVector.y))
-            lookAxis = 0;
-        else
-            lookAxis = 1;
+        int lookAxis = (Mathf.Abs(movementVector.x) > Mathf.Abs(movementVector.y)) ? 0 : 1;
+
         if (lookAxis == 1)
         {
             if (movementVector.y >= 0)

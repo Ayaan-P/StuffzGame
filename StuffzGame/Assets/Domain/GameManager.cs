@@ -6,7 +6,7 @@ public class GameManager : Singleton
     private static readonly object Lock = new object(); //thread-safe volatile locking
     [SerializeField]
     private bool _persistent = true;
-   
+    #region Singleton
     public static GameManager Instance
     {
         get
@@ -51,7 +51,7 @@ public class GameManager : Singleton
             }
         }
     }
-
+    #endregion
 
 
     private void Awake()
@@ -66,6 +66,23 @@ public class GameManager : Singleton
 
     protected virtual void OnAwake()
     {
+    }
+
+    private void Start()
+    {
+        Player player = Player.Instance;
+        PokemonFactory pokemonFactory = new PokemonFactory();
+        ItemFactory itemFactory = new ItemFactory();
+
+        System.Random rand = new System.Random();
+        for(int i=0; i<6; i++)
+        {
+            int randLevel = rand.Next(1, 101);
+            Pokemon randPokemon = pokemonFactory.CreateRandomPokemon(randLevel);
+            Item randItem = itemFactory.CreateRandomItem();
+            randPokemon.HeldItem = randItem;
+            player.AddPokemonToParty(randPokemon);
+        }
     }
 
 }

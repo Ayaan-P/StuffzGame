@@ -13,6 +13,8 @@ public class Pokemon
     public List<PokemonMove> LearnedMoves { get; set; }
     public PokemonAbility CurrentAbility { get; set; }
     public Item HeldItem { get; set; }
+    public bool IsFainted { get; set; }
+
     private readonly System.Random random;
 
     public Pokemon(System.Random random)

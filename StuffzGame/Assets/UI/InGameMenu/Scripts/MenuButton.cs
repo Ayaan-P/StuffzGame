@@ -9,15 +9,14 @@ public class MenuButton : MonoBehaviour,IPointerEnterHandler, IPointerClickHandl
     public MenuGroup menuGroup;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         menuGroup.SubscribeButton(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDisable()
     {
-        
+        menuGroup.UnsubscribeButton(this);
     }
 
     public void OnPointerClick(PointerEventData eventData)

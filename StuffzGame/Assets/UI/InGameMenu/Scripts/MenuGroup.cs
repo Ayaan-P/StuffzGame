@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MenuGroup : MonoBehaviour
@@ -6,6 +7,10 @@ public class MenuGroup : MonoBehaviour
     private List<MenuButton> menuButtons;
     public List<GameObject> menuPages;
 
+    private void OnEnable()
+    {
+        ResetMenuPages();
+    }
     public void SubscribeButton(MenuButton button)
     {
         if (menuButtons == null)
@@ -13,6 +18,14 @@ public class MenuGroup : MonoBehaviour
             menuButtons = new List<MenuButton>();
         }
         menuButtons.Add(button);
+    }
+
+    public void UnsubscribeButton(MenuButton button)
+    {
+        if(menuButtons != null)
+        {
+            menuButtons.Remove(button);
+        }
     }
 
     public void OnTabEnter(MenuButton button) { }
@@ -34,5 +47,11 @@ public class MenuGroup : MonoBehaviour
     }
     public void OnTabExit(MenuButton button) { }
 
-
+    private void ResetMenuPages()
+    {
+        foreach(GameObject page in menuPages)
+        {
+            page.SetActive(false);
+        }
+    }
 }
