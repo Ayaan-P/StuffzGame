@@ -21,16 +21,8 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/salamence.png
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 3a2ec6e230715ed49846bbafd5395750
-    m_Address: Assets/UI/InGameMenu/Prefabs/PokemonSlot.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 9b17c70148e12974aab5a4c51ebf50e8
     m_Address: Assets/Pokemon/Sprites/Overworld/blaziken.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: a71684b6ecffdca4fa10b212676a23a3
-    m_Address: Assets/UI/InGameMenu/Prefabs/HealthBar.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
