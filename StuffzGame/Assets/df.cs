@@ -8,8 +8,8 @@ public class EditorHelper : MonoBehaviour
      static void SliceSprites()
      {
          // Change the below for the with and height dimensions of each sprite within the spritesheets
-         int sliceWidth = 64;
-         int sliceHeight = 64;
+         int sliceWidth = 128;
+         int sliceHeight = 128;
  
          // Change the below for the path to the folder containing the sprite sheets (warning: not tested on folders containing anything other than just spritesheets!)
          // Ensure the folder is within 'Assets/Resources/' (the below example folder's full path within the project is 'Assets/Resources/ToSlice')
@@ -38,7 +38,7 @@ public class EditorHelper : MonoBehaviour
                      SpriteMetaData smd = new SpriteMetaData();
                      smd.pivot = new Vector2(0.5f, 0.5f);
                      smd.alignment = 9;
-                     smd.name = (spriteSheet.height - j) / sliceHeight + ", " + (i / sliceWidth)*2;//naming changed remove x2 for original
+                     smd.name = (spriteSheet.height - j) / sliceHeight + ", " + i / sliceWidth;//naming changed remove x2 for original
                      smd.rect = new Rect(i, j - sliceHeight, sliceWidth, sliceHeight);
  
                      newData.Add(smd);
