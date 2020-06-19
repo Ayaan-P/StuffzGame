@@ -31,7 +31,7 @@ public class Pokemon
         {
             if (stat.IV == null)
             {
-                UnityEngine.Debug.LogWarning($"Pokemon {BasePokemon.Name} ({BasePokemon.Id}) has no {stat.BaseStat.Name} IV. Generating a new IV value!");
+                //UnityEngine.Debug.LogWarning($"Pokemon {BasePokemon.Name} ({BasePokemon.Id}) has no {stat.BaseStat.Name} IV. Generating a new IV value!");
                 stat.IV = GenerateIV();
             }
 

@@ -1,12 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Linq;
+using UnityEngine;
+
 public class GameManager : Singleton
 {
-
     private static GameManager _instance;
     private static readonly object Lock = new object(); //thread-safe volatile locking
+
     [SerializeField]
     private bool _persistent = true;
+
     #region Singleton
+
     public static GameManager Instance
     {
         get
@@ -51,8 +56,8 @@ public class GameManager : Singleton
             }
         }
     }
-    #endregion
 
+    #endregion Singleton
 
     private void Awake()
     {
@@ -63,7 +68,6 @@ public class GameManager : Singleton
         OnAwake();
     }
 
-
     protected virtual void OnAwake()
     {
     }
@@ -73,29 +77,34 @@ public class GameManager : Singleton
         Player player = Player.Instance;
         PokemonFactory pokemonFactory = new PokemonFactory();
         ItemFactory itemFactory = new ItemFactory();
-
         System.Random rand = new System.Random();
-        for(int i=0; i<6; i++)
+        int[] pokemonIds = new int[] { rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231) };
+        int[] itemIds = new int[] { rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101) };
+        float[] hpPercents = new float[] { (float)rand.NextDouble(), 0.0f, (float)rand.NextDouble(), (float)rand.NextDouble(), 1.0f, (float)rand.NextDouble() };
+
+        for (int i = 0; i < 6; i++)
         {
-            int randLevel = rand.Next(1, 101);
-            Pokemon randPokemon = pokemonFactory.CreateRandomPokemon(randLevel);
-            Item randItem = itemFactory.CreateRandomItem();
+            int randLevel = rand.Next(15, 101);
+            Pokemon randPokemon = pokemonFactory.CreatePokemon(pokemonIds[i], randLevel);
+            PokemonStat hpStat = randPokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.HP).SingleOrDefault();
+            hpStat.CurrentValue = Convert.ToInt32(hpPercents[i] * hpStat.CalculatedValue);
+            if (hpPercents[i] <= float.Epsilon)
+            {
+                randPokemon.IsFainted = true;
+            }
+            Item randItem = itemFactory.CreateItem(itemIds[i]);
             randPokemon.HeldItem = randItem;
             player.AddPokemonToParty(randPokemon);
         }
     }
-
 }
 
 public abstract class Singleton : MonoBehaviour
 {
-
     public static bool Quitting { get; private set; }
 
     private void OnApplicationQuit()
     {
         Quitting = true;
     }
-
 }
-

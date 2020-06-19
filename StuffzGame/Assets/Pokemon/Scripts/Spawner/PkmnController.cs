@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using Pathfinding;
-	public class PkmnController: MonoBehaviour {
+using System.Linq;
+
+public class PkmnController: MonoBehaviour {
 		
 		public GameObject player;
 		public Animator animator;
@@ -14,6 +16,10 @@ using Pathfinding;
 
 		void Update ()
 		{
+			int speedStat = wild_pokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.SPEED).SingleOrDefault().BaseValue;
+			float MAX_BASE_SPEED = 160;
+			int MAX_MOVEMENT_SPEED = 5;
+			gameObject.GetComponent<AIPath>().maxSpeed = speedStat/MAX_BASE_SPEED * MAX_MOVEMENT_SPEED;
 			var target = player.transform;
 			float distance = Vector2.Distance(target.position,transform.position);
 			if(distance<=radius)

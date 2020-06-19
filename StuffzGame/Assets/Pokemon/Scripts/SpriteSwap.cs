@@ -10,11 +10,30 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class SpriteSwap : MonoBehaviour
 {
     public string pokemon_name;
-    public Sprite[] spriteArray;
+    private Sprite[] spriteArray;
     public bool done ;
+
+    public int Id { get; set; }
+
+    private string FormatId(int value)
+    {
+        if(value < 10)
+        {
+            return $"00{value}";
+        }else if(value < 100)
+        {
+            return $"0{value}";
+        }
+        else
+        {
+            return $"{value}";
+        }
+    }
+
     void Start()
     {
-        AsyncOperationHandle<Sprite[]> spriteHandle = Addressables.LoadAssetAsync<Sprite[]>("Assets/Pokemon/Sprites/Overworld/"+pokemon_name+".png");
+        string formattedId = FormatId(Id);
+        AsyncOperationHandle<Sprite[]> spriteHandle = Addressables.LoadAssetAsync<Sprite[]>($"Assets/Pokemon/Sprites/Ovworld/{formattedId}.png");
         spriteHandle.Completed += LoadSpritesWhenReady;
         done=false;
     }   
@@ -41,12 +60,12 @@ public class SpriteSwap : MonoBehaviour
                 new_sprite = renderer.sprite;
             foreach( var sp in spriteArray)
             {
-               if(sp.name[sp.name.Length-1]==sprite_name[sprite_name.Length-1])
+               if(sp.name==sprite_name)
                {
                    new_sprite = sp;
                    break;
                }
-           }
+            }
             
                 renderer.sprite = new_sprite;
             }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using System.Linq;
 
 public class PokemonSpawner : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class PokemonSpawner : MonoBehaviour
         if (Time.time > nextspawn && currmobs <= maxmobs)
         {
             
-            randpkmn = Random.Range(0, 2);
+            randpkmn = Random.Range(1, 649);
             int randlvl = Random.Range(60, 70);
             nextspawn = Time.time + rate;
             randX = Random.Range(-5.0f, 5.0f);
@@ -40,21 +41,20 @@ public class PokemonSpawner : MonoBehaviour
            
             Pokemon pkmn ;
             // go.GetComponent<AIDestinationSetter>().target = player.transform;
-            if (randpkmn == 0)
-            {
-                pkmn = factory.CreatePokemon(257,randlvl);
-             
+            GameObject go = Instantiate(WildPokemon, spawnpoint, Quaternion.identity);  
+           
+                pkmn = factory.CreatePokemon(randpkmn,randlvl);
+                go.GetComponent<SpriteSwap>().Id = randpkmn;
+                int speedStat = pkmn.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.SPEED).SingleOrDefault().BaseValue;
+                float MAX_BASE_SPEED = 160;
+                go.GetComponent<Animator>().speed = 1 + (speedStat/MAX_BASE_SPEED);
                // go.GetComponent<AIDestinationSetter>().target = player;
               
-            }
-            else
-            {
-                 pkmn = factory.CreatePokemon(373,randlvl);
-              
-            }
-               GameObject go = Instantiate(WildPokemon, spawnpoint, Quaternion.identity);              
+           
+            
+                           
                 go.GetComponent<PkmnController>().player = player;
-                go.GetComponent<SpriteSwap>().pokemon_name = pkmn.BasePokemon.Name;
+                
                 go.GetComponent<PkmnController>().pokemon_name = pkmn.BasePokemon.Name;
                 go.GetComponent<PkmnController>().wild_pokemon = pkmn;
                 
