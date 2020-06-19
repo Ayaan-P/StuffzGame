@@ -33,7 +33,7 @@ public class SpriteSwap : MonoBehaviour
     void Start()
     {
         string formattedId = FormatId(Id);
-        AsyncOperationHandle<Sprite[]> spriteHandle = Addressables.LoadAssetAsync<Sprite[]>($"Assets/Pokemon/Sprites/Ovworld/{formattedId}.png");
+        AsyncOperationHandle<Sprite[]> spriteHandle = Addressables.LoadAssetAsync<Sprite[]>($"Assets/Pokemon/Sprites/Overworld/{formattedId}.png");
         spriteHandle.Completed += LoadSpritesWhenReady;
         done=false;
     }   

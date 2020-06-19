@@ -82,7 +82,7 @@ public class SpriteLoader
     {
         switch (type)
         {
-            case SpriteType.OVERWORLD_POKEMON: return "Assets/Pokemon/Sprites/Ovworld/";
+            case SpriteType.OVERWORLD_POKEMON: return "Assets/Pokemon/Sprites/Overworld/";
             case SpriteType.BATTLE_FRONT: return "Assets/Pokemon/Sprites/Front/";
             case SpriteType.BATTLE_BACK: return "Assets/Pokemon/Sprites/Back/";
             case SpriteType.SUMMARY_POKEMON: return "Assets/Pokemon/Sprites/Summary/";

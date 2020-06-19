@@ -20,6 +20,7 @@ public class PkmnController: MonoBehaviour {
 			float MAX_BASE_SPEED = 160;
 			int MAX_MOVEMENT_SPEED = 5;
 			gameObject.GetComponent<AIPath>().maxSpeed = speedStat/MAX_BASE_SPEED * MAX_MOVEMENT_SPEED;
+			animator.speed = speedStat / MAX_BASE_SPEED;
 			var target = player.transform;
 			float distance = Vector2.Distance(target.position,transform.position);
 			if(distance<=radius)
