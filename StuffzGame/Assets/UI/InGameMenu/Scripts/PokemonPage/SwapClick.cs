@@ -51,7 +51,7 @@ public class SwapClick : MonoBehaviour
 
     private void ToggleDraggable(bool toggle)
     {
-        Draggable draggable = this.transform.GetComponentInChildren<Draggable>(true);
+        DraggablePokemonSlot draggable = this.transform.GetComponentInChildren<DraggablePokemonSlot>(true);
         if (draggable != null)
         {
             draggable.enabled = toggle;

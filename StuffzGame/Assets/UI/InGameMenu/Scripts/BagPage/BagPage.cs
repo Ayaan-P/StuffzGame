@@ -61,7 +61,7 @@ public class BagPage : MonoBehaviour
         Text itemName = textComponents[0];
         Text itemCount = textComponents[1];
 
-        Item currentItem = itemSlotData.CurrentItem;
+        Item currentItem = itemSlotData.CurrentObject;
 
         Sprite itemSprite = itemSlotData.ItemSprite;
         if (itemSprite != null)

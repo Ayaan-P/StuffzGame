@@ -11,9 +11,9 @@ public class UIManager : Singleton
     [SerializeField]
     private bool _persistent = true;
 
-    private static bool enableDebug = false;
-    public List<PartySlotSpriteData> PartySlotDataList { get; } = new List<PartySlotSpriteData>();
-    public List<ItemSlotSpriteData> ItemSlotDataList { get; } = new List<ItemSlotSpriteData>();
+    private bool enableDebug = false;
+    public List<SpriteSlotData<Pokemon>> PartySlotDataList { get; } = new List<SpriteSlotData<Pokemon>>();
+    public List<SpriteSlotData<Item>> ItemSlotDataList { get; } = new List<SpriteSlotData<Item>>();
     public GameObject menu;
 
     #region Singleton
@@ -116,10 +116,16 @@ public class UIManager : Singleton
     private void Update()
     {
         ToggleInGameMenu();
+        LoadSpritesIfReady<Pokemon>(PartySlotDataList);
+        LoadSpritesIfReady<Item>(ItemSlotDataList);
 
-        for (int index = 0; index < PartySlotDataList.Count; index++)
+    }
+
+    private void LoadSpritesIfReady<T>(List<SpriteSlotData<T>> spriteSlotDataList)
+    {
+        for (int index = 0; index < spriteSlotDataList.Count; index++)
         {
-            PartySlotSpriteData slotData = PartySlotDataList[index];
+            SpriteSlotData<T> slotData = spriteSlotDataList[index];
             if (slotData.AreSpritesReady())
             {
                 continue;
@@ -133,7 +139,7 @@ public class UIManager : Singleton
 
     private void SwapPokemonPartySlot(int firstIndex, int secondIndex)
     {
-        PartySlotSpriteData temp = PartySlotDataList[firstIndex];
+        SpriteSlotData<Pokemon> temp = PartySlotDataList[firstIndex];
         PartySlotDataList[firstIndex] = PartySlotDataList[secondIndex];
         PartySlotDataList[secondIndex] = temp;
     }
@@ -168,8 +174,8 @@ public class UIManager : Singleton
         }
         else if (isOnlyDataChange)
         {
-            ItemSlotSpriteData slotData =ItemSlotDataList.Where(it => it.CurrentItem.Id == item.Id).SingleOrDefault();
-            slotData.CurrentItem.Count = item.Count;
+            SpriteSlotData<Item> slotData =ItemSlotDataList.Where(it => ((it.CurrentObject) as Item).Id == item.Id).SingleOrDefault();
+            slotData.CurrentObject.Count = item.Count;
         }
         else
         {

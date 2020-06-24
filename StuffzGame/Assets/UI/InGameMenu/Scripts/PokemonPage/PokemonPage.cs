@@ -62,8 +62,8 @@ public class PokemonPage : MonoBehaviour
 
     private void SetPokemonSlotDetails(PartySlotSpriteData slotData, GameObject slot)
     {
-        SetTextComponents(slotData.CurrentPokemon, slot);
-        SetPokemonHPDetails(slotData.CurrentPokemon, slot);
+        SetTextComponents(slotData.CurrentObject, slot);
+        SetPokemonHPDetails(slotData.CurrentObject, slot);
         SetImageComponents(slotData, slot);
         SetPokemonMoveDetails(slotData, slot);
     }
@@ -71,7 +71,7 @@ public class PokemonPage : MonoBehaviour
     private void SetImageComponents(PartySlotSpriteData slotData, GameObject slot)
     {
         int MAX_TYPES_COUNT = 2;
-        Pokemon pokemon = slotData.CurrentPokemon;
+        Pokemon pokemon = slotData.CurrentObject;
 
         Image[] imageComponents = slot.GetComponentsInChildren<Image>();
         Image slotBg = imageComponents[1];
@@ -167,7 +167,7 @@ public class PokemonPage : MonoBehaviour
     private void SetPokemonMoveDetails(PartySlotSpriteData slotData, GameObject slot)
     {
         int MAX_MOVES_COUNT = 4;
-        Pokemon pokemon = slotData.CurrentPokemon;
+        Pokemon pokemon = slotData.CurrentObject;
         GameObject moveObjectList = slot.transform.Find("Moves").gameObject;
 
         List<PokemonMove> learnedMoves = pokemon.LearnedMoves;

@@ -7,7 +7,7 @@ public class DropZone : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
-        Draggable draggable = eventData.pointerDrag.GetComponent<Draggable>();
+        DraggablePokemonSlot draggable = eventData.pointerDrag.GetComponent<DraggablePokemonSlot>();
         if (draggable != null)
         {
             draggable.NewParent = this.transform;

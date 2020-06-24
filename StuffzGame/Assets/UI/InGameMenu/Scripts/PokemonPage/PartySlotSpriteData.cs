@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PartySlotSpriteData
+public class PartySlotSpriteData : SpriteSlotData<Pokemon>
 {
-    public Pokemon CurrentPokemon { get; }
+    public override Pokemon CurrentObject { get; }
   
     private readonly SpriteLoader loader;
     private Sprite pokemonSprite;
@@ -24,11 +25,11 @@ public class PartySlotSpriteData
 
     public PartySlotSpriteData(Pokemon pokemon)
     {
-        this.CurrentPokemon = pokemon;
+        this.CurrentObject = pokemon;
         this.loader = new SpriteLoader();
     }
 
-    public void PreLoadSprites()
+    public override void PreLoadSprites()
     {
         PreLoadPokemonSprite();
         PreLoadHeldItemSprite();
@@ -40,14 +41,14 @@ public class PartySlotSpriteData
 
     private void PreLoadPokemonSprite()
     {
-        this.pokemonSprite = loader.LoadPokemonSprite(CurrentPokemon.BasePokemon.Id, CurrentPokemon.IsShiny, SpriteType.OVERWORLD_POKEMON);
+        this.pokemonSprite = loader.LoadPokemonSprite(CurrentObject.BasePokemon.Id, CurrentObject.IsShiny, SpriteType.OVERWORLD_POKEMON);
     }
 
     private void PreLoadHeldItemSprite()
     {
-        if (CurrentPokemon.HeldItem != null)
+        if (CurrentObject.HeldItem != null)
         {
-            this.itemSprite = loader.LoadItemSprite(CurrentPokemon.HeldItem.Name);
+            this.itemSprite = loader.LoadItemSprite(CurrentObject.HeldItem.Name);
         }
         else
         {
@@ -58,7 +59,7 @@ public class PartySlotSpriteData
     private void PreLoadTypeSprites()
     {
         List<Sprite> typeSprites = new List<Sprite>();
-        foreach (var type in CurrentPokemon.BasePokemon.Types)
+        foreach (var type in CurrentObject.BasePokemon.Types)
         {
             typeSprites.Add(loader.LoadTypeSprite(type));
         }
@@ -67,7 +68,7 @@ public class PartySlotSpriteData
 
     private void PreLoadFaintedSprite()
     {
-        if (CurrentPokemon.IsFainted)
+        if (CurrentObject.IsFainted)
         {
             this.faintedSprite = loader.LoadFaintedSprite();
         }
@@ -79,25 +80,25 @@ public class PartySlotSpriteData
 
     private void PreLoadGenderSprite()
     {
-        this.genderSprite = loader.LoadGenderSprite(CurrentPokemon.Gender);
+        this.genderSprite = loader.LoadGenderSprite(CurrentObject.Gender);
     }
 
     private void PreLoadMoveSprites()
     {
         List<Sprite> moveSprites = new List<Sprite>();
-        foreach (var move in CurrentPokemon.LearnedMoves)
+        foreach (var move in CurrentObject.LearnedMoves)
         {
             moveSprites.Add(loader.LoadMoveDamageClassSprite(move.BaseMove.MoveDamageClass, false));
         }
         this.moveSpriteList = moveSprites;
     }
 
-    public bool AreSpritesReady()
+    public override bool AreSpritesReady()
     {
         if (pokemonSprite == null ||
-           (CurrentPokemon.HeldItem != null && itemSprite == null) ||
+           (CurrentObject.HeldItem != null && itemSprite == null) ||
            genderSprite == null ||
-           (CurrentPokemon.IsFainted && faintedSprite == null) ||
+           (CurrentObject.IsFainted && faintedSprite == null) ||
            typeSpriteList ==null ||
            typeSpriteList.Contains(null) ||
            moveSpriteList == null ||

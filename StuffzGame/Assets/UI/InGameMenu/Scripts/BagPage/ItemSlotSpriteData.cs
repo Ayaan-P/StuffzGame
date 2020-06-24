@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class ItemSlotSpriteData
+public class ItemSlotSpriteData : SpriteSlotData<Item>
 {
-    public Item CurrentItem { get; }
+    public override Item CurrentObject { get; }
 
     private readonly SpriteLoader loader;
     private Sprite itemSprite;
@@ -10,20 +10,20 @@ public class ItemSlotSpriteData
 
     public ItemSlotSpriteData(Item item)
     {
-        this.CurrentItem = item;
+        this.CurrentObject = item;
         this.loader = new SpriteLoader();
     }
 
-    public void PreLoadSprites()
+    public override void PreLoadSprites()
     {
         PreLoadItemSprite();
     }
 
     private void PreLoadItemSprite()
     {
-        if (CurrentItem != null)
+        if (CurrentObject != null)
         {
-            this.itemSprite = loader.LoadItemSprite(CurrentItem.Name);
+            this.itemSprite = loader.LoadItemSprite(CurrentObject.Name);
         }
         else
         {
@@ -31,7 +31,7 @@ public class ItemSlotSpriteData
         }
     }
 
-    public bool AreSpritesReady()
+    public override bool AreSpritesReady()
     {
         return itemSprite != null;
     }

@@ -66,7 +66,7 @@ public class SwapListen : MonoBehaviour, IPointerClickHandler
     private void ToggleHighlightedState(bool toggle)
     {
         Button swapButton = this.transform.GetComponentInChildren<Button>(true);
-        Draggable draggable = this.transform.GetComponentInChildren<Draggable>(true);
+        DraggablePokemonSlot draggable = this.transform.GetComponentInChildren<DraggablePokemonSlot>(true);
 
         if (swapButton != null && draggable != null)
         {

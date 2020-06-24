@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggablePokemonSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Transform NewParent { get; set; }
     private Transform originalParent;
