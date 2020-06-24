@@ -15,23 +15,23 @@ public class StatMapper : DataMapper
         this.StatList = (JsonObject[FileName] as JArray).Select(obj => obj as JObject).ToList();
     }
 
-    public override object GetObjectById(int id)
+    public override T GetObjectById<T>(int id)
     {
         JObject stat = StatList.Where(it => (int)it["id"] == id).SingleOrDefault();
         if (stat != null)
         {
          
-            return new BasePokemonStat
+            return (T) Convert.ChangeType( new BasePokemonStat
             {
                 Id = stat["id"].Value<int>(),
                 IsBattleOnly = stat["is_battle_only"].Value<bool>(),
                 DamageClass = ((string)stat["move_damage_class"] != null)? ParseDamageClass(stat["move_damage_class"].Value<string>()) : MoveDamageClass.NULL,
                 Name = ((string)stat["name"] != null) ? ParseStatName(stat["name"].Value<string>()) : StatName.NULL,
-            };
+            }, typeof(T));
         }
 
         UnityEngine.Debug.LogWarning($"No stat found for stat ID: {id}");
-        return null;
+        return default;
     }
 
     private MoveDamageClass ParseDamageClass(string str)

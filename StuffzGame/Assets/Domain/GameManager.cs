@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class GameManager : Singleton
@@ -80,9 +82,9 @@ public class GameManager : Singleton
         System.Random rand = new System.Random();
         int[] pokemonIds = new int[] { rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231) };
         int[] itemIds = new int[] { rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101) };
-        float[] hpPercents = new float[] { (float)rand.NextDouble(), 0.0f, (float)rand.NextDouble(), (float)rand.NextDouble(), 1.0f, (float)rand.NextDouble() };
-
-        for (int i = 0; i < 6; i++)
+        float[] hpPercents = new float[] { (float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble() };
+        int size = rand.Next(3, 7);
+        for (int i = 0; i < size; i++)
         {
             int randLevel = rand.Next(15, 101);
             Pokemon randPokemon = pokemonFactory.CreatePokemon(pokemonIds[i], randLevel);
@@ -94,14 +96,21 @@ public class GameManager : Singleton
             }
             Item randItem = itemFactory.CreateItem(itemIds[i]);
             randPokemon.HeldItem = randItem;
-            player.AddPokemonToParty(randPokemon);
+            player.Party.Add(randPokemon);
+            player.Inventory.Add(randItem);
+        }
+        Item newRandItem = itemFactory.CreateItem(107);
+        for (int j = 0; j< 20; j++)
+        {
+            player.Inventory.Add(newRandItem);
         }
     }
+
 }
 
 public abstract class Singleton : MonoBehaviour
 {
-    public static bool Quitting { get; private set; }
+    public static bool Quitting { get; private set; } = false;
 
     private void OnApplicationQuit()
     {

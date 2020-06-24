@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,23 +15,23 @@ public class GrowthRateMapper : DataMapper
         this.ExpGrowthRateList = (JsonObject[FileName] as JArray).Select(obj => obj as JObject).ToList();
     }
 
-    public override object GetObjectById(int id)
+    public override T GetObjectById<T>(int id)
     {
 
         JObject expGrowthRate = ExpGrowthRateList.Where(it => (int)it["id"] == id).SingleOrDefault();
         if (expGrowthRate != null)
         {
-            return new PokemonGrowthRate
+            return (T) Convert.ChangeType(new PokemonGrowthRate
             {
                 Description = expGrowthRate["description"].Value<string>(),
                 Formula = expGrowthRate["formula"].Value<string>(),
                 Id = expGrowthRate["id"].Value<int>(),
                 LevelExperienceDict = GetLevelExperienceDict(expGrowthRate["levels"].Value<JArray>()),
                 Name = expGrowthRate["name"].Value<string>()
-            };
+            },typeof(T));
         }
         UnityEngine.Debug.LogWarning($"No EXP Growth Rate found for ID: {id}");
-        return null;
+        return default;
     }
 
 

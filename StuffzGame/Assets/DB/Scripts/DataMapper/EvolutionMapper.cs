@@ -16,12 +16,12 @@ public class EvolutionMapper : DataMapper
         this.EvolutionList = (JsonObject[FileName] as JArray).Select(obj => obj as JObject).ToList();
     }
 
-    public override object GetObjectById(int id)
+    public override T GetObjectById<T>(int id)
     {
         throw new InvalidOperationException($"{nameof(EvolutionMapper)} does not support this method. Instead call {nameof(GetEvolutionFromSpeciesID)}");
     }
 
-    public override object GetEvolutionFromSpeciesID(int speciesId, int evolutionChainId)
+    public override T GetEvolutionFromSpeciesID<T>(int speciesId, int evolutionChainId)
     {
         JObject evolution = EvolutionList.Where(it => (int)it["id"] == evolutionChainId).SingleOrDefault();
         if (evolution != null)
@@ -33,18 +33,18 @@ public class EvolutionMapper : DataMapper
 
             if (obj != null)
             {
-                return new PokemonEvolution
+                return (T)Convert.ChangeType(new PokemonEvolution
                 {
                     BabyTriggerItemId = babyTriggerItemId,
                     Id = evolutionId,
                     IsBabyPokemon = obj["is_baby"].Value<bool>(),
                     PokemonSpeciesId = JSONParsingUtil.GetIdFromJObject(obj["species"]),
                     EvolutionDetails = GetEvolutionDetails(obj["evolution_details"].Value<JArray>())
-                };
+                },typeof(T));
             }
         }
         UnityEngine.Debug.LogWarning($"No evolution found for species: {speciesId} and evolutionChain: {evolutionChainId}");
-        return null;
+        return default;
     }
 
     private JObject GetEvolutionHelper(JObject chain, int speciesId)

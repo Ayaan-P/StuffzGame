@@ -15,12 +15,12 @@ public class NatureMapper : DataMapper
         this.NatureList = (JsonObject[FileName] as JArray).Select(obj => obj as JObject).ToList();
     }
 
-    public override object GetObjectById(int id)
+    public override T GetObjectById<T>(int id)
     {
         JObject nature = NatureList.Where(it => (int)it["id"] == id).SingleOrDefault();
         if (nature != null)
         {
-            return new PokemonNatureTemplate
+            return (T) Convert.ChangeType(new PokemonNatureTemplate
             {
                Id = nature["id"].Value<int>(),
                Name= ParseNature(nature["name"].Value<string>()),
@@ -28,11 +28,11 @@ public class NatureMapper : DataMapper
                DecreasedStatId = JSONParsingUtil.GetIdFromJObject(nature["decreased_stat"]),
                LikedBerryFlavor = (BerryFlavor)JSONParsingUtil.GetIdFromJObject(nature["likes_flavor"]),
                DislikedBerryFlavor = (BerryFlavor)JSONParsingUtil.GetIdFromJObject(nature["hates_flavor"])
-            };
+            }, typeof(T));
         }
 
         UnityEngine.Debug.LogWarning($"No nature found for nature ID: {id}");
-        return null;
+        return default;
 
     }
 

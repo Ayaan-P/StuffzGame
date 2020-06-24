@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 public class ItemMapper : DataMapper
@@ -13,12 +14,12 @@ public class ItemMapper : DataMapper
         this.ItemList = (JsonObject[FileName] as JArray).Select(obj => obj as JObject).ToList();
     }
 
-    public override object GetObjectById(int id)
+    public override T GetObjectById<T>(int id)
     {
         JObject item = ItemList.Where(it => (int)it["id"] == id).SingleOrDefault();
         if (item != null)
         {
-            return new Item
+            return (T) Convert.ChangeType( new Item
             {
                 Attributes = (item["attributes"].Value<JArray>().Count!=0)? item["attributes"].Value<JArray>().Select(it => (ItemAttribute)JSONParsingUtil.GetIdFromJObject(it)).ToList() : new List<ItemAttribute>(),
                 BabyTriggerForEvolutionId = JSONParsingUtil.GetIdFromJObject(item["baby_trigger_for"]),
@@ -30,11 +31,11 @@ public class ItemMapper : DataMapper
                 FlingPower = item["fling_power"]?.Value<int?>(),
                 Id = item["id"].Value<int>(),
                 Name = item["name"].Value<string>()
-            };
+            },typeof(T));
         }
 
         UnityEngine.Debug.LogWarning($"No item found for item ID: {id}");
-        return null;
+        return default;
     }
 
 }

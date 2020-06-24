@@ -12,7 +12,7 @@ public class BasePokemonFactory
     public BasePokemon CreateBasePokemon(int id)
     {
         DataMapper pokemonMapper = MapperFactory.GetMapper(MapperName.POKEMON_MAPPER);
-        BasePokemonTemplate pokemonTemplate = pokemonMapper.GetObjectById(id) as BasePokemonTemplate;
+        BasePokemonTemplate pokemonTemplate = pokemonMapper.GetObjectById<BasePokemonTemplate>(id);
         if(pokemonTemplate!= null)
         {
             return new BasePokemon
@@ -46,7 +46,7 @@ public class BasePokemonFactory
             bool isHidden = pokemonTemplate.IsAbilityHiddenList[i];
             int slot = pokemonTemplate.AbilitySlotList[i];
 
-            BasePokemonAbility baseAbility = abilityMapper.GetObjectById(abilityId) as BasePokemonAbility;
+            BasePokemonAbility baseAbility = abilityMapper.GetObjectById<BasePokemonAbility>(abilityId);
 
             PokemonAbility ability = new PokemonAbility
             {
@@ -71,12 +71,12 @@ public class BasePokemonFactory
             int moveId = pokemonTemplate.PossibleMoveIdList[i];
             List<MoveLearnDetails> moveLearnDetails = pokemonTemplate.MoveLearnDetailsList[i];
 
-            BasePokemonMoveTemplate baseMoveTemplate = moveMapper.GetObjectById(moveId) as BasePokemonMoveTemplate;
+            BasePokemonMoveTemplate baseMoveTemplate = moveMapper.GetObjectById<BasePokemonMoveTemplate>(moveId);
             Dictionary<BasePokemonStat, int> statChangesDict = new Dictionary<BasePokemonStat, int>();
 
             foreach (int baseStatId in baseMoveTemplate.StatChangesIdDict.Keys)
             {
-                BasePokemonStat baseStat = statMapper.GetObjectById(baseStatId) as BasePokemonStat;
+                BasePokemonStat baseStat = statMapper.GetObjectById<BasePokemonStat>(baseStatId);
                 int baseStatValue = baseMoveTemplate.StatChangesIdDict[baseStatId];
 
                 statChangesDict.Add(baseStat, baseStatValue);
@@ -131,13 +131,13 @@ public class BasePokemonFactory
 
         int pokemonSpeciesId = pokemonTemplate.SpeciesId;
 
-        PokemonSpeciesTemplate speciesTemplate = speciesMapper.GetObjectById(pokemonSpeciesId) as PokemonSpeciesTemplate;
+        PokemonSpeciesTemplate speciesTemplate = speciesMapper.GetObjectById<PokemonSpeciesTemplate>(pokemonSpeciesId);
         int evolvesFromSpeciesId = speciesTemplate.EvolvesFromSpeciesId;
         int evolutionId = speciesTemplate.EvolvesFromChainId;
         int growthRateId = speciesTemplate.GrowthRateId;
 
-        PokemonEvolution evolvesFrom = evolutionMapper.GetEvolutionFromSpeciesID(evolvesFromSpeciesId, evolutionId) as PokemonEvolution;
-        PokemonGrowthRate growthRate = growthRateMapper.GetObjectById(growthRateId) as PokemonGrowthRate;
+        PokemonEvolution evolvesFrom = evolutionMapper.GetEvolutionFromSpeciesID<PokemonEvolution>(evolvesFromSpeciesId, evolutionId);
+        PokemonGrowthRate growthRate = growthRateMapper.GetObjectById<PokemonGrowthRate>(growthRateId);
 
         PokemonSpecies pokemonSpecies = new PokemonSpecies
         {
@@ -174,7 +174,7 @@ public class BasePokemonFactory
             int EVsGainedOnDefeat = pokemonTemplate.EVsGainedOnDefeatList[i];
             int baseStatValue = pokemonTemplate.BaseStatValueList[i];
 
-            BasePokemonStat basePokemonStat = statMapper.GetObjectById(baseStatId) as BasePokemonStat;
+            BasePokemonStat basePokemonStat = statMapper.GetObjectById<BasePokemonStat>(baseStatId);
 
             PokemonStat pokemonStat = new PokemonStat
             {

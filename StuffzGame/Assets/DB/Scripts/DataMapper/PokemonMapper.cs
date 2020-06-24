@@ -15,7 +15,7 @@ public class PokemonMapper : DataMapper
         this.PokemonList = (JsonObject[FileName] as JArray).Select(obj => obj as JObject).ToList();
     }
 
-    public override object GetObjectById(int id)
+    public override T GetObjectById<T>(int id)
     {
         JObject pokemon = PokemonList.Where(it => (int)it["id"] == id).SingleOrDefault();
         if (pokemon != null)
@@ -35,7 +35,7 @@ public class PokemonMapper : DataMapper
             List<int> baseStatValueList = statWrapperList.Select(it => it.StatValue).ToList();
 
 
-            return new BasePokemonTemplate
+            return (T) Convert.ChangeType( new BasePokemonTemplate
             {
                 AbilityIdList = abilityIdList,
                 IsAbilityHiddenList = abilityIsHiddenList,
@@ -55,12 +55,12 @@ public class PokemonMapper : DataMapper
                 Types = pokemon["types"].Value<JArray>().Select(it => (PokemonType)JSONParsingUtil.GetIdFromJObject(it)).ToList(),
                 Weight = pokemon["weight"].Value<int>()
 
-            };
+            }, typeof(T));
           
         }
 
         UnityEngine.Debug.LogWarning($"No pokemon found for pokemon ID: {id}");
-        return null;
+        return default;
     }
 
    

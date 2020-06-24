@@ -15,12 +15,12 @@ public class BerryMapper : DataMapper
         this.BerryList = (JsonObject[FileName] as JArray).Select(obj => obj as JObject).ToList();
     }
 
-    public override object GetObjectById(int id)
+    public override T GetObjectById<T>(int id)
     {
         JObject berry = BerryList.Where(it => (int)it["id"] == id).SingleOrDefault();
         if (berry != null)
         {
-            return new Berry
+            return (T) Convert.ChangeType(new Berry
             {
                 Firmness = ParseBerryFirmness(berry["firmness"].Value<string>()),
                 Flavors = berry["flavors"].Select(flavor => ParseBerryFlavor(flavor.Value<string>())).ToList(),
@@ -33,11 +33,11 @@ public class BerryMapper : DataMapper
                 Size = berry["size"].Value<int>(),
                 Smoothness = berry["smoothness"].Value<int>(),
                 Soil_dryness = berry["soil_dryness"].Value<int>()
-            };
+            },typeof(T));
         }
 
         UnityEngine.Debug.LogWarning($"No berry found for berry ID: {id}");
-        return null;
+        return default;
     }
 
     private BerryFlavor ParseBerryFlavor(string str)

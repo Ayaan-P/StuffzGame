@@ -1,17 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : Singleton
 {
     private static Player _instance;
     private static readonly object Lock = new object(); //thread-safe volatile locking
+
     [SerializeField]
     private bool _persistent = true;
-    private readonly int MAX_PARTY_SIZE = 6;
+
     public PlayerInventory Inventory { get; } = new PlayerInventory();
-    public List<Pokemon> PlayerParty { get; } = new List<Pokemon>();
+    public PlayerParty Party { get; } = new PlayerParty();
+
+
     #region Singleton
+
     public static Player Instance
     {
         get
@@ -56,7 +58,8 @@ public class Player : Singleton
             }
         }
     }
-    #endregion
+
+    #endregion Singleton
 
     private void Awake()
     {
@@ -73,26 +76,12 @@ public class Player : Singleton
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
-
-    public void AddPokemonToParty(Pokemon pokemon)
-    {
-        if(PlayerParty.Count < MAX_PARTY_SIZE)
-        {
-            PlayerParty.Add(pokemon);
-        }
-        else
-        {
-            // Add pokemon to PC instead.
-        }
     }
 }

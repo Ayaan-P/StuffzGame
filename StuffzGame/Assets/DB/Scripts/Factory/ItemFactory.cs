@@ -13,8 +13,9 @@
     public Item CreateItem(int id)
     {
         DataMapper itemMapper = MapperFactory.GetMapper(MapperName.ITEM_MAPPER);
-        if (itemMapper.GetObjectById(id) is Item item)
+        if (itemMapper.GetObjectById<Item>(id) is Item item)
         {
+            item.Count = item.Attributes.Contains(ItemAttribute.COUNTABLE)? 1 : (int?) null;
             return item;
         }
         UnityEngine.Debug.LogError($"No item found with id: {id}");
@@ -24,7 +25,7 @@
     public Berry CreateBerry(int id)
     {
         DataMapper berryMapper = MapperFactory.GetMapper(MapperName.BERRY_MAPPER);
-        if (berryMapper.GetObjectById(id) is Berry berry)
+        if (berryMapper.GetObjectById<Berry>(id) is Berry berry)
         {
             return berry;
         }
@@ -35,7 +36,7 @@
     public Machine CreateTM(int id)
     {
         DataMapper machineMapper = MapperFactory.GetMapper(MapperName.MACHINE_MAPPER);
-        if (machineMapper.GetObjectById(id) is Machine tm)
+        if (machineMapper.GetObjectById<Machine>(id) is Machine tm)
         {
             return tm;
         }

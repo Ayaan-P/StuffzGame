@@ -59,14 +59,14 @@ public class PokemonFactory
         int numNatures = natureMapper.GetJSONObjectCount();
         int natureId = random.Next(1, numNatures);
 
-        PokemonNatureTemplate natureTemplate = natureMapper.GetObjectById(natureId) as PokemonNatureTemplate;
+        PokemonNatureTemplate natureTemplate = natureMapper.GetObjectById<PokemonNatureTemplate>(natureId);
         int increasedStatId = natureTemplate.IncreasedStatId;
         int decreasedStatId = natureTemplate.DecreasedStatId;
 
         DataMapper statMapper = MapperFactory.GetInstance().GetMapper(MapperName.STAT_MAPPER);
 
-        BasePokemonStat increasedStat = statMapper.GetObjectById(increasedStatId) as BasePokemonStat;
-        BasePokemonStat decreasedStat = statMapper.GetObjectById(decreasedStatId) as BasePokemonStat;
+        BasePokemonStat increasedStat = statMapper.GetObjectById<BasePokemonStat>(increasedStatId);
+        BasePokemonStat decreasedStat = statMapper.GetObjectById<BasePokemonStat>(decreasedStatId);
 
         return new PokemonNature
         {

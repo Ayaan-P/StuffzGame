@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,13 +15,13 @@ public class SpeciesMapper : DataMapper
         this.SpeciesList = (JsonObject[FileName] as JArray).Select(obj => obj as JObject).ToList();
     }
 
-    public override object GetObjectById(int id)
+    public override T GetObjectById<T>(int id)
     {
         JObject species = SpeciesList.Where(it => (int)it["id"] == id).SingleOrDefault();
         if (species != null)
         {
            
-            return new PokemonSpeciesTemplate
+            return (T) Convert.ChangeType( new PokemonSpeciesTemplate
             {
                 BaseHappiness = species["base_happiness"].Value<int>(),
                 CaptureRate = species["capture_rate"].Value<int>(),
@@ -39,11 +40,11 @@ public class SpeciesMapper : DataMapper
                 Name = species["name"].Value<string>(),
                 Order = species["order"].Value<int>(),
                 PokemonVarieties = GetPokemonVarietiesDict(species["varieties"].Value<JArray>())
-            };
+            }, typeof(T));
         }
 
         UnityEngine.Debug.LogWarning($"No species found for species ID: {id}");
-        return null;
+        return default;
     }
 
     private Dictionary<int, bool> GetPokemonVarietiesDict(JArray varieties)

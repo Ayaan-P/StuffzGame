@@ -1,25 +1,19 @@
-﻿using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.UI;
 
-public class SpriteLoader 
+public class SpriteLoader
 {
-    private bool enableDebug = false;
-    public bool IsReady()
-    {
-        return SyncAddressables.Ready;
-    }
+    private readonly bool enableDebug = true;
 
     public Sprite LoadPokemonSprite(int id, bool isShiny, SpriteType type)
     {
         string shinyChar = isShiny ? "s" : "";
         string formattedId = FormatId(id);
+
         string address = $"{GetAddressForSpriteType(type)}{formattedId}{shinyChar}.png";
         if (enableDebug) { Debug.Log($"Loading pokemon sprite at address: {address}"); }
         return GetSpriteAsync(address);
-
     }
 
     public Sprite LoadTypeSprite(PokemonType type)
@@ -27,7 +21,6 @@ public class SpriteLoader
         string address = $"Assets/Pokemon/Sprites/Types/{type.ToString().ToLower()}.png";
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
         return GetSpriteAsync(address);
-
     }
 
     public Sprite LoadGenderSprite(Gender gender)
@@ -35,7 +28,6 @@ public class SpriteLoader
         string address = $"Assets/Pokemon/Sprites/Gender/{gender.ToString().ToLower()}.png";
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
         return GetSpriteAsync(address);
-
     }
 
     public Sprite LoadFaintedSprite()
@@ -62,7 +54,6 @@ public class SpriteLoader
         else
         {
             address = $"Assets/Pokemon/Sprites/MoveDamageClass/{damageClass.ToString().ToLower()}.png";
-
         }
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
         return GetSpriteAsync(address);
@@ -70,13 +61,23 @@ public class SpriteLoader
 
     private Sprite GetSpriteAsync(string address)
     {
-        if (IsReady())
+        AsyncOperationHandle<Sprite> spriteHandle = Addressables.LoadAssetAsync<Sprite>(address);
+        if (!spriteHandle.IsDone)
         {
-            return SyncAddressables.LoadAsset<Sprite>(address);
+            if (enableDebug) { Debug.LogWarning($"Sprite only loaded {spriteHandle.PercentComplete * 100} %. Wait for completion."); }
+            return null;
         }
-        return null;
+
+        if (spriteHandle.Status == AsyncOperationStatus.Succeeded)
+        {
+            return spriteHandle.Result;
+        }
+        else
+        {
+            Debug.LogError($"Sprite not found at {address}");
+            return null;
+        }
     }
-  
 
     private string GetAddressForSpriteType(SpriteType type)
     {
@@ -87,7 +88,6 @@ public class SpriteLoader
             case SpriteType.BATTLE_BACK: return "Assets/Pokemon/Sprites/Back/";
             case SpriteType.SUMMARY_POKEMON: return "Assets/Pokemon/Sprites/Summary/";
             default: Debug.LogError($"No sprite address available for {type}"); return null;
-
         }
     }
 

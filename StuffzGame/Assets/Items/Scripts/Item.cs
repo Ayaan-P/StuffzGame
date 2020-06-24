@@ -15,7 +15,7 @@ public class Item
     public int? FlingPower { get; set; }
     public int Id { get; set; }
     public string Name { get; set; }
- 
+    public int? Count { get; set; }
   
     
    

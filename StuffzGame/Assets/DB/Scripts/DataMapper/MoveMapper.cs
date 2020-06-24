@@ -16,14 +16,14 @@ public class MoveMapper : DataMapper
         this.MoveList = (JsonObject[FileName] as JArray).Select(obj => obj as JObject).ToList();
     }
 
-    public override object GetObjectById(int id)
+    public override T GetObjectById<T>(int id)
     {
         JObject move = MoveList.Where(it => (int)it["id"] == id).SingleOrDefault();
         
         if (move != null)
         {
             JObject meta = move["meta"].Value<JObject>();
-            return new BasePokemonMoveTemplate
+            return (T) Convert.ChangeType( new BasePokemonMoveTemplate
             {
                 Accuracy = move["accuracy"]?.Value<int?>(),
                 MoveDamageClass = ParseDamageClass(move["damage_class"].Value<string>()),
@@ -50,11 +50,11 @@ public class MoveMapper : DataMapper
                 StatChangesIdDict = GetStatChangesIdDict(move["stat_changes"].Value<JArray>()),
                 Target = ParseTarget(move["target"].Value<string>()),
                 Type = (PokemonType)JSONParsingUtil.GetIdFromJObject(move["type"])
-            };
+            }, typeof(T));
         }
 
         UnityEngine.Debug.LogWarning($"No move found for move ID: {id}");
-        return null;
+        return default;
 
     }
 

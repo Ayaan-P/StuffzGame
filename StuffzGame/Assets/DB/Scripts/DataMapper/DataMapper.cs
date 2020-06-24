@@ -28,10 +28,10 @@ public abstract class DataMapper
         return (int)JsonObject[ObjectCountTag];
     }
 
-    public abstract object GetObjectById(int id);
+    public abstract T GetObjectById<T>(int id);
 
     // hook to be optionally overriden by subclasses.
-    public virtual object GetEvolutionFromSpeciesID(int speciesId, int evolutionChainId)
+    public virtual T GetEvolutionFromSpeciesID<T>(int speciesId, int evolutionChainId)
     {
         throw new InvalidOperationException($"{nameof(DataMapper)}.{nameof(GetEvolutionFromSpeciesID)} is a hook method. This method should be overidden by a subclass and called accordingly");
     }

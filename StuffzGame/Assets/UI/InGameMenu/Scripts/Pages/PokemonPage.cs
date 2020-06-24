@@ -9,58 +9,69 @@ public class PokemonPage : MonoBehaviour
     public GameObject partySlots;
     public GameObject pokemonSlot;
     public GameObject healthBar;
-    private SpriteLoader loader;
-    private bool partyLoaded;
-
-    // Start is called before the first frame update
-    private void Start()
+    private UIManager uiManager;
+     
+    private void OnEnable()
     {
-        loader = new SpriteLoader();
-        partyLoaded = false;
-    }
+        uiManager = UIManager.Instance;
+        GameObject swapText = this.transform.Find("SwapText").gameObject;
+        swapText.SetActive(false);
+        UpdatePartyUI();
 
-    // Update is called once per frame
-    private void Update()
-    {
-        if (loader.IsReady() && !partyLoaded)
-        {
-            UpdatePartyUI();
-        }
-        else
-        {
-            return;
-        }
     }
 
     private void UpdatePartyUI()
     {
-        Player player = Player.Instance;
-        List<Pokemon> party = player.PlayerParty;
 
         foreach (Transform child in partySlots.transform)
         {
             Destroy(child.gameObject);
         }
 
-        foreach (Pokemon pokemon in party)
+        foreach (PartySlotSpriteData slotData in uiManager.PartySlotDataList)
         {
             GameObject slot = Instantiate(pokemonSlot, partySlots.transform);
-            SetPokemonSlotDetails(pokemon, slot);
+            SetPokemonSlotDetails(slotData, slot);
         }
-        partyLoaded = true;
     }
 
-    private void SetPokemonSlotDetails(Pokemon pokemon, GameObject slot)
+    public void UpdateUIAtSlot(PartySlotSpriteData slotData, int index)
     {
-        SetTextComponents(pokemon, slot);
-        SetPokemonHPDetails(pokemon, slot);
-        SetImageComponents(pokemon, slot);
-        SetPokemonMoveDetails(pokemon, slot);
+        if (slotData == null)
+        {
+            Destroy(partySlots.transform.GetChild(index).gameObject);
+        }
+        else
+        {
+            GameObject slot;
+            if (partySlots.transform.childCount <= index)
+            {
+                slot = Instantiate(pokemonSlot, partySlots.transform);
+                SetPokemonSlotDetails(slotData, slot);
+            }
+            else
+            {
+                Destroy(partySlots.transform.GetChild(index).gameObject);
+                slot = Instantiate(pokemonSlot, partySlots.transform);
+                slot.transform.SetSiblingIndex(index);
+            }
+
+            SetPokemonSlotDetails(slotData, slot);
+        }
     }
 
-    private void SetImageComponents(Pokemon pokemon, GameObject slot)
+    private void SetPokemonSlotDetails(PartySlotSpriteData slotData, GameObject slot)
+    {
+        SetTextComponents(slotData.CurrentPokemon, slot);
+        SetPokemonHPDetails(slotData.CurrentPokemon, slot);
+        SetImageComponents(slotData, slot);
+        SetPokemonMoveDetails(slotData, slot);
+    }
+
+    private void SetImageComponents(PartySlotSpriteData slotData, GameObject slot)
     {
         int MAX_TYPES_COUNT = 2;
+        Pokemon pokemon = slotData.CurrentPokemon;
 
         Image[] imageComponents = slot.GetComponentsInChildren<Image>();
         Image slotBg = imageComponents[1];
@@ -71,11 +82,11 @@ public class PokemonPage : MonoBehaviour
         Image type1 = imageComponents[6];
         Image type2 = imageComponents[7];
 
-        pokemonImg.sprite = loader.LoadPokemonSprite(pokemon.BasePokemon.Id, pokemon.IsShiny, SpriteType.OVERWORLD_POKEMON);
+        pokemonImg.sprite = slotData.PokemonSprite;
 
         if (pokemon.HeldItem != null)
         {
-            itemImg.sprite = loader.LoadItemSprite(pokemon.HeldItem.Name);
+            itemImg.sprite = slotData.ItemSprite;
             itemImg.preserveAspect = true;
         }
         else
@@ -86,7 +97,7 @@ public class PokemonPage : MonoBehaviour
         if (pokemon.IsFainted)
         {
             slotBg.color = ColorPalette.GetColor(ColorName.FAINTED_RED);
-            faintedImg.sprite = loader.LoadFaintedSprite();
+            faintedImg.sprite = slotData.FaintedSprite;
             faintedImg.preserveAspect = true;
         }
         else
@@ -94,21 +105,21 @@ public class PokemonPage : MonoBehaviour
             faintedImg.color = new Color(0, 0, 0, 0);
         }
 
-        genderImg.sprite = loader.LoadGenderSprite(pokemon.Gender);
+        genderImg.sprite = slotData.GenderSprite;
         genderImg.preserveAspect = true;
 
         if (pokemon.BasePokemon.Types.Count == MAX_TYPES_COUNT)
         {
-            type1.sprite = loader.LoadTypeSprite(pokemon.BasePokemon.Types[0]);
+            type1.sprite = slotData.TypeSpriteList[0];
             type1.preserveAspect = true;
-            type2.sprite = loader.LoadTypeSprite(pokemon.BasePokemon.Types[1]);
+            type2.sprite = slotData.TypeSpriteList[1];
             type2.preserveAspect = true;
         }
         else
         {
-            type1.sprite = loader.LoadTypeSprite(pokemon.BasePokemon.Types[0]);
+            type1.sprite = slotData.TypeSpriteList[0];
             type1.preserveAspect = true;
-            type2.sprite = loader.LoadTypeSprite(PokemonType.NULL);
+            type2.sprite = slotData.TypeSpriteList[0];
             type2.preserveAspect = true;
             type2.color = new Color(0, 0, 0, 0);
         }
@@ -153,10 +164,10 @@ public class PokemonPage : MonoBehaviour
         hpSlider.value = hpStat.CurrentValue;
     }
 
-    private void SetPokemonMoveDetails(Pokemon pokemon, GameObject slot)
+    private void SetPokemonMoveDetails(PartySlotSpriteData slotData, GameObject slot)
     {
         int MAX_MOVES_COUNT = 4;
-      
+        Pokemon pokemon = slotData.CurrentPokemon;
         GameObject moveObjectList = slot.transform.Find("Moves").gameObject;
 
         List<PokemonMove> learnedMoves = pokemon.LearnedMoves;
@@ -168,7 +179,7 @@ public class PokemonPage : MonoBehaviour
         for (int i = 0; i < MAX_MOVES_COUNT; i++)
         {
             GameObject moveObject = moveObjectList.transform.GetChild(i).gameObject;
-            if (i>= numMoves)
+            if (i >= numMoves)
             {
                 moveObject.SetActive(false);
                 continue;
@@ -180,31 +191,18 @@ public class PokemonPage : MonoBehaviour
                 moveName = moveObject.GetComponentsInChildren<Text>()[0];
                 movePP = moveObject.GetComponentsInChildren<Text>()[1];
 
-                damageClass.sprite = loader.LoadMoveDamageClassSprite(move.BaseMove.MoveDamageClass, false);
+                damageClass.sprite = slotData.MoveSpriteList[i];
                 damageClass.preserveAspect = true;
 
                 moveName.text = FormatText(move.BaseMove.Name, false);
                 movePP.text = $"{move.CurrentPP}/{move.BaseMove.PP}";
             }
-           
         }
     }
 
     private string FormatText(string str, bool keepDashes)
     {
-        string str1;
-
-        if (!keepDashes)
-        {
-            //replace dashes with spaces
-            str1 = str.Replace('-', ' ');
-            
-        }
-        else
-        {
-            str1 = str;
-        }
-
+        string str1 = (keepDashes) ? str : str.Replace('-', ' ');
         // capitalize every word
         return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str1.ToLower());
     }
@@ -224,6 +222,7 @@ public class PokemonPage : MonoBehaviour
         {
             return ColorPalette.GetColor(ColorName.PRIMARY_YELLOW);
         }
+        //HP less than 10%
         else
         {
             return ColorPalette.GetColor(ColorName.PRIMARY_RED);
