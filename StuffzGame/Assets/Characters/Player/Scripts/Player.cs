@@ -7,7 +7,6 @@ public class Player : Singleton
 
     [SerializeField]
     private bool _persistent = true;
-
     public PlayerInventory Inventory { get; } = new PlayerInventory();
     public PlayerParty Party { get; } = new PlayerParty();
 
@@ -83,5 +82,7 @@ public class Player : Singleton
     // Update is called once per frame
     private void Update()
     {
+        
     }
+
 }

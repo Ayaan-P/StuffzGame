@@ -4,7 +4,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SpriteLoader
 {
-    private readonly bool enableDebug = true;
+    private readonly bool enableDebug = false;
 
     public Sprite LoadPokemonSprite(int id, bool isShiny, SpriteType type)
     {

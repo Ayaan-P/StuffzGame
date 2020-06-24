@@ -5,6 +5,7 @@ public class PokemonSpawner : MonoBehaviour
 {
     public GameObject WildPokemon;
     public GameObject player;
+    public GameObject Encounter_Data;
     public Sprite s;
     private float randX, randY;
     private int randpkmn;
@@ -42,6 +43,7 @@ public class PokemonSpawner : MonoBehaviour
             Pokemon pkmn = factory.CreatePokemon(randpkmn, randlvl);
             go.GetComponent<SpriteSwap>().Id = randpkmn;
 
+            go.GetComponent<PkmnController>().encounter_data=Encounter_Data;
             go.GetComponent<PkmnController>().player = player;
 
             go.GetComponent<PkmnController>().pokemon_name = pkmn.BasePokemon.Name;

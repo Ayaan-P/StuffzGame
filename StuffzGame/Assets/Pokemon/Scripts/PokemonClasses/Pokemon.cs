@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using UnityEngine;
 public class Pokemon
 {
     public BasePokemon BasePokemon { get; set; }
@@ -14,7 +14,6 @@ public class Pokemon
     public PokemonAbility CurrentAbility { get; set; }
     public Item HeldItem { get; set; }
     public bool IsFainted { get; set; }
-
     private readonly System.Random random;
 
     public Pokemon(System.Random random)
@@ -79,4 +78,46 @@ public class Pokemon
         builder.AppendLine($"Evolves from?: {BasePokemon?.Species?.EvolvesFrom?.PokemonSpeciesId.ToString() ?? "N/A"} }}");
         return builder.ToString();
     }
+
+    public bool TakeDamage(PokemonMove move, Pokemon enemy)
+    {
+        double base_damage = 0.0;
+        
+        int damage_class = (int) move.BaseMove.MoveDamageClass;
+        if(move.BaseMove.Power!=null)
+        {
+           if(damage_class==1)
+           {
+               PokemonStat spatkStat = enemy.BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.SPECIAL_ATTACK).SingleOrDefault();
+               PokemonStat spdefStat = BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.SPECIAL_DEFENSE).SingleOrDefault();
+               base_damage = (((2*CurrentLevel/5 +2)*(int)move.BaseMove.Power*spatkStat.CurrentValue/spdefStat.CurrentValue)/50 +2);
+               Debug.Log("specialmove");
+           }
+           else if(damage_class==2)
+           {
+               PokemonStat atkStat = enemy.BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.ATTACK).SingleOrDefault();
+               PokemonStat defStat = BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.DEFENSE).SingleOrDefault();
+               base_damage = (((2*CurrentLevel/5 +2)*(int)move.BaseMove.Power*atkStat.CurrentValue/defStat.CurrentValue)/50 +2);    
+               Debug.Log("physicalmove");
+           }
+
+        }
+        int currentHp = this.BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.HP).SingleOrDefault().CurrentValue;
+        Modifiers modifier = new Modifiers();
+        Debug.Log(currentHp + ","+this.BasePokemon.Name);
+        currentHp -= (int)( base_damage*modifier.CalculateModifier(enemy, this, move ));
+        Debug.Log(currentHp + ","+this.BasePokemon.Name);
+        
+        if(currentHp <= 0)
+        {      
+            this.BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.HP).SingleOrDefault().CurrentValue = 0;
+            return true; 
+        }
+        else
+        {
+            this.BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.HP).SingleOrDefault().CurrentValue = currentHp; 
+            return false;         
+        }
+    }
+
 }

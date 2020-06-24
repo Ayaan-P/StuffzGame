@@ -99,9 +99,10 @@ public class GameManager : Singleton
             player.Party.Add(randPokemon);
             player.Inventory.Add(randItem);
         }
-        Item newRandItem = itemFactory.CreateItem(107);
         for (int j = 0; j< 20; j++)
         {
+            int num = rand.Next(1, 100);
+            Item newRandItem = itemFactory.CreateItem(num);
             player.Inventory.Add(newRandItem);
         }
     }
