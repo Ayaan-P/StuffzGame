@@ -48,10 +48,13 @@ public class PkmnController: MonoBehaviour {
 				if(distance<=attack_radius)
 				{
 
-					GameObject Encounter_Data = Instantiate(encounter_data);
-					DontDestroyOnLoad(Encounter_Data);
+					//GameObject Encounter_Data = GameObject.Find("CurrentEncounter(Clone)");;
+					
 					// Encounter_Data.GetComponent<EncounterData>().pokemon_name = gameObject.GetComponent<SpriteSwap>().pokemon_name;
-					Encounter_Data.GetComponent<EncounterData>().current_enemy = wild_pokemon;
+					encounter_data.GetComponent<EncounterData>().current_enemy = wild_pokemon;
+					encounter_data.GetComponent<EncounterData>().pokemon_name = wild_pokemon.BasePokemon.Name;
+					Debug.Log(encounter_data.GetComponent<EncounterData>().current_enemy.BasePokemon.Name );
+					Debug.Log(pokemon_name );
 					SceneManager.LoadScene(1);
 				}
 			}

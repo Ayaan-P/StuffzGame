@@ -41,11 +41,11 @@ public class SpriteSwapBattle : MonoBehaviour
     public Sprite[] spriteArray;
     public bool done ;
     public bool shiny;
-    public bool front;
+    public string orientation;
     void Start()
     {
       
-        AsyncOperationHandle<Sprite[]> spriteHandle = Addressables.LoadAssetAsync<Sprite[]>("Assets/Pokemon/Sprites/Front/"+id+".png");
+        AsyncOperationHandle<Sprite[]> spriteHandle = Addressables.LoadAssetAsync<Sprite[]>("Assets/Pokemon/Sprites/"+orientation+"/"+id+".png");
         spriteHandle.Completed += LoadSpritesWhenReady;
         done=false;
     }   

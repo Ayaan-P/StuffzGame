@@ -11,10 +11,10 @@ public class loader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            loadBattle();
-        }
+        // if(Input.GetMouseButtonDown(0))
+        // {
+        //     loadBattle();
+        // }
     }
     public void loadBattle()
     {

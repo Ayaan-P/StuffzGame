@@ -7,9 +7,18 @@ using UnityEngine;
     // Start is called before the first frame update
     
         public Pokemon current_enemy { get; set; }
+        public List<Pokemon> Party { get; set; }
         public string pokemon_name ;
+        public bool persistent;
 
-   
+        void Start()
+        {
+            if(persistent)
+                DontDestroyOnLoad(gameObject);
+        }
+        void Update()
+        {
+        }
     }   
 
 

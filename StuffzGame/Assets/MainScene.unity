@@ -431,9 +431,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88f4d63ed5fd23498fe040bae12c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WildPokemon: {fileID: 7579254951464329679, guid: b87143c78b180ea4eaca3222e849d9e3,
+  WildPokemon: {fileID: 3584803001155169253, guid: b623686e26b5cf24fb08d49ef66e3488,
     type: 3}
   player: {fileID: 1617124652}
+  Encounter_Data: {fileID: 910261792}
   s: {fileID: 0}
   rate: 2
   currmobs: 0
@@ -2431,6 +2432,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &910261792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910261794}
+  - component: {fileID: 910261793}
+  m_Layer: 0
+  m_Name: CurrentEncounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &910261793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910261792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba173543f9cf4364c9a9c4ddfa312bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemon_name: 
+  persistent: 1
+--- !u!4 &910261794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910261792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5603647, y: -0.7940091, z: -2.3144531}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &936871125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,7 +2873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9034d54a63292c45954da7d33c85833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _persistent: 1
+  _persistent: 0
 --- !u!4 &1133462647
 Transform:
   m_ObjectHideFlags: 0
@@ -3467,6 +3513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 0
+  encounter_data: {fileID: 910261792}
 --- !u!95 &1617124659
 Animator:
   serializedVersion: 3

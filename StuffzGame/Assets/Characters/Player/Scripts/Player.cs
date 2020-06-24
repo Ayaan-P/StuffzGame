@@ -9,6 +9,8 @@ public class Player : Singleton
     [SerializeField]
     private bool _persistent = true;
     private readonly int MAX_PARTY_SIZE = 6;
+    public GameObject encounter_data;
+
     public PlayerInventory Inventory { get; } = new PlayerInventory();
     public List<Pokemon> PlayerParty { get; } = new List<Pokemon>();
     #region Singleton
@@ -75,7 +77,6 @@ public class Player : Singleton
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -89,9 +90,13 @@ public class Player : Singleton
         if(PlayerParty.Count < MAX_PARTY_SIZE)
         {
             PlayerParty.Add(pokemon);
+          
+			
+            //Debug.Log(encounter_data.GetComponent<EncounterData>().Party[0].BasePokemon.Name+"here");
         }
         else
         {
+            encounter_data.GetComponent<EncounterData>().Party = PlayerParty;
             // Add pokemon to PC instead.
         }
     }
