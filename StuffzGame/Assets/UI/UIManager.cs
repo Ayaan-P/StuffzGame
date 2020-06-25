@@ -153,8 +153,23 @@ public class UIManager : Singleton
         }
         else
         {
-            PartySlotSpriteData slotData = new PartySlotSpriteData(pokemon);
-            slotData.PreLoadSprites();
+            PartySlotSpriteData slotData;
+            SpriteSlotData<Pokemon> existingPokemonSlotData = PartySlotDataList.Where(it => it.CurrentObject.BasePokemon.Id == pokemon.BasePokemon.Id).FirstOrDefault();
+            if (existingPokemonSlotData != null)
+            {
+                slotData = new PartySlotSpriteData(pokemon)
+                {
+                    PokemonSprite = (existingPokemonSlotData as PartySlotSpriteData).PokemonSprite
+                };
+                slotData.PreLoadSprites();
+
+            }
+            else
+            {
+                slotData = new PartySlotSpriteData(pokemon);
+                slotData.PreLoadSprites();
+            }
+            
             if (index >= PartySlotDataList.Count)
             {
                 PartySlotDataList.Add(slotData);
@@ -174,13 +189,37 @@ public class UIManager : Singleton
         }
         else if (isOnlyDataChange)
         {
-            SpriteSlotData<Item> slotData =ItemSlotDataList.Where(it => ((it.CurrentObject) as Item).Id == item.Id).SingleOrDefault();
-            slotData.CurrentObject.Count = item.Count;
+            for(int i= 0; i < ItemSlotDataList.Count; i++)
+            {
+                SpriteSlotData<Item> slotData = ItemSlotDataList[i];
+                if((slotData.CurrentObject as Item).Id == item.Id)
+                {
+                    Debug.Log($"Found item to change count of. existing: {slotData.CurrentObject}, new: {item.Count}");
+                    ItemSlotDataList[i].CurrentObject.Count = item.Count;
+                    break;
+                }
+            }
+
         }
         else
         {
-            ItemSlotSpriteData slotData = new ItemSlotSpriteData(item);
-            slotData.PreLoadSprites();
+            ItemSlotSpriteData slotData;
+            SpriteSlotData<Item> existingItemSlotData = ItemSlotDataList.Where(it => it.CurrentObject.Id == item.Id).FirstOrDefault();
+            if (existingItemSlotData != null)
+            {
+                slotData = new ItemSlotSpriteData(item)
+                {
+                    ItemSprite = (existingItemSlotData as ItemSlotSpriteData).ItemSprite
+                };
+                slotData.PreLoadSprites();
+
+            }
+            else
+            {
+                slotData = new ItemSlotSpriteData(item);
+                slotData.PreLoadSprites();
+            }
+          
             if (index >= ItemSlotDataList.Count)
             {
                 ItemSlotDataList.Add(slotData);

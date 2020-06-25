@@ -68,14 +68,22 @@ public class SwapListen : MonoBehaviour, IPointerClickHandler
         Button swapButton = this.transform.GetComponentInChildren<Button>(true);
         DraggablePokemonSlot draggable = this.transform.GetComponentInChildren<DraggablePokemonSlot>(true);
 
-        if (swapButton != null && draggable != null)
+        if ( draggable != null)
         {
-            swapButton.transform.gameObject.SetActive(!toggle);
             draggable.enabled = !toggle;
         }
         else
         {
-            Debug.LogError($"Swap button or Draggable is null");
+            Debug.LogError($"Draggable is null");
+        }
+
+        if (swapButton != null)
+        {
+            swapButton.transform.gameObject.SetActive(!toggle);
+        }
+        else
+        {
+            Debug.LogError($"Swap button is null");
         }
 
         HighlightSlot(toggle);

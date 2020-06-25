@@ -95,15 +95,13 @@ public class GameManager : Singleton
                 randPokemon.IsFainted = true;
             }
             Item randItem = itemFactory.CreateItem(itemIds[i]);
-            randPokemon.HeldItem = randItem;
+            if(randItem.Attributes.Contains(ItemAttribute.HOLDABLE) ||
+                randItem.Attributes.Contains(ItemAttribute.HOLDABLE_ACTIVE)||
+                randItem.Attributes.Contains(ItemAttribute.HOLDABLE_PASSIVE))
+            {
+                randPokemon.HeldItem = randItem;
+            }
             player.Party.Add(randPokemon);
-            player.Inventory.Add(randItem);
-        }
-        for (int j = 0; j< 20; j++)
-        {
-            int num = rand.Next(1, 100);
-            Item newRandItem = itemFactory.CreateItem(num);
-            player.Inventory.Add(newRandItem);
         }
     }
 

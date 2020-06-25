@@ -172,8 +172,8 @@ public class PokemonFactory
 
     private PokemonAbility GenerateAbility(BasePokemon pokemon)
     {
-        // approx. 30% of hidden ability:
-        int HIDDEN_ABILITY_THRESHOLD = 21845;
+        // approx. 15% of hidden ability:
+        int HIDDEN_ABILITY_THRESHOLD = 9830;
         int LOWER_LIMIT = 0;
         int UPPER_LIMIT = 65535;
 

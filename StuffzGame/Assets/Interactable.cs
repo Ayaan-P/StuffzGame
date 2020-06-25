@@ -11,6 +11,7 @@ public class Interactable : MonoBehaviour
     private bool isSpriteLoaded;
     private SpriteLoader spriteLoader;
 
+
     private void Start()
     {
         ItemFactory itemFactory = new ItemFactory();
@@ -67,8 +68,17 @@ public class Interactable : MonoBehaviour
 
     private void LoadSprite(SpriteRenderer spriteRenderer)
     {
-        
-        Sprite itemSprite = spriteLoader.LoadItemSprite(item.Name);
+        Sprite itemSprite;
+        if (item.IsMachine)
+        {
+            itemSprite = spriteLoader.LoadTMSprite(item.Name, (item as Machine).TMType);
+
+        }
+        else
+        {
+            itemSprite = spriteLoader.LoadItemSprite(item.Name);
+
+        }
         if (itemSprite != null)
         {
             spriteRenderer.sprite = itemSprite;

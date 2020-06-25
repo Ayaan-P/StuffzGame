@@ -44,6 +44,14 @@ public class SpriteLoader
         return GetSpriteAsync(address);
     }
 
+    public Sprite LoadTMSprite(string name, PokemonType type)
+    {
+        string tmOrHM = name.Contains("tm") ? "tm" : "hm";
+        string address = $"Assets/Items/Sprites/{tmOrHM}-{type.ToString().ToLower()}.png";
+        if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
+        return GetSpriteAsync(address);
+    }
+
     public Sprite LoadMoveDamageClassSprite(MoveDamageClass damageClass, bool isLong)
     {
         string address;

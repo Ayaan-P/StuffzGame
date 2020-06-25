@@ -6,7 +6,7 @@ public class ItemSlotSpriteData : SpriteSlotData<Item>
 
     private readonly SpriteLoader loader;
     private Sprite itemSprite;
-    public Sprite ItemSprite { get => itemSprite; }
+    public Sprite ItemSprite { get => itemSprite; set => itemSprite = value; }
 
     public ItemSlotSpriteData(Item item)
     {
@@ -23,7 +23,15 @@ public class ItemSlotSpriteData : SpriteSlotData<Item>
     {
         if (CurrentObject != null)
         {
-            this.itemSprite = loader.LoadItemSprite(CurrentObject.Name);
+            if (CurrentObject.IsMachine)
+            {
+                this.itemSprite = loader.LoadTMSprite(CurrentObject.Name, (CurrentObject as Machine).TMType);
+            }
+            else
+            {
+                this.itemSprite = loader.LoadItemSprite(CurrentObject.Name);
+            }
+           
         }
         else
         {

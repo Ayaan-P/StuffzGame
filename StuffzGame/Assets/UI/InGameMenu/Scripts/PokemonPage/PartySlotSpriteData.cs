@@ -16,7 +16,7 @@ public class PartySlotSpriteData : SpriteSlotData<Pokemon>
     private Sprite faintedSprite;
     private List<Sprite> moveSpriteList;
 
-    public Sprite PokemonSprite { get => pokemonSprite; }
+    public Sprite PokemonSprite { get => pokemonSprite; set => pokemonSprite=value; }
     public Sprite ItemSprite { get => itemSprite; }
     public List<Sprite> TypeSpriteList { get => typeSpriteList; }
     public Sprite GenderSprite { get => genderSprite; }
@@ -48,7 +48,14 @@ public class PartySlotSpriteData : SpriteSlotData<Pokemon>
     {
         if (CurrentObject.HeldItem != null)
         {
-            this.itemSprite = loader.LoadItemSprite(CurrentObject.HeldItem.Name);
+            if (CurrentObject.HeldItem.IsMachine)
+            {
+                this.itemSprite = loader.LoadTMSprite(CurrentObject.HeldItem.Name, (CurrentObject.HeldItem as Machine).TMType);
+            }
+            else
+            {
+                this.itemSprite = loader.LoadItemSprite(CurrentObject.HeldItem.Name);
+            }
         }
         else
         {

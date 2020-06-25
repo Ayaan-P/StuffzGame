@@ -16,6 +16,9 @@ public class Item
     public int Id { get; set; }
     public string Name { get; set; }
     public int? Count { get; set; }
+    public ItemPocket Pocket { get; set; }
+    public bool IsBerry { get; set; }
+    public bool IsMachine { get; set; }
   
     
    

@@ -14,6 +14,14 @@ public class BagPage : MonoBehaviour
     public GameObject healthBar;
     private UIManager uiManager;
 
+    private List<ItemSlotSpriteData> MiscDataList;
+    private List<ItemSlotSpriteData> MedicineDataList;
+    private List<ItemSlotSpriteData> PokeballsDataList;
+    private List<ItemSlotSpriteData> MachinesDataList;
+    private List<ItemSlotSpriteData> BerriesDataList;
+    private List<ItemSlotSpriteData> BattleDataList;
+    private List<ItemSlotSpriteData> KeyDataList;
+
     private void OnEnable()
     {
         uiManager = UIManager.Instance;
@@ -68,9 +76,18 @@ public class BagPage : MonoBehaviour
         {
             icon.sprite = itemSprite;
         }
-        itemName.text = FormatText(currentItem.Name, false);
 
-        if (currentItem.Attributes.Contains(ItemAttribute.COUNTABLE)){
+        if (currentItem.IsMachine)
+        {
+            string tmFullName = $"{currentItem.Name.ToUpper()} - {FormatText((currentItem as Machine).MoveName, false)}";
+            itemName.text = tmFullName;
+        }
+        else
+        {
+            itemName.text = FormatText(currentItem.Name, false);
+        }
+
+        if (currentItem.Count!=null){
             itemCount.text = $"x {currentItem.Count}";
         }
         else

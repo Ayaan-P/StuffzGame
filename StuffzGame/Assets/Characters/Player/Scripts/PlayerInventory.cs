@@ -17,24 +17,37 @@ public class PlayerInventory
 
     public void Add(Item item)
     {
+        Debug.Log($"Added {item.Name}");
         bool isCountable = item.Attributes.Contains(ItemAttribute.COUNTABLE);
-        if (isCountable)
+        if (isCountable || item.Attributes.Count == 0)
         {
-            Item foundItem = ItemList.Where(it => it.Id == item.Id).SingleOrDefault();
-            if (foundItem != null)
+            //Debug.Log($"Countable! {item.Name}");
+            Item foundItem = null;
+            for (int i = 0; i < ItemList.Count; i++)
             {
-                foundItem.Count++;
-                OnInventoryItemChanged(foundItem, ItemList.Count - 1, true);
+                foundItem = ItemList[i];
+                if(foundItem.Id == item.Id)
+                {
+                    ItemList[i].Count++;
+                    OnInventoryItemChanged(ItemList[i], i, true);
+                    return;
+                }
+                foundItem = null;
+            }
+            if (foundItem == null)
+            {
+                item.Count = item.Count ?? 1;
+                ItemList.Add(item);
+                OnInventoryItemChanged(item, ItemList.Count - 1, false);
             }
             else
             {
-                item.Count = 1;
-                ItemList.Add(item);
-                OnInventoryItemChanged(item, ItemList.Count - 1, false);
+                Debug.LogError($"Item found in inventory but triggered error. This case should not be reached!");
             }
         }
         else
         {
+            //Debug.Log($"Uncountable! {item.Name}");
             ItemList.Add(item);
             OnInventoryItemChanged(item, ItemList.Count - 1, false);
         }
