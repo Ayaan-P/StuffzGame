@@ -47,6 +47,19 @@ public class SpeciesMapper : DataMapper
         return default;
     }
 
+    public List<int> GetSpeciesIdForSpeciesThatEvolveFrom(int id)
+    {
+        List<JObject> species = SpeciesList.Where(it => ((it["id"]["evolves_from_species"].Value<int?>()) ?? -2) == id).ToList();
+        if(species!=null)
+        {
+            return species.Select(it => it["id"].Value<int>()).ToList();
+        }
+        else
+        {
+            return new List<int>();
+        }
+    }
+
     private Dictionary<int, bool> GetPokemonVarietiesDict(JArray varieties)
     {
         Dictionary<int, bool> varietiesDict = new Dictionary<int, bool>();

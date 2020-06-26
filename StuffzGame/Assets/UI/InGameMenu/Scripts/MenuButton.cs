@@ -8,7 +8,6 @@ public class MenuButton : MonoBehaviour,IPointerEnterHandler, IPointerClickHandl
 
     public MenuGroup menuGroup;
 
-    // Start is called before the first frame update
     void OnEnable()
     {
         menuGroup.SubscribeButton(this);

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
@@ -43,6 +44,21 @@ public class Pokemon
         int minIV = 1;
         int maxIV = 31;
         return random.Next(minIV, maxIV + 1);   // Random.Next(a,b) 'b' is exclusive
+    }
+
+    public bool GiveItem(Item item)
+    {
+        if (item.Attributes.Contains(ItemAttribute.HOLDABLE) ||
+             item.Attributes.Contains(ItemAttribute.HOLDABLE_ACTIVE) ||
+             item.Attributes.Contains(ItemAttribute.HOLDABLE_PASSIVE))
+        {
+            this.HeldItem = item;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public override string ToString()
@@ -120,4 +136,40 @@ public class Pokemon
         }
     }
 
+    internal bool CanUseItem(Item item)
+    {
+        if (item.IsMachine)
+        {
+            Machine machine = item as Machine;
+            List<int> possibleMoveIdList = this.BasePokemon.PossibleMoveList.Select(it => it.BaseMove.Id).ToList();
+            if (possibleMoveIdList.Contains(machine.MoveId))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else if (item.Category == ItemCategory.EVOLUTION)
+        {
+            PokemonQuery pokemonQuery = new PokemonQuery();
+            List<BasePokemon> basePokemonList = pokemonQuery.GetEvolutionsFor(this);
+            foreach(BasePokemon basePokemon in basePokemonList)
+            {
+                foreach( EvolutionDetail evolutionDetail in basePokemon.Species.EvolvesFrom.EvolutionDetails)
+                {
+                    if(evolutionDetail.EvolutionItemId == item.Id)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

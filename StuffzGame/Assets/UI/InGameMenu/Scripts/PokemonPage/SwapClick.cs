@@ -9,14 +9,20 @@ public class SwapClick : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        int numSiblings = this.transform.parent.childCount;
         this.swapText = this.transform.parent.parent.Find("SwapText").gameObject;
         this.swapButton = GetComponentInChildren<UnityEngine.UI.Button>(true);
         if (swapButton == null)
         {
             Debug.LogError("PokemonPartySlot prefab has no Swap Button to listen to!");
         }
+        else if (numSiblings == 1)
+        {
+            this.swapButton.enabled = false;
+        }
         else
         {
+            this.swapButton.enabled = true;
             this.swapButton.onClick.AddListener(CheckIfAnotherSlotClicked);
         }
     }
