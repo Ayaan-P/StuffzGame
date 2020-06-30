@@ -136,7 +136,7 @@ public class Pokemon
         }
     }
 
-    internal bool CanUseItem(Item item)
+    internal bool? CanUseItem(Item item)
     {
         if (item.IsMachine)
         {
@@ -169,7 +169,7 @@ public class Pokemon
         }
         else
         {
-            return false;
+            return null;
         }
     }
 }

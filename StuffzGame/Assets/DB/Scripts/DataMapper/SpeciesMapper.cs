@@ -20,8 +20,7 @@ public class SpeciesMapper : DataMapper
         JObject species = SpeciesList.Where(it => (int)it["id"] == id).SingleOrDefault();
         if (species != null)
         {
-           
-            return (T) Convert.ChangeType( new PokemonSpeciesTemplate
+            return (T)Convert.ChangeType(new PokemonSpeciesTemplate
             {
                 BaseHappiness = species["base_happiness"].Value<int>(),
                 CaptureRate = species["capture_rate"].Value<int>(),
@@ -49,15 +48,19 @@ public class SpeciesMapper : DataMapper
 
     public List<int> GetSpeciesIdForSpeciesThatEvolveFrom(int id)
     {
-        List<JObject> species = SpeciesList.Where(it => ((it["id"]["evolves_from_species"].Value<int?>()) ?? -2) == id).ToList();
-        if(species!=null)
+        List<int> speciesId = new List<int>();
+        foreach (JObject speciesJObject in SpeciesList)
         {
-            return species.Select(it => it["id"].Value<int>()).ToList();
+            if (speciesJObject != null)
+            {
+                int evolvesFromId = JSONParsingUtil.GetIdFromJObject(speciesJObject["evolves_from_species"]);
+                if (evolvesFromId != -1 && evolvesFromId == id)
+                {
+                    speciesId.Add(speciesJObject["id"].Value<int>());
+                }
+            }
         }
-        else
-        {
-            return new List<int>();
-        }
+        return speciesId;
     }
 
     private Dictionary<int, bool> GetPokemonVarietiesDict(JArray varieties)

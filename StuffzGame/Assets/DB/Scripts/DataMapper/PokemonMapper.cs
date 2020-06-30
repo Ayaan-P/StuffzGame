@@ -65,16 +65,20 @@ public class PokemonMapper : DataMapper
 
    public int GetPokemonIdForSpeciesId(int id)
     {
-        JObject pokemon = PokemonList.Where(it => JSONParsingUtil.GetIdFromJObject(it["id"]["species"]) == id).SingleOrDefault();
-        if(pokemon!= null)
+        int pokemonId = -1;
+        foreach(JObject pokemon in PokemonList)
         {
-            return pokemon["id"].Value<int>();
+            if (pokemon != null)
+            {
+                int speciesId = JSONParsingUtil.GetIdFromJObject(pokemon["species"]);
+                if(speciesId == id)
+                {
+                    pokemonId = pokemon["id"].Value<int>();
+                    break;
+                }
+            }
         }
-        else
-        {
-            return -1;
-        }
-
+        return pokemonId;
     }
     private List<AbilityWrapper> GetAbilityInfo(JArray abilities)
     {

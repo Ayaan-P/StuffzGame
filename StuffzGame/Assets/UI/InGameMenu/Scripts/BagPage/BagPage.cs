@@ -18,13 +18,14 @@ public class BagPage : MonoBehaviour
     public Sprite descendingSortSprite;
 
     public GameObject sortByDropdown;
-    public GameObject filterDropdown;
     public GameObject searchInputField;
+    public GameObject descriptionData;
 
     private UIManager uiManager;
     private List<ItemPocketTab> pocketTabs;
-    public ItemPocket CurrentItemPocket { get; private set; }
+    public ItemPocket CurrentItemPocket { get; private set; } = ItemPocket.MISC;
     private Dictionary<ItemPocket, List<ItemSlotSpriteData>> pocketItemsDict;
+    private int? prevItemSelectedIndex;
 
     private void OnEnable()
     {
@@ -33,7 +34,6 @@ public class BagPage : MonoBehaviour
         uiManager = UIManager.Instance;
         UpdateInventoryUI();
         PopulateSortByDropdown();
-        PopulateFilterDropdown();
     }
 
     private void UpdateInventoryUI()
@@ -74,6 +74,8 @@ public class BagPage : MonoBehaviour
         foreach (ItemSlotSpriteData currentPocketSlotData in itemSlotDataList)
         {
             GameObject iSlot = Instantiate(itemSlot, itemSlots.transform);
+            ItemClick itemClick = iSlot.GetComponent<ItemClick>();
+            itemClick.bag = this;
             SetItemSlotDetails(currentPocketSlotData, iSlot);
         }
     }
@@ -150,6 +152,7 @@ public class BagPage : MonoBehaviour
         pokemonName.text = FormatText(pokemon.BasePokemon.Name, true);
         pokemonLevel.text = $"Lv. {pokemon.CurrentLevel}";
     }
+
     private void SetPokemonImageComponents(PartySlotSpriteData slotData, GameObject slot)
     {
         int MAX_TYPES_COUNT = 2;
@@ -203,6 +206,7 @@ public class BagPage : MonoBehaviour
             type2.color = new Color(0, 0, 0, 0);
         }
     }
+
     private void SetPokemonHPDetails(Pokemon pokemon, GameObject slot)
     {
         Text pokemonHP = slot.GetComponentsInChildren<Text>()[2];
@@ -248,17 +252,86 @@ public class BagPage : MonoBehaviour
         }
     }
 
+    public void OnItemClick(int itemIndex)
+    {
+        if (prevItemSelectedIndex != null && itemIndex != prevItemSelectedIndex)
+        {
+            itemSlots.transform.GetChild((int)prevItemSelectedIndex).GetComponent<ItemClick>().ResetItemBGSprite();
+        }
+        ItemSlotSpriteData selectedSlotData = this.pocketItemsDict[CurrentItemPocket][itemIndex];
+        UpdateItemDescription(selectedSlotData);
+        SetPokemonIsAble(selectedSlotData.CurrentObject);
+        prevItemSelectedIndex = itemIndex;
+    }
+
+    private void ResetPokemonAbleText()
+    {
+        for (int i = 0; i < pokemonSlots.transform.childCount; i++)
+        {
+            GameObject pSlot = pokemonSlots.transform.GetChild(i).gameObject;
+            Text isAbleText = pSlot.GetComponentsInChildren<Text>()[3];
+            isAbleText.text = "";
+        }
+    }
+
     public void SetPokemonIsAble(Item item)
     {
         var partySlotDataList = uiManager.PartySlotDataList;
-        for (int i=0;i< pokemonSlots.transform.childCount;i++)
+        for (int i = 0; i < pokemonSlots.transform.childCount; i++)
         {
             PartySlotSpriteData slotData = partySlotDataList[i] as PartySlotSpriteData;
             GameObject pSlot = pokemonSlots.transform.GetChild(i).gameObject;
             Text isAbleText = pSlot.GetComponentsInChildren<Text>()[3];
-            bool canUseItem = slotData.CurrentObject.CanUseItem(item);
+            bool? canUseItem = slotData.CurrentObject.CanUseItem(item);
+            if(canUseItem == null)
+            {
+                isAbleText.text = "";
+            }
+            else
+            {
+                isAbleText.text = (bool)canUseItem ? "ABLE" : "UNABLE";
+            }
+        }
+    }
 
-            isAbleText.text = canUseItem ? "ABLE" : "UNABLE";
+    private void UpdateItemDescription(ItemSlotSpriteData slotData)
+    {
+        if (descriptionData != null)
+        {
+            Item item = slotData.CurrentObject;
+
+            descriptionData.SetActive(true);
+            Image itemSprite = descriptionData.GetComponentInChildren<Image>();
+            Text[] textComponents = descriptionData.GetComponentsInChildren<Text>();
+            Text itemName = textComponents[0];
+            Text itemFlavorText = textComponents[1];
+            Text itemCost = textComponents[2];
+
+            itemSprite.sprite = slotData.ItemSprite;
+            if (item.IsMachine)
+            {
+                string tmFullName = $"{item.Name.ToUpper()} - {FormatText((item as Machine).MoveName, false)}";
+                itemName.text = tmFullName;
+            }
+            else
+            {
+                itemName.text = FormatText(item.Name, false);
+            }
+
+            if (item.FlavorText != null)
+            {
+                itemFlavorText.text = item.FlavorText.Replace("\n", " ");
+            }
+            else
+            {
+                itemFlavorText.text = "";
+            }
+
+            itemCost.text = $"Cost: {item.Cost}";
+        }
+        else
+        {
+            Debug.LogError("Description box is null");
         }
     }
 
@@ -281,6 +354,26 @@ public class BagPage : MonoBehaviour
         { ItemPocket.BATTLE, new List<ItemSlotSpriteData>()},
         { ItemPocket.KEY, new List<ItemSlotSpriteData>()},};
         isSortAscending = true;
+        ResetSelectedItem();
+        ResetPokemonAbleText();
+    }
+
+    private void ResetSelectedItem()
+    {
+        prevItemSelectedIndex = null;
+        ResetItemDescriptionBox();
+    }
+
+    private void ResetItemDescriptionBox()
+    {
+        if (descriptionData != null)
+        {
+            descriptionData.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("Cant Reset Description box, because it is null");
+        }
     }
 
     internal void SubscribeItemPocketTab(ItemPocketTab itemPocketTab)
@@ -303,34 +396,68 @@ public class BagPage : MonoBehaviour
     internal void OnItemPocketTabSelected(ItemPocketTab itemPocketTab)
     {
         ItemPocket selectedPocket = itemPocketTab.ItemPocket;
+        ResetSelectedItem();
+        ResetPokemonAbleText();
         CurrentItemPocket = selectedPocket;
         UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
     }
 
     private void PopulateSortByDropdown()
     {
-        List<string> options = Enum.GetNames(typeof(SortBy)).ToList();
+        List<string> options = new List<string>();
+        options.Add("Sort By");
+        options.AddRange(Enum.GetNames(typeof(SortBy)).ToList());
         Dropdown sortBy = sortByDropdown.GetComponent<Dropdown>();
+        //Destroy(sortByDropdown.GetComponentInChildren<Canvas>().gameObject);
         sortBy.ClearOptions();
         sortBy.AddOptions(options);
-    }
-
-    private void PopulateFilterDropdown()
-    {
-        List<string> options = Enum.GetNames(typeof(FilterBy)).ToList();
-
-        Dropdown filterBy = filterDropdown.GetComponent<Dropdown>();
-        filterBy.ClearOptions();
-        filterBy.AddOptions(options);
     }
 
     private void SetUpListeners()
     {
         Button sortDirectionButton = sortDirection.GetComponent<Button>();
         sortDirectionButton.onClick.AddListener(ChangeSortDirection);
-      
+
         InputField searchField = searchInputField.GetComponent<InputField>();
         searchField.onValueChanged.AddListener(SearchItems);
+
+        Dropdown sortDropdown = sortByDropdown.GetComponent<Dropdown>();
+        sortDropdown.onValueChanged.AddListener(SortPocketBy);
+    }
+
+    private void SortPocketBy(int index)
+    {
+
+        Dropdown sortDropdown = sortByDropdown.GetComponent<Dropdown>();
+        string selectedOption = sortDropdown.options[index].text;
+        if (Enum.TryParse<SortBy>(selectedOption, true, out SortBy option))
+        {
+            switch (option)
+            {
+                case SortBy.Name:
+                    pocketItemsDict[CurrentItemPocket].Sort((a, b) => a.CurrentObject.Name.CompareTo(b.CurrentObject.Name));
+                    UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
+                    break;
+
+                case SortBy.Cost:
+                    pocketItemsDict[CurrentItemPocket].Sort((a, b) => a.CurrentObject.Cost.CompareTo(b.CurrentObject.Cost));
+                    UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
+                    break;
+
+                case SortBy.Count:
+                    pocketItemsDict[CurrentItemPocket].Sort((a, b) => Nullable.Compare(a.CurrentObject.Count, b.CurrentObject.Count));
+                    UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
+                    break;
+
+                default:
+                    Debug.LogWarning($"{option} is not a member of enum SortBy for this dropdown");
+                    break;
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"{option} is not a member of enum SortBy for this dropdown");
+        }
     }
 
     private void SearchItems(string input)
@@ -338,18 +465,16 @@ public class BagPage : MonoBehaviour
         List<ItemSlotSpriteData> searchResults = new List<ItemSlotSpriteData>();
         foreach (var key in pocketItemsDict.Keys)
         {
-            foreach(var itemSlot in pocketItemsDict[key])
+            foreach (var itemSlot in pocketItemsDict[key])
             {
                 if (CultureInfo.CurrentCulture.CompareInfo.IndexOf(itemSlot.CurrentObject.Name, input, CompareOptions.IgnoreCase) >= 0)
                 {
-                   
                     searchResults.Add(itemSlot);
                 }
             }
         }
         if (searchResults.Count != 0)
         {
-
             UpdateCurrentItemPocketData(searchResults);
         }
     }
@@ -369,18 +494,11 @@ public class BagPage : MonoBehaviour
         pocketItemsDict[CurrentItemPocket].Reverse();
         UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
     }
-    enum SortBy
+
+    private enum SortBy
     {
         Name,
         Cost,
         Count
     }
-
-    enum FilterBy
-    {
-        Name,
-        Cost,
-        Count
-    }
-
 }

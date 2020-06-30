@@ -44,6 +44,16 @@ public static class ColorPalette
             {
                 Name = ColorName.SECONDARY_YELLOW,
                 Color = new Color(0.996f, 0.792f, 0.341f, 1)
+            },
+             new Entry
+            {
+                Name = ColorName.PRIMARY_GREY,
+                Color = new Color(0.427f, 0.431f, 0.443f, 1)
+            },
+              new Entry
+            {
+                Name = ColorName.SECONDARY_GREY,
+                Color = new Color(0.501f, 0.509f, 0.521f, 1)
             }
         };
 
@@ -70,5 +80,7 @@ public enum ColorName
     PRIMARY_GREEN,
     SECONDARY_GREEN,
     PRIMARY_YELLOW,
-    SECONDARY_YELLOW
+    SECONDARY_YELLOW,
+    PRIMARY_GREY,
+    SECONDARY_GREY,
 }
