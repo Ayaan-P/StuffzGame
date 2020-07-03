@@ -29,7 +29,7 @@ public class PlayerParty
         {
             Debug.Log($"Party full ({PartyPokemon.Count}). Adding {pokemon} to PC");
             // Add pokemon to PC instead.
-            PokemonPC PC = PokemonPC.GetInstance();
+            PokemonStorage PC = PokemonStorage.GetInstance();
             PC.AddPokemon(pokemon);
         }
     }

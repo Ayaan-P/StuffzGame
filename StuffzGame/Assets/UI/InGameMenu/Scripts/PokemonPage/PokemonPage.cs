@@ -17,7 +17,6 @@ public class PokemonPage : MonoBehaviour
         GameObject swapText = this.transform.Find("SwapText").gameObject;
         swapText.SetActive(false);
         UpdatePartyUI();
-
     }
 
     private void UpdatePartyUI()
@@ -28,14 +27,14 @@ public class PokemonPage : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        foreach (PartySlotSpriteData slotData in uiManager.PartySlotDataList)
+        foreach (PokemonSlotSpriteData slotData in uiManager.PartySlotDataList)
         {
             GameObject slot = Instantiate(pokemonSlot, partySlots.transform);
             SetPokemonSlotDetails(slotData, slot);
         }
     }
 
-    public void UpdateUIAtSlot(PartySlotSpriteData slotData, int index)
+    public void UpdateUIAtSlot(PokemonSlotSpriteData slotData, int index)
     {
         if (slotData == null)
         {
@@ -60,7 +59,7 @@ public class PokemonPage : MonoBehaviour
         }
     }
 
-    private void SetPokemonSlotDetails(PartySlotSpriteData slotData, GameObject slot)
+    private void SetPokemonSlotDetails(PokemonSlotSpriteData slotData, GameObject slot)
     {
         SetTextComponents(slotData.CurrentObject, slot);
         SetPokemonHPDetails(slotData.CurrentObject, slot);
@@ -68,7 +67,7 @@ public class PokemonPage : MonoBehaviour
         SetPokemonMoveDetails(slotData, slot);
     }
 
-    private void SetImageComponents(PartySlotSpriteData slotData, GameObject slot)
+    private void SetImageComponents(PokemonSlotSpriteData slotData, GameObject slot)
     {
         int MAX_TYPES_COUNT = 2;
         Pokemon pokemon = slotData.CurrentObject;
@@ -133,10 +132,10 @@ public class PokemonPage : MonoBehaviour
         Text abilityTitle = textComponents[3];
         Text abilityName = textComponents[4];
 
-        pokemonName.text = FormatText(pokemon.BasePokemon.Name, true);
+        pokemonName.text =  pokemon.Nickname ?? UIUtils.FormatText(pokemon.BasePokemon.Name, true);
         pokemonLevel.text = $"Lv. {pokemon.CurrentLevel}";
         abilityTitle.text = "Ability";
-        abilityName.text = FormatText(pokemon.CurrentAbility.BaseAbility.Name, false);
+        abilityName.text = UIUtils.FormatText(pokemon.CurrentAbility.BaseAbility.Name, false);
     }
 
     private void SetPokemonHPDetails(Pokemon pokemon, GameObject slot)
@@ -150,7 +149,7 @@ public class PokemonPage : MonoBehaviour
             pokemonHP.text = $"{hpStat.CurrentValue}/{hpStat.CalculatedValue}";
         }
 
-        Color hpColor = GetColorForHP(hpStat.CurrentValue, hpStat.CalculatedValue);
+        Color hpColor = UIUtils.GetColorForHP(hpStat.CurrentValue, hpStat.CalculatedValue);
         slotBorder.color = hpColor;
 
         // set HP slider via HealthBar prefab
@@ -164,7 +163,7 @@ public class PokemonPage : MonoBehaviour
         hpSlider.value = hpStat.CurrentValue;
     }
 
-    private void SetPokemonMoveDetails(PartySlotSpriteData slotData, GameObject slot)
+    private void SetPokemonMoveDetails(PokemonSlotSpriteData slotData, GameObject slot)
     {
         int MAX_MOVES_COUNT = 4;
         Pokemon pokemon = slotData.CurrentObject;
@@ -194,38 +193,9 @@ public class PokemonPage : MonoBehaviour
                 damageClass.sprite = slotData.MoveSpriteList[i];
                 damageClass.preserveAspect = true;
 
-                moveName.text = FormatText(move.BaseMove.Name, false);
+                moveName.text = UIUtils.FormatText(move.BaseMove.Name, false);
                 movePP.text = $"{move.CurrentPP}/{move.BaseMove.PP}";
             }
-        }
-    }
-
-    private string FormatText(string str, bool keepDashes)
-    {
-        string str1 = (keepDashes) ? str : str.Replace('-', ' ');
-        // capitalize every word
-        return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str1.ToLower());
-    }
-
-    private Color GetColorForHP(int currentHP, int maxHP)
-    {
-        float FIFTY_PERCENT = 0.5f;
-        float TEN_PERCENT = 0.1f;
-
-        float hpPercent = currentHP / (float)maxHP;
-
-        if (hpPercent >= FIFTY_PERCENT)
-        {
-            return ColorPalette.GetColor(ColorName.PRIMARY_GREEN);
-        }
-        else if (hpPercent > TEN_PERCENT && hpPercent < FIFTY_PERCENT)
-        {
-            return ColorPalette.GetColor(ColorName.PRIMARY_YELLOW);
-        }
-        //HP less than 10%
-        else
-        {
-            return ColorPalette.GetColor(ColorName.PRIMARY_RED);
         }
     }
 }

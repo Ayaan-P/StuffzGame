@@ -5,6 +5,11 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class SpriteLoader
 {
     private readonly bool enableDebug = false;
+    private SpritePool spritePool;
+    public SpriteLoader()
+    {
+        this.spritePool = SpritePool.GetInstance();
+    }
 
     public Sprite LoadPokemonSprite(int id, bool isShiny, SpriteType type)
     {
@@ -41,6 +46,7 @@ public class SpriteLoader
     {
         string address = $"Assets/Items/Sprites/{itemName}.png";
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
+
         return GetSpriteAsync(address);
     }
 
@@ -69,21 +75,32 @@ public class SpriteLoader
 
     private Sprite GetSpriteAsync(string address)
     {
-        AsyncOperationHandle<Sprite> spriteHandle = Addressables.LoadAssetAsync<Sprite>(address);
-        if (!spriteHandle.IsDone)
-        {
-            if (enableDebug) { Debug.LogWarning($"Sprite only loaded {spriteHandle.PercentComplete * 100} %. Wait for completion."); }
-            return null;
-        }
 
-        if (spriteHandle.Status == AsyncOperationStatus.Succeeded)
+        Sprite cachedSprite = spritePool.CheckPool(address);
+        if (cachedSprite != null)
         {
-            return spriteHandle.Result;
+            return cachedSprite;
         }
         else
         {
-            Debug.LogError($"Sprite not found at {address}");
-            return null;
+            AsyncOperationHandle<Sprite> spriteHandle = Addressables.LoadAssetAsync<Sprite>(address);
+            if (!spriteHandle.IsDone)
+            {
+                if (enableDebug) { Debug.LogWarning($"Sprite only loaded {spriteHandle.PercentComplete * 100} %. Wait for completion."); }
+                return null;
+            }
+
+            if (spriteHandle.Status == AsyncOperationStatus.Succeeded)
+            {
+                Sprite result = spriteHandle.Result;
+                spritePool.AddToPool(address, result);
+                return spriteHandle.Result;
+            }
+            else
+            {
+                Debug.LogError($"Sprite not found at {address}");
+                return null;
+            }
         }
     }
 

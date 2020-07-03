@@ -29,11 +29,16 @@ public class BagPage : MonoBehaviour
 
     private void OnEnable()
     {
-        SetUpListeners();
+        SetUpListeners(true);
         ResetPage();
         uiManager = UIManager.Instance;
         UpdateInventoryUI();
         PopulateSortByDropdown();
+    }
+
+    private void OnDisable()
+    {
+        SetUpListeners(false);
     }
 
     private void UpdateInventoryUI()
@@ -53,15 +58,25 @@ public class BagPage : MonoBehaviour
 
     private void UpdatePokemonSlots()
     {
-        foreach (Transform child in pokemonSlots.transform)
+        PartyUISection partyUISection = this.GetComponent<PartyUISection>();
+        
+        if(partyUISection== null)
         {
-            Destroy(child.gameObject);
+            Debug.LogError($"{nameof(PartyUISection)} script not attached!");
+            return;
         }
-
-        foreach (PartySlotSpriteData pokemonSlotData in uiManager.PartySlotDataList)
+        else
         {
-            GameObject pSlot = Instantiate(pokemonSlot, pokemonSlots.transform);
-            SetPokemonSlotDetails(pokemonSlotData, pSlot);
+            foreach (Transform child in pokemonSlots.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            foreach (PokemonSlotSpriteData pokemonSlotData in uiManager.PartySlotDataList)
+            {
+                GameObject pSlot = Instantiate(pokemonSlot, pokemonSlots.transform);
+                partyUISection.SetPokemonSlotDetails(pokemonSlotData, pSlot, healthBar);
+            }
         }
     }
 
@@ -115,12 +130,12 @@ public class BagPage : MonoBehaviour
 
         if (currentItem.IsMachine)
         {
-            string tmFullName = $"{currentItem.Name.ToUpper()} - {FormatText((currentItem as Machine).MoveName, false)}";
+            string tmFullName = $"{currentItem.Name.ToUpper()} - {UIUtils.FormatText((currentItem as Machine).MoveName, false)}";
             itemName.text = tmFullName;
         }
         else
         {
-            itemName.text = FormatText(currentItem.Name, false);
+            itemName.text = UIUtils.FormatText(currentItem.Name, false);
         }
 
         if (currentItem.Count != null)
@@ -130,125 +145,6 @@ public class BagPage : MonoBehaviour
         else
         {
             itemCount.text = "  -";
-        }
-    }
-
-    private void SetPokemonSlotDetails(PartySlotSpriteData pokemonSlotData, GameObject pSlot)
-    {
-        SetPokemonTextComponents(pokemonSlotData, pSlot);
-        SetPokemonImageComponents(pokemonSlotData, pSlot);
-        SetPokemonHPDetails(pokemonSlotData.CurrentObject, pSlot);
-    }
-
-    private void SetPokemonTextComponents(PartySlotSpriteData pokemonSlotData, GameObject pSlot)
-    {
-        Pokemon pokemon = pokemonSlotData.CurrentObject;
-        Text[] textComponents = pSlot.GetComponentsInChildren<Text>();
-
-        Text pokemonName = textComponents[0];
-        Text pokemonLevel = textComponents[1];
-        Text isAbleText = textComponents[3];
-        isAbleText.text = "";
-        pokemonName.text = FormatText(pokemon.BasePokemon.Name, true);
-        pokemonLevel.text = $"Lv. {pokemon.CurrentLevel}";
-    }
-
-    private void SetPokemonImageComponents(PartySlotSpriteData slotData, GameObject slot)
-    {
-        int MAX_TYPES_COUNT = 2;
-        Pokemon pokemon = slotData.CurrentObject;
-        Image[] imageComponents = slot.GetComponentsInChildren<Image>();
-        Image pokemonImage = imageComponents[1];
-        Image heldItemImage = imageComponents[2];
-        Image statusImage = imageComponents[3];
-        Image genderImage = imageComponents[4];
-        Image type1 = imageComponents[5];
-        Image type2 = imageComponents[6];
-
-        pokemonImage.sprite = slotData.PokemonSprite;
-
-        if (pokemon.HeldItem != null)
-        {
-            heldItemImage.sprite = slotData.ItemSprite;
-            heldItemImage.preserveAspect = true;
-        }
-        else
-        {
-            heldItemImage.color = new Color(0, 0, 0, 0);
-        }
-
-        if (pokemon.IsFainted)
-        {
-            statusImage.sprite = slotData.FaintedSprite;
-            statusImage.preserveAspect = true;
-        }
-        else
-        {
-            statusImage.color = new Color(0, 0, 0, 0);
-        }
-
-        genderImage.sprite = slotData.GenderSprite;
-        genderImage.preserveAspect = true;
-
-        if (pokemon.BasePokemon.Types.Count == MAX_TYPES_COUNT)
-        {
-            type1.sprite = slotData.TypeSpriteList[0];
-            type1.preserveAspect = true;
-            type2.sprite = slotData.TypeSpriteList[1];
-            type2.preserveAspect = true;
-        }
-        else
-        {
-            type1.sprite = slotData.TypeSpriteList[0];
-            type1.preserveAspect = true;
-            type2.sprite = slotData.TypeSpriteList[0];
-            type2.preserveAspect = true;
-            type2.color = new Color(0, 0, 0, 0);
-        }
-    }
-
-    private void SetPokemonHPDetails(Pokemon pokemon, GameObject slot)
-    {
-        Text pokemonHP = slot.GetComponentsInChildren<Text>()[2];
-
-        PokemonStat hpStat = pokemon.BasePokemon.Stats.Where(stat => stat.BaseStat.Name == StatName.HP).SingleOrDefault();
-        if (hpStat != null)
-        {
-            pokemonHP.text = $"{hpStat.CurrentValue}/{hpStat.CalculatedValue}";
-        }
-
-        Color hpColor = GetColorForHP(hpStat.CurrentValue, hpStat.CalculatedValue);
-
-        // set HP slider via HealthBar prefab
-        GameObject health = slot.transform.Find("Health").gameObject;
-        GameObject hpBar = Instantiate(healthBar, health.transform);
-        Image fill = hpBar.GetComponentsInChildren<Image>()[1];
-        fill.color = hpColor;
-        Slider hpSlider = hpBar.GetComponent<Slider>();
-        hpSlider.minValue = 0;
-        hpSlider.maxValue = hpStat.CalculatedValue;
-        hpSlider.value = hpStat.CurrentValue;
-    }
-
-    private Color GetColorForHP(int currentHP, int maxHP)
-    {
-        float FIFTY_PERCENT = 0.5f;
-        float TEN_PERCENT = 0.1f;
-
-        float hpPercent = currentHP / (float)maxHP;
-
-        if (hpPercent >= FIFTY_PERCENT)
-        {
-            return ColorPalette.GetColor(ColorName.PRIMARY_GREEN);
-        }
-        else if (hpPercent > TEN_PERCENT && hpPercent < FIFTY_PERCENT)
-        {
-            return ColorPalette.GetColor(ColorName.PRIMARY_YELLOW);
-        }
-        //HP less than 10%
-        else
-        {
-            return ColorPalette.GetColor(ColorName.PRIMARY_RED);
         }
     }
 
@@ -279,7 +175,7 @@ public class BagPage : MonoBehaviour
         var partySlotDataList = uiManager.PartySlotDataList;
         for (int i = 0; i < pokemonSlots.transform.childCount; i++)
         {
-            PartySlotSpriteData slotData = partySlotDataList[i] as PartySlotSpriteData;
+            PokemonSlotSpriteData slotData = partySlotDataList[i] as PokemonSlotSpriteData;
             GameObject pSlot = pokemonSlots.transform.GetChild(i).gameObject;
             Text isAbleText = pSlot.GetComponentsInChildren<Text>()[3];
             bool? canUseItem = slotData.CurrentObject.CanUseItem(item);
@@ -310,12 +206,12 @@ public class BagPage : MonoBehaviour
             itemSprite.sprite = slotData.ItemSprite;
             if (item.IsMachine)
             {
-                string tmFullName = $"{item.Name.ToUpper()} - {FormatText((item as Machine).MoveName, false)}";
+                string tmFullName = $"{item.Name.ToUpper()} - {UIUtils.FormatText((item as Machine).MoveName, false)}";
                 itemName.text = tmFullName;
             }
             else
             {
-                itemName.text = FormatText(item.Name, false);
+                itemName.text = UIUtils.FormatText(item.Name, false);
             }
 
             if (item.FlavorText != null)
@@ -333,13 +229,6 @@ public class BagPage : MonoBehaviour
         {
             Debug.LogError("Description box is null");
         }
-    }
-
-    private string FormatText(string str, bool keepDashes)
-    {
-        string str1 = (keepDashes) ? str : str.Replace('-', ' ');
-        // capitalize every word
-        return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str1.ToLower());
     }
 
     private void ResetPage()
@@ -404,25 +293,34 @@ public class BagPage : MonoBehaviour
 
     private void PopulateSortByDropdown()
     {
-        List<string> options = new List<string>();
-        options.Add("Sort By");
-        options.AddRange(Enum.GetNames(typeof(SortBy)).ToList());
+        List<string> options = new List<string>
+        {
+            "Sort By"
+        };
+        options.AddRange(Enum.GetNames(typeof(ItemSortBy)).ToList());
         Dropdown sortBy = sortByDropdown.GetComponent<Dropdown>();
-        //Destroy(sortByDropdown.GetComponentInChildren<Canvas>().gameObject);
         sortBy.ClearOptions();
         sortBy.AddOptions(options);
     }
 
-    private void SetUpListeners()
+    private void SetUpListeners(bool toggle)
     {
         Button sortDirectionButton = sortDirection.GetComponent<Button>();
-        sortDirectionButton.onClick.AddListener(ChangeSortDirection);
-
         InputField searchField = searchInputField.GetComponent<InputField>();
-        searchField.onValueChanged.AddListener(SearchItems);
-
         Dropdown sortDropdown = sortByDropdown.GetComponent<Dropdown>();
-        sortDropdown.onValueChanged.AddListener(SortPocketBy);
+
+        if (toggle)
+        {
+            sortDirectionButton.onClick.AddListener(ChangeSortDirection);
+            searchField.onValueChanged.AddListener(SearchItems);
+            sortDropdown.onValueChanged.AddListener(SortPocketBy);
+        }
+        else
+        {
+            sortDirectionButton.onClick.RemoveAllListeners();
+            searchField.onValueChanged.RemoveAllListeners();
+            sortDropdown.onValueChanged.RemoveAllListeners();
+        }
     }
 
     private void SortPocketBy(int index)
@@ -430,33 +328,33 @@ public class BagPage : MonoBehaviour
 
         Dropdown sortDropdown = sortByDropdown.GetComponent<Dropdown>();
         string selectedOption = sortDropdown.options[index].text;
-        if (Enum.TryParse<SortBy>(selectedOption, true, out SortBy option))
+        if (Enum.TryParse<ItemSortBy>(selectedOption, true, out ItemSortBy option))
         {
             switch (option)
             {
-                case SortBy.Name:
+                case ItemSortBy.Name:
                     pocketItemsDict[CurrentItemPocket].Sort((a, b) => a.CurrentObject.Name.CompareTo(b.CurrentObject.Name));
                     UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
                     break;
 
-                case SortBy.Cost:
+                case ItemSortBy.Cost:
                     pocketItemsDict[CurrentItemPocket].Sort((a, b) => a.CurrentObject.Cost.CompareTo(b.CurrentObject.Cost));
                     UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
                     break;
 
-                case SortBy.Count:
+                case ItemSortBy.Count:
                     pocketItemsDict[CurrentItemPocket].Sort((a, b) => Nullable.Compare(a.CurrentObject.Count, b.CurrentObject.Count));
                     UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
                     break;
 
                 default:
-                    Debug.LogWarning($"{option} is not a member of enum SortBy for this dropdown");
+                    Debug.LogWarning($"{option} is not a member of enum ItemSortBy for this dropdown");
                     break;
             }
         }
         else
         {
-            Debug.LogWarning($"{option} is not a member of enum SortBy for this dropdown");
+            Debug.LogWarning($"{option} is not a member of enum ItemSortBy for this dropdown");
         }
     }
 
@@ -495,7 +393,7 @@ public class BagPage : MonoBehaviour
         UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
     }
 
-    private enum SortBy
+    private enum ItemSortBy
     {
         Name,
         Cost,

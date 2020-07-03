@@ -1,6 +1,5 @@
-﻿using Boo.Lang;
-using System;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UIManager : Singleton
@@ -14,6 +13,8 @@ public class UIManager : Singleton
     private bool enableDebug = false;
     public List<SpriteSlotData<Pokemon>> PartySlotDataList { get; } = new List<SpriteSlotData<Pokemon>>();
     public List<SpriteSlotData<Item>> ItemSlotDataList { get; } = new List<SpriteSlotData<Item>>();
+    public List<SpriteSlotData<Pokemon>> StorageSlotDataList { get; } = new List<SpriteSlotData<Pokemon>>();
+
     public GameObject menu;
 
     #region Singleton
@@ -81,6 +82,9 @@ public class UIManager : Singleton
     // Use this for initialization
     private void Start()
     {
+        // start without menu active
+        menu.gameObject.SetActive(false);
+
         Player player = Player.Instance;
         if (player != null)
         {
@@ -96,20 +100,33 @@ public class UIManager : Singleton
             Debug.LogError($"{nameof(Player)} is null but shouldn't be.");
         }
 
-        // start without menu active
-        menu.gameObject.SetActive(false);
+        PokemonStorage storage = PokemonStorage.GetInstance();
+        storage.OnStoragePokemonChanged += ReloadStoragePokemonSlot;
+        if (enableDebug) { Debug.Log("subscribed UI Manager to OnStoragePokemonChanged"); }
+        storage.OnStoragePokemonSwapped += SwapStoragePokemonSlot;
+        if (enableDebug) { Debug.Log("subscribed UI Manager to OnStoragePokemonChanged"); }
+        storage.OnStorageDatasetChanged += SortStorageSlots;
+        if (enableDebug) { Debug.Log("subscribed UI Manager to OnStoragePokemonChanged"); }
+
     }
     private void OnDisable()
     {
         Player player = Player.Instance;
 
         // Causes Null pointer because Player is destroyed before UIManager can unsubscribe from it
-       // player.Party.OnPartyPokemonChanged -= ReloadPokemonPartySlot;
+        // player.Party.OnPartyPokemonChanged -= ReloadPokemonPartySlot;
         if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnPartyPokemonChanged"); }
         //player.Party.OnPartyPokemonSwapped -= SwapPokemonPartySlot;
         if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnPartyPokemonSwapped"); }
         //player.Inventory.OnInventoryItemChanged -= ReloadInventoryItemSlot;
         if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnInventoryItemChanged"); }
+
+       // storage.OnStoragePokemonChanged -= ReloadStoragePokemonSlot;
+        if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnStoragePokemonChanged"); }
+       // storage.OnStoragePokemonSwapped -= SwapStoragePokemonSlot;
+        if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnStoragePokemonChanged"); }
+        //storage.OnStorageDatasetChanged -= SortStorageSlots;
+        if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnStoragePokemonChanged"); }
     }
 
     // Update is called once per frame
@@ -118,6 +135,7 @@ public class UIManager : Singleton
         ToggleInGameMenu();
         LoadSpritesIfReady<Pokemon>(PartySlotDataList);
         LoadSpritesIfReady<Item>(ItemSlotDataList);
+        LoadSpritesIfReady<Pokemon>(StorageSlotDataList);
 
     }
 
@@ -144,7 +162,6 @@ public class UIManager : Singleton
         PartySlotDataList[secondIndex] = temp;
     }
 
-
     private void ReloadPokemonPartySlot(Pokemon pokemon, int index)
     {
         if (pokemon == null)
@@ -153,23 +170,9 @@ public class UIManager : Singleton
         }
         else
         {
-            PartySlotSpriteData slotData;
-            SpriteSlotData<Pokemon> existingPokemonSlotData = PartySlotDataList.Where(it => it.CurrentObject.BasePokemon.Id == pokemon.BasePokemon.Id).FirstOrDefault();
-            if (existingPokemonSlotData != null)
-            {
-                slotData = new PartySlotSpriteData(pokemon)
-                {
-                    PokemonSprite = (existingPokemonSlotData as PartySlotSpriteData).PokemonSprite
-                };
-                slotData.PreLoadSprites();
+            PokemonSlotSpriteData slotData = new PokemonSlotSpriteData(pokemon);
+            slotData.PreLoadSprites();
 
-            }
-            else
-            {
-                slotData = new PartySlotSpriteData(pokemon);
-                slotData.PreLoadSprites();
-            }
-            
             if (index >= PartySlotDataList.Count)
             {
                 PartySlotDataList.Add(slotData);
@@ -189,37 +192,22 @@ public class UIManager : Singleton
         }
         else if (isOnlyDataChange)
         {
-            for(int i= 0; i < ItemSlotDataList.Count; i++)
+            for (int i = 0; i < ItemSlotDataList.Count; i++)
             {
                 SpriteSlotData<Item> slotData = ItemSlotDataList[i];
-                if((slotData.CurrentObject as Item).Id == item.Id)
+                if ((slotData.CurrentObject as Item).Id == item.Id)
                 {
                     Debug.Log($"Found item to change count of. existing: {slotData.CurrentObject}, new: {item.Count}");
                     ItemSlotDataList[i].CurrentObject.Count = item.Count;
                     break;
                 }
             }
-
         }
         else
         {
-            ItemSlotSpriteData slotData;
-            SpriteSlotData<Item> existingItemSlotData = ItemSlotDataList.Where(it => it.CurrentObject.Id == item.Id).FirstOrDefault();
-            if (existingItemSlotData != null)
-            {
-                slotData = new ItemSlotSpriteData(item)
-                {
-                    ItemSprite = (existingItemSlotData as ItemSlotSpriteData).ItemSprite
-                };
-                slotData.PreLoadSprites();
+            ItemSlotSpriteData slotData = new ItemSlotSpriteData(item);
+            slotData.PreLoadSprites();
 
-            }
-            else
-            {
-                slotData = new ItemSlotSpriteData(item);
-                slotData.PreLoadSprites();
-            }
-          
             if (index >= ItemSlotDataList.Count)
             {
                 ItemSlotDataList.Add(slotData);
@@ -228,6 +216,43 @@ public class UIManager : Singleton
             {
                 ItemSlotDataList[index] = slotData;
             }
+        }
+    }
+
+    private void ReloadStoragePokemonSlot(Pokemon pokemon, int index)
+    {
+        if (pokemon == null)
+        {
+            StorageSlotDataList.RemoveAt(index);
+        }
+        else
+        {
+            PokemonSlotSpriteData slotData = new PokemonSlotSpriteData(pokemon);
+            slotData.PreLoadSprites();
+
+            if (index >= StorageSlotDataList.Count)
+            {
+                StorageSlotDataList.Add(slotData);
+            }
+            else
+            {
+                StorageSlotDataList[index] = slotData;
+            }
+        }
+    }
+
+    private void SwapStoragePokemonSlot(int firstIndex, int secondIndex)
+    {
+        SpriteSlotData<Pokemon> temp = StorageSlotDataList[firstIndex];
+        StorageSlotDataList[firstIndex] = StorageSlotDataList[secondIndex];
+        StorageSlotDataList[secondIndex] = temp;
+    }
+
+    private void SortStorageSlots(List<Pokemon> list)
+    {
+        for(int i=0;i< list.Count; i++)
+        {
+            ReloadStoragePokemonSlot(list[i], i);
         }
     }
 

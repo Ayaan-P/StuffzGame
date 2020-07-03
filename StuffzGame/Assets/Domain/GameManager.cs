@@ -78,21 +78,22 @@ public class GameManager : Singleton
         PokemonFactory pokemonFactory = new PokemonFactory();
         ItemFactory itemFactory = new ItemFactory();
         System.Random rand = new System.Random();
-        int[] pokemonIds = new int[] { rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231), rand.Next(1, 231) };
-        int[] itemIds = new int[] { rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101), rand.Next(1, 101) };
-        float[] hpPercents = new float[] { (float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble() };
-        int size = rand.Next(6, 7);
+        int size = rand.Next(30, 200);
         for (int i = 0; i < size; i++)
         {
             int randLevel = rand.Next(15, 101);
-            Pokemon randPokemon = pokemonFactory.CreatePokemon(pokemonIds[i], randLevel);
+            int randPokemonId = rand.Next(1, 700);
+            Pokemon randPokemon = pokemonFactory.CreatePokemon(randPokemonId, randLevel);
             PokemonStat hpStat = randPokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.HP).SingleOrDefault();
-            hpStat.CurrentValue = Convert.ToInt32(hpPercents[i] * hpStat.CalculatedValue);
-            if (hpPercents[i] <= float.Epsilon)
+            float hpPercent = (float)rand.NextDouble();
+
+            hpStat.CurrentValue = Convert.ToInt32(hpPercent * hpStat.CalculatedValue);
+            if (hpStat.CurrentValue <= float.Epsilon)
             {
                 randPokemon.IsFainted = true;
             }
-            Item randItem = itemFactory.CreateItem(itemIds[i]);
+            int randItemId = rand.Next(1, 400);
+            Item randItem = itemFactory.CreateItem(randItemId);
             bool wasItemGiven = randPokemon.GiveItem(randItem);
             player.Party.Add(randPokemon);
         }

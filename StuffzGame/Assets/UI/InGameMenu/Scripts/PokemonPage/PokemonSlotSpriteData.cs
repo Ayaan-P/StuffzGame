@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PartySlotSpriteData : SpriteSlotData<Pokemon>
+public class PokemonSlotSpriteData : SpriteSlotData<Pokemon>
 {
     public override Pokemon CurrentObject { get; }
   
@@ -23,7 +23,7 @@ public class PartySlotSpriteData : SpriteSlotData<Pokemon>
     public Sprite FaintedSprite { get => faintedSprite; }
     public List<Sprite> MoveSpriteList { get => moveSpriteList; }
 
-    public PartySlotSpriteData(Pokemon pokemon)
+    public PokemonSlotSpriteData(Pokemon pokemon)
     {
         this.CurrentObject = pokemon;
         this.loader = new SpriteLoader();
