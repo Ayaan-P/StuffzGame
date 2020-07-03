@@ -15,8 +15,8 @@ public class BattleSystem : MonoBehaviour
 
     public GameObject wildData;
 
-    public Transform playerPlatform;
-    public Transform enemyPlatform;
+    public Transform playerPokemonPosition;
+    public Transform enemyPokemonPosition;
 
     public List<Pokemon> PlayerParty;
   
@@ -35,8 +35,7 @@ public class BattleSystem : MonoBehaviour
 
     List<PokemonMove> playerMoves;
 
-    unit player;
-    unit enemy;
+
 
     // Start is called before the first frame update
     void Start()
@@ -49,24 +48,20 @@ public class BattleSystem : MonoBehaviour
     IEnumerator battleSetup()
     {
         wildData = GameObject.Find("CurrentEncounter");
-        GameObject enemy_fab = Instantiate(enemyUnit, enemyPlatform);
-        GameObject player_fab = Instantiate(playerUnit, playerPlatform);
+        GameObject enemySprite = Instantiate(enemyUnit, enemyPokemonPosition);
+        GameObject playerSprite = Instantiate(playerUnit, playerPokemonPosition);
 
         PlayerParty = wildData.GetComponent<EncounterData>().Party;
         //Pokemon player_pokemon = PlayerParty[0];
         EnemyPokemon = wildData.GetComponent<EncounterData>().CurrentEnemyPokemon;
-        enemy_fab.GetComponent<SpriteSwapBattle>().orientation = "Front";
-        enemy_fab.GetComponent<SpriteSwapBattle>().id = wildData.GetComponent<EncounterData>().CurrentEnemyPokemon.BasePokemon.Id;
+        enemySprite.GetComponent<SpriteSwapBattle>().orientation = "Front";
+        enemySprite.GetComponent<SpriteSwapBattle>().id = wildData.GetComponent<EncounterData>().CurrentEnemyPokemon.BasePokemon.Id;
         
         PokemonFactory factory = new PokemonFactory();
         PlayerPokemon = factory.CreatePokemon(257, 60);
-        player_fab.GetComponent<SpriteSwapBattle>().orientation = "Back";
-        player_fab.GetComponent<SpriteSwapBattle>().id = PlayerPokemon.BasePokemon.Id;
+        playerSprite.GetComponent<SpriteSwapBattle>().orientation = "Back";
+        playerSprite.GetComponent<SpriteSwapBattle>().id = PlayerPokemon.BasePokemon.Id;
         
-
-        player = player_fab.GetComponent<unit>();
-        enemy = enemy_fab.GetComponent<unit>();
-
         
 	    playerHUD.SetHUD(PlayerPokemon);
 		enemyHUD.SetHUD(EnemyPokemon);
@@ -91,18 +86,18 @@ public class BattleSystem : MonoBehaviour
         // StartCoroutine(conductCombat());
     }
 
-    IEnumerator conductCombat(PokemonMove player_move, PokemonMove enemy_move)
+    IEnumerator conductCombat(PokemonMove playerMove, PokemonMove enemyMove)
     {
         Debug.Log(" conduct combat");
-        int player_speed = PlayerPokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.SPEED).SingleOrDefault().CurrentValue;
-        int enemy_speed = EnemyPokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.SPEED).SingleOrDefault().CurrentValue;
-        if (player_speed>=enemy_speed)
+        int playerSpeed = PlayerPokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.SPEED).SingleOrDefault().CurrentValue;
+        int enemySpeed = EnemyPokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.SPEED).SingleOrDefault().CurrentValue;
+        if (playerSpeed>=enemySpeed)
         {
-            bool enemy_dead = EnemyPokemon.TakeDamage(player_move, PlayerPokemon);
+            bool enemyDead = EnemyPokemon.TakeDamage(playerMove, PlayerPokemon);
             enemyHUD.SetHP();
             yield return new WaitForSeconds(2f);
 
-            if(enemy_dead)
+            if(enemyDead)
             {
                 state = BATTLE_STATE.WIN;
                 playerWin();
@@ -110,12 +105,12 @@ public class BattleSystem : MonoBehaviour
             else
             {
 
-               bool player_dead = PlayerPokemon.TakeDamage(enemy_move, EnemyPokemon);
+               bool playerDead = PlayerPokemon.TakeDamage(enemyMove, EnemyPokemon);
                playerHUD.SetHP();
 
                yield return new WaitForSeconds(2f);
 
-               if(player_dead)
+               if(playerDead)
                {
                    state = BATTLE_STATE.LOST;
                    playerLose();
@@ -130,22 +125,22 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            bool player_dead = PlayerPokemon.TakeDamage(enemy_move, EnemyPokemon);
+            bool playerDead = PlayerPokemon.TakeDamage(enemyMove, EnemyPokemon);
             playerHUD.SetHP();
             yield return new WaitForSeconds(2f);
 
-            if(player_dead)
+            if(playerDead)
             {
                 state = BATTLE_STATE.LOST;
                 playerLose();
             }
             else
             {
-               bool enemy_dead = EnemyPokemon.TakeDamage(player_move, PlayerPokemon);
+               bool enemyDead = EnemyPokemon.TakeDamage(playerMove, PlayerPokemon);
                enemyHUD.SetHP();
                yield return new WaitForSeconds(2f);
 
-               if(enemy_dead)
+               if(enemyDead)
                {
                    state = BATTLE_STATE.WIN;
                    playerWin();
@@ -172,16 +167,19 @@ public class BattleSystem : MonoBehaviour
         Destroy(wildData);
         SceneManager.LoadScene(0);
     }
-    public void OnAttack(int move_no)
+    
+    public void OnAttack(int moveNumber)
     {
         if(state!=BATTLE_STATE.PLAYER_TURN)
             return;
-        int rndmove = Random.Range(0,3);
-        //PokemonMove player_move = player_pokemon.LearnedMoves[rndmove];
-        Debug.Log(playerMoves[move_no].BaseMove.Name);
-        PokemonMove enemy_move = EnemyPokemon.LearnedMoves[rndmove];
-        Debug.Log(enemy_move.BaseMove.Name);
-        StartCoroutine(conductCombat(playerMoves[move_no], enemy_move));
+        
+        //PokemonMove playerMove = player_pokemon.LearnedMoves[randomMove];
+        Debug.Log(playerMoves[moveNumber].BaseMove.Name);
+        
+        int randomMove = Random.Range(0,3);
+        PokemonMove enemyMove = EnemyPokemon.LearnedMoves[randomMove];
+        Debug.Log(enemyMove.BaseMove.Name);
+        StartCoroutine(conductCombat(playerMoves[moveNumber], enemyMove));
         
     }
  

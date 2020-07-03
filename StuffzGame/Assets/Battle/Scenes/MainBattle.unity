@@ -151,8 +151,8 @@ Transform:
   - {fileID: 930257705}
   - {fileID: 603039822}
   - {fileID: 448997339}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 807476312}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &257193613
 GameObject:
@@ -795,7 +795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 448997339}
   m_Layer: 0
-  m_Name: pos2
+  m_Name: EnemyPlatformEnd
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1235,7 +1235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603039822}
   m_Layer: 0
-  m_Name: pos1
+  m_Name: EnemyPlatformStart
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1347,7 +1347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 676868193}
   m_Layer: 10
-  m_Name: pos3
+  m_Name: PlayerPlatformEnd
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1365,7 +1365,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1841534407}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &764627194
 GameObject:
@@ -1377,7 +1377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 764627195}
   m_Layer: 11
-  m_Name: enemypokepos
+  m_Name: EnemyPokemonPosition
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1396,6 +1396,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 930257705}
   m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &807476311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 807476312}
+  m_Layer: 0
+  m_Name: Platforms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &807476312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807476311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 169434831}
+  - {fileID: 1841534407}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &808370913
 GameObject:
@@ -2202,8 +2234,8 @@ MonoBehaviour:
   enemyUnit: {fileID: 5677035846917430873, guid: cad6b80cb2c1c2443984ae7421b8ccf4,
     type: 3}
   wildData: {fileID: 0}
-  playerPlatform: {fileID: 310266826}
-  enemyPlatform: {fileID: 930257705}
+  playerPokemonPosition: {fileID: 2018832671}
+  enemyPokemonPosition: {fileID: 764627195}
   dialogueText: {fileID: 1260913399}
   move1: {fileID: 1260913411}
   move2: {fileID: 1260913410}
@@ -2596,7 +2628,7 @@ PrefabInstance:
     - target: {fileID: 2116863993788592931, guid: 19cd342bdabe2e24d9e187bbdef0ebcb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2116863993788592931, guid: 19cd342bdabe2e24d9e187bbdef0ebcb,
         type: 3}
@@ -4765,7 +4797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1473010239}
   m_Layer: 10
-  m_Name: pos4
+  m_Name: PlayerPlatformStart
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4783,7 +4815,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1841534407}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1686136242
 GameObject:
@@ -5219,15 +5251,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841534406}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9.945776, y: 0.030907243, z: -1.7062578}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 310266826}
-  - {fileID: 676868193}
   - {fileID: 1473010239}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  - {fileID: 676868193}
+  m_Father: {fileID: 807476312}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1941394414
 PrefabInstance:
@@ -5367,7 +5399,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2018832670
 GameObject:
@@ -5379,7 +5411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2018832671}
   m_Layer: 11
-  m_Name: playerpokepos
+  m_Name: PlayerPokemonPosition
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
