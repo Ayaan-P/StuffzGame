@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 using UnityEngine.UI;
 
 public class BagPage : MonoBehaviour
@@ -52,8 +53,8 @@ public class BagPage : MonoBehaviour
         foreach (ItemSlotSpriteData itemSlotData in uiManager.ItemSlotDataList)
         {
             PopulateRespectiveItemPocket(itemSlotData);
-            UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
         }
+        UpdateCurrentItemPocketData(pocketItemsDict[CurrentItemPocket]);
     }
 
     private void UpdatePokemonSlots()
@@ -111,6 +112,7 @@ public class BagPage : MonoBehaviour
                 pocketItemsDict[ItemPocket.MISC].Add(itemSlotData);
                 break;
         }
+
     }
 
     private void SetItemSlotDetails(ItemSlotSpriteData itemSlotData, GameObject iSlot)
@@ -186,6 +188,7 @@ public class BagPage : MonoBehaviour
             else
             {
                 isAbleText.text = (bool)canUseItem ? "ABLE" : "UNABLE";
+                isAbleText.color = (bool)canUseItem ? ColorPalette.GetColor(ColorName.PRIMARY_GREEN) : ColorPalette.GetColor(ColorName.PRIMARY_RED);
             }
         }
     }
@@ -201,7 +204,8 @@ public class BagPage : MonoBehaviour
             Text[] textComponents = descriptionData.GetComponentsInChildren<Text>();
             Text itemName = textComponents[0];
             Text itemFlavorText = textComponents[1];
-            Text itemCost = textComponents[2];
+            Text itemEffect = textComponents[2];
+            Text itemCost = textComponents[3];
 
             itemSprite.sprite = slotData.ItemSprite;
             if (item.IsMachine)
@@ -223,6 +227,15 @@ public class BagPage : MonoBehaviour
                 itemFlavorText.text = "";
             }
 
+            if( item.EffectEntries != null && item.EffectEntries[0].Length != 0 )
+            {
+                itemEffect.text = item.EffectEntries[0].Replace("\n", " "); ;
+            }
+            else
+            {
+                itemEffect.text = "";
+            }
+
             itemCost.text = $"Cost: {item.Cost}";
         }
         else
@@ -241,7 +254,8 @@ public class BagPage : MonoBehaviour
         { ItemPocket.MACHINES, new List<ItemSlotSpriteData>()},
         { ItemPocket.BERRIES, new List<ItemSlotSpriteData>()},
         { ItemPocket.BATTLE, new List<ItemSlotSpriteData>()},
-        { ItemPocket.KEY, new List<ItemSlotSpriteData>()},};
+        { ItemPocket.KEY, new List<ItemSlotSpriteData>()}
+        };
         isSortAscending = true;
         ResetSelectedItem();
         ResetPokemonAbleText();

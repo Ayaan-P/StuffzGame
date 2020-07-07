@@ -9,6 +9,9 @@ public class SwapListen : MonoBehaviour, IPointerClickHandler
     private Sprite originalSprite;
     private Color originalColor;
 
+    public delegate void SetSlotOrder(int from, int to);
+    public event SetSlotOrder OnSlotsSwapped;
+
     private void Start()
     {
         Image border = this.transform.GetComponentsInChildren<Image>()[0];
@@ -37,9 +40,8 @@ public class SwapListen : MonoBehaviour, IPointerClickHandler
             slot.ToggleClickedSwapButtonAndOtherHighlightedStates(false, swapWithIndex);
             //reset this slot back to how it was
             ToggleCurrentState(false, null);
-
             SwapSlots(currentSiblingIndex, swapWithIndex);
-
+            OnSlotsSwapped(currentSiblingIndex, swapWithIndex);
         }
     }
 
@@ -74,7 +76,7 @@ public class SwapListen : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            Debug.LogError($"Draggable is null");
+            Debug.LogWarning($"Draggable is null");
         }
 
         if (swapButton != null)
@@ -103,7 +105,7 @@ public class SwapListen : MonoBehaviour, IPointerClickHandler
             if (toggle)
             {
                 border.sprite = highlightedSprite;
-                border.color = ColorPalette.GetColor(ColorName.PRIMARY_RED);
+                border.color = Color.white;
             }
             else
             {

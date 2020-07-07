@@ -19,9 +19,4 @@ public class Item
     public ItemPocket Pocket { get; set; }
     public bool IsBerry { get; set; }
     public bool IsMachine { get; set; }
-  
-    
-   
-  
-  
 }

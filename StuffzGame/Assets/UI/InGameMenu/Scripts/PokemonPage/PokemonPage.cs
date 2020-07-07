@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using UnityEngine;
@@ -24,12 +25,22 @@ public class PokemonPage : MonoBehaviour
 
         foreach (Transform child in partySlots.transform)
         {
+            SwapListen swapListener = child.GetComponent<SwapListen>();
+            if (swapListener != null)
+            {
+                swapListener.OnSlotsSwapped -= SwapPokemonSlots;
+            }
             Destroy(child.gameObject);
         }
 
         foreach (PokemonSlotSpriteData slotData in uiManager.PartySlotDataList)
         {
             GameObject slot = Instantiate(pokemonSlot, partySlots.transform);
+            SwapListen swapListener = slot.GetComponentInChildren<SwapListen>();
+            if (swapListener != null)
+            {
+                swapListener.OnSlotsSwapped += SwapPokemonSlots;
+            }
             SetPokemonSlotDetails(slotData, slot);
         }
     }
@@ -61,10 +72,17 @@ public class PokemonPage : MonoBehaviour
 
     private void SetPokemonSlotDetails(PokemonSlotSpriteData slotData, GameObject slot)
     {
-        SetTextComponents(slotData.CurrentObject, slot);
-        SetPokemonHPDetails(slotData.CurrentObject, slot);
-        SetImageComponents(slotData, slot);
-        SetPokemonMoveDetails(slotData, slot);
+        GameObject cardFace = slot.transform.Find("Card/CardFace").gameObject;
+        SetTextComponents(slotData.CurrentObject, cardFace);
+        SetPokemonHPDetails(slotData.CurrentObject, cardFace);
+        SetPokemonEXPDetails(slotData.CurrentObject, cardFace);
+        SetImageComponents(slotData, cardFace);
+
+        GameObject moveObjectList = slot.transform.Find("Card/CardInfo").gameObject;
+        PokemonType type = slotData.CurrentObject.BasePokemon.Types[0];
+        SetPokemonMoveDetails(slotData, moveObjectList, type);
+        SetPokemonSlotOrder(slot);
+
     }
 
     private void SetImageComponents(PokemonSlotSpriteData slotData, GameObject slot)
@@ -73,13 +91,12 @@ public class PokemonPage : MonoBehaviour
         Pokemon pokemon = slotData.CurrentObject;
 
         Image[] imageComponents = slot.GetComponentsInChildren<Image>();
-        Image slotBg = imageComponents[1];
-        Image pokemonImg = imageComponents[2];
-        Image itemImg = imageComponents[3];
-        Image faintedImg = imageComponents[4];
-        Image genderImg = imageComponents[5];
-        Image type1 = imageComponents[6];
-        Image type2 = imageComponents[7];
+        Image pokemonImg = imageComponents[1];
+        Image itemImg = imageComponents[2];
+        Image ailmentImg = imageComponents[3];
+        Image genderImg = imageComponents[4];
+        Image type1 = imageComponents[5];
+        Image type2 = imageComponents[6];
 
         pokemonImg.sprite = slotData.PokemonSprite;
 
@@ -95,13 +112,13 @@ public class PokemonPage : MonoBehaviour
 
         if (pokemon.IsFainted)
         {
-            slotBg.color = ColorPalette.GetColor(ColorName.FAINTED_RED);
-            faintedImg.sprite = slotData.FaintedSprite;
-            faintedImg.preserveAspect = true;
+            ailmentImg.sprite = slotData.FaintedSprite;
+            ailmentImg.preserveAspect = true;
         }
         else
         {
-            faintedImg.color = new Color(0, 0, 0, 0);
+            //check ailments and set sprite accordingly else transparent
+            ailmentImg.color = new Color(0, 0, 0, 0);
         }
 
         genderImg.sprite = slotData.GenderSprite;
@@ -129,19 +146,17 @@ public class PokemonPage : MonoBehaviour
         Text[] textComponents = slot.GetComponentsInChildren<Text>();
         Text pokemonName = textComponents[0];
         Text pokemonLevel = textComponents[1];
-        Text abilityTitle = textComponents[3];
-        Text abilityName = textComponents[4];
+        Text abilityName = textComponents[2];
 
         pokemonName.text =  pokemon.Nickname ?? UIUtils.FormatText(pokemon.BasePokemon.Name, true);
         pokemonLevel.text = $"Lv. {pokemon.CurrentLevel}";
-        abilityTitle.text = "Ability";
         abilityName.text = UIUtils.FormatText(pokemon.CurrentAbility.BaseAbility.Name, false);
     }
 
     private void SetPokemonHPDetails(Pokemon pokemon, GameObject slot)
     {
-        Image slotBorder = slot.GetComponentsInChildren<Image>()[0];
-        Text pokemonHP = slot.GetComponentsInChildren<Text>()[2];
+        GameObject health = slot.transform.Find("Health").gameObject;
+        Text pokemonHP = health.GetComponentInChildren<Text>();
 
         PokemonStat hpStat = pokemon.BasePokemon.Stats.Where(stat => stat.BaseStat.Name == StatName.HP).SingleOrDefault();
         if (hpStat != null)
@@ -150,11 +165,9 @@ public class PokemonPage : MonoBehaviour
         }
 
         Color hpColor = UIUtils.GetColorForHP(hpStat.CurrentValue, hpStat.CalculatedValue);
-        slotBorder.color = hpColor;
-
+        GridLayoutGroup hpBarContainer = health.GetComponentInChildren<GridLayoutGroup>();
         // set HP slider via HealthBar prefab
-        GameObject health = slot.transform.Find("Health").gameObject;
-        GameObject hpBar = Instantiate(healthBar, health.transform);
+        GameObject hpBar = Instantiate(healthBar, hpBarContainer.transform);
         Image fill = hpBar.GetComponentsInChildren<Image>()[1];
         fill.color = hpColor;
         Slider hpSlider = hpBar.GetComponent<Slider>();
@@ -163,11 +176,33 @@ public class PokemonPage : MonoBehaviour
         hpSlider.value = hpStat.CurrentValue;
     }
 
-    private void SetPokemonMoveDetails(PokemonSlotSpriteData slotData, GameObject slot)
+    private void SetPokemonEXPDetails(Pokemon pokemon, GameObject slot)
     {
+        /*GameObject exp = slot.transform.Find("Exp").gameObject;
+        Text pokemonExp = exp.GetComponentInChildren<Text>();
+
+        Color expColor = ColorPalette.GetColor(ColorName.EXP);
+
+        GameObject expBar = Instantiate(healthBar, exp.transform);
+        Image fill = expBar.GetComponentsInChildren<Image>()[1];
+        fill.color = expColor;
+        Slider expSlider = expBar.GetComponent<Slider>();
+         set min,current and max value
+         */
+    }
+
+    private void SetPokemonMoveDetails(PokemonSlotSpriteData slotData, GameObject slot, PokemonType type)
+    {
+        Image bg = slot.GetComponent<Image>();
+        Color bgColor = ColorPalette.AddShade(UIUtils.GetColorForType(type), 1);
+        Color textColor = ColorPalette.GetTextContrastedColorFor(bgColor);
+
+        bg.color = bgColor;
+
+        GameObject moveObjectList = slot.transform.Find("Moves").gameObject;
+
         int MAX_MOVES_COUNT = 4;
         Pokemon pokemon = slotData.CurrentObject;
-        GameObject moveObjectList = slot.transform.Find("Moves").gameObject;
 
         List<PokemonMove> learnedMoves = pokemon.LearnedMoves;
         int numMoves = learnedMoves.Count;
@@ -195,7 +230,25 @@ public class PokemonPage : MonoBehaviour
 
                 moveName.text = UIUtils.FormatText(move.BaseMove.Name, false);
                 movePP.text = $"{move.CurrentPP}/{move.BaseMove.PP}";
+
+                moveName.color = textColor;
+                movePP.color = textColor;
             }
         }
+    }
+
+    private void SetPokemonSlotOrder(GameObject slot)
+    {
+        GameObject order = slot.transform.Find("Order").gameObject;
+        Text orderNumber = order.GetComponentInChildren<Text>();
+        orderNumber.text = $"{slot.transform.GetSiblingIndex() + 1}";
+    }
+
+    private void SwapPokemonSlots(int from, int to)
+    {
+        GameObject fromSlot = partySlots.transform.GetChild(from).gameObject;
+        GameObject toSlot = partySlots.transform.GetChild(to).gameObject;
+        SetPokemonSlotOrder(fromSlot);
+        SetPokemonSlotOrder(toSlot);
     }
 }
