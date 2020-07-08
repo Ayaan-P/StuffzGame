@@ -82,7 +82,7 @@ public class GameManager : Singleton
         for (int i = 0; i < size; i++)
         {
             int randLevel = rand.Next(15, 101);
-            int randPokemonId = rand.Next(1, 700);
+            int randPokemonId = rand.Next(1, 649);
             Pokemon randPokemon = pokemonFactory.CreatePokemon(randPokemonId, randLevel);
             PokemonStat hpStat = randPokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.HP).SingleOrDefault();
             float hpPercent = (float)rand.NextDouble();

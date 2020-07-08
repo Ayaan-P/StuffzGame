@@ -24,8 +24,11 @@ public class StoragePage : MonoBehaviour
     public GameObject sortByDropdown;
     public GameObject searchInputField;
 
+    public GameObject pokemonDescription;
+
     private UIManager uiManager;
     private PokemonStorage storage;
+    private int? prevPokemonSelectedIndex;
 
     private void OnEnable()
     {
@@ -37,7 +40,7 @@ public class StoragePage : MonoBehaviour
         UpdateStorageUI();
     }
 
-    private void OnDisable()
+       private void OnDisable()
     {
         SetUpListeners(false);
     }
@@ -45,6 +48,140 @@ public class StoragePage : MonoBehaviour
     private void ResetPage()
     {
         isSortAscending = true;
+        ResetSelectedSlot();
+    }
+
+    private void ResetSelectedSlot()
+    {
+        prevPokemonSelectedIndex = null;
+        ResetPokemonDescriptionBox();
+    }
+
+    private void ResetPokemonDescriptionBox()
+    {
+        if (pokemonDescription != null)
+        {
+            pokemonDescription.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("Cant reset Pokemon Description box, because it is null");
+        }
+    }
+
+    internal void OnPokemonSlotClick(int pokemonSlotIndex)
+    {
+        if (prevPokemonSelectedIndex != null && pokemonSlotIndex != prevPokemonSelectedIndex)
+        {
+            storageSlots.transform.GetChild((int)prevPokemonSelectedIndex).GetComponent<StoragePokemonClick>().ResetStorageSlotBGSprite();
+        }
+        StorageSlotSpriteData selectedSlotData = uiManager.StorageSlotDataList[pokemonSlotIndex] as StorageSlotSpriteData;
+        UpdatePokemonDescription(selectedSlotData);
+        prevPokemonSelectedIndex = pokemonSlotIndex;
+    }
+
+    private void UpdatePokemonDescription(StorageSlotSpriteData selectedSlotData)
+    {
+        if(pokemonDescription!= null)
+        {
+            const int MAX_TYPES_COUNT = 2;
+            pokemonDescription.SetActive(true);
+            Image[] imageComponents = pokemonDescription.GetComponentsInChildren<Image>(true);
+            Image pokemonImage = imageComponents[1];
+            Image genderImage = imageComponents[2];
+            Image type1Image = imageComponents[3];
+            Image type2Image = imageComponents[4];
+            Image heldItemImage = imageComponents[5];
+
+            Pokemon pokemon = selectedSlotData.CurrentObject;
+            pokemonImage.sprite = selectedSlotData.SummarySprite;
+            pokemonImage.preserveAspect = true;
+
+            genderImage.sprite = selectedSlotData.GenderSprite;
+            genderImage.preserveAspect = true;
+
+            if (pokemon.BasePokemon.Types.Count == MAX_TYPES_COUNT)
+            {
+                type1Image.sprite = selectedSlotData.TypeSpriteList[0];
+                type1Image.preserveAspect = true;
+                type2Image.sprite = selectedSlotData.TypeSpriteList[1];
+                type2Image.preserveAspect = true;
+            }
+            else
+            {
+                type1Image.sprite = selectedSlotData.TypeSpriteList[0];
+                type1Image.preserveAspect = true;
+                type2Image.gameObject.SetActive(false);
+            }
+
+            if (pokemon.HeldItem != null)
+            {
+                heldItemImage.sprite = selectedSlotData.ItemSprite;
+                heldItemImage.preserveAspect = true;
+            }
+            else
+            {
+                heldItemImage.color = new Color(0, 0, 0, 0);
+            }
+
+            Text[] textComponents = pokemonDescription.GetComponentsInChildren<Text>(true);
+            Text pokemonName = textComponents[0];
+            Text pokemonLevel = textComponents[1];
+            Text heldItemName = textComponents[3];
+            Text heldItemFlavorText = textComponents[4];
+            Text abilityName = textComponents[6];
+            Text abilityDesc = textComponents[7];
+            Text pokemonNature = textComponents[9];
+
+            pokemonName.text = pokemon.Nickname ?? UIUtils.FormatText(pokemon.BasePokemon.Name, true);
+            pokemonLevel.text = $"Lv. {pokemon.CurrentLevel}";
+            Item heldItem = pokemon.HeldItem;
+            if (heldItem != null)
+            {
+                if (pokemon.HeldItem.IsMachine)
+                {
+                    string tmFullName = $"{heldItem.Name.ToUpper()} - {UIUtils.FormatText((heldItem as Machine).MoveName, false)}";
+                    heldItemName.text = tmFullName;
+                }
+                else
+                {
+                    heldItemName.text = UIUtils.FormatText(heldItem.Name, false);
+                }
+
+                if (heldItem.FlavorText != null)
+                {
+                    heldItemFlavorText.text = heldItem.FlavorText.Replace("\n", " ");
+                }
+                else
+                {
+                    heldItemFlavorText.text = "";
+                }
+            }
+            else
+            {
+                heldItemName.text = "None";
+                heldItemFlavorText.text = "";
+            }
+
+            PokemonAbility ability = pokemon.CurrentAbility;
+            abilityName.text = UIUtils.FormatText(ability.BaseAbility.Name, false);
+            if (ability.BaseAbility.FlavorText != null)
+            {
+                abilityDesc.text = ability.BaseAbility.FlavorText.Replace("\n", " ");
+            }
+            else
+            {
+                abilityDesc.text = "";
+            }
+
+            pokemonNature.text = UIUtils.FormatText(pokemon.Nature.Name.ToString(), false);
+
+
+        }
+        else
+        {
+            Debug.LogError("Pokemon description box is null");
+        }
     }
 
     private void UpdateStorageUI()
@@ -84,14 +221,16 @@ public class StoragePage : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        foreach (PokemonSlotSpriteData storageSlotData in slotDataList)
+        foreach (StorageSlotSpriteData storageSlotData in slotDataList)
         {
             GameObject storageSlot = Instantiate(storagePokemonSlot, storageSlots.transform);
+            StoragePokemonClick storageSlotClick = storageSlot.GetComponent<StoragePokemonClick>();
+            storageSlotClick.storage = this;
             SetStoragePokemonSlotDetails(storageSlotData, storageSlot);
         }
     }
 
-    private void SetStoragePokemonSlotDetails(PokemonSlotSpriteData slotData, GameObject storageSlot)
+    private void SetStoragePokemonSlotDetails(StorageSlotSpriteData slotData, GameObject storageSlot)
     {
         Pokemon pokemon = slotData.CurrentObject;
         Image[] imageComponents = storageSlot.GetComponentsInChildren<Image>();

@@ -64,75 +64,75 @@ public static class ColorPalette
                  new Entry
             {
                 Name = ColorName.TYPE_NORMAL,
-                Color = new Color(0.847f,0.804f,0.788f,1.000f)
+                Color = new Color(0.67f, 0.65f, 0.62f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_FIRE,
-                Color = new Color(0.945f,0.349f,0.173f,1.000f)
+                Color = new Color(1.00f, 0.25f, 0.20f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_WATER,
-                Color = new Color(0.188f,0.643f,0.863f,1.000f)
+                Color = new Color(0.06f, 0.74f, 0.98f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_ELECTRIC,
-                Color = new Color(0.988f,0.847f,0.204f,1.000f)
+                Color = new Color(1.00f, 0.83f, 0.16f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_GRASS,
-                Color = new Color(0.282f,0.690f,0.310f,1.000f)
+                Color = new Color(0.23f, 0.89f, 0.45f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_ICE,
-                Color = new Color(0.212f,0.761f,0.839f,1.000f)
+                Color = new Color(0.21f, 0.76f, 0.84f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_FIGHTING,
-                Color = new Color(0.718f,0.125f,0.145f,1.000f)
+                Color = new Color(0.72f, 0.08f, 0.25f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_POISON,
-                Color = new Color(0.565f,0.243f,0.596f,1.000f)
+                Color = new Color(0.56f, 0.24f, 0.59f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_GROUND,
-                Color = new Color(0.922f,0.710f,0.251f,1.000f)
+                Color = new Color(0.88f, 0.69f, 0.17f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_FLYING,
-                Color = new Color(0.475f,0.525f,0.761f,1.000f)
+                Color = new Color(0.48f, 0.53f, 0.76f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_PSYCHIC,
-                Color = new Color(0.918f,0.106f,0.392f,1.000f)
+                Color = new Color(0.91f, 0.12f, 0.39f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_BUG,
-                Color = new Color(0.686f,0.710f,0.212f,1.000f)
+                Color = new Color(0.69f, 0.71f, 0.21f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_ROCK,
-                Color = new Color(0.804f,0.682f,0.384f,1.000f)
+                Color = new Color(0.80f, 0.68f, 0.38f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_GHOST,
-                Color = new Color(0.396f,0.286f,0.620f,1.000f)
+                Color = new Color(0.37f, 0.15f, 0.80f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_DRAGON,
-                Color = new Color(0.267f,0.333f,0.647f,1.000f)
+                Color = new Color(0.12f, 0.22f, 0.60f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_DARK,
-                Color = new Color(0.239f,0.149f,0.133f,1.000f)
+                Color = new Color(0.24f, 0.15f, 0.14f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_STEEL,
-                Color = new Color(0.561f,0.643f,0.682f,1.000f)
+                Color = new Color(0.50f, 0.56f, 0.65f,1.000f)
             },new Entry
             {
                 Name = ColorName.TYPE_FAIRY,
-                Color = new Color(0.949f,0.502f,0.671f,1.000f)
+                Color = new Color(0.99f, 0.65f, 0.87f,1.000f)
             },
         };
 

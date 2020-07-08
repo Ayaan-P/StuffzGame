@@ -227,7 +227,7 @@ public class UIManager : Singleton
         }
         else
         {
-            PokemonSlotSpriteData slotData = new PokemonSlotSpriteData(pokemon);
+            StorageSlotSpriteData slotData = new StorageSlotSpriteData(pokemon);
             slotData.PreLoadSprites();
 
             if (index >= StorageSlotDataList.Count)

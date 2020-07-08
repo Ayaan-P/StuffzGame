@@ -20,6 +20,19 @@ public class PokemonPage : MonoBehaviour
         UpdatePartyUI();
     }
 
+    private void OnDisable()
+    {
+        foreach (Transform child in partySlots.transform)
+        {
+            SwapListen swapListener = child.GetComponent<SwapListen>();
+            if (swapListener != null)
+            {
+                swapListener.OnSlotsSwapped -= SwapPokemonSlots;
+            }
+            Destroy(child.gameObject);
+        }
+    }
+
     private void UpdatePartyUI()
     {
 
@@ -135,9 +148,10 @@ public class PokemonPage : MonoBehaviour
         {
             type1.sprite = slotData.TypeSpriteList[0];
             type1.preserveAspect = true;
-            type2.sprite = slotData.TypeSpriteList[0];
-            type2.preserveAspect = true;
-            type2.color = new Color(0, 0, 0, 0);
+            type2.gameObject.SetActive(false);
+            //type2.sprite = slotData.TypeSpriteList[0];
+            //type2.preserveAspect = true;
+            //type2.color = new Color(0, 0, 0, 0);
         }
     }
 
@@ -194,7 +208,7 @@ public class PokemonPage : MonoBehaviour
     private void SetPokemonMoveDetails(PokemonSlotSpriteData slotData, GameObject slot, PokemonType type)
     {
         Image bg = slot.GetComponent<Image>();
-        Color bgColor = ColorPalette.AddShade(UIUtils.GetColorForType(type), 1);
+        Color bgColor =  UIUtils.GetColorForType(type);
         Color textColor = ColorPalette.GetTextContrastedColorFor(bgColor);
 
         bg.color = bgColor;

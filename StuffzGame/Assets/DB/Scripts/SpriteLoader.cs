@@ -14,7 +14,15 @@ public class SpriteLoader
     public Sprite LoadPokemonSprite(int id, bool isShiny, SpriteType type)
     {
         string shinyChar = isShiny ? "s" : "";
-        string formattedId = FormatId(id);
+        string formattedId;
+        if (type == SpriteType.BATTLE_FRONT  || type == SpriteType.BATTLE_BACK)
+        {
+            formattedId = id.ToString();
+        }
+        else
+        {
+             formattedId = FormatId(id);
+        }
 
         string address = $"{GetAddressForSpriteType(type)}{formattedId}{shinyChar}.png";
         if (enableDebug) { Debug.Log($"Loading pokemon sprite at address: {address}"); }
