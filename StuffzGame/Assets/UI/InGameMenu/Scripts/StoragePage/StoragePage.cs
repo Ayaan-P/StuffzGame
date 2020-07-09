@@ -104,6 +104,7 @@ public class StoragePage : MonoBehaviour
             {
                 type1Image.sprite = selectedSlotData.TypeSpriteList[0];
                 type1Image.preserveAspect = true;
+                type2Image.gameObject.SetActive(true);
                 type2Image.sprite = selectedSlotData.TypeSpriteList[1];
                 type2Image.preserveAspect = true;
             }
@@ -116,12 +117,13 @@ public class StoragePage : MonoBehaviour
 
             if (pokemon.HeldItem != null)
             {
+                heldItemImage.gameObject.SetActive(true);
                 heldItemImage.sprite = selectedSlotData.ItemSprite;
                 heldItemImage.preserveAspect = true;
             }
             else
             {
-                heldItemImage.color = new Color(0, 0, 0, 0);
+                heldItemImage.gameObject.SetActive(false);
             }
 
             Text[] textComponents = pokemonDescription.GetComponentsInChildren<Text>(true);

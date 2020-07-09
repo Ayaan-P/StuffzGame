@@ -115,23 +115,25 @@ public class PokemonPage : MonoBehaviour
 
         if (pokemon.HeldItem != null)
         {
+            itemImg.gameObject.SetActive(true);
             itemImg.sprite = slotData.ItemSprite;
             itemImg.preserveAspect = true;
         }
         else
         {
-            itemImg.color = new Color(0, 0, 0, 0);
+            itemImg.gameObject.SetActive(false);
         }
 
         if (pokemon.IsFainted)
         {
+            ailmentImg.gameObject.SetActive(true);
             ailmentImg.sprite = slotData.FaintedSprite;
             ailmentImg.preserveAspect = true;
         }
         else
         {
             //check ailments and set sprite accordingly else transparent
-            ailmentImg.color = new Color(0, 0, 0, 0);
+            ailmentImg.gameObject.SetActive(false);
         }
 
         genderImg.sprite = slotData.GenderSprite;

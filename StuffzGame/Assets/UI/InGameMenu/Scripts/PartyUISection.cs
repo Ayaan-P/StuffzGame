@@ -34,7 +34,7 @@ public class PartyUISection : MonoBehaviour
         Image[] imageComponents = slot.GetComponentsInChildren<Image>();
         Image pokemonImage = imageComponents[1];
         Image heldItemImage = imageComponents[2];
-        Image statusImage = imageComponents[3];
+        Image ailmentImage = imageComponents[3];
         Image genderImage = imageComponents[4];
         Image type1 = imageComponents[5];
         Image type2 = imageComponents[6];
@@ -43,22 +43,24 @@ public class PartyUISection : MonoBehaviour
 
         if (pokemon.HeldItem != null)
         {
+            heldItemImage.gameObject.SetActive(true);
             heldItemImage.sprite = slotData.ItemSprite;
             heldItemImage.preserveAspect = true;
         }
         else
         {
-            heldItemImage.color = new Color(0, 0, 0, 0);
+            heldItemImage.gameObject.SetActive(false);
         }
 
         if (pokemon.IsFainted)
         {
-            statusImage.sprite = slotData.FaintedSprite;
-            statusImage.preserveAspect = true;
+            ailmentImage.gameObject.SetActive(true);
+            ailmentImage.sprite = slotData.FaintedSprite;
+            ailmentImage.preserveAspect = true;
         }
         else
         {
-            statusImage.color = new Color(0, 0, 0, 0);
+            ailmentImage.gameObject.SetActive(false);
         }
 
         genderImage.sprite = slotData.GenderSprite;
@@ -68,6 +70,7 @@ public class PartyUISection : MonoBehaviour
         {
             type1.sprite = slotData.TypeSpriteList[0];
             type1.preserveAspect = true;
+            type2.gameObject.SetActive(true);
             type2.sprite = slotData.TypeSpriteList[1];
             type2.preserveAspect = true;
         }
@@ -75,9 +78,7 @@ public class PartyUISection : MonoBehaviour
         {
             type1.sprite = slotData.TypeSpriteList[0];
             type1.preserveAspect = true;
-            type2.sprite = slotData.TypeSpriteList[0];
-            type2.preserveAspect = true;
-            type2.color = new Color(0, 0, 0, 0);
+            type2.gameObject.SetActive(false);
         }
     }
 
