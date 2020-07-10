@@ -16,7 +16,7 @@ namespace Pathfinding {
 	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_patrol.php")]
 	public class Patrol : VersionedMonoBehaviour {
 		/// <summary>Target points to move to in order</summary>
-		public Transform[] targets;
+		public Vector3[] targets;
 
 		/// <summary>Time in seconds to wait at each target</summary>
 		public float delay = 0;
@@ -51,7 +51,7 @@ namespace Pathfinding {
 			}
 
 			index = index % targets.Length;
-			agent.destination = targets[index].position;
+			agent.destination = targets[index];
 
 			if (search) agent.SearchPath();
 		}

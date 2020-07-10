@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
@@ -11,7 +9,6 @@ public class Interactable : MonoBehaviour
     private bool isSpriteLoaded;
     private SpriteLoader spriteLoader;
 
-
     private void Start()
     {
         ItemFactory itemFactory = new ItemFactory();
@@ -20,7 +17,7 @@ public class Interactable : MonoBehaviour
         spriteLoader = new SpriteLoader();
         if (spriteRenderer.sprite == null)
         {
-            isSpriteLoaded = false;
+            this.isSpriteLoaded = false;
             LoadSprite(spriteRenderer);
         }
         else
@@ -31,7 +28,6 @@ public class Interactable : MonoBehaviour
                 Debug.LogError($"Overworld Item has assigned item named {item.Name} but has sprite for {spriteRenderer.sprite.name} instead!");
             }
         }
-            
     }
 
     private void Update()
@@ -42,12 +38,11 @@ public class Interactable : MonoBehaviour
         }
 
         ListenForItemInteraction();
-
     }
 
     private void ListenForItemInteraction()
     {
-        if (Input.GetAxisRaw("Submit") >= 0)
+        if (Input.GetAxisRaw("Submit") >= 0 && player != null)
         {
             var heading = transform.position - player.GetComponent<Transform>().position;
             var distance = heading.magnitude;
@@ -69,16 +64,16 @@ public class Interactable : MonoBehaviour
     private void LoadSprite(SpriteRenderer spriteRenderer)
     {
         Sprite itemSprite;
+
         if (item.IsMachine)
         {
             itemSprite = spriteLoader.LoadTMSprite(item.Name, (item as Machine).TMType);
-
         }
         else
         {
             itemSprite = spriteLoader.LoadItemSprite(item.Name);
-
         }
+
         if (itemSprite != null)
         {
             spriteRenderer.sprite = itemSprite;

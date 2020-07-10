@@ -5,18 +5,18 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     public Animator transition;
-    public float transitiontime = 1f;
+    public const float transitionTime = 1f;
 
     public void LoadBattle()
     {
         StartCoroutine(Loadscene(1));
     }
-    IEnumerator Loadscene(int scene_index)
+    IEnumerator Loadscene(int sceneIndex)
     {
         transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(transitiontime);
+        yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(scene_index);
+        SceneManager.LoadScene(sceneIndex);
     }
 }

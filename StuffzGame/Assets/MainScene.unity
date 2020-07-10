@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1701,14 +1701,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88f4d63ed5fd23498fe040bae12c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WildPokemon: {fileID: 3584803001155169253, guid: b623686e26b5cf24fb08d49ef66e3488,
+  wildPokemonPrefab: {fileID: 3584803001155169253, guid: b623686e26b5cf24fb08d49ef66e3488,
     type: 3}
-  player: {fileID: 1617124652}
-  Encounter_Data: {fileID: 910261792}
-  s: {fileID: 0}
-  rate: 2
-  currmobs: 0
-  maxmobs: 2
+  playerGameObject: {fileID: 1617124652}
+  encounterData: {fileID: 910261792}
+  rate: 10
+  maxMobs: 2
 --- !u!4 &290765539
 Transform:
   m_ObjectHideFlags: 0
@@ -6592,7 +6590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba173543f9cf4364c9a9c4ddfa312bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pokemon_name: 
   persistent: 1
 --- !u!4 &910261794
 Transform:
@@ -7884,7 +7881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -390, y: -30}
+  m_AnchoredPosition: {x: -389.99994, y: -30}
   m_SizeDelta: {x: -780, y: -59.99994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180449633
@@ -9548,7 +9545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.000061035156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1376810106
@@ -11081,8 +11078,8 @@ GameObject:
   - component: {fileID: 1617124654}
   - component: {fileID: 1617124653}
   - component: {fileID: 1617124659}
-  - component: {fileID: 1617124660}
   - component: {fileID: 1617124657}
+  - component: {fileID: 1617124658}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11206,6 +11203,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 0
+--- !u!61 &1617124658
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617124652}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0625, y: 1.4375}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!95 &1617124659
 Animator:
   serializedVersion: 3
@@ -11225,22 +11248,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &1617124660
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617124652}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.71875
 --- !u!1 &1620388959
 GameObject:
   m_ObjectHideFlags: 0
@@ -13611,7 +13618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.000061035156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1951535885
@@ -13739,7 +13746,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: Search Pokemon ...
 --- !u!222 &1952751535
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15720,10 +15727,35 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4574750134116432799, guid: d240e8178e5ff014092d70ff15b35a55,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6103128254038299052, guid: d240e8178e5ff014092d70ff15b35a55,
         type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6103128254038299052, guid: d240e8178e5ff014092d70ff15b35a55,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6103128254038299052, guid: d240e8178e5ff014092d70ff15b35a55,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6103128254038299052, guid: d240e8178e5ff014092d70ff15b35a55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6103128254038299052, guid: d240e8178e5ff014092d70ff15b35a55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 7857026743104597375, guid: d240e8178e5ff014092d70ff15b35a55,
         type: 3}

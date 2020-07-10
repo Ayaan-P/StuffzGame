@@ -41,7 +41,7 @@ public class PokemonSlotSpriteData : SpriteSlotData<Pokemon>
 
     private void PreLoadPokemonSprite()
     {
-        this.pokemonSprite = loader.LoadPokemonSprite(CurrentObject.BasePokemon.Id, CurrentObject.IsShiny, SpriteType.OVERWORLD_POKEMON);
+        this.pokemonSprite = loader.LoadPokemonSprite(CurrentObject.BasePokemon.Id, CurrentObject.IsShiny, CurrentObject.Gender, SpriteType.OVERWORLD);
     }
 
     private void PreLoadHeldItemSprite()

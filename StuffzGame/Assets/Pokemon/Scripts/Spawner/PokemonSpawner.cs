@@ -1,24 +1,20 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PokemonSpawner : MonoBehaviour
 {
-    public GameObject WildPokemon;
-    public GameObject player;
-    public GameObject Encounter_Data;
-    public Sprite s;
-    private float randX, randY;
-    private int randpkmn;
-    private Vector2 spawnpoint;
+    public GameObject wildPokemonPrefab;
+    public GameObject playerGameObject;
+    public GameObject encounterData;
     public float rate = 2f;
-    private float nextspawn = 0.0f;
-    public int currmobs = 0;
-    public int maxmobs;
+    public int maxMobs;
+    private float nextSpawnTime = 0f;
+    private int currentMobs;
     private PokemonFactory factory;
 
     // Start is called before the first frame update
     private void Start()
     {
+        currentMobs = 0;
         factory = new PokemonFactory();
         Debug.Log("Generating trash value for Pokemon to preload JSON.");
         //Single pokemon creation to load the JSON and keep it cached.
@@ -28,28 +24,25 @@ public class PokemonSpawner : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (Time.time > nextspawn && currmobs <= maxmobs)
+        int randomPokemonID, randomLevel;
+        float randX, randY;
+
+        if (Time.time > nextSpawnTime && currentMobs < maxMobs)
         {
-            randpkmn = Random.Range(1, 649);
-            int randlvl = Random.Range(60, 70);
-            nextspawn = Time.time + rate;
+            randomPokemonID = Random.Range(1, 650);
+            randomLevel = Random.Range(1, 101);
+            nextSpawnTime = Time.time + rate;
             randX = Random.Range(-5.0f, 5.0f);
             randY = Random.Range(-5.0f, 5.0f);
-            spawnpoint = new Vector2(randX, randY);
+            Vector2 spawnPoint = new Vector2(randX, randY);
+            Pokemon wildPokemon = factory.CreatePokemon(randomPokemonID, randomLevel);
 
-      
-            GameObject go = Instantiate(WildPokemon, spawnpoint, Quaternion.identity);
+            GameObject spawnedWildPokemon = Instantiate(wildPokemonPrefab, spawnPoint, Quaternion.identity);
+            spawnedWildPokemon.GetComponent<SpriteSwap>().Id = randomPokemonID;
+            PokemonController pokemonController = spawnedWildPokemon.GetComponent<PokemonController>();
+            pokemonController.InitWildPokemonData(playerGameObject, wildPokemon, encounterData);
 
-            Pokemon pkmn = factory.CreatePokemon(randpkmn, randlvl);
-            go.GetComponent<SpriteSwap>().Id = randpkmn;
-
-            go.GetComponent<PkmnController>().encounter_data=Encounter_Data;
-            go.GetComponent<PkmnController>().player = player;
-
-            go.GetComponent<PkmnController>().pokemon_name = pkmn.BasePokemon.Name;
-            go.GetComponent<PkmnController>().wild_pokemon = pkmn;
-
-            currmobs++;
+            currentMobs++;
         }
     }
 }

@@ -41,11 +41,11 @@ public class StorageSlotSpriteData : SpriteSlotData<Pokemon>
 
     private void PreLoadSummarySprite()
     {
-        this.summarySprite = loader.LoadPokemonSprite(CurrentObject.BasePokemon.Id, CurrentObject.IsShiny, SpriteType.BATTLE_FRONT);
+        this.summarySprite = loader.LoadPokemonSprite(CurrentObject.BasePokemon.Id, CurrentObject.IsShiny, CurrentObject.Gender, SpriteType.BATTLE_FRONT);
     }
     private void PreLoadPokemonSprite()
     {
-        this.pokemonSprite = loader.LoadPokemonSprite(CurrentObject.BasePokemon.Id, CurrentObject.IsShiny, SpriteType.OVERWORLD_POKEMON);
+        this.pokemonSprite = loader.LoadPokemonSprite(CurrentObject.BasePokemon.Id, CurrentObject.IsShiny, CurrentObject.Gender, SpriteType.OVERWORLD);
     }
 
     private void PreLoadHeldItemSprite()

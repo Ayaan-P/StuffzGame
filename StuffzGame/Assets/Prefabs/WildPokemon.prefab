@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 382778694753926113}
   - component: {fileID: 6653581793818337983}
   - component: {fileID: 5944873485669236082}
-  - component: {fileID: 8458004407575036859}
+  - component: {fileID: 3119643463943783366}
   m_Layer: 0
   m_Name: WildPokemon
   m_TagString: Untagged
@@ -122,8 +122,8 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0.009668887, y: 0}
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6645705, y: 1.5565414}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &3883281977370231658
 Animator:
@@ -181,13 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d6bb1d409894243a57031c18237bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   animator: {fileID: 3883281977370231658}
-  encounter_data: {fileID: 0}
-  pokemon_name: 
   radius: 3
-  attack_radius: 1.6
-  escape_radius: 3
+  attackRadius: 1
+  escapeRadius: 3
+  maxMovementSpeed: 5
 --- !u!114 &6653581793818337983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +250,7 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &8458004407575036859
+--- !u!114 &3119643463943783366
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,8 +259,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3584803001155169253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Script: {fileID: 11500000, guid: 22e6c29e32504465faa943c537d8029b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 0}
+  targets: []
+  delay: 0

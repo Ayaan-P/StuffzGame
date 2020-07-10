@@ -8,7 +8,6 @@ using UnityEngine;
     
         public Pokemon CurrentEnemyPokemon { get; set; }
         public List<Pokemon> Party { get; set; }
-        public string pokemon_name ;
         public bool persistent;
 
         void Start()

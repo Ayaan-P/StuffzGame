@@ -6,25 +6,17 @@ public class SpriteLoader
 {
     private readonly bool enableDebug = false;
     private SpritePool spritePool;
+
     public SpriteLoader()
     {
         this.spritePool = SpritePool.GetInstance();
     }
 
-    public Sprite LoadPokemonSprite(int id, bool isShiny, SpriteType type)
+    public Sprite LoadPokemonSprite(int id, bool isShiny, Gender gender, SpriteType type)
     {
-        string shinyChar = isShiny ? "s" : "";
-        string formattedId;
-        if (type == SpriteType.BATTLE_FRONT  || type == SpriteType.BATTLE_BACK)
-        {
-            formattedId = id.ToString();
-        }
-        else
-        {
-             formattedId = FormatId(id);
-        }
-
-        string address = $"{GetAddressForSpriteType(type)}{formattedId}{shinyChar}.png";
+        string formattedId = FormatId(id, isShiny, gender, type);
+       
+        string address = $"{GetAddressForSpriteType(type)}{formattedId}.png";
         if (enableDebug) { Debug.Log($"Loading pokemon sprite at address: {address}"); }
         return GetSpriteAsync(address);
     }
@@ -83,7 +75,6 @@ public class SpriteLoader
 
     private Sprite GetSpriteAsync(string address)
     {
-
         Sprite cachedSprite = spritePool.CheckPool(address);
         if (cachedSprite != null)
         {
@@ -116,35 +107,50 @@ public class SpriteLoader
     {
         switch (type)
         {
-            case SpriteType.OVERWORLD_POKEMON: return "Assets/Pokemon/Sprites/Overworld/";
+            case SpriteType.OVERWORLD: return "Assets/Pokemon/Sprites/Overworld/";
             case SpriteType.BATTLE_FRONT: return "Assets/Pokemon/Sprites/Front/";
             case SpriteType.BATTLE_BACK: return "Assets/Pokemon/Sprites/Back/";
-            case SpriteType.SUMMARY_POKEMON: return "Assets/Pokemon/Sprites/Summary/";
+            case SpriteType.BOX: return "Assets/Pokemon/Sprites/Box/";
             default: Debug.LogError($"No sprite address available for {type}"); return null;
         }
     }
 
-    private string FormatId(int id)
+    private string FormatId(int id, bool isShiny, Gender gender, SpriteType spriteType)
     {
-        if (id < 10)
+        string genderChar, formattedId, shinyChar;
+    
+        if (spriteType == SpriteType.OVERWORLD)
         {
-            return $"00{id}";
-        }
-        else if (id < 100)
-        {
-            return $"0{id}";
+            genderChar = "";
+            shinyChar = isShiny ? "s" : "";
+            if(id < 10)
+            {
+                formattedId = $"00{id}{genderChar}{shinyChar}";
+            }
+            else if (id < 100)
+            {
+                formattedId = $"0{id}{genderChar}{shinyChar}";
+            }
+            else
+            {
+                formattedId = $"{id}{genderChar}{shinyChar}";
+            }
+
         }
         else
         {
-            return $"{id}";
+            genderChar = (gender == Gender.FEMALE) ? "f" : "";
+            shinyChar = isShiny ? "s" : "";
+            formattedId = $"{id}{genderChar}{shinyChar}";
         }
+        return formattedId;
     }
 }
 
 public enum SpriteType
 {
-    OVERWORLD_POKEMON,
+    OVERWORLD,
     BATTLE_FRONT,
     BATTLE_BACK,
-    SUMMARY_POKEMON
+    BOX
 }
