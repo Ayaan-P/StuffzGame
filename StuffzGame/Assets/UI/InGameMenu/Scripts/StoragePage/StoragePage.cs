@@ -350,6 +350,7 @@ public class StoragePage : MonoBehaviour
 public enum PokemonSortBy
 {
     Name,
+    ID,
     Level,
     Nature,
     Gender,

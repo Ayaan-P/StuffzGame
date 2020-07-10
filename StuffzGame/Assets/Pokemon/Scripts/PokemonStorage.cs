@@ -98,6 +98,10 @@ public class PokemonStorage
                 PokemonList.Sort((a, b) => a.BasePokemon.Name.CompareTo(b.BasePokemon.Name));
                 OnStorageDatasetChanged(PokemonList);
                 break;
+            case PokemonSortBy.ID:
+                PokemonList.Sort((a, b) => a.BasePokemon.Id.CompareTo(b.BasePokemon.Id));
+                OnStorageDatasetChanged(PokemonList);
+                break;
             case PokemonSortBy.Level:
                 PokemonList.Sort((a, b) => a.CurrentLevel.CompareTo(b.CurrentLevel));
                 OnStorageDatasetChanged(PokemonList);

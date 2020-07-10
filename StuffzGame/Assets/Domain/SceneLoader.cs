@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadBattle()
     {
+        
         StartCoroutine(Loadscene(1));
     }
     IEnumerator Loadscene(int sceneIndex)
