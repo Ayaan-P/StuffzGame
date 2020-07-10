@@ -84,6 +84,10 @@ public class GameManager : Singleton
             int randLevel = rand.Next(15, 101);
             int randPokemonId = rand.Next(1, 649);
             Pokemon randPokemon = pokemonFactory.CreatePokemon(randPokemonId, randLevel);
+            if(i == 25)
+            {
+                randPokemon.IsShiny = true;
+            }
             PokemonStat hpStat = randPokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.HP).SingleOrDefault();
             float hpPercent = (float)rand.NextDouble();
 

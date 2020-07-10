@@ -76,7 +76,7 @@ public class SwapListen : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            Debug.LogWarning($"Draggable is null");
+           // Debug.LogWarning($"Draggable is null");
         }
 
         if (swapButton != null)

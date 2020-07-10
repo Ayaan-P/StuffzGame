@@ -111,7 +111,7 @@ public class PokemonStorage
                 OnStorageDatasetChanged(PokemonList);
                 break;
             case PokemonSortBy.IsShiny:
-                PokemonList.Sort((a, b) => a.IsShiny.CompareTo(b.IsShiny));
+                PokemonList.Sort((a, b) => b.IsShiny.CompareTo(a.IsShiny)); //flipped so that shiny is first in list
                 OnStorageDatasetChanged(PokemonList);
                 break;
             case PokemonSortBy.Fainted:

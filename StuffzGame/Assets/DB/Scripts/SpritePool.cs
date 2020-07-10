@@ -22,7 +22,7 @@ public class SpritePool
      *
      */
 
-    private readonly int MAX_POOL_SIZE = 200;
+    private readonly int MAX_POOL_SIZE = 250;
     private readonly Dictionary<string, int> spriteUseCountDict;
     private readonly Dictionary<string, Sprite> spritePool;
 

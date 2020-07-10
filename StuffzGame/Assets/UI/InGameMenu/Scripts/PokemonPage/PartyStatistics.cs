@@ -67,12 +67,8 @@ public class PartyStatistics : MonoBehaviour
 
             RectTransform rect = (RectTransform)typePieWedge.transform;
             float radius = (wedgeImage.transform.right.x - wedgeImage.transform.position.x) / 4f;
-            Debug.Log("radius: " + radius);
-
+         
             Vector2 textPosition = GetTextPosition(radius, wedgeImage);
-
-            Debug.Log("TextPos: " + wedgeText.transform.position);
-            Debug.Log("new TextPos: " + textPosition);
 
             wedgeText.transform.position = wedgeImage.transform.position + new Vector3(textPosition.x, textPosition.y);
         }

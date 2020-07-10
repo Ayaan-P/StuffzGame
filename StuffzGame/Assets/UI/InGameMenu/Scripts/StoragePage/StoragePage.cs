@@ -88,14 +88,24 @@ public class StoragePage : MonoBehaviour
             pokemonDescription.SetActive(true);
             Image[] imageComponents = pokemonDescription.GetComponentsInChildren<Image>(true);
             Image pokemonImage = imageComponents[1];
-            Image genderImage = imageComponents[2];
-            Image type1Image = imageComponents[3];
-            Image type2Image = imageComponents[4];
-            Image heldItemImage = imageComponents[5];
+            Image shinyImage = imageComponents[2];
+            Image genderImage = imageComponents[3];
+            Image type1Image = imageComponents[4];
+            Image type2Image = imageComponents[5];
+            Image heldItemImage = imageComponents[6];
 
             Pokemon pokemon = selectedSlotData.CurrentObject;
             pokemonImage.sprite = selectedSlotData.SummarySprite;
             pokemonImage.preserveAspect = true;
+
+            if (pokemon.IsShiny)
+            {
+                shinyImage.gameObject.SetActive(true);
+            }
+            else
+            {
+                shinyImage.gameObject.SetActive(false);
+            }
 
             genderImage.sprite = selectedSlotData.GenderSprite;
             genderImage.preserveAspect = true;

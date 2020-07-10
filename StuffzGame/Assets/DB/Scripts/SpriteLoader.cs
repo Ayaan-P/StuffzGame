@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
@@ -15,8 +16,16 @@ public class SpriteLoader
     public Sprite LoadPokemonSprite(int id, bool isShiny, Gender gender, SpriteType type)
     {
         string formattedId = FormatId(id, isShiny, gender, type);
-       
         string address = $"{GetAddressForSpriteType(type)}{formattedId}.png";
+       
+        if(gender == Gender.FEMALE && !File.Exists(address))
+        {
+            // Not all female pokemon have special sprites, so use male one instead.
+
+             formattedId = FormatId(id, isShiny, Gender.MALE, type);
+             address = $"{GetAddressForSpriteType(type)}{formattedId}.png";
+        }
+
         if (enableDebug) { Debug.Log($"Loading pokemon sprite at address: {address}"); }
         return GetSpriteAsync(address);
     }
