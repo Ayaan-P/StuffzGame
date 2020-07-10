@@ -250,15 +250,17 @@ public class StoragePage : MonoBehaviour
         Image heldItemImage = imageComponents[3];
 
         pokemonImage.sprite = slotData.PokemonSprite;
+        pokemonImage.preserveAspect = true;
 
         if (pokemon.HeldItem != null)
         {
+            heldItemImage.gameObject.SetActive(true);
             heldItemImage.sprite = slotData.ItemSprite;
             heldItemImage.preserveAspect = true;
         }
         else
         {
-            heldItemImage.color = new Color(0, 0, 0, 0);
+            heldItemImage.gameObject.SetActive(false);
         }
     }
 
@@ -316,7 +318,7 @@ public class StoragePage : MonoBehaviour
     {
         List<SpriteSlotData<Pokemon>> searchResults = new List<SpriteSlotData<Pokemon>>();
 
-        foreach (PokemonSlotSpriteData storageSlot in uiManager.StorageSlotDataList)
+        foreach (StorageSlotSpriteData storageSlot in uiManager.StorageSlotDataList)
         {
             if (CultureInfo.CurrentCulture.CompareInfo.IndexOf(storageSlot.CurrentObject.BasePokemon.Name, input, CompareOptions.IgnoreCase) >= 0)
             {
