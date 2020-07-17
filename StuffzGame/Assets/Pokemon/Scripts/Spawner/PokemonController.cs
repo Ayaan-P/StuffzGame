@@ -4,11 +4,10 @@ using UnityEngine.SceneManagement;
 using Pathfinding;
 public class PokemonController : MonoBehaviour
 {
-    public Animator animator;
+    private Animator animator;
     public float radius = 3f;
     public int maxMovementSpeed = 5;
     private Pokemon wildPokemon;
-    private GameObject encounterData;
     private GameObject playerGameObject;
     private bool isPatrolSet;
     private Patrol patrol;
@@ -17,6 +16,7 @@ public class PokemonController : MonoBehaviour
 
     private void Start()
     {
+        this.animator = this.GetComponent<Animator>();
         isPatrolSet = false;
         patrol = this.GetComponent<Patrol>();
         aiPath = this.GetComponent<AIPath>();
@@ -35,9 +35,7 @@ public class PokemonController : MonoBehaviour
                 isPatrolSet = false;
                 patrol.targets = new Vector3[] { target.position };
                 patrol.delay = 0;
-                //this.GetComponent<AIDestinationSetter>().target = target;
-
-                //SetAnimatorSpriteDirection();
+               
             }
             else
             {
@@ -53,19 +51,25 @@ public class PokemonController : MonoBehaviour
     {
         if (collision.collider.gameObject.Equals(playerGameObject))
         {
-            encounterData.GetComponent<EncounterData>().CurrentEnemyPokemon = wildPokemon;
-            encounterData.GetComponent<EncounterData>().Party = Player.Instance.Party.PartyPokemon;
-            Debug.Log(encounterData.GetComponent<EncounterData>().CurrentEnemyPokemon.BasePokemon.Name);
-            SceneManager.LoadScene(1);
+            EncounterData encounterData = EncounterData.Instance;
+            if(encounterData != null)
+            {
+                encounterData.SetWildPokemonEncounter(wildPokemon);
+                SceneLoader sceneLoader = new SceneLoader();
+                sceneLoader.LoadBattle();
+            }
+            else
+            {
+                Debug.LogError($"{typeof(EncounterData)} is null");
+            }
         }
     }
 
-    public void InitWildPokemonData(GameObject playerGameObject, Pokemon wildPokemon, GameObject encounterData)
+    public void InitWildPokemonData(GameObject playerGameObject, Pokemon wildPokemon)
     {
         this.playerGameObject = playerGameObject;
         this.wildPokemon = wildPokemon;
-        this.encounterData = encounterData;
-        int speedStat = this.wildPokemon.BasePokemon.Stats.Where(it => it.BaseStat.Name == StatName.SPEED).SingleOrDefault().BaseValue;
+        int speedStat = this.wildPokemon.GetStat(StatName.SPEED).BaseValue;
         this.GetComponent<AIPath>().maxSpeed = speedStat / MAX_POKEMON_BASE_SPEED * maxMovementSpeed;
         this.GetComponent<Rigidbody2D>().mass = this.wildPokemon.BasePokemon.Weight;
     }

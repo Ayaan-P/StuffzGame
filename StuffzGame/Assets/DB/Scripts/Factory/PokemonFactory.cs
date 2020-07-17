@@ -7,6 +7,7 @@ public class PokemonFactory
     private int SEED = 69;
     private readonly System.Random random;
     private readonly BasePokemonFactory basePokemonFactory;
+    private readonly bool enableDebug = true;
 
     public PokemonFactory()
     {
@@ -30,12 +31,15 @@ public class PokemonFactory
                 LearnedMoves = GenerateMovesetForLevel(basePokemon, level),
                 CurrentAbility = GenerateAbility(basePokemon),
                 HeldItem = null,
-                IsFainted = false
+                IsFainted = false,
+                Ailment = MoveAilment.NONE
             };
 
             pokemon.CalculateStats();
-
-            UnityEngine.Debug.Log($"Created pokemon with id: {id}. Pokemon : \n{pokemon}");
+            if (enableDebug)
+            {
+                UnityEngine.Debug.Log($"Created pokemon with id: {id}. Pokemon : \n{pokemon}");
+            }
             return pokemon;
         }
 
@@ -49,7 +53,10 @@ public class PokemonFactory
         int maxId = pokemonMapper.GetJSONObjectCount();     <-- doesn't work because ID > 807 exist, but are numbered 10001 through 10157 */
         int MAX_ID = 807;
         int randomId = random.Next(1, MAX_ID + 1);
-        UnityEngine.Debug.Log($"Creating random pokemon with id: {randomId}");
+        if (enableDebug)
+        {
+            UnityEngine.Debug.Log($"Creating random pokemon with id: {randomId}");
+        }
         return CreatePokemon(randomId, level);
     }
 

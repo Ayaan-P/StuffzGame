@@ -3,7 +3,7 @@
 public class Interactable : MonoBehaviour
 {
     public float radius = 2f;
-    public GameObject player;
+    private GameObject playerGameObject;
     public int itemId;
     private Item item;
     private bool isSpriteLoaded;
@@ -11,6 +11,11 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
+        this.playerGameObject = Player.Instance.gameObject;
+        if(this.playerGameObject == null)
+        {
+            Debug.LogError($"{typeof(Interactable)}: Player is null");
+        }
         ItemFactory itemFactory = new ItemFactory();
         this.item = itemFactory.CreateItem(itemId);
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
@@ -42,12 +47,12 @@ public class Interactable : MonoBehaviour
 
     private void ListenForItemInteraction()
     {
-        if (Input.GetAxisRaw("Submit") >= 0 && player != null)
+        if (Input.GetAxisRaw("Submit") >= 0 && playerGameObject != null)
         {
-            var heading = transform.position - player.GetComponent<Transform>().position;
+            var heading = transform.position - playerGameObject.GetComponent<Transform>().position;
             var distance = heading.magnitude;
             var direction = heading / distance;
-            var lookingInDirection = player.GetComponent<PlayerMovement>().lookingInDirection;
+            var lookingInDirection = playerGameObject.GetComponent<PlayerMovement>().lookingInDirection;
 
             if (distance <= radius && Input.GetAxisRaw("Submit") > 0)
             {

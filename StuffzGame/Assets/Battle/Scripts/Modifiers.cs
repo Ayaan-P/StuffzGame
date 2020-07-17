@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Modifiers
 {
-    private const double EFFECTIVE = 1.0;
-    private const double SUPER = 2.0;
-    private const double NOTVERY = 0.5;
-    private const double NOEFFECT = 0;
+    private const float EFFECTIVE = 1;
+    private const float SUPER = 2;
+    private const float NOTVERY = 0.5f;
+    private const float NOEFFECT = 0;
 
-    private readonly double[,] typeTable ={ 
+    private readonly float[,] typeTable ={ 
                             /*NORMAL     FIGHTING   FLYING     POISON     GROUND     ROCK       BUG        GHOST      STEEL      FIRE       WATER      GRASS      ELECTRIC   PSYCHIC    ICE        DRAGON     DARK       FAIRY
         /*NORMAL*/           {EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, NOTVERY,   EFFECTIVE, NOEFFECT,  NOTVERY,   EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE},
         /*FIGHTING*/         {SUPER,     EFFECTIVE, NOTVERY,   NOTVERY,   EFFECTIVE, SUPER,     NOTVERY,   NOEFFECT,  SUPER,     EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, NOTVERY,   SUPER,     EFFECTIVE, SUPER,     NOTVERY},
@@ -32,33 +34,84 @@ public class Modifiers
         /*FAIRY*/            {EFFECTIVE, SUPER,     EFFECTIVE, NOTVERY,   EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, NOTVERY,   NOTVERY,   EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, EFFECTIVE, SUPER,     SUPER,     EFFECTIVE},
                                        };
 
-    public double CalculateModifier(Pokemon attacking, Pokemon defending, PokemonMove move)
+    /*
+     * Formula for damage calculation taken from Bulbapedia:
+     * https://bulbapedia.bulbagarden.net/wiki/Damage#Damage_calculation
+     * 
+     */
+    public double CalculateModifier(Pokemon attackingPokemon, Pokemon defendingPokemon, PokemonMove move)
     {
-        double STAB = 1;
-        List<PokemonType> defending_type = defending.BasePokemon.Types;
-        List<PokemonType> attacking_type = attacking.BasePokemon.Types;
-        int move_type = (int)move.BaseMove.Type;
-        foreach (PokemonType x in attacking_type)
+        StringBuilder stringBuilder = new StringBuilder();
+        List<PokemonType> defendingTypes = defendingPokemon.BasePokemon.Types;
+        List<PokemonType> attackingTypes = attackingPokemon.BasePokemon.Types;
+        PokemonType moveType = move.BaseMove.Type;
+
+        float targetModifier = GetTargetModifier(move.BaseMove.Target);
+
+        float criticalModifier = GetCriticalHitModifier(attackingPokemon, move);
+
+        float randomModifier = UnityEngine.Random.Range(0.85f, 1.0f);
+
+        float STAB = 1;
+        foreach (PokemonType attackingType in attackingTypes)
         {
-            if (move_type == (int)x)
+            if (moveType == attackingType)
             {
-                Debug.Log("you get stab");
-                STAB = 1.5;
+                STAB = 1.5f;
+                stringBuilder.Append($"{attackingPokemon.BasePokemon.Name} attacked {defendingPokemon.BasePokemon.Name} with {move.BaseMove.Name} (STAB: {STAB})\n");
                 break;
             }
         }
-        double type_modifier = 1;
-        foreach (PokemonType x in defending_type)
+
+        float typeModifier = 1;
+        foreach (PokemonType defendingType in defendingTypes)
         {
-            type_modifier *= typeTable[move_type - 1, (int)(x) - 1];
+
+            typeModifier *= GetTypeEffectiveness(moveType, defendingType);
         }
 
-        Debug.Log(type_modifier);
-        double rand_modifier = UnityEngine.Random.Range(0.85f, 1.0f);
 
-        double final_modifier = STAB * type_modifier * rand_modifier;
-        Debug.Log(final_modifier + "=" + STAB + "x" + type_modifier + "x" + rand_modifier);
-        return final_modifier;
+        stringBuilder.Append($"{move.BaseMove.Name} is {typeModifier} x effective against {defendingPokemon.BasePokemon.Name}\n");
+
+        float burnModifier = (attackingPokemon.Ailment == MoveAilment.BURN && move.BaseMove.MoveDamageClass == MoveDamageClass.PHYSICAL) ? 0.5f : 1;
+
+        float finalModifier = targetModifier * criticalModifier * randomModifier * STAB * typeModifier * burnModifier;
+        stringBuilder.Append($"Final modifier = {targetModifier} x {criticalModifier} x {randomModifier} x {STAB} x {typeModifier} x {burnModifier}");
+        Debug.Log(stringBuilder.ToString());
+        return finalModifier;
+    }
+
+    private float GetTargetModifier(PokemonTarget target)
+    {
+        switch (target)
+        {
+            case PokemonTarget.ALL_OPPONENTS:
+            case PokemonTarget.ALL_OTHER_POKEMON:
+            case PokemonTarget.ALL_POKEMON:
+            case PokemonTarget.ENTIRE_FIELD:
+            case PokemonTarget.OPPONENTS_FIELD:
+            case PokemonTarget.USERS_FIELD:
+            case PokemonTarget.USER_AND_ALLIES:
+                return 0.75f;
+            case PokemonTarget.SPECIFIC_MOVE:
+            case PokemonTarget.SELECTED_POKEMON_ME_FIRST:
+            case PokemonTarget.ALLY:
+            case PokemonTarget.USER_OR_ALLY:
+            case PokemonTarget.USER:
+            case PokemonTarget.RANDOM_OPPONENT:
+            case PokemonTarget.SELECTED_POKEMON:
+            case PokemonTarget.NULL:
+                return 1;
+            default:
+                Debug.LogError($"{target} modifier not available, setting to 1");
+                return 1;
+        }
+    }
+    private float GetCriticalHitModifier(Pokemon attackingPokemon, PokemonMove move)
+    {
+
+        int critRateBonus = move.BaseMove.CritRate;
+        return 0;
     }
 
     public List<PokemonType> GetTypesStrongAgainst(PokemonType type)
@@ -115,5 +168,12 @@ public class Modifiers
             }
         }
         return resistantToTypes;
+    }
+
+    public float GetTypeEffectiveness(PokemonType attackingType, PokemonType defendingType)
+    {
+        int attackingTypeIndex = (int)attackingType - 1;
+        int defendingTypeIndex = (int)defendingType - 1;
+        return typeTable[attackingTypeIndex, defendingTypeIndex];
     }
 }

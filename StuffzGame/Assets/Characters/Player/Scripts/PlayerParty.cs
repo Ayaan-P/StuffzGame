@@ -5,7 +5,7 @@ public class PlayerParty
 {
     public readonly int MAX_PARTY_SIZE = 6;
     private const bool enableDebug = false;
-    public List<Pokemon> PartyPokemon { get; }
+    private List<Pokemon> partyPokemon;
     public delegate void LoadSprite<T>(T thing, int index);
     public delegate void SwapSprite(int firstIndex, int secondIndex);
 
@@ -14,20 +14,20 @@ public class PlayerParty
 
     public PlayerParty()
     {
-        PartyPokemon = new List<Pokemon>();
+        partyPokemon = new List<Pokemon>();
     }
 
     public void Add(Pokemon pokemon)
     {
-        if (PartyPokemon.Count < MAX_PARTY_SIZE)
+        if (partyPokemon.Count < MAX_PARTY_SIZE)
         {
-            PartyPokemon.Add(pokemon);
+            partyPokemon.Add(pokemon);
             if (enableDebug) { Debug.Log($"Added {pokemon.BasePokemon.Name} to party"); }
-            OnPartyPokemonChanged(pokemon, PartyPokemon.Count - 1);
+            OnPartyPokemonChanged(pokemon, partyPokemon.Count - 1);
         }
         else
         {
-            Debug.Log($"Party full ({PartyPokemon.Count}). Adding {pokemon} to PC");
+            Debug.Log($"Party full ({partyPokemon.Count}). Adding {pokemon} to PC");
             // Add pokemon to PC instead.
             PokemonStorage PC = PokemonStorage.GetInstance();
             PC.AddPokemon(pokemon);
@@ -36,7 +36,7 @@ public class PlayerParty
 
     public bool Remove(Pokemon pokemon)
     {
-        int index = PartyPokemon.IndexOf(pokemon);
+        int index = partyPokemon.IndexOf(pokemon);
         if (index == -1)
         {
             Debug.LogError($"{pokemon.BasePokemon.Name} cannot be removed because it does not exist in Party");
@@ -46,22 +46,22 @@ public class PlayerParty
         {
             OnPartyPokemonChanged(null, index);
             if (enableDebug) { Debug.Log($"Removed {pokemon.BasePokemon.Name} from party"); }
-            return PartyPokemon.Remove(pokemon);
+            return partyPokemon.Remove(pokemon);
         }
     }
 
     public bool Swap(int firstIndex, int secondIndex)
     {
-        if (firstIndex == -1 || firstIndex >= PartyPokemon.Count || secondIndex == -1 || secondIndex >= PartyPokemon.Count)
+        if (firstIndex < 0 || firstIndex >= partyPokemon.Count || secondIndex < 0 || secondIndex >= partyPokemon.Count)
         {
             Debug.LogError($"Cannot swap pokemon in party at indices: {firstIndex} or {secondIndex} because either is out of bounds");
             return false;
         }
         else
         {
-            Pokemon temp = PartyPokemon[firstIndex];
-            PartyPokemon[firstIndex] = PartyPokemon[secondIndex];
-            PartyPokemon[secondIndex] = temp;
+            Pokemon temp = partyPokemon[firstIndex];
+            partyPokemon[firstIndex] = partyPokemon[secondIndex];
+            partyPokemon[secondIndex] = temp;
             OnPartyPokemonSwapped(firstIndex, secondIndex);
             if (enableDebug) { Debug.Log($"Swapped pokemon at index: {firstIndex} with index: {secondIndex} (size: {PartySize()})"); }
             return true;
@@ -70,11 +70,19 @@ public class PlayerParty
 
     public Pokemon GetPokemonAtIndex(int index)
     {
-        return PartyPokemon[index];
+        if(index < PartySize() && index > -1)
+        {
+            return partyPokemon[index];
+        }
+        else
+        {
+            Debug.LogError($"Cant access party pokemon at index: {index}");
+            return null;
+        }
     }
 
     public int PartySize()
     {
-        return PartyPokemon.Count;
+        return partyPokemon.Count;
     }
 }

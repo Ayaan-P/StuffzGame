@@ -14,10 +14,18 @@ public class PokemonPage : MonoBehaviour
      
     private void OnEnable()
     {
-        uiManager = UIManager.Instance;
         GameObject swapText = this.transform.Find("SwapText").gameObject;
         swapText.SetActive(false);
-        UpdatePartyUI();
+
+        uiManager = UIManager.Instance;
+        if(uiManager == null)
+        {
+            Debug.LogError($"{typeof(PokemonPage)}: UIManager is null");
+        }
+        else
+        {
+            UpdatePartyUI();
+        }
     }
 
     private void OnDisable()
@@ -174,7 +182,7 @@ public class PokemonPage : MonoBehaviour
         GameObject health = slot.transform.Find("Health").gameObject;
         Text pokemonHP = health.GetComponentInChildren<Text>();
 
-        PokemonStat hpStat = pokemon.BasePokemon.Stats.Where(stat => stat.BaseStat.Name == StatName.HP).SingleOrDefault();
+        PokemonStat hpStat = pokemon.GetStat(StatName.HP);
         if (hpStat != null)
         {
             pokemonHP.text = $"{hpStat.CurrentValue}/{hpStat.CalculatedValue}";

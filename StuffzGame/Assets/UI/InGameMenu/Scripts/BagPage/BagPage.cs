@@ -32,9 +32,17 @@ public class BagPage : MonoBehaviour
     {
         SetUpListeners(true);
         ResetPage();
-        uiManager = UIManager.Instance;
-        UpdateInventoryUI();
         PopulateSortByDropdown();
+
+        uiManager = UIManager.Instance;
+        if (uiManager == null)
+        {
+            Debug.LogError($"{typeof(BagPage)}: UIManager is null");
+        }
+        else
+        {
+            UpdateInventoryUI();
+        }
     }
 
     private void OnDisable()

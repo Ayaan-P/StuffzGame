@@ -1,87 +1,90 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using Pathfinding;
-using System.Linq;
 
-public enum BATTLE_STATE { START, PLAYER_TURN, COMBAT, WIN, LOST}
 public class BattleSystem : MonoBehaviour
 {
-    public BATTLE_STATE state;
-    public GameObject playerUnit;
-    public GameObject enemyUnit;
+    private enum BattleState { START, PLAYER_TURN, ENEMY_TURN, WON, LOST }
 
-    public GameObject wildData;
+   // private BattleAI AI;
+    private AIAgent aiAgent;
+    private Dictionary<BattleState, Action<Pokemon, Pokemon>> battleStateFunction;
 
-    public Transform playerPlatform;
-    public Transform enemyPlatform;
-
-    public List<Pokemon> PlayerParty;
-  
-    public Pokemon PlayerPokemon {get; set;}
-    public Pokemon EnemyPokemon {get; set;}
-
-    
-	public Text dialogueText;
-    public Text move1;
-    public Text move2;
-    public Text move3;
-    public Text move4;
-
-	public BattleHUD playerHUD;
-	public BattleHUD enemyHUD;
-
-    List<PokemonMove> playerMoves;
-
-    unit player;
-    unit enemy;
+    public delegate void SeekInput();
+    public event SeekInput OnPlayerTurn;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        aiAgent = new RandomAgent();
+        InitBattleFunctions();
 
-        state = BATTLE_STATE.START;
-        StartCoroutine(battleSetup());
+        var player = Player.Instance;
+        var encounterData = EncounterData.Instance;
+        if(player == null || encounterData == null)
+        {
+            Debug.LogError($"Cannot start battle: {typeof(Player)} is null? {player == null} or {typeof(EncounterData)} is null? {encounterData == null}");
+        }
+        else
+        {
+            Pokemon playerPokemon = player.Party.GetPokemonAtIndex(0);
+            List<Pokemon> enemyParty = encounterData.GetCurrentEncounterData();
+            Pokemon enemyPokemon = enemyParty[0];
+            battleStateFunction[BattleState.START].Invoke(playerPokemon, enemyPokemon);
+        }
+      
     }
 
-    IEnumerator battleSetup()
+    private void InitBattleFunctions()
     {
-        wildData = GameObject.Find("CurrentEncounter");
-        GameObject enemy_fab = Instantiate(enemyUnit, enemyPlatform);
-        GameObject player_fab = Instantiate(playerUnit, playerPlatform);
-
-        PlayerParty = wildData.GetComponent<EncounterData>().Party;
-        //Pokemon player_pokemon = PlayerParty[0];
-        EnemyPokemon = wildData.GetComponent<EncounterData>().CurrentEnemyPokemon;
-        enemy_fab.GetComponent<SpriteSwapBattle>().orientation = "Front";
-        enemy_fab.GetComponent<SpriteSwapBattle>().id = wildData.GetComponent<EncounterData>().CurrentEnemyPokemon.BasePokemon.Id;
-        
-        PokemonFactory factory = new PokemonFactory();
-        PlayerPokemon = factory.CreatePokemon(257, 60);
-        player_fab.GetComponent<SpriteSwapBattle>().orientation = "Back";
-        player_fab.GetComponent<SpriteSwapBattle>().id = PlayerPokemon.BasePokemon.Id;
-        
-
-        player = player_fab.GetComponent<unit>();
-        enemy = enemy_fab.GetComponent<unit>();
-
-        
-	    playerHUD.SetHUD(PlayerPokemon);
-		enemyHUD.SetHUD(EnemyPokemon);
-        
-        playerMoves = PlayerPokemon.LearnedMoves;
-    
-        dialogueText.text = "A wild " + EnemyPokemon.BasePokemon.Name + " approaches...";
-        yield return new WaitForSeconds(2f);
-         
-        state = BATTLE_STATE.PLAYER_TURN;
-        Debug.Log(" Battle Setup");
-        playerTurn();
+        if (this.battleStateFunction == null)
+        {
+            this.battleStateFunction = new Dictionary<BattleState, Action<Pokemon, Pokemon>>{
+        { BattleState.START, (player,enemy) => StartBattle(player,enemy) },
+        { BattleState.PLAYER_TURN, (player,enemy) => PlayerTurn(player,enemy) },
+        { BattleState.ENEMY_TURN, (player,enemy) => EnemyTurn(player,enemy) },
+        { BattleState.WON, (player,enemy) => Won() },
+        { BattleState.LOST, (player,enemy) => Lost() }
+            };
+        }
     }
-    
-    void playerTurn()
+
+    private void StartBattle(Pokemon player, Pokemon enemy)
+    {
+    }
+
+    private void PlayerTurn(Pokemon player, Pokemon enemy)
+    {
+    }
+
+    private void EnemyTurn(Pokemon player, Pokemon enemy)
+    {
+
+        KeyValuePair<AIAction, int> actionIndexPair = aiAgent.GetNextAction(player, enemy);
+
+        switch (actionIndexPair.Key)
+        {
+            case AIAction.USE_MOVE:
+                break;
+            case AIAction.USE_ITEM:
+                break;
+            case AIAction.SWITCH_OUT:
+                break;
+            default:
+                Debug.LogError($"{actionIndexPair.Key} is not a valid AI action that can be performed");
+                break;
+        }
+    }
+
+    private void Won()
+    {
+    }
+
+    private void Lost()
+    {
+    }
+
+    /*void playerTurn()
     {
         Debug.Log(" player turn");
         move1.text=playerMoves[0].BaseMove.Name;
@@ -109,7 +112,6 @@ public class BattleSystem : MonoBehaviour
             }
             else
             {
-
                bool player_dead = PlayerPokemon.TakeDamage(enemy_move, EnemyPokemon);
                playerHUD.SetHP();
 
@@ -126,7 +128,6 @@ public class BattleSystem : MonoBehaviour
                    playerTurn();
                }
             }
-
         }
         else
         {
@@ -163,14 +164,16 @@ public class BattleSystem : MonoBehaviour
     {
         Debug.Log(" win");
         Destroy(wildData);
-        SceneManager.LoadScene(0);
+        SceneLoader loader = new SceneLoader();
+        loader.LoadMainScene();
     }
 
      public void playerLose()
     {
         Debug.Log(" lose");
         Destroy(wildData);
-        SceneManager.LoadScene(0);
+        SceneLoader loader = new SceneLoader();
+        loader.LoadMainScene();
     }
     public void OnAttack(int move_no)
     {
@@ -182,7 +185,5 @@ public class BattleSystem : MonoBehaviour
         PokemonMove enemy_move = EnemyPokemon.LearnedMoves[rndmove];
         Debug.Log(enemy_move.BaseMove.Name);
         StartCoroutine(conductCombat(playerMoves[move_no], enemy_move));
-        
-    }
- 
+    }*/
 }

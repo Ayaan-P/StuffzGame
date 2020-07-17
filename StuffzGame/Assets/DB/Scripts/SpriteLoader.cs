@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -6,49 +7,55 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class SpriteLoader
 {
     private readonly bool enableDebug = false;
-    private SpritePool spritePool;
+    private readonly SpritePool spritePool;
 
     public SpriteLoader()
     {
         this.spritePool = SpritePool.GetInstance();
     }
 
-    public Sprite LoadPokemonSprite(int id, bool isShiny, Gender gender, SpriteType type)
+    public T LoadPokemonSprite<T>(int id, bool isShiny, Gender gender, SpriteType type)
     {
         string formattedId = FormatId(id, isShiny, gender, type);
         string address = $"{GetAddressForSpriteType(type)}{formattedId}.png";
-       
-        if(gender == Gender.FEMALE && !File.Exists(address))
+
+        if (gender == Gender.FEMALE && !File.Exists(address))
         {
             // Not all female pokemon have special sprites, so use male one instead.
-
-             formattedId = FormatId(id, isShiny, Gender.MALE, type);
-             address = $"{GetAddressForSpriteType(type)}{formattedId}.png";
+            formattedId = FormatId(id, isShiny, Gender.MALE, type);
+            address = $"{GetAddressForSpriteType(type)}{formattedId}.png";
         }
 
         if (enableDebug) { Debug.Log($"Loading pokemon sprite at address: {address}"); }
-        return GetSpriteAsync(address);
+        if (type == SpriteType.OVERWORLD)
+        {
+            return (T)Convert.ChangeType(GetSpriteAsync<Sprite[]>(address), typeof(T));
+        }
+        else
+        {
+            return (T)Convert.ChangeType(GetSpriteAsync<Sprite>(address), typeof(T));
+        }
     }
 
     public Sprite LoadTypeSprite(PokemonType type)
     {
         string address = $"Assets/Pokemon/Sprites/Types/{type.ToString().ToLower()}.png";
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
-        return GetSpriteAsync(address);
+        return GetSpriteAsync<Sprite>(address);
     }
 
     public Sprite LoadGenderSprite(Gender gender)
     {
         string address = $"Assets/Pokemon/Sprites/Gender/{gender.ToString().ToLower()}.png";
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
-        return GetSpriteAsync(address);
+        return GetSpriteAsync<Sprite>(address);
     }
 
     public Sprite LoadFaintedSprite()
     {
         string address = "Assets/UI/InGameMenu/Sprites/fainted.png";
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
-        return GetSpriteAsync(address);
+        return GetSpriteAsync<Sprite>(address);
     }
 
     public Sprite LoadItemSprite(string itemName)
@@ -56,7 +63,7 @@ public class SpriteLoader
         string address = $"Assets/Items/Sprites/{itemName}.png";
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
 
-        return GetSpriteAsync(address);
+        return GetSpriteAsync<Sprite>(address);
     }
 
     public Sprite LoadTMSprite(string name, PokemonType type)
@@ -64,7 +71,7 @@ public class SpriteLoader
         string tmOrHM = name.Contains("tm") ? "tm" : "hm";
         string address = $"Assets/Items/Sprites/{tmOrHM}-{type.ToString().ToLower()}.png";
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
-        return GetSpriteAsync(address);
+        return GetSpriteAsync<Sprite>(address);
     }
 
     public Sprite LoadMoveDamageClassSprite(MoveDamageClass damageClass, bool isLong)
@@ -79,35 +86,46 @@ public class SpriteLoader
             address = $"Assets/Pokemon/Sprites/MoveDamageClass/{damageClass.ToString().ToLower()}.png";
         }
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
-        return GetSpriteAsync(address);
+        return GetSpriteAsync<Sprite>(address);
     }
 
-    private Sprite GetSpriteAsync(string address)
+    private T GetSpriteAsync<T>(string address)
     {
         Sprite cachedSprite = spritePool.CheckPool(address);
         if (cachedSprite != null)
         {
-            return cachedSprite;
+            return (T) Convert.ChangeType(cachedSprite, typeof(T));
         }
         else
         {
-            AsyncOperationHandle<Sprite> spriteHandle = Addressables.LoadAssetAsync<Sprite>(address);
+            AsyncOperationHandle<T> spriteHandle = Addressables.LoadAssetAsync<T>(address);
             if (!spriteHandle.IsDone)
             {
                 if (enableDebug) { Debug.LogWarning($"Sprite only loaded {spriteHandle.PercentComplete * 100} %. Wait for completion."); }
-                return null;
+                return default;
             }
 
             if (spriteHandle.Status == AsyncOperationStatus.Succeeded)
             {
-                Sprite result = spriteHandle.Result;
-                spritePool.AddToPool(address, result);
-                return spriteHandle.Result;
+                T result = spriteHandle.Result;
+                if(!result.GetType().IsArray)
+                {
+                    Sprite resultSprite = result as Sprite;
+                    if (resultSprite != null)
+                    {
+                        spritePool.AddToPool(address, resultSprite);
+                    }
+                    else
+                    {
+                        Debug.LogError($"Cannot cache sprite at address: {address}");
+                    }
+                }
+                return result;
             }
             else
             {
                 Debug.LogError($"Sprite not found at {address}");
-                return null;
+                return default;
             }
         }
     }
@@ -127,12 +145,12 @@ public class SpriteLoader
     private string FormatId(int id, bool isShiny, Gender gender, SpriteType spriteType)
     {
         string genderChar, formattedId, shinyChar;
-    
+
         if (spriteType == SpriteType.OVERWORLD)
         {
             genderChar = "";
             shinyChar = isShiny ? "s" : "";
-            if(id < 10)
+            if (id < 10)
             {
                 formattedId = $"00{id}{genderChar}{shinyChar}";
             }
@@ -144,7 +162,6 @@ public class SpriteLoader
             {
                 formattedId = $"{id}{genderChar}{shinyChar}";
             }
-
         }
         else
         {

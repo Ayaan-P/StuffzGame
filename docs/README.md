@@ -9,3 +9,5 @@
 ## Credits
 
 Anand Desai, Ayaan Khan, Ayaan Pupala
+
+Full credits [here](./credits.md)

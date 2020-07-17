@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 7338852273849670815}
   - component: {fileID: 4077468058388410243}
   - component: {fileID: 2377788872855060101}
-  - component: {fileID: 3883281977370231658}
-  - component: {fileID: 1955957944025391700}
+  - component: {fileID: 153433835836333321}
   - component: {fileID: 382778694753926113}
   - component: {fileID: 6653581793818337983}
   - component: {fileID: 5944873485669236082}
   - component: {fileID: 3119643463943783366}
+  - component: {fileID: 4394626607614869340}
+  - component: {fileID: 8651676022662208780}
   m_Layer: 0
   m_Name: WildPokemon
   m_TagString: Untagged
@@ -75,10 +76,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_SortingLayerID: -1179176109
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 8368552079975496215, guid: 9dba4194fcc0d4449bca2ab39db62fd2,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +88,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &4077468058388410243
@@ -136,26 +138,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!95 &3883281977370231658
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3584803001155169253}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0ff8544ad87faed4eaa4a4dc5288e90d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1955957944025391700
+--- !u!114 &153433835836333321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,8 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fdb21ef2ad026a469d5a8fb33c4c6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pokemon_name: 
-  done: 0
 --- !u!114 &382778694753926113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,10 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d6bb1d409894243a57031c18237bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 3883281977370231658}
   radius: 3
-  attackRadius: 1
-  escapeRadius: 3
   maxMovementSpeed: 5
 --- !u!114 &6653581793818337983
 MonoBehaviour:
@@ -265,3 +243,36 @@ MonoBehaviour:
   version: 1
   targets: []
   delay: 0
+--- !u!114 &4394626607614869340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3584803001155169253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85068c2878fe464c9ba836e748e083c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropShadowSprite: {fileID: 21300000, guid: 96084d30e3db70a48b20f7826bdf2b3c, type: 3}
+  transparency: 0.25
+--- !u!95 &8651676022662208780
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3584803001155169253}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ff8544ad87faed4eaa4a4dc5288e90d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -32,12 +32,20 @@ public class StoragePage : MonoBehaviour
 
     private void OnEnable()
     {
-        uiManager = UIManager.Instance;
         storage = PokemonStorage.GetInstance();
         ResetPage();
         SetUpListeners(true);
         PopulateSortByDropdown();
-        UpdateStorageUI();
+
+        uiManager = UIManager.Instance;
+        if (uiManager == null)
+        {
+            Debug.LogError($"{typeof(StoragePage)}: UIManager is null");
+        }
+        else
+        {
+            UpdateStorageUI();
+        }
     }
 
        private void OnDisable()

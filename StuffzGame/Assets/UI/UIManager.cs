@@ -1,90 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : Singleton
+public class UIManager : Singleton<UIManager>
 {
-    private static UIManager _instance;
-    private static readonly object Lock = new object(); //thread-safe volatile locking
-
-    [SerializeField]
-    private bool _persistent = true;
+    private UIManager()
+    {
+    }
 
     private bool enableDebug = false;
     public List<SpriteSlotData<Pokemon>> PartySlotDataList { get; } = new List<SpriteSlotData<Pokemon>>();
     public List<SpriteSlotData<Item>> ItemSlotDataList { get; } = new List<SpriteSlotData<Item>>();
     public List<SpriteSlotData<Pokemon>> StorageSlotDataList { get; } = new List<SpriteSlotData<Pokemon>>();
 
-    public GameObject menu;
-
-    #region Singleton
-
-    public static UIManager Instance
-    {
-        get
-        {
-            if (Quitting)
-            {
-                Debug.LogWarning($"[{nameof(Singleton)}<{typeof(UIManager)}>] Instance will not be returned because the application is quitting.");
-                return null;
-            }
-            lock (Lock)
-            {
-                if (_instance != null)
-                {
-                    return _instance;
-                }
-                var instances = FindObjectsOfType<UIManager>();
-                var count = instances.Length;
-
-                if (count == 0)
-                {
-                    // no instances found, create one
-                    Debug.Log($"[{nameof(Singleton)}<{typeof(UIManager)}>] An instance is needed in the scene and no existing instances were found, so a new instance will be created.");
-                    return _instance = new GameObject($"({nameof(Singleton)}){typeof(UIManager)}")
-                               .AddComponent<UIManager>();
-                }
-                else if (count == 1)
-                {
-                    // singular instance found as expected
-                    return _instance = instances[0];
-                }
-                else
-                {
-                    // erroneous condition where multiple singleton instances found.
-
-                    Debug.LogWarning($"[{nameof(Singleton)}<{typeof(UIManager)}>] There should never be more than one {nameof(Singleton)} of type {typeof(UIManager)} in the scene, but {count} were found. The first instance found will be used, and all others will be destroyed.");
-                    for (var i = 1; i < instances.Length; i++)
-                    {
-                        Destroy(instances[i]);
-                    }
-                    return _instance = instances[0];
-                }
-            }
-        }
-    }
-
-    #endregion Singleton
-
-    private void Awake()
-    {
-        if (_persistent)
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-        OnAwake();
-    }
-
-    protected virtual void OnAwake()
-    {
-    }
-
     // Use this for initialization
     private void Start()
     {
-        // start without menu active
-        menu.gameObject.SetActive(false);
-
         Player player = Player.Instance;
         if (player != null)
         {
@@ -97,7 +27,7 @@ public class UIManager : Singleton
         }
         else
         {
-            Debug.LogError($"{nameof(Player)} is null but shouldn't be.");
+            Debug.LogError($"{nameof(Player)} is null, cant subscribe listeners in UIManager.");
         }
 
         PokemonStorage storage = PokemonStorage.GetInstance();
@@ -107,36 +37,41 @@ public class UIManager : Singleton
         if (enableDebug) { Debug.Log("subscribed UI Manager to OnStoragePokemonChanged"); }
         storage.OnStorageDatasetChanged += SortStorageSlots;
         if (enableDebug) { Debug.Log("subscribed UI Manager to OnStoragePokemonChanged"); }
-
     }
+
     private void OnDisable()
     {
         Player player = Player.Instance;
+        if (player != null)
+        {
+            // Causes Null pointer because Player is destroyed before UIManager can unsubscribe from it
+            player.Party.OnPartyPokemonChanged -= ReloadPokemonPartySlot;
+            if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnPartyPokemonChanged"); }
+            player.Party.OnPartyPokemonSwapped -= SwapPokemonPartySlot;
+            if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnPartyPokemonSwapped"); }
+            player.Inventory.OnInventoryItemChanged -= ReloadInventoryItemSlot;
+            if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnInventoryItemChanged"); }
+        }
+        else
+        {
+            Debug.LogError($"{nameof(Player)} is null cant unsubscribe listeners in UIManager");
+        }
 
-        // Causes Null pointer because Player is destroyed before UIManager can unsubscribe from it
-        // player.Party.OnPartyPokemonChanged -= ReloadPokemonPartySlot;
-        if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnPartyPokemonChanged"); }
-        //player.Party.OnPartyPokemonSwapped -= SwapPokemonPartySlot;
-        if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnPartyPokemonSwapped"); }
-        //player.Inventory.OnInventoryItemChanged -= ReloadInventoryItemSlot;
-        if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnInventoryItemChanged"); }
-
-       // storage.OnStoragePokemonChanged -= ReloadStoragePokemonSlot;
+        PokemonStorage storage = PokemonStorage.GetInstance();
+        storage.OnStoragePokemonChanged -= ReloadStoragePokemonSlot;
         if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnStoragePokemonChanged"); }
-       // storage.OnStoragePokemonSwapped -= SwapStoragePokemonSlot;
+        storage.OnStoragePokemonSwapped -= SwapStoragePokemonSlot;
         if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnStoragePokemonChanged"); }
-        //storage.OnStorageDatasetChanged -= SortStorageSlots;
+        storage.OnStorageDatasetChanged -= SortStorageSlots;
         if (enableDebug) { Debug.Log("unsubscribed UI Manager to OnStoragePokemonChanged"); }
     }
 
     // Update is called once per frame
     private void Update()
     {
-        ToggleInGameMenu();
         LoadSpritesIfReady<Pokemon>(PartySlotDataList);
         LoadSpritesIfReady<Item>(ItemSlotDataList);
         LoadSpritesIfReady<Pokemon>(StorageSlotDataList);
-
     }
 
     private void LoadSpritesIfReady<T>(List<SpriteSlotData<T>> spriteSlotDataList)
@@ -250,32 +185,9 @@ public class UIManager : Singleton
 
     private void SortStorageSlots(List<Pokemon> list)
     {
-        for(int i=0;i< list.Count; i++)
+        for (int i = 0; i < list.Count; i++)
         {
             ReloadStoragePokemonSlot(list[i], i);
         }
-    }
-
-    private void ToggleInGameMenu()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            bool menuToggle = !menu.gameObject.activeSelf;
-            Debug.Log("Escape key was pressed. Menu toggled: " + menuToggle);
-
-            int timeScale = menuToggle ? 0 : 1;
-
-            PauseOrContinue(menuToggle, timeScale);
-        }
-    }
-
-    private void PauseOrContinue(bool toggle, int timescale)
-    {
-        Time.timeScale = timescale;
-        menu.gameObject.SetActive(toggle);
-
-        //Disable movement since it's NOT dependent on timescale
-        GameObject player = GameObject.Find("Player");
-        player.GetComponent<PlayerMovement>().enabled = !toggle;
     }
 }

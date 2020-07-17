@@ -9,7 +9,7 @@ public class EvolutionMapper : DataMapper
     protected override string FileName { get => "evolutions"; }
     protected override JObject JsonObject { get; }
     private List<JObject> EvolutionList { get; }
-
+    private readonly bool enableDebug = false;
     public EvolutionMapper()
     {
         this.JsonObject = LoadJSON();
@@ -43,7 +43,10 @@ public class EvolutionMapper : DataMapper
                 },typeof(T));
             }
         }
-        UnityEngine.Debug.LogWarning($"No evolution found for species: {speciesId} and evolutionChain: {evolutionChainId}");
+        if (enableDebug)
+        {
+            UnityEngine.Debug.LogWarning($"No evolution found for species: {speciesId} and evolutionChain: {evolutionChainId}");
+        }
         return default;
     }
 

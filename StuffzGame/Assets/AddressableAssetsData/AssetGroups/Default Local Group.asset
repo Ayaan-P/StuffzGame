@@ -141,6 +141,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/755s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0128d31e36b15eb49af5985462459c11
+    m_Address: Assets/Battle/Sprites/Backgrounds/beach_night.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 01350fcb184c96a49873a5cdcb23b882
     m_Address: Assets/Pokemon/Sprites/Box/581s.png
     m_ReadOnly: 0
@@ -259,6 +263,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 0266e92c6044b8a46ac9b22051143eba
     m_Address: Assets/Pokemon/Sprites/Box/203.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 02686358198232c428787ff8ae391f4c
+    m_Address: Assets/Battle/Sprites/Backgrounds/hill_night.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 026f01d626165a64383bbaf4c84a5e98
@@ -479,6 +487,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 0461f29d82b538a4abf64523d37f1333
     m_Address: Assets/Pokemon/Sprites/Front/502.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 04786ed29ad4d0e4c8dc5ff5a99ee43c
+    m_Address: Assets/Battle/Sprites/Backgrounds/meadows_night.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 047de4d0dd04edf418a257c36e30985c
@@ -1277,6 +1289,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/89s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0aad2fdfa0b16384a96c537eeb24c62c
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_rocky_evening.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 0ab2f3bc52190974393507f993170f95
     m_Address: Assets/Pokemon/Sprites/Overworld/648_a.png
     m_ReadOnly: 0
@@ -2003,6 +2019,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 10a231f95ace3724a81797699aec3588
     m_Address: Assets/Pokemon/Sprites/Front/759s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 10afe8318514c894180f7fcf433d7004
+    m_Address: Assets/Battle/Sprites/Backgrounds/lake_evening.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 10b2533efd5a5834d82c7aab33c6d0c3
@@ -4425,6 +4445,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/256f.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 22023942a6e4a9c4c85125b0502372b8
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_snow_night.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 220da56b4c7aa3b40b963a5e8ca1bf0b
     m_Address: Assets/Pokemon/Sprites/Overworld/176s.png
     m_ReadOnly: 0
@@ -6077,6 +6101,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/597s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2eb69d8bcd3398440be727cd7956f5b1
+    m_Address: Assets/Battle/Sprites/Backgrounds/sea.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 2ec2433cd8022a746a6d564d4c4eaa16
     m_Address: Assets/Pokemon/Sprites/Overworld/225.png
     m_ReadOnly: 0
@@ -6593,6 +6621,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/315.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 32a43c478f38b4d46bc181ab0925ef4c
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 32a6131516d1e1f4682e365d8ee62a92
     m_Address: Assets/Items/Sprites/ss-ticket--hoenn.png
     m_ReadOnly: 0
@@ -6759,6 +6791,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 33f947ae65c87044ba0c706a6e4a40f8
     m_Address: Assets/Pokemon/Sprites/Overworld/789s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 340301bf845518f42a5f8f4e94ff8b7a
+    m_Address: Assets/Battle/Sprites/Backgrounds/meadows_evening.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 340706739595ab148bfd6a67d66b462d
@@ -8465,6 +8501,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/grubby-hanky.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 40c5a941cc235ca4da4e4964b56d4478
+    m_Address: Assets/Battle/Sprites/Backgrounds/sea_night.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 40cd1bea063addf42936d8953496273c
     m_Address: Assets/Pokemon/Sprites/Overworld/683.png
     m_ReadOnly: 0
@@ -8547,6 +8587,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 418bade12c857f545911eb9bfb58684f
     m_Address: Assets/Pokemon/Sprites/Box/483.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4191624b0861a124595e1e3a96c92b9c
+    m_Address: Assets/Battle/Sprites/Backgrounds/cave_lava.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4199f1545e730714f8e561ba24518b21
@@ -12777,6 +12821,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/384.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 61dda70c6d613074491fa79b83727dcd
+    m_Address: Assets/Battle/Sprites/Backgrounds/cave_snow.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 61e2bcf93a847c145bae49e12bda82b0
     m_Address: Assets/Pokemon/Sprites/Back/367.png
     m_ReadOnly: 0
@@ -13989,6 +14037,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/415_1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6bb43fee5b9c2c0468c1fe19b6869b95
+    m_Address: Assets/Battle/Sprites/Backgrounds/cave_dark.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 6bb45252323df804baae47c185e3104a
     m_Address: Assets/Pokemon/Sprites/Front/20fs.png
     m_ReadOnly: 0
@@ -14951,6 +15003,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 739e7044d0add344ea50e460d64e939b
     m_Address: Assets/Pokemon/Sprites/Overworld/443s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 73a3d5a1160498748962c794fdaacb19
+    m_Address: Assets/Battle/Sprites/Backgrounds/beach.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 73ad7b7cf2d6e3a4497edf71f4a7ff1d
@@ -17113,6 +17169,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/pink-nectar.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 846ed262e04a37f44acf1196729dc26e
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_volcano_evening.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 847130b0abea4764a9059236e0071474
     m_Address: Assets/Pokemon/Sprites/Front/718s.png
     m_ReadOnly: 0
@@ -17435,6 +17495,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 87283b7992cd3414abbb58fdbf360830
     m_Address: Assets/Items/Sprites/full-restore.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 872e449f47245564aa0a124d47ca1473
+    m_Address: Assets/Battle/Sprites/Backgrounds/hill.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 872e77b7044794244b796b337fb856ca
@@ -17831,6 +17895,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 8a6fe64b8cb57ec4d8e29149828f0494
     m_Address: Assets/Pokemon/Sprites/Front/154fs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8a82050e5065147438320249188c317b
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_snow.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8a868f7fa7a4e804eaee10944f219be3
@@ -19649,6 +19717,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/180s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 983ed23abb0d87c42a7e65464dcc02ad
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_volcano_night.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 9849aa2f3405492449bdacf67ea7c94d
     m_Address: Assets/Pokemon/Sprites/Front/627s.png
     m_ReadOnly: 0
@@ -20623,6 +20695,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 9f2f7d48b4d8b1046852d1fd2c75dce4
     m_Address: Assets/Pokemon/Sprites/Back/160s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9f31b998bd3aeed45bde9f5ac63eee09
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_volcano.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9f38b6b11ad84064695e7f646b4b92b7
@@ -21683,6 +21759,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: a78d010300713b940b13870eee23a5c4
     m_Address: Assets/Pokemon/Sprites/Box/677s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a792f2ccdec8b0d46a9ec78699bec6c2
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_night.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: a79c1abce77bec8409ecbebda2d64423
@@ -23325,6 +23405,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/226.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b4a58a7b3dcfc014e9fb26af8cb31967
+    m_Address: Assets/Battle/Sprites/Backgrounds/cave.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b4acfbe1c42748440bfcb7faf0708b19
     m_Address: Assets/Pokemon/Sprites/Back/312s.png
     m_ReadOnly: 0
@@ -23685,6 +23769,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/10040.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b75ae1d6f8db23d48b30cb779eee2ccc
+    m_Address: Assets/Battle/Sprites/Backgrounds/lake.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b75d4c613c4071641a3e1a3b1d92afcb
     m_Address: Assets/Pokemon/Sprites/Front/683.png
     m_ReadOnly: 0
@@ -23843,6 +23931,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b854dcb3c62d7f24792e1b480a0ac7ec
     m_Address: Assets/Pokemon/Sprites/Box/447.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b85e3d7929b2bf94baef8c90d4e13ce6
+    m_Address: Assets/Battle/Sprites/Backgrounds/sea_evening.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b85e46e354aa2fd40b3343599f0e9487
@@ -24505,6 +24597,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/hp-up.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bd49c94b9611cb84d84ccf5ad869ebb1
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_rocky_night.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: bd5184ba980b6ae4db2f7ca72fc0109f
     m_Address: Assets/Pokemon/Sprites/Back/393.png
     m_ReadOnly: 0
@@ -24839,6 +24935,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: bff1cf0ef3df91f439654c4fcb9fb422
     m_Address: Assets/Pokemon/Sprites/Back/529s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bfffc4ba7ba90be468a479d96cd8c458
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_snow_evening.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c0015d7fe65f5f941af348a132a31f8f
@@ -25845,6 +25945,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/301s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c77c396aa51bd0a4eaa00c24475f2c6c
+    m_Address: Assets/Battle/Sprites/Backgrounds/beach_evening.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: c79d5cd57a46ed941998b33a0ff0d49a
     m_Address: Assets/Pokemon/Sprites/Front/717.png
     m_ReadOnly: 0
@@ -26427,6 +26531,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: cc312fff254446e448a5b1829384efbf
     m_Address: Assets/Pokemon/Sprites/Box/10053s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cc343aa4d1f513e4cbea59868a269c59
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_evening.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cc3910b7436fa6647a32080b36df3bda
@@ -27427,6 +27535,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d48b08f75dab70d4db7089c85ab5d3be
     m_Address: Assets/Pokemon/Sprites/Back/302.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d48be89f6f370d045a097a8933d97b50
+    m_Address: Assets/Battle/Sprites/Backgrounds/mountain_rocky.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d49dfb09697912140bfa77add29877da
@@ -30529,6 +30641,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/586.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ebc4e9592f1eee84cbdccb6521eec17e
+    m_Address: Assets/Battle/Sprites/Backgrounds/lake_night.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: ebce0022af6963d4b8e96355f4fde4ca
     m_Address: Assets/Pokemon/Sprites/Front/776s.png
     m_ReadOnly: 0
@@ -30711,6 +30827,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: ed25bd3d70ee210458d10353fa7ecf1b
     m_Address: Assets/Pokemon/Sprites/Front/519s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ed282dd7498c1ba4493181075f3bcf0f
+    m_Address: Assets/Battle/Sprites/Backgrounds/hill_evening.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ed48beaf1ff8839479cb367ef669dfcd
@@ -32095,6 +32215,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: f8629a28dd104d44882ef7ccc9eb7210
     m_Address: Assets/Pokemon/Sprites/Front/65s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f86a8812953cc054fa0daab248f65eec
+    m_Address: Assets/Battle/Sprites/Backgrounds/meadows.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f871b2676d964a847bc95a3b79e672ac

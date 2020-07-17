@@ -3,8 +3,7 @@
 public class PokemonSpawner : MonoBehaviour
 {
     public GameObject wildPokemonPrefab;
-    public GameObject playerGameObject;
-    public GameObject encounterData;
+    private GameObject playerGameObject;
     public float rate = 2f;
     public int maxMobs;
     private float nextSpawnTime = 0f;
@@ -14,6 +13,11 @@ public class PokemonSpawner : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        playerGameObject = Player.Instance.gameObject;
+        if(playerGameObject == null)
+        {
+            Debug.LogError($"{typeof(PokemonSpawner)}: Player is null");
+        }
         currentMobs = 0;
         factory = new PokemonFactory();
         Debug.Log("Generating trash value for Pokemon to preload JSON.");
@@ -38,9 +42,11 @@ public class PokemonSpawner : MonoBehaviour
             Pokemon wildPokemon = factory.CreatePokemon(randomPokemonID, randomLevel);
 
             GameObject spawnedWildPokemon = Instantiate(wildPokemonPrefab, spawnPoint, Quaternion.identity);
-            spawnedWildPokemon.GetComponent<SpriteSwap>().Id = randomPokemonID;
+            AbstractSpriteSwap spriteSwap = spawnedWildPokemon.GetComponent<OverworldSpriteSwap>();
+            spriteSwap.Pokemon = wildPokemon;
+            spriteSwap.Sprite = SpriteType.OVERWORLD;
             PokemonController pokemonController = spawnedWildPokemon.GetComponent<PokemonController>();
-            pokemonController.InitWildPokemonData(playerGameObject, wildPokemon, encounterData);
+            pokemonController.InitWildPokemonData(playerGameObject, wildPokemon);
 
             currentMobs++;
         }

@@ -15,6 +15,7 @@ public class Pokemon
     public PokemonAbility CurrentAbility { get; set; }
     public Item HeldItem { get; set; }
     public bool IsFainted { get; set; }
+    public MoveAilment Ailment { get; set; }
     private readonly System.Random random;
 
     public Pokemon(System.Random random)
@@ -171,5 +172,10 @@ public class Pokemon
         {
             return null;
         }
+    }
+
+    internal PokemonStat GetStat(StatName stat)
+    {
+        return this.BasePokemon.Stats.Where(it => it.BaseStat.Name == stat).SingleOrDefault();
     }
 }

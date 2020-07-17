@@ -8,6 +8,7 @@ public class StatMapper : DataMapper
     protected override string FileName { get => "stats"; }
     protected override JObject JsonObject { get; }
     private List<JObject> StatList { get; }
+    private readonly bool enableDebug = false;
 
     public StatMapper()
     {
@@ -29,8 +30,10 @@ public class StatMapper : DataMapper
                 Name = ((string)stat["name"] != null) ? ParseStatName(stat["name"].Value<string>()) : StatName.NULL,
             }, typeof(T));
         }
-
-        UnityEngine.Debug.LogWarning($"No stat found for stat ID: {id}");
+        if (enableDebug)
+        {
+            UnityEngine.Debug.LogWarning($"No stat found for stat ID: {id}");
+        }
         return default;
     }
 

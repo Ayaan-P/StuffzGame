@@ -86,7 +86,7 @@ public class PartyUISection : MonoBehaviour
     {
         Text pokemonHP = slot.GetComponentsInChildren<Text>()[2];
 
-        PokemonStat hpStat = pokemon.BasePokemon.Stats.Where(stat => stat.BaseStat.Name == StatName.HP).SingleOrDefault();
+        PokemonStat hpStat = pokemon.GetStat(StatName.HP);
         if (hpStat != null)
         {
             pokemonHP.text = $"{hpStat.CurrentValue}/{hpStat.CalculatedValue}";
