@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     private Vector2 movementVector;
     public Vector2 lookingInDirection;
+    public bool isControllable = true;
 
     // Start is called before the first frame update
     private void Start()
@@ -17,30 +19,35 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame (don't put anything physics related here)
     private void Update()
     {
-        movementVector.x = Input.GetAxisRaw("Horizontal");
-        movementVector.y = Input.GetAxisRaw("Vertical");
-        if (movementVector != Vector2.zero)
+        if(isControllable)
         {
-            animator.SetFloat("Horizontal", movementVector.x);
-            animator.SetFloat("Vertical", movementVector.y);
-        }
-        animator.SetFloat("Speed", movementVector.sqrMagnitude);
 
-        int lookAxis = (Mathf.Abs(movementVector.x) > Mathf.Abs(movementVector.y)) ? 0 : 1;
+        
+            movementVector.x = Input.GetAxisRaw("Horizontal");
+            movementVector.y = Input.GetAxisRaw("Vertical");
+            if (movementVector != Vector2.zero)
+            {
+                animator.SetFloat("Horizontal", movementVector.x);
+                animator.SetFloat("Vertical", movementVector.y);
+            }
+            animator.SetFloat("Speed", movementVector.sqrMagnitude);
 
-        if (lookAxis == 1)
-        {
-            if (movementVector.y >= 0)
-                lookingInDirection.y = 1f;
+            int lookAxis = (Mathf.Abs(movementVector.x) > Mathf.Abs(movementVector.y)) ? 0 : 1;
+
+            if (lookAxis == 1)
+            {
+                if (movementVector.y >= 0)
+                    lookingInDirection.y = 1f;
+                else
+                    lookingInDirection.y = -1f;
+            }
             else
-                lookingInDirection.y = -1f;
-        }
-        else
-        {
-            if (movementVector.x >= 0)
-                lookingInDirection.x = 1f;
-            else
-                lookingInDirection.x = -1f;
+            {
+                if (movementVector.x >= 0)
+                    lookingInDirection.x = 1f;
+                else
+                    lookingInDirection.x = -1f;
+            }
         }
     }
 
