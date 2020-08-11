@@ -9,8 +9,9 @@ public class SwapClick : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        int numSiblings = this.transform.parent.childCount;
-        this.swapText = this.transform.parent.parent.Find("SwapText").gameObject;
+        var parent = this.transform.parent;
+        int numSiblings = parent.childCount;
+        this.swapText = parent.parent.Find("SwapText").gameObject;
         this.swapButton = GetComponentInChildren<UnityEngine.UI.Button>(true);
         if (swapButton == null)
         {

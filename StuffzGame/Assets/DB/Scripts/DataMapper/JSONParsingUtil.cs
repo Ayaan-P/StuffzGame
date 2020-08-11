@@ -9,9 +9,9 @@ public static class JSONParsingUtil
     public static List<string> GetEffectEntries(object obj)
     {
         List<string> effectEntries = new List<string>();
-        if (obj as JArray!= null)
+        if (obj is JArray array)
         {
-            foreach (JObject entry in obj as JArray)
+            foreach (JObject entry in array)
             {
                 effectEntries.Add(entry["effect"].Value<string>());
                 effectEntries.Add(entry["short_effect"].Value<string>());
@@ -27,7 +27,7 @@ public static class JSONParsingUtil
 
     public static int GetIdFromJObject(object obj)
     {
-        return (obj as JObject != null) ? (obj as JObject)["id"].Value<int>() : -1;
+        return (obj is JObject jObject) ? jObject["id"].Value<int>() : -1;
     }
 
     public static float? ConvertPercentageIntToFloat(int? num)

@@ -1,0 +1,182 @@
+{
+	"general_dialogue": [
+		{
+			"type": "wild",
+			"dialogues": [
+				{
+					"id": 1,
+					"name": "encounter",
+					"text": "A wild <?> appeared !"
+				},
+				{
+					"id": 2,
+					"name": "use_move",
+					"text": "The wild <?> used <?>"
+				},
+				{
+					"id": 3,
+					"name": "use_item",
+					"text": "The wild <?> used its <?>"
+				},
+				{
+					"id": 4,
+					"name": "switch_out",
+					"text": "The wild <?> fled !"
+				},
+				{
+					"id": 6,
+					"name": "faint",
+					"text": "The wild <?> fainted"
+				}
+			]
+		},
+		{
+			"type": "trainer",
+			"dialogues": [
+				{
+					"id": 1,
+					"name": "encounter",
+					"text": "<?> would like to battle !"
+				},
+				{
+					"id": 2,
+					"name": "use_move",
+					"text": "The foe's <?> used <?>"
+				},
+				{
+					"id": 3,
+					"name": "use_item",
+					"text": "<?> used a <?> on <?>"
+				},
+				{
+					"id": 4,
+					"name": "switch_out",
+					"text": "<?> withdrew <?>"
+				},
+				{
+					"id": 5,
+					"name": "switch_in",
+					"text": "<?> sent out <?> !"
+				},
+				{
+					"id": 6,
+					"name": "faint",
+					"text": "The foe's <?> fainted"
+				}
+			]
+		},
+		{
+			"type": "player",
+			"dialogues": [
+				{
+					"id": 2,
+					"name": "use_move",
+					"text": "<?> used <?>"
+				},
+				{
+					"id": 3,
+					"name": "use_item",
+					"text": "You used a <?> on <?>"
+				},
+				{
+					"id": 4,
+					"name": "switch_out",
+					"text": "<?>, Return !"
+				},
+				{
+					"id": 5,
+					"name": "switch_in",
+					"text": "Go <?> !"
+				},
+				{
+					"id": 6,
+					"name": "faint",
+					"text": "<?> fainted"
+				},
+				{
+					"id": 7,
+					"name": "idle",
+					"text": "What will <?> do ?"
+				}
+			]
+		}
+	],
+	"effects": [
+		{
+			"id": 1,
+			"name": "super_effective",
+			"text": "It's super-effective !"
+		},
+		{
+			"id": 2,
+			"name": "not_effective",
+			"text": "It's not very effective ..."
+		},
+		{
+			"id": 3,
+			"name": "no_effect",
+			"text": "It had no effect !"
+		},
+		{
+			"id": 4,
+			"name": "stat_lower",
+			"text": "It's <?> fell !"
+		},
+		{
+			"id": 5,
+			"name": "stat_raise",
+			"text": "It's <?> rose !"
+		},
+		{
+			"id": 6,
+			"name": "stat_lower_sharply",
+			"text": "It's <?> fell sharply!"
+		},
+		{
+			"id": 7,
+			"name": "stat_raise_sharply",
+			"text": "It's <?> rose sharply!"
+		},
+		{
+			"id": 8,
+			"name": "burn",
+			"text": "<?> is burned"
+		},
+		{
+			"id": 9,
+			"name": "sleep",
+			"text": "<?> is fast asleep"
+		},
+		{
+			"id": 10,
+			"name": "freeze",
+			"text": "<?> is frozen solid"
+		},
+		{
+			"id": 11,
+			"name": "paralysis",
+			"text": "<?> is paralyzed, it can't move !"
+		},
+		{
+			"id": 12,
+			"name": "poison",
+			"text": "<?> is poisoned"
+		},
+		{
+			"id": 13,
+			"name": "badly_poison",
+			"text": "<?> is badly poisoned"
+		},
+		{
+			"id": 14,
+			"name": "exp",
+			"text": "<?> gained <?> experience points"
+		},
+		{
+			"id": 15,
+			"name": "level_up",
+			"text": "<?> levelled up to Lv. <?> !"
+		}
+	],
+	"variable": "<?>"
+}

@@ -108,7 +108,6 @@ public class PokemonPage : MonoBehaviour
 
     private void SetImageComponents(PokemonSlotSpriteData slotData, GameObject slot)
     {
-        int MAX_TYPES_COUNT = 2;
         Pokemon pokemon = slotData.CurrentObject;
 
         Image[] imageComponents = slot.GetComponentsInChildren<Image>();
@@ -120,7 +119,7 @@ public class PokemonPage : MonoBehaviour
         Image type2 = imageComponents[6];
 
         pokemonImg.sprite = slotData.PokemonSprite;
-
+        pokemonImg.preserveAspect = true;
         if (pokemon.HeldItem != null)
         {
             itemImg.gameObject.SetActive(true);
@@ -134,23 +133,23 @@ public class PokemonPage : MonoBehaviour
 
         if (pokemon.IsFainted)
         {
-            ailmentImg.gameObject.SetActive(true);
             ailmentImg.sprite = slotData.FaintedSprite;
             ailmentImg.preserveAspect = true;
         }
         else
         {
-            //check ailments and set sprite accordingly else transparent
-            ailmentImg.gameObject.SetActive(false);
+            ailmentImg.sprite = slotData.AilmentSprite;
+            ailmentImg.preserveAspect = true;
         }
 
         genderImg.sprite = slotData.GenderSprite;
         genderImg.preserveAspect = true;
 
-        if (pokemon.BasePokemon.Types.Count == MAX_TYPES_COUNT)
+        if (pokemon.BasePokemon.Types.Count == Pokemon.MAX_POKEMON_TYPES)
         {
             type1.sprite = slotData.TypeSpriteList[0];
             type1.preserveAspect = true;
+            type2.gameObject.SetActive(true);
             type2.sprite = slotData.TypeSpriteList[1];
             type2.preserveAspect = true;
         }
@@ -159,9 +158,6 @@ public class PokemonPage : MonoBehaviour
             type1.sprite = slotData.TypeSpriteList[0];
             type1.preserveAspect = true;
             type2.gameObject.SetActive(false);
-            //type2.sprite = slotData.TypeSpriteList[0];
-            //type2.preserveAspect = true;
-            //type2.color = new Color(0, 0, 0, 0);
         }
     }
 
@@ -192,7 +188,14 @@ public class PokemonPage : MonoBehaviour
         GridLayoutGroup hpBarContainer = health.GetComponentInChildren<GridLayoutGroup>();
         // set HP slider via HealthBar prefab
         GameObject hpBar = Instantiate(healthBar, hpBarContainer.transform);
-        Image fill = hpBar.GetComponentsInChildren<Image>()[1];
+        
+        Image[] hpComponents = hpBar.GetComponentsInChildren<Image>();
+        Image bg = hpComponents[0];
+        Image fill = hpComponents[1];
+
+        bg.preserveAspect = true;
+        fill.preserveAspect = true;
+        
         fill.color = hpColor;
         Slider hpSlider = hpBar.GetComponent<Slider>();
         hpSlider.minValue = 0;
@@ -202,17 +205,37 @@ public class PokemonPage : MonoBehaviour
 
     private void SetPokemonEXPDetails(Pokemon pokemon, GameObject slot)
     {
-        /*GameObject exp = slot.transform.Find("Exp").gameObject;
-        Text pokemonExp = exp.GetComponentInChildren<Text>();
+        GameObject exp = slot.transform.Find("Exp").gameObject;
 
-        Color expColor = ColorPalette.GetColor(ColorName.EXP);
+        Color expColor = ColorPalette.GetColor(ColorName.TYPE_WATER);
+        GridLayoutGroup expBarContainer = exp.GetComponentInChildren<GridLayoutGroup>();
 
-        GameObject expBar = Instantiate(healthBar, exp.transform);
-        Image fill = expBar.GetComponentsInChildren<Image>()[1];
+        GameObject expBar = Instantiate(healthBar, expBarContainer.transform);
+       
+        Image[] hpComponents = expBar.GetComponentsInChildren<Image>();
+        Image bg = hpComponents[0];
+        Image fill = hpComponents[1];
+
+        bg.preserveAspect = true;
+        fill.preserveAspect = true;
+        
         fill.color = expColor;
         Slider expSlider = expBar.GetComponent<Slider>();
-         set min,current and max value
-         */
+        
+        if(pokemon.CurrentLevel == Pokemon.MAX_LEVEL)
+        {
+            expSlider.minValue = 0;
+            expSlider.maxValue = 0;
+            expSlider.value = 0;
+        }
+        else
+        {
+            expSlider.minValue = pokemon.BasePokemon.Species.GrowthRate.LevelExperienceDict[pokemon.CurrentLevel];
+            expSlider.maxValue = pokemon.BasePokemon.Species.GrowthRate.LevelExperienceDict[pokemon.CurrentLevel+1];
+            expSlider.value = pokemon.BasePokemon.Species.GrowthRate.CurrentExperience ?? 0;
+
+        }
+
     }
 
     private void SetPokemonMoveDetails(PokemonSlotSpriteData slotData, GameObject slot, PokemonType type)
@@ -224,8 +247,6 @@ public class PokemonPage : MonoBehaviour
         bg.color = bgColor;
 
         GameObject moveObjectList = slot.transform.Find("Moves").gameObject;
-
-        int MAX_MOVES_COUNT = 4;
         Pokemon pokemon = slotData.CurrentObject;
 
         List<PokemonMove> learnedMoves = pokemon.LearnedMoves;
@@ -234,7 +255,7 @@ public class PokemonPage : MonoBehaviour
         Text moveName;
         Text movePP;
 
-        for (int i = 0; i < MAX_MOVES_COUNT; i++)
+        for (int i = 0; i < PokemonMove.MAX_MOVES; i++)
         {
             GameObject moveObject = moveObjectList.transform.GetChild(i).gameObject;
             if (i >= numMoves)
@@ -245,11 +266,12 @@ public class PokemonPage : MonoBehaviour
             else
             {
                 PokemonMove move = learnedMoves[i];
+                Text[] textComponents = moveObject.GetComponentsInChildren<Text>();
                 damageClass = moveObject.GetComponentInChildren<Image>();
-                moveName = moveObject.GetComponentsInChildren<Text>()[0];
-                movePP = moveObject.GetComponentsInChildren<Text>()[1];
+                moveName = textComponents[0];
+                movePP = textComponents[1];
 
-                damageClass.sprite = slotData.MoveSpriteList[i];
+                damageClass.sprite = slotData.MoveDamageClassSpriteList[i];
                 damageClass.preserveAspect = true;
 
                 moveName.text = UIUtils.FormatText(move.BaseMove.Name, false);

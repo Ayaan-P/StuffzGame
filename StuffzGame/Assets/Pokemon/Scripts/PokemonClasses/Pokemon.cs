@@ -18,6 +18,14 @@ public class Pokemon
     public MoveAilment Ailment { get; set; }
     private readonly System.Random random;
 
+    public const int MAX_LEVEL = 100;
+    public const int MAX_POKEMON_TYPES = 2;
+
+    public delegate void UpdatePokemonUI(Pokemon pokemon);
+    public delegate void LearnMove(Pokemon pokemon, PokemonMove move);
+    public event UpdatePokemonUI OnLevelUp;
+    public event UpdatePokemonUI OnEvolve;
+    public event LearnMove OnNewMoveAvailable;
     public Pokemon(System.Random random)
     {
         this.random = random;
@@ -38,12 +46,15 @@ public class Pokemon
 
             stat.CalculateStat(increasedStatId, decreasedStatId, CurrentLevel);
         }
+
+        // set experience for level
+        this.BasePokemon.Species.GrowthRate.SetEXP(CurrentLevel);
     }
 
     private int GenerateIV()
     {
-        int minIV = 1;
-        int maxIV = 31;
+        const int minIV = 1;
+        const int maxIV = 31;
         return random.Next(minIV, maxIV + 1);   // Random.Next(a,b) 'b' is exclusive
     }
 
@@ -59,6 +70,63 @@ public class Pokemon
         else
         {
             return false;
+        }
+    }
+
+    public void GainExperience(long gainedExp)
+    {
+        if (CurrentLevel == MAX_LEVEL){ return;}
+        var growthRate = this.BasePokemon.Species.GrowthRate;
+        long expToNextLevel = growthRate.GetEXPToNextLevel(CurrentLevel);
+
+        if (gainedExp > expToNextLevel)
+        {
+            long difference = gainedExp - expToNextLevel;
+            this.LevelUp();
+            this.GainExperience(difference);
+        }
+        else
+        {
+            growthRate.GainExperience(gainedExp);
+        }
+    }
+
+    private void LevelUp()
+    {
+        if (CurrentLevel == MAX_LEVEL){ return;}
+        CurrentLevel++;
+        CalculateStats();
+        OnLevelUp(this);
+        CheckForNewMovesAtLevel();
+        if (ShouldEvolve())
+        {
+            OnEvolve(this);
+            Evolve();
+        }
+    }
+
+    private bool ShouldEvolve()
+    {
+        PokemonQuery query = new PokemonQuery();
+        return query.CanPokemonEvolveAtLevel(CurrentLevel, this);
+    }
+
+    private void Evolve()
+    {
+    }
+
+    private void CheckForNewMovesAtLevel()
+    {
+        foreach(PokemonMove move in this.BasePokemon.PossibleMoveList)
+        {
+            foreach(var moveDetail in move.MoveLearnDetails)
+            {
+                if(moveDetail.MoveLearnMethod == MoveLearnMethod.LEVEL_UP && moveDetail.LevelLearnedAt <= CurrentLevel)
+                {
+                    OnNewMoveAvailable(this, move);
+                    Debug.Log($"{this.BasePokemon.Name} can learn a new move: {move.BaseMove.Name}");
+                }
+            }
         }
     }
 
@@ -79,7 +147,7 @@ public class Pokemon
                 builder.Append($"{stat.BaseStat.Name}: {stat.CalculatedValue}({stat.BaseValue}) ");
             }
         }
-        builder.Append($"\nTypes: ");
+        builder.Append("\nTypes: ");
         foreach (PokemonType type in BasePokemon.Types)
         {
             builder.Append($"{type}  ");
@@ -96,25 +164,26 @@ public class Pokemon
         return builder.ToString();
     }
 
-    public bool TakeDamage(PokemonMove move, Pokemon enemy)
+    public bool AttackedWith(PokemonMove move, Pokemon enemy)
     {
-        double base_damage = 0.0;
-        
-        int damage_class = (int) move.BaseMove.MoveDamageClass;
+        float baseDamage = 0;
+        return false;
+       /* 
+        MoveDamageClass damageClass = move.BaseMove.MoveDamageClass;
         if(move.BaseMove.Power!=null)
         {
-           if(damage_class==1)
+           if(damageClass==1)
            {
                PokemonStat spatkStat = enemy.BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.SPECIAL_ATTACK).SingleOrDefault();
                PokemonStat spdefStat = BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.SPECIAL_DEFENSE).SingleOrDefault();
-               base_damage = (((2*CurrentLevel/5 +2)*(int)move.BaseMove.Power*spatkStat.CurrentValue/spdefStat.CurrentValue)/50 +2);
+               baseDamage = (((2*CurrentLevel/5 +2)*(int)move.BaseMove.Power*spatkStat.CurrentValue/spdefStat.CurrentValue)/50 +2);
                Debug.Log("specialmove");
            }
-           else if(damage_class==2)
+           else if(damageClass==2)
            {
                PokemonStat atkStat = enemy.BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.ATTACK).SingleOrDefault();
                PokemonStat defStat = BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.DEFENSE).SingleOrDefault();
-               base_damage = (((2*CurrentLevel/5 +2)*(int)move.BaseMove.Power*atkStat.CurrentValue/defStat.CurrentValue)/50 +2);    
+               baseDamage = (((2*CurrentLevel/5 +2)*(int)move.BaseMove.Power*atkStat.CurrentValue/defStat.CurrentValue)/50 +2);    
                Debug.Log("physicalmove");
            }
 
@@ -122,7 +191,7 @@ public class Pokemon
         int currentHp = this.BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.HP).SingleOrDefault().CurrentValue;
         Modifiers modifier = new Modifiers();
         Debug.Log(currentHp + ","+this.BasePokemon.Name);
-        currentHp -= (int)( base_damage*modifier.CalculateModifier(enemy, this, move ));
+        currentHp -= (int)( baseDamage*modifier.CalculateModifier(enemy, this, move ));
         Debug.Log(currentHp + ","+this.BasePokemon.Name);
         
         if(currentHp <= 0)
@@ -134,7 +203,7 @@ public class Pokemon
         {
             this.BasePokemon.Stats.Where( it=> it.BaseStat.Name == StatName.HP).SingleOrDefault().CurrentValue = currentHp; 
             return false;         
-        }
+        }*/
     }
 
     internal bool? CanUseItem(Item item)
@@ -143,14 +212,7 @@ public class Pokemon
         {
             Machine machine = item as Machine;
             List<int> possibleMoveIdList = this.BasePokemon.PossibleMoveList.Select(it => it.BaseMove.Id).ToList();
-            if (possibleMoveIdList.Contains(machine.MoveId))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return possibleMoveIdList.Contains(machine.MoveId);
         }
         else if (item.Category == ItemCategory.EVOLUTION)
         {
@@ -176,6 +238,6 @@ public class Pokemon
 
     internal PokemonStat GetStat(StatName stat)
     {
-        return this.BasePokemon.Stats.Where(it => it.BaseStat.Name == stat).SingleOrDefault();
+        return this.BasePokemon.Stats.SingleOrDefault(it => it.BaseStat.Name == stat);
     }
 }

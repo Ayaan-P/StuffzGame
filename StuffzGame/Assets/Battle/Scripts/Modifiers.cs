@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class Modifiers
 {
@@ -39,7 +36,7 @@ public class Modifiers
      * https://bulbapedia.bulbagarden.net/wiki/Damage#Damage_calculation
      * 
      */
-    public double CalculateModifier(Pokemon attackingPokemon, Pokemon defendingPokemon, PokemonMove move)
+    public KeyValuePair<float,bool> CalculateModifier(Pokemon attackingPokemon, Pokemon defendingPokemon, PokemonMove move)
     {
         StringBuilder stringBuilder = new StringBuilder();
         List<PokemonType> defendingTypes = defendingPokemon.BasePokemon.Types;
@@ -48,7 +45,8 @@ public class Modifiers
 
         float targetModifier = GetTargetModifier(move.BaseMove.Target);
 
-        float criticalModifier = GetCriticalHitModifier(attackingPokemon, move);
+        bool isCrit = IsCriticalHit(move);
+        float criticalModifier = isCrit ? 2f : 1f;
 
         float randomModifier = UnityEngine.Random.Range(0.85f, 1.0f);
 
@@ -58,7 +56,7 @@ public class Modifiers
             if (moveType == attackingType)
             {
                 STAB = 1.5f;
-                stringBuilder.Append($"{attackingPokemon.BasePokemon.Name} attacked {defendingPokemon.BasePokemon.Name} with {move.BaseMove.Name} (STAB: {STAB})\n");
+                stringBuilder.AppendLine($"{attackingPokemon.BasePokemon.Name} attacked {defendingPokemon.BasePokemon.Name} with {move.BaseMove.Name} (STAB: {STAB})");
                 break;
             }
         }
@@ -71,14 +69,14 @@ public class Modifiers
         }
 
 
-        stringBuilder.Append($"{move.BaseMove.Name} is {typeModifier} x effective against {defendingPokemon.BasePokemon.Name}\n");
+        stringBuilder.AppendLine($"{move.BaseMove.Name} is {typeModifier} x effective against {defendingPokemon.BasePokemon.Name}");
 
         float burnModifier = (attackingPokemon.Ailment == MoveAilment.BURN && move.BaseMove.MoveDamageClass == MoveDamageClass.PHYSICAL) ? 0.5f : 1;
 
         float finalModifier = targetModifier * criticalModifier * randomModifier * STAB * typeModifier * burnModifier;
-        stringBuilder.Append($"Final modifier = {targetModifier} x {criticalModifier} x {randomModifier} x {STAB} x {typeModifier} x {burnModifier}");
+        stringBuilder.AppendLine($"Final modifier = {targetModifier} x {criticalModifier} x {randomModifier} x {STAB} x {typeModifier} x {burnModifier}");
         Debug.Log(stringBuilder.ToString());
-        return finalModifier;
+        return new KeyValuePair<float,bool>(finalModifier,isCrit);
     }
 
     private float GetTargetModifier(PokemonTarget target)
@@ -107,11 +105,32 @@ public class Modifiers
                 return 1;
         }
     }
-    private float GetCriticalHitModifier(Pokemon attackingPokemon, PokemonMove move)
+    /* Gen 2 onwards crit formula from Bulbapedia:
+     * https://bulbapedia.bulbagarden.net/wiki/Critical_hit#Generation_II_onwards
+     */
+    private bool IsCriticalHit(PokemonMove move)
     {
+        int critStage = move.BaseMove.CritRate;
 
-        int critRateBonus = move.BaseMove.CritRate;
-        return 0;
+        float critProb;
+        switch (critStage)
+        {
+            case 0:
+                critProb = 1f / 24f;
+                break;
+            case 1:
+                critProb = 1f / 8f;
+                break;
+            case 2:
+                critProb = 1f / 2f;
+                break;
+            default:
+                critProb = 1f;
+                break;
+        }
+
+        float diceRoll = new System.Random().Next();
+        return diceRoll <= critProb;
     }
 
     public List<PokemonType> GetTypesStrongAgainst(PokemonType type)

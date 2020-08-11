@@ -5,6 +5,7 @@ using Pathfinding;
 public class PokemonController : MonoBehaviour
 {
     private Animator animator;
+    private SceneLoader sceneLoader;
     public float radius = 3f;
     public int maxMovementSpeed = 5;
     private Pokemon wildPokemon;
@@ -55,7 +56,6 @@ public class PokemonController : MonoBehaviour
             if(encounterData != null)
             {
                 encounterData.SetWildPokemonEncounter(wildPokemon);
-                SceneLoader sceneLoader = new SceneLoader();
                 sceneLoader.LoadBattle();
             }
             else
@@ -65,13 +65,14 @@ public class PokemonController : MonoBehaviour
         }
     }
 
-    public void InitWildPokemonData(GameObject playerGameObject, Pokemon wildPokemon)
+    public void InitWildPokemonData(GameObject playerGameObject, Pokemon wildPokemon, GameObject sceneLoader)
     {
         this.playerGameObject = playerGameObject;
         this.wildPokemon = wildPokemon;
         int speedStat = this.wildPokemon.GetStat(StatName.SPEED).BaseValue;
         this.GetComponent<AIPath>().maxSpeed = speedStat / MAX_POKEMON_BASE_SPEED * maxMovementSpeed;
         this.GetComponent<Rigidbody2D>().mass = this.wildPokemon.BasePokemon.Weight;
+        this.sceneLoader = sceneLoader.GetComponent<SceneLoader>();
     }
 
     private void SetAnimatorSpriteDirection()

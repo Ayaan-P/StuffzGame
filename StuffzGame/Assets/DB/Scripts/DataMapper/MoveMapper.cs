@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-public class MoveMapper : DataMapper
+public class 
+    
+    MoveMapper : DataMapper
 {
     protected override string FileName { get => "moves"; }
     protected override JObject JsonObject { get; }

@@ -34,7 +34,6 @@ public class PokemonMapper : DataMapper
             List<int> EVGainedOnDefeatList = statWrapperList.Select(it => it.EVGainedOnDefeat).ToList();
             List<int> baseStatValueList = statWrapperList.Select(it => it.StatValue).ToList();
 
-
             return (T) Convert.ChangeType( new BasePokemonTemplate
             {
                 AbilityIdList = abilityIdList,
@@ -53,7 +52,8 @@ public class PokemonMapper : DataMapper
                 EVsGainedOnDefeatList = EVGainedOnDefeatList,
                 BaseStatValueList = baseStatValueList,
                 Types = pokemon["types"].Value<JArray>().Select(it => (PokemonType)JSONParsingUtil.GetIdFromJObject(it)).ToList(),
-                Weight = pokemon["weight"].Value<int>()
+                Weight = pokemon["weight"].Value<int>(),
+                FormIdList = GetFormIdList(pokemon)
 
             }, typeof(T));
           
@@ -63,7 +63,25 @@ public class PokemonMapper : DataMapper
         return default;
     }
 
-   public int GetPokemonIdForSpeciesId(int id)
+    private List<int> GetFormIdList(JObject pokemon)
+    {
+        var forms = pokemon["forms"].Value<JArray>();
+        if (forms == null)
+        {
+            return null;
+        }
+        else
+        {
+            List<int> formIdList = new List<int>();
+            foreach (JObject form in forms)
+            {
+                formIdList.Add(form["id"].Value<int>());
+            }
+            return formIdList.Count == 0 ? null : formIdList;
+        }
+    }
+
+    public int GetPokemonIdForSpeciesId(int id)
     {
         int pokemonId = -1;
         foreach(JObject pokemon in PokemonList)

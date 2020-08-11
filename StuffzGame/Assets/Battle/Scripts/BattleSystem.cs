@@ -5,15 +5,24 @@ using UnityEngine;
 public class BattleSystem : MonoBehaviour
 {
     private enum BattleState { START, PLAYER_TURN, ENEMY_TURN, WON, LOST }
-
-   // private BattleAI AI;
+    public GameObject sceneLoader;
     private AIAgent aiAgent;
-    private Dictionary<BattleState, Action<Pokemon, Pokemon>> battleStateFunction;
-
+    private Dictionary<BattleState, Action> battleStateFunction;
+    private Pokemon playerPokemon;
+    private Pokemon enemyPokemon;
     public delegate void SeekInput();
     public event SeekInput OnPlayerTurn;
 
+    public delegate void SetGeneralDialogue(BattleDialogueLoader.GeneralDialogue dialogue, BattleDialogueLoader.Actor actor, Pokemon pokemon, Item item);
+    public event SetGeneralDialogue OnActionTaken;
+
+    public delegate void SetEffectDialogue(BattleDialogueLoader.EffectDialogue dialogue, BattleDialogueLoader.Actor actor, Pokemon pokemon);
+    public event SetEffectDialogue OnAilmentReceived;
+    public event SetEffectDialogue OnStatChanged;
+
+
     // Start is called before the first frame update
+    
     private void Start()
     {
         aiAgent = new RandomAgent();
@@ -27,48 +36,60 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            Pokemon playerPokemon = player.Party.GetPokemonAtIndex(0);
+            int currentPokemonIndex = 0;
+            playerPokemon = player.Party.GetPokemonAtIndex(currentPokemonIndex);
             List<Pokemon> enemyParty = encounterData.GetCurrentEncounterData();
-            Pokemon enemyPokemon = enemyParty[0];
-            battleStateFunction[BattleState.START].Invoke(playerPokemon, enemyPokemon);
+            enemyPokemon = enemyParty[currentPokemonIndex];
+            battleStateFunction[BattleState.START].Invoke();
         }
-      
     }
 
     private void InitBattleFunctions()
     {
         if (this.battleStateFunction == null)
         {
-            this.battleStateFunction = new Dictionary<BattleState, Action<Pokemon, Pokemon>>{
-        { BattleState.START, (player,enemy) => StartBattle(player,enemy) },
-        { BattleState.PLAYER_TURN, (player,enemy) => PlayerTurn(player,enemy) },
-        { BattleState.ENEMY_TURN, (player,enemy) => EnemyTurn(player,enemy) },
-        { BattleState.WON, (player,enemy) => Won() },
-        { BattleState.LOST, (player,enemy) => Lost() }
+            this.battleStateFunction = new Dictionary<BattleState, Action>{
+        { BattleState.START, StartBattle },
+        { BattleState.PLAYER_TURN, PlayerTurn },
+        { BattleState.ENEMY_TURN, EnemyTurn },
+        { BattleState.WON, Won },
+        { BattleState.LOST, Lost }
             };
         }
     }
 
-    private void StartBattle(Pokemon player, Pokemon enemy)
+    private void StartBattle()
     {
+        this.battleStateFunction[BattleState.PLAYER_TURN].Invoke();
     }
 
-    private void PlayerTurn(Pokemon player, Pokemon enemy)
+    private void PlayerTurn()
     {
+        OnPlayerTurn?.Invoke();
     }
 
-    private void EnemyTurn(Pokemon player, Pokemon enemy)
+    public void MoveSelected(int moveIndex)
+    {
+        PokemonMove selectedMove = playerPokemon.LearnedMoves[moveIndex];
+        this.battleStateFunction[BattleState.ENEMY_TURN].Invoke();
+
+    }
+
+    private void EnemyTurn()
     {
 
-        KeyValuePair<AIAction, int> actionIndexPair = aiAgent.GetNextAction(player, enemy);
+        KeyValuePair<AIAction, int> actionIndexPair = aiAgent.GetNextAction(playerPokemon, enemyPokemon);
 
         switch (actionIndexPair.Key)
         {
             case AIAction.USE_MOVE:
+                PokemonMove moveUsed = enemyPokemon.LearnedMoves[actionIndexPair.Value];
                 break;
             case AIAction.USE_ITEM:
+                int itemIndex = actionIndexPair.Value;
                 break;
             case AIAction.SWITCH_OUT:
+                int swapWithIndex = actionIndexPair.Value;
                 break;
             default:
                 Debug.LogError($"{actionIndexPair.Key} is not a valid AI action that can be performed");
@@ -82,6 +103,11 @@ public class BattleSystem : MonoBehaviour
 
     private void Lost()
     {
+    }
+
+    private void ConductCombat()
+    {
+
     }
 
     /*void playerTurn()

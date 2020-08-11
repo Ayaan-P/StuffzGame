@@ -28,11 +28,32 @@ public class BasePokemonFactory
                 Species = ConstructPokemonSpecies(pokemonTemplate),
                 Stats = ConstructStatList(pokemonTemplate),
                 Types = pokemonTemplate.Types,
-                Weight = pokemonTemplate.Weight
+                Weight = pokemonTemplate.Weight,
+                Forms = ConstructPokemonForms(pokemonTemplate)
             };
         }
         UnityEngine.Debug.LogError($"No pokemon found with id: {id}");
         return null;
+    }
+
+    private List<PokemonForm> ConstructPokemonForms(BasePokemonTemplate pokemonTemplate)
+    {
+        if (pokemonTemplate.FormIdList == null || pokemonTemplate.FormIdList.Count == 0)
+        {
+            return null;
+        }
+        DataMapper formMapper = MapperFactory.GetMapper(MapperName.FORM_MAPPER);
+        List<PokemonForm> pokemonFormList = new List<PokemonForm>();
+        foreach (int formId in pokemonTemplate.FormIdList)
+        {
+            PokemonForm form = formMapper.GetObjectById<PokemonForm>(formId);
+            if (form.FormOrder != 1)
+            {
+                pokemonFormList.Add(form);
+            }
+        }
+
+        return pokemonFormList.Count == 0 ? null : pokemonFormList;
     }
 
     private List<PokemonAbility> ConstructPokemonAbilityList(BasePokemonTemplate pokemonTemplate)

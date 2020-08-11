@@ -92,7 +92,6 @@ public class StoragePage : MonoBehaviour
     {
         if(pokemonDescription!= null)
         {
-            const int MAX_TYPES_COUNT = 2;
             pokemonDescription.SetActive(true);
             Image[] imageComponents = pokemonDescription.GetComponentsInChildren<Image>(true);
             Image pokemonImage = imageComponents[1];
@@ -118,7 +117,7 @@ public class StoragePage : MonoBehaviour
             genderImage.sprite = selectedSlotData.GenderSprite;
             genderImage.preserveAspect = true;
 
-            if (pokemon.BasePokemon.Types.Count == MAX_TYPES_COUNT)
+            if (pokemon.BasePokemon.Types.Count == Pokemon.MAX_POKEMON_TYPES)
             {
                 type1Image.sprite = selectedSlotData.TypeSpriteList[0];
                 type1Image.preserveAspect = true;

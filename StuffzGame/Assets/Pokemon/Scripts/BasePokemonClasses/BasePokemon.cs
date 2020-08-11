@@ -18,4 +18,5 @@ public class BasePokemon
     public List<PokemonStat> Stats { get; set; }
     public List<PokemonType> Types { get; set; }
     public int Weight { get; set; }
+    public List<PokemonForm> Forms { get; set; }
 }

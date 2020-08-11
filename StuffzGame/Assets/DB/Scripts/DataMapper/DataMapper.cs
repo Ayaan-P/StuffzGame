@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
+using UnityEngine.AddressableAssets;
 
 public abstract class DataMapper
 {
@@ -13,14 +14,7 @@ public abstract class DataMapper
 
     protected JObject LoadJSON()
     {
-        JObject jsonFile;
-        using (FileStream fileStream = File.Open($"{JsonDirectory}{FileName}{FileExtension}", FileMode.Open))
-        using (StreamReader streamReader = new StreamReader(fileStream))
-        using (JsonReader jsonReader = new JsonTextReader(streamReader))
-        {
-            jsonFile = (JObject)JToken.ReadFrom(jsonReader);
-        }
-        return jsonFile;
+       return new JsonLoader().LoadJSON($"{JsonDirectory}{FileName}{FileExtension}");
     }
 
     public int GetJSONObjectCount()

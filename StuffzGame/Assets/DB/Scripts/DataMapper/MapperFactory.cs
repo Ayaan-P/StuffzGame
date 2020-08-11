@@ -84,6 +84,9 @@ public class MapperFactory
                 case MapperName.MACHINE_MAPPER:
                     mapperInstances.Add(mapperName, new MachineMapper());
                     break;
+                case MapperName.FORM_MAPPER:
+                    mapperInstances.Add(mapperName, new FormMapper());
+                    break;
             }
             if (enableDebug) { UnityEngine.Debug.Log($"DataMapper not found in mapperInstances. Creating new instance of DataMapper: {mapperName}"); }
             return mapperInstances[mapperName];
@@ -103,5 +106,6 @@ public enum MapperName
     EVOLUTION_MAPPER,
     BERRY_MAPPER,
     SPECIES_MAPPER,
-    MACHINE_MAPPER
+    MACHINE_MAPPER,
+    FORM_MAPPER
 }

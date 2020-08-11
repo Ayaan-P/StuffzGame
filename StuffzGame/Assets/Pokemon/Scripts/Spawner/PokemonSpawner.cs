@@ -4,6 +4,7 @@ public class PokemonSpawner : MonoBehaviour
 {
     public GameObject wildPokemonPrefab;
     private GameObject playerGameObject;
+    public GameObject sceneLoader;
     public float rate = 2f;
     public int maxMobs;
     private float nextSpawnTime = 0f;
@@ -46,7 +47,7 @@ public class PokemonSpawner : MonoBehaviour
             spriteSwap.Pokemon = wildPokemon;
             spriteSwap.Sprite = SpriteType.OVERWORLD;
             PokemonController pokemonController = spawnedWildPokemon.GetComponent<PokemonController>();
-            pokemonController.InitWildPokemonData(playerGameObject, wildPokemon);
+            pokemonController.InitWildPokemonData(playerGameObject, wildPokemon, sceneLoader);
 
             currentMobs++;
         }

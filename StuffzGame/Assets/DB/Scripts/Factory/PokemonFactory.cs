@@ -136,7 +136,6 @@ public class PokemonFactory
 
     private List<PokemonMove> GenerateMovesetForLevel(BasePokemon pokemon, int level)
     {
-        int MAX_MOVE_SLOTS = 4;
 
         List<PokemonMove> allPossibleMoves = pokemon.PossibleMoveList;
         List<PokemonMove> movesPossibleAtCurrentLevel = new List<PokemonMove>();
@@ -157,7 +156,7 @@ public class PokemonFactory
             UnityEngine.Debug.LogError($"{pokemon.Name} with ID: {pokemon.Id} was unable to be constructed. No moves can be learned at level: {level}");
             throw new Exception($"{pokemon.Name} with ID: {pokemon.Id} was unable to be constructed. No moves can be learned at level: {level}");
         }
-        else if (numMovesPossibleAtCurrentLevel <= MAX_MOVE_SLOTS)
+        else if (numMovesPossibleAtCurrentLevel <= PokemonMove.MAX_MOVES)
         {
             // if less than or equal to maxMoveSlots, return all those moves as a moveset.
             return movesPossibleAtCurrentLevel;
@@ -166,14 +165,14 @@ public class PokemonFactory
         {
             // Fisher-Yates shuffle to get random, unique set of moves from possible moveset pool
 
-            for (int i = numMovesPossibleAtCurrentLevel - 1; i >= numMovesPossibleAtCurrentLevel - MAX_MOVE_SLOTS; i--)
+            for (int i = numMovesPossibleAtCurrentLevel - 1; i >= numMovesPossibleAtCurrentLevel - PokemonMove.MAX_MOVES; i--)
             {
                 int randomIndex = random.Next(i + 1);
                 PokemonMove temp = movesPossibleAtCurrentLevel[i];
                 movesPossibleAtCurrentLevel[i] = movesPossibleAtCurrentLevel[randomIndex];
                 movesPossibleAtCurrentLevel[randomIndex] = temp;
             }
-            return movesPossibleAtCurrentLevel.Skip(numMovesPossibleAtCurrentLevel - MAX_MOVE_SLOTS).Take(MAX_MOVE_SLOTS).ToList();
+            return movesPossibleAtCurrentLevel.Skip(numMovesPossibleAtCurrentLevel - PokemonMove.MAX_MOVES).Take(PokemonMove.MAX_MOVES).ToList();
         }
     }
 

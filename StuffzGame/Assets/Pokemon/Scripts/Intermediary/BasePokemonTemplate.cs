@@ -13,4 +13,5 @@ public class BasePokemonTemplate: BasePokemon
     public List<int> BaseStatIdList { get; set; }
     public List<int> EVsGainedOnDefeatList { get; set; }
     public List<int> BaseStatValueList { get; set; }
+    public List<int> FormIdList { get; set; }
 }

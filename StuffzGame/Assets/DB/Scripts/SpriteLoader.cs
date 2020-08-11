@@ -18,7 +18,6 @@ public class SpriteLoader
     {
         string formattedId = FormatId(id, isShiny, gender, type);
         string address = $"{GetAddressForSpriteType(type)}{formattedId}.png";
-
         if (gender == Gender.FEMALE && !File.Exists(address))
         {
             // Not all female pokemon have special sprites, so use male one instead.
@@ -54,6 +53,17 @@ public class SpriteLoader
     public Sprite LoadFaintedSprite()
     {
         string address = "Assets/UI/InGameMenu/Sprites/fainted.png";
+        if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
+        return GetSpriteAsync<Sprite>(address);
+    }
+
+    public Sprite LoadAilmentSprite(MoveAilment ailment)
+    {
+        if(!DoesAilmentHaveSprite(ailment))
+        {
+            return null;
+        }
+        string address = $"Assets/Pokemon/Sprites/Ailments/{ailment.ToString().ToLower()}.png";
         if (enableDebug) { Debug.Log($"Loading sprite at address: {address}"); }
         return GetSpriteAsync<Sprite>(address);
     }
@@ -170,6 +180,22 @@ public class SpriteLoader
             formattedId = $"{id}{genderChar}{shinyChar}";
         }
         return formattedId;
+    }
+
+    public bool DoesAilmentHaveSprite(MoveAilment ailment)
+    {
+        switch (ailment)
+        {
+            case MoveAilment.POISON:
+            case MoveAilment.BADLY_POISON:
+            case MoveAilment.BURN:
+            case MoveAilment.PARALYSIS:
+            case MoveAilment.SLEEP:
+            case MoveAilment.FREEZE:
+                return true;
+            default:
+                return false;
+        }
     }
 }
 

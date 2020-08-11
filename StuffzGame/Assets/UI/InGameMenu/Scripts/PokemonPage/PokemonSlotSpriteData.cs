@@ -1,27 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PokemonSlotSpriteData : SpriteSlotData<Pokemon>
 {
     public override Pokemon CurrentObject { get; }
-  
+
     private readonly SpriteLoader loader;
     private Sprite pokemonSprite;
     private Sprite itemSprite;
     private List<Sprite> typeSpriteList;
     private Sprite genderSprite;
     private Sprite faintedSprite;
-    private List<Sprite> moveSpriteList;
-
-    public Sprite PokemonSprite { get => pokemonSprite; set => pokemonSprite=value; }
+    private Sprite ailmentSprite;
+    private List<Sprite> moveDamageClassSpriteList;
+    private List<Sprite> moveDamageClassLongSpriteList;
+    private List<Sprite> moveTypesSpriteList;
+    public Sprite PokemonSprite { get => pokemonSprite; set => pokemonSprite = value; }
     public Sprite ItemSprite { get => itemSprite; }
     public List<Sprite> TypeSpriteList { get => typeSpriteList; }
     public Sprite GenderSprite { get => genderSprite; }
     public Sprite FaintedSprite { get => faintedSprite; }
-    public List<Sprite> MoveSpriteList { get => moveSpriteList; }
+    public Sprite AilmentSprite { get => ailmentSprite; }
+    public List<Sprite> MoveDamageClassSpriteList { get => moveDamageClassSpriteList; }
+    public List<Sprite> MoveDamageClassLongSpriteList { get => moveDamageClassLongSpriteList; }
+    public List<Sprite> MoveTypesSpriteList { get => moveTypesSpriteList; }
 
     public PokemonSlotSpriteData(Pokemon pokemon)
     {
@@ -36,7 +38,9 @@ public class PokemonSlotSpriteData : SpriteSlotData<Pokemon>
         PreLoadTypeSprites();
         PreLoadGenderSprite();
         PreLoadFaintedSprite();
-        PreLoadMoveSprites();
+        PreLoadAilmentSprite();
+        PreLoadMoveDamagClassSprites();
+        PreLoadMoveTypeSprites();
     }
 
     private void PreLoadPokemonSprite()
@@ -85,19 +89,38 @@ public class PokemonSlotSpriteData : SpriteSlotData<Pokemon>
         }
     }
 
+    private void PreLoadAilmentSprite()
+    {
+        this.ailmentSprite = loader.LoadAilmentSprite(CurrentObject.Ailment);
+    }
+
     private void PreLoadGenderSprite()
     {
         this.genderSprite = loader.LoadGenderSprite(CurrentObject.Gender);
     }
 
-    private void PreLoadMoveSprites()
+    private void PreLoadMoveDamagClassSprites()
     {
-        List<Sprite> moveSprites = new List<Sprite>();
+        List<Sprite> damageClassSprites = new List<Sprite>();
+        List<Sprite> damageClassLongSprites = new List<Sprite>();
+
         foreach (var move in CurrentObject.LearnedMoves)
         {
-            moveSprites.Add(loader.LoadMoveDamageClassSprite(move.BaseMove.MoveDamageClass, false));
+            damageClassSprites.Add(loader.LoadMoveDamageClassSprite(move.BaseMove.MoveDamageClass, false));
+            damageClassLongSprites.Add(loader.LoadMoveDamageClassSprite(move.BaseMove.MoveDamageClass, true));
         }
-        this.moveSpriteList = moveSprites;
+        this.moveDamageClassSpriteList = damageClassSprites;
+        this.moveDamageClassLongSpriteList = damageClassLongSprites;
+    }
+
+    private void PreLoadMoveTypeSprites()
+    {
+        List<Sprite> moveTypeSprites = new List<Sprite>();
+        foreach (var move in CurrentObject.LearnedMoves)
+        {
+            moveTypeSprites.Add(loader.LoadTypeSprite(move.BaseMove.Type));
+        }
+        this.moveTypesSpriteList = moveTypeSprites;
     }
 
     public override bool AreSpritesReady()
@@ -106,10 +129,15 @@ public class PokemonSlotSpriteData : SpriteSlotData<Pokemon>
            (CurrentObject.HeldItem != null && itemSprite == null) ||
            genderSprite == null ||
            (CurrentObject.IsFainted && faintedSprite == null) ||
-           typeSpriteList ==null ||
+           typeSpriteList == null ||
            typeSpriteList.Contains(null) ||
-           moveSpriteList == null ||
-           moveSpriteList.Contains(null))
+           moveDamageClassSpriteList == null ||
+           moveDamageClassSpriteList.Contains(null) ||
+           moveDamageClassLongSpriteList == null ||
+           moveDamageClassLongSpriteList.Contains(null) ||
+           moveTypesSpriteList == null ||
+           moveTypesSpriteList.Contains(null) ||
+           loader.DoesAilmentHaveSprite(CurrentObject.Ailment) && ailmentSprite == null)
         {
             return false;
         }

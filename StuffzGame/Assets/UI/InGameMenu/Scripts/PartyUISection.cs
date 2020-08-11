@@ -29,7 +29,6 @@ public class PartyUISection : MonoBehaviour
 
     private void SetPokemonImageComponents(PokemonSlotSpriteData slotData, GameObject slot)
     {
-        int MAX_TYPES_COUNT = 2;
         Pokemon pokemon = slotData.CurrentObject;
         Image[] imageComponents = slot.GetComponentsInChildren<Image>();
         Image pokemonImage = imageComponents[1];
@@ -40,7 +39,7 @@ public class PartyUISection : MonoBehaviour
         Image type2 = imageComponents[6];
 
         pokemonImage.sprite = slotData.PokemonSprite;
-
+        pokemonImage.preserveAspect = true;
         if (pokemon.HeldItem != null)
         {
             heldItemImage.gameObject.SetActive(true);
@@ -54,19 +53,19 @@ public class PartyUISection : MonoBehaviour
 
         if (pokemon.IsFainted)
         {
-            ailmentImage.gameObject.SetActive(true);
             ailmentImage.sprite = slotData.FaintedSprite;
             ailmentImage.preserveAspect = true;
         }
-        else
+        else 
         {
-            ailmentImage.gameObject.SetActive(false);
+            ailmentImage.sprite = slotData.AilmentSprite;
+            ailmentImage.preserveAspect = true;
         }
 
         genderImage.sprite = slotData.GenderSprite;
         genderImage.preserveAspect = true;
 
-        if (pokemon.BasePokemon.Types.Count == MAX_TYPES_COUNT)
+        if (pokemon.BasePokemon.Types.Count == Pokemon.MAX_POKEMON_TYPES)
         {
             type1.sprite = slotData.TypeSpriteList[0];
             type1.preserveAspect = true;
@@ -97,7 +96,12 @@ public class PartyUISection : MonoBehaviour
         // set HP slider via HealthBar prefab
         GameObject health = slot.transform.Find("Health").gameObject;
         GameObject hpBar = Instantiate(healthBar, health.transform);
-        Image fill = hpBar.GetComponentsInChildren<Image>()[1];
+        Image[] hpComponents = hpBar.GetComponentsInChildren<Image>();
+        Image bg = hpComponents[0];
+        Image fill = hpComponents[1];
+
+        bg.preserveAspect = true;
+        fill.preserveAspect = true;
         fill.color = hpColor;
         Slider hpSlider = hpBar.GetComponent<Slider>();
         hpSlider.minValue = 0;

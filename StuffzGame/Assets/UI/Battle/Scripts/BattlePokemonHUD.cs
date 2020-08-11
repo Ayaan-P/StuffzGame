@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +26,7 @@ public class BattlePokemonHUD : MonoBehaviour
 
     private void Update()
     {
-        if (hudSpriteDict.ContainsValue(null))
+        if (!AreHUDSpritesReady())
         {
             LoadHUDSprites();
         }
@@ -58,11 +57,15 @@ public class BattlePokemonHUD : MonoBehaviour
         Image shadow = imageComponents[0];
         Image bg = imageComponents[1];
         Image gender = imageComponents[2];
+        Image ailment = imageComponents[3];
         shadow.preserveAspect = true;
         bg.preserveAspect = true;
 
         gender.sprite = hudSpriteDict[HUDSprite.GENDER];
         gender.preserveAspect = true;
+
+        ailment.sprite = hudSpriteDict[HUDSprite.AILMENT];
+        ailment.preserveAspect = true;
     }
 
     private void SetTextComponents()
@@ -88,9 +91,10 @@ public class BattlePokemonHUD : MonoBehaviour
         Image hpBarBg = hpBar.GetComponentsInChildren<Image>()[0];
         Image fill = hpBar.GetComponentsInChildren<Image>()[1];
 
+        hpBarBg.preserveAspect = true;
+        fill.preserveAspect = true;
         hpBarBg.pixelsPerUnitMultiplier = 2;
-        fill.pixelsPerUnitMultiplier = 2
-            ;
+        fill.pixelsPerUnitMultiplier = 2;
         fill.color = hpColor;
         Slider hpSlider = hpBar.GetComponent<Slider>();
         hpSlider.minValue = 0;
@@ -101,8 +105,29 @@ public class BattlePokemonHUD : MonoBehaviour
     private void SetEXP()
     {
         GameObject expBar = Instantiate(healthBar, expPanel.transform, false);
-        Image fill = expBar.GetComponentsInChildren<Image>()[1];
+        
+        Image[] hpComponents = expBar.GetComponentsInChildren<Image>();
+        Image bg = hpComponents[0];
+        Image fill = hpComponents[1];
+
+        bg.preserveAspect = true;
+        fill.preserveAspect = true;
+
         fill.color = ColorPalette.GetColor(ColorName.TYPE_WATER);
+        Slider expSlider = expBar.GetComponent<Slider>();
+
+        if (Pokemon.CurrentLevel == Pokemon.MAX_LEVEL)
+        {
+            expSlider.minValue = 0;
+            expSlider.maxValue = 0;
+            expSlider.value = 0;
+        }
+        else
+        {
+            expSlider.minValue = Pokemon.BasePokemon.Species.GrowthRate.LevelExperienceDict[Pokemon.CurrentLevel];
+            expSlider.maxValue = Pokemon.BasePokemon.Species.GrowthRate.LevelExperienceDict[Pokemon.CurrentLevel + 1];
+            expSlider.value = Pokemon.BasePokemon.Species.GrowthRate.CurrentExperience ?? 0;
+        }
     }
 
     private void InitHUD()
@@ -123,7 +148,8 @@ public class BattlePokemonHUD : MonoBehaviour
     private void ResetHUDSpriteDict()
     {
         hudSpriteDict = new Dictionary<HUDSprite, Sprite> {
-            { HUDSprite.GENDER, null}
+            { HUDSprite.GENDER, null},
+            { HUDSprite.AILMENT, null}
         };
     }
 
@@ -149,6 +175,12 @@ public class BattlePokemonHUD : MonoBehaviour
                             break;
 
                         case HUDSprite.AILMENT:
+                            Sprite ailmentSprite = loader.LoadAilmentSprite(Pokemon.Ailment);
+                            if (ailmentSprite != null)
+                            {
+                                hudSpriteDict[HUDSprite.AILMENT] = ailmentSprite;
+                                SetImageComponents();
+                            }
                             break;
 
                         default:
@@ -161,6 +193,19 @@ public class BattlePokemonHUD : MonoBehaviour
         else
         {
             Debug.LogError("Cant load HUD sprites, Pokemon is null");
+        }
+    }
+
+    private bool AreHUDSpritesReady()
+    {
+        if (hudSpriteDict[HUDSprite.GENDER] == null ||
+           loader.DoesAilmentHaveSprite(Pokemon.Ailment) && hudSpriteDict[HUDSprite.AILMENT] == null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
         }
     }
 

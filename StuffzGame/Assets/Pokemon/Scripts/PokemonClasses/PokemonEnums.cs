@@ -63,7 +63,8 @@ public enum MoveAilment
     EMBARGO = 19,
     PERISH_SONG = 20,
     INGRAIN = 21,
-    SILENCE = 24
+    SILENCE = 24,
+    BADLY_POISON = 25
 }
 
 public enum MoveCategory

@@ -27,8 +27,9 @@ public class GrowthRateMapper : DataMapper
                 Formula = expGrowthRate["formula"].Value<string>(),
                 Id = expGrowthRate["id"].Value<int>(),
                 LevelExperienceDict = GetLevelExperienceDict(expGrowthRate["levels"].Value<JArray>()),
-                Name = expGrowthRate["name"].Value<string>()
-            },typeof(T));
+                Name = expGrowthRate["name"].Value<string>(),
+                CurrentExperience = null
+            },typeof(T));;
         }
         UnityEngine.Debug.LogWarning($"No EXP Growth Rate found for ID: {id}");
         return default;

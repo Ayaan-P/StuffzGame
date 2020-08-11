@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleUI : MonoBehaviour
 {
@@ -13,23 +15,54 @@ public class BattleUI : MonoBehaviour
     public GameObject playerBattleHUDContainer;
     public GameObject enemyBattleHUDContainer;
 
+    public PartyStatusUI partyStatus;
+    public GameObject battleMenu;
+    public MoveSelection moveSelection;
+
+    public BattleSystem battleSystem;
+    private Player player;
+    private EncounterData encounterData;
     // Start is called before the first frame update
     private void Start()
     {
-        var player = Player.Instance;
-        var encounterData = EncounterData.Instance;
+        player = Player.Instance;
+        encounterData = EncounterData.Instance;
         if (player == null || encounterData == null)
         {
             Debug.LogError($"Cannot start battle: {typeof(Player)} is null? {player == null} or {typeof(EncounterData)} is null? {encounterData == null}");
         }
         else
         {
-            Pokemon playerPokemon = player.Party.GetPokemonAtIndex(0);
+            int currentPokemonIndex = 0;
+            Pokemon playerPokemon = player.Party.GetPokemonAtIndex(currentPokemonIndex);
             List<Pokemon> enemyParty = encounterData.GetCurrentEncounterData();
-            Pokemon enemyPokemon = enemyParty[0];
+            Pokemon enemyPokemon = enemyParty[currentPokemonIndex];
             SetPokemonBattleSprites(playerPokemon, enemyPokemon);
             SetBattleHUDs(playerPokemon, enemyPokemon);
+            SetPartyStatus();
+            PopulateMoves(currentPokemonIndex);
         }
+    }
+
+    private void OnEnable()
+    {
+        //Subscribe Listeners
+
+    }
+
+    private void OnDisable()
+    {
+        //Unsubscribe Listeners
+    }
+
+    private void SetPartyStatus()
+    {
+        partyStatus.PopulatePartyStatusIcons(player.Party.PartySize());
+    }
+
+    private void PopulateMoves(int partyIndex)
+    {
+        moveSelection.PopulateMoves(partyIndex);
     }
 
     private void SetPokemonBattleSprites(Pokemon player, Pokemon enemy)

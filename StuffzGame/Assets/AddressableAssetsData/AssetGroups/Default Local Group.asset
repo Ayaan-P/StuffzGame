@@ -49,6 +49,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/10005.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0046063ba42386c4cb6f1d6ab739dc98
+    m_Address: Assets/Pokemon/Sprites/Back/10057s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 0049f458ec6cda74182d70c74cb544b9
     m_Address: Assets/Pokemon/Sprites/Box/27s.png
     m_ReadOnly: 0
@@ -225,6 +229,14 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/302s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 02070289a1e87564cbfcdeedaa44ea07
+    m_Address: Assets/Pokemon/Sprites/Back/10083s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 020c93ed1998588428cdbb7b3a2faf0a
+    m_Address: Assets/Pokemon/Sprites/Box/716_form2s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 02101e30182255742a0529ff27b5f57c
     m_Address: Assets/Pokemon/Sprites/Front/616.png
     m_ReadOnly: 0
@@ -329,6 +341,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/pink-scarf.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 02efd048349fea84ab161fc2b416cbc3
+    m_Address: Assets/Pokemon/Sprites/Box/10131s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 02ffb5cb6eb30b24eb0cbaa505b26766
     m_Address: Assets/Pokemon/Sprites/Front/274fs.png
     m_ReadOnly: 0
@@ -413,6 +429,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/352.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 03a8564bc21d81b42aa7b236edc27e82
+    m_Address: Assets/Pokemon/Sprites/Box/10131.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 03b55e87292816b4381faa8b7d208ae9
     m_Address: Assets/Pokemon/Sprites/Front/201.png
     m_ReadOnly: 0
@@ -477,6 +497,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/613.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 04560ed11e9fd784287acc1a26204d4f
+    m_Address: Assets/DB/JSON/evolutions.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 04586a5e206238b4ea3dba367c9e1160
     m_Address: Assets/Pokemon/Sprites/Front/399.png
     m_ReadOnly: 0
@@ -487,6 +511,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 0461f29d82b538a4abf64523d37f1333
     m_Address: Assets/Pokemon/Sprites/Front/502.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 04784ab8646a4b14c88d3c3c4d6ff2d0
+    m_Address: Assets/Pokemon/Sprites/Back/10059s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 04786ed29ad4d0e4c8dc5ff5a99ee43c
@@ -527,6 +555,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 04c963f4885ed374584e15e295bddcce
     m_Address: Assets/Pokemon/Sprites/Box/469s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 04ca839312f7d9c4cba4abe6c704b5aa
+    m_Address: Assets/Pokemon/Sprites/Box/10207s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 04d0c5ce2fbc41b47978853639c3486c
@@ -577,6 +609,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/data-card-07.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 052b8fa3bf42462409d1b7122b84c7ad
+    m_Address: Assets/Pokemon/Sprites/Box/386s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 052d036c7fffda74db05f64b8b5722a2
     m_Address: Assets/Pokemon/Sprites/Back/298.png
     m_ReadOnly: 0
@@ -617,6 +653,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/635s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 05909cb7db02f054290bb595e3210512
+    m_Address: Assets/Pokemon/Sprites/Box/10266.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 0595aeb46d557a54f9d6c287d12250b4
     m_Address: Assets/Pokemon/Sprites/Back/555s.png
     m_ReadOnly: 0
@@ -655,6 +695,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 05dda425f0998c6458209cd1d2dde68a
     m_Address: Assets/Pokemon/Sprites/Overworld/430s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 05e63ac42a1a79b48b08bdc416563d2a
+    m_Address: Assets/Pokemon/Sprites/Back/10074s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 060f0981d583e93438c72763151a91b3
@@ -801,6 +845,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/271.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 06fbecf0c4969ba4ebabf5d9cd588276
+    m_Address: Assets/Pokemon/Sprites/Box/10206s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 0707ac066595088439216400f70b126a
     m_Address: Assets/Pokemon/Sprites/Front/76.png
     m_ReadOnly: 0
@@ -909,12 +957,24 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/786s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 07dd21f45926d5940816ea1054597375
+    m_Address: Assets/Pokemon/Sprites/Back/10002.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 07fe05be3d3b47845b874ea5e2f7118b
+    m_Address: Assets/Pokemon/Sprites/Back/10075.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 080b0dec6ed25e14fa60c24d51c0ddfb
     m_Address: Assets/Pokemon/Sprites/Back/329.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 080cb5131d0a0414e870d19e04f180af
     m_Address: Assets/Pokemon/Sprites/Front/678s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 08123dc8bd7647541b7baba981ef8624
+    m_Address: Assets/Pokemon/Sprites/Box/10260.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 08144f1cce4b0774e91053bf43c15445
@@ -1001,6 +1061,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/320s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 087b57b7ea4cce444bddf55170ec5cc5
+    m_Address: Assets/Pokemon/Sprites/Box/10173s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 087cdb0f7b7302a48b59c5407d10f8b2
     m_Address: Assets/Items/Sprites/hm06.png
     m_ReadOnly: 0
@@ -1029,6 +1093,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/518.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 089f5133be63eda40a04495082a4bf5b
+    m_Address: Assets/Pokemon/Sprites/Back/10029.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 08b7abb2b1aab73499383edfe673977a
     m_Address: Assets/Pokemon/Sprites/Back/573s.png
     m_ReadOnly: 0
@@ -1049,6 +1117,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/722.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 08dbda652ee87104c84237db72279b74
+    m_Address: Assets/Pokemon/Sprites/Box/10160s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 08e08aabc11109248845eae7a2201de4
     m_Address: Assets/Items/Sprites/ride-pager.png
     m_ReadOnly: 0
@@ -1059,6 +1131,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 08e621a9971f06b4ea25a35d7cc3ee34
     m_Address: Assets/Pokemon/Sprites/Overworld/51s_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 08efd67d0853d3e4a8f85bd21d8c011f
+    m_Address: Assets/Pokemon/Sprites/Box/10153.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 08ff4fbafa424c744b3f5600b693bf21
@@ -1101,6 +1177,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/386_1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 096963e8522f62c498cd85aa07824a83
+    m_Address: Assets/Pokemon/Sprites/Box/10219.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 09747a2b2be937145a54744dc1d992ff
     m_Address: Assets/Pokemon/Sprites/Back/10010s.png
     m_ReadOnly: 0
@@ -1111,6 +1191,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 097fe7e3b24a9384797d55d99e9c3eae
     m_Address: Assets/Pokemon/Sprites/Front/706.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 09877f44c597d03428b4c95c688c4c97
+    m_Address: Assets/Pokemon/Sprites/Box/10213.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 0987a3133999baa498c1187fbfccad26
@@ -1167,6 +1251,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 09e9969bea990bc49825542c98f1e915
     m_Address: Assets/Pokemon/Sprites/Back/164.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 09ef617d2c5eca146bf173173a95bed5
+    m_Address: Assets/Pokemon/Sprites/Back/10061s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 09f3b031cf17cde4ebcf45cc375acf83
@@ -1493,6 +1581,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/663.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0c43ec589c50adc4d8b07d01e066f648
+    m_Address: Assets/Pokemon/Sprites/Box/10204.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 0c45ee6254692ae47b55247e199cc009
     m_Address: Assets/Pokemon/Sprites/Front/484.png
     m_ReadOnly: 0
@@ -1503,6 +1595,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 0c4bab392b411234f888f2b9bb88973c
     m_Address: Assets/Pokemon/Sprites/Box/322.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0c56ae75b3751cd4cb99a5da18908bcd
+    m_Address: Assets/Pokemon/Sprites/Box/10133s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 0c65ed3d83e034749ba762ac6a23b599
@@ -1705,6 +1801,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/603.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0e03d6dd54b640842be66cabf3718285
+    m_Address: Assets/Pokemon/Sprites/Box/648s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 0e0ec0483042cf24ebbd9d48f8cd3c8a
     m_Address: Assets/Pokemon/Sprites/Front/10048.png
     m_ReadOnly: 0
@@ -1745,6 +1845,14 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/499s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0e8f116505cbfd64c971a33288d28853
+    m_Address: Assets/Pokemon/Sprites/Back/10032s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0e93f860cb339454282bad11b6119ccb
+    m_Address: Assets/Pokemon/Sprites/Back/10073.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 0e9d3943d17f1cd4d9077901d40361a2
     m_Address: Assets/Pokemon/Sprites/Back/553s.png
     m_ReadOnly: 0
@@ -1759,6 +1867,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 0ea371faf7df5394dab6ceef7118d4bd
     m_Address: Assets/Pokemon/Sprites/Front/306.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0ea671fa49e5539499b0b4f9f4535045
+    m_Address: Assets/Pokemon/Sprites/Box/10236.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 0eac8b4bf370df740a7ac8ea41785c49
@@ -1833,6 +1945,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/563s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0f2647ebcf18269459bb07996c9b0d65
+    m_Address: Assets/Pokemon/Sprites/Box/10261.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 0f29def469c9a5d429dc04af3f7b97ff
     m_Address: Assets/Pokemon/Sprites/Overworld/317s.png
     m_ReadOnly: 0
@@ -1853,6 +1969,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/287s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0f50bd020eff6ae4b991388d5ba40382
+    m_Address: Assets/Pokemon/Sprites/Box/10025s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 0f5159bf24a576c4482d35d6344aca2f
     m_Address: Assets/Pokemon/Sprites/Front/421s.png
     m_ReadOnly: 0
@@ -1871,6 +1991,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 0fa53e22432c8a04ca6b6b254a916c41
     m_Address: Assets/Items/Sprites/retro-mail.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0fb75b1604a9acf46828aa87719ab489
+    m_Address: Assets/Pokemon/Sprites/Box/10234.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 0fbf52f1053f9ab4ba8d3c2a88d4cac6
@@ -2649,6 +2773,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/10038s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 14c5dc4563a30dd4293d288c14abe743
+    m_Address: Assets/Pokemon/Sprites/Back/10048s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 14ca715e4612dc648bb8353fd4cfcf18
     m_Address: Assets/Pokemon/Sprites/Back/494s.png
     m_ReadOnly: 0
@@ -2833,6 +2961,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/214f.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 15f1a226ac8f90249b4dae34b137cc27
+    m_Address: Assets/Pokemon/Sprites/Box/10226.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 15f7c0884e4ffd94692ad367026b6da1
     m_Address: Assets/Pokemon/Sprites/Overworld/468.png
     m_ReadOnly: 0
@@ -2885,6 +3017,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/388s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 165130e4c335ef14da2c6ad03e65b692
+    m_Address: Assets/Pokemon/Sprites/Back/10041.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 165225612bf527644a26cde9ae00c9c9
     m_Address: Assets/Pokemon/Sprites/Front/283s.png
     m_ReadOnly: 0
@@ -2899,6 +3035,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 16743bac8041c9346a37c6f3458b29d2
     m_Address: Assets/Pokemon/Sprites/Box/129.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 16776c3caa7043546830ce7f11465902
+    m_Address: Assets/Pokemon/Sprites/Box/10175s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 1679b081d5a5e894991d2fa4843633f9
@@ -2923,6 +3063,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 16b2e5aad1d4de34fbce12d79eabd75c
     m_Address: Assets/Pokemon/Sprites/Box/467.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 16b45644bd4a65043925c2ec9e2f6f46
+    m_Address: Assets/Pokemon/Sprites/Box/10182s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 16c09ef7dd7080e4aaabc29cdc0cf349
@@ -2983,6 +3127,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 1732d655be2ccc247a14d30e354a2059
     m_Address: Assets/Pokemon/Sprites/Box/175.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1734abf9d997c6a4499abbff8f3646cc
+    m_Address: Assets/Pokemon/Sprites/Box/10215.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 1739a7334b80cd749b9ffb570eadaa1e
@@ -3073,6 +3221,14 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/492_1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 17ac96c0200d21849815f7e39870daf3
+    m_Address: Assets/Pokemon/Sprites/Back/10058s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 17ad486a33005504ea99a883e293b99a
+    m_Address: Assets/Pokemon/Sprites/Box/10315s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 17b211bed912868439ee0c2dd4591528
     m_Address: Assets/Items/Sprites/sapphire.png
     m_ReadOnly: 0
@@ -3131,6 +3287,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 17f7d2e0462a63f488609da45f3e4720
     m_Address: Assets/Pokemon/Sprites/Front/221.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 17fc22d8bf15c3e469e60e41be750f48
+    m_Address: Assets/Pokemon/Sprites/Box/10181.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 181255817f2fcd14289e3aaa5cd89791
@@ -3305,6 +3465,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/805_1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 196152f639a0c61429f55ea322b5ef93
+    m_Address: Assets/Pokemon/Sprites/Box/645s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 196223a7b053c0f4d9c8dd2a7d347d3a
     m_Address: Assets/Pokemon/Sprites/Overworld/280s.png
     m_ReadOnly: 0
@@ -3469,8 +3633,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/454s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 1aa8a49b2a8fcfe4ea98560054132e3e
+    m_Address: Assets/Pokemon/Sprites/Box/10314.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 1aadac7ae7edd1143af651c75892efb7
     m_Address: Assets/Pokemon/Sprites/Front/52.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1ac32d21477094f4d8753d5530de6c3a
+    m_Address: Assets/Pokemon/Sprites/Box/10159.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 1ac8562618aff864588730cfede06ccc
@@ -3555,6 +3727,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 1b2d4e9b1b10f404e8894589b60d6da0
     m_Address: Assets/Pokemon/Sprites/Box/10148.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1b3166d5e83a18546bf26afc2ad1c778
+    m_Address: Assets/Pokemon/Sprites/Box/10206.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 1b3c544b2e8e29a45b69ef7346aa5d04
@@ -3717,6 +3893,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/282.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 1c7fdcf75e5878c4fbdf0d39e777c721
+    m_Address: Assets/Pokemon/Sprites/Box/487.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 1c81182c5d6d10840abf03f6a834f8f3
     m_Address: Assets/Pokemon/Sprites/Front/10012.png
     m_ReadOnly: 0
@@ -3779,6 +3959,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 1cf99818375ec6145b70a9889b1492cf
     m_Address: Assets/Pokemon/Sprites/Box/236.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1d0090115a7ee394ab639f002abff588
+    m_Address: Assets/Pokemon/Sprites/Box/10232.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 1d024c6603f038840ab0acc37f69be5e
@@ -3915,6 +4099,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 1dfda89dbf6cf5f449581b7200630a91
     m_Address: Assets/Pokemon/Sprites/Overworld/458s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1e06586d5102854429687e5a5a0c4aab
+    m_Address: Assets/Pokemon/Sprites/Box/unknown.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 1e06d3aaa94158f4e8aee4c4036f76a0
@@ -4075,6 +4263,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 1f26bec2f8de54040aa58d26ab44d84d
     m_Address: Assets/Items/Sprites/lax-incense.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1f281ab9a82e5c049aea8e8f73cc3c7f
+    m_Address: Assets/Pokemon/Sprites/Box/10192s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 1f2b513d69b0cea42941eca0bbd4c17d
@@ -4249,8 +4441,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/96.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 209040e7e114e394e81da6519b895318
+    m_Address: Assets/Pokemon/Sprites/Box/10179.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 20928d2cc90eed540a960c6439bf492f
     m_Address: Assets/Pokemon/Sprites/Box/634.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2095e1131156ed84f8a1260a75d238f6
+    m_Address: Assets/Pokemon/Sprites/Box/10153s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 209e6a77bfb405e4e99e114b709d9b66
@@ -4303,6 +4503,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 20f915227b9d8934db9f9fc6200f235d
     m_Address: Assets/Pokemon/Sprites/Overworld/424.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 20ffd7373fc524847b2e835e1d1f39c4
+    m_Address: Assets/Pokemon/Sprites/Box/10165s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2101af7204d2b0c448675cb311db71f5
@@ -4363,6 +4567,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 216fb29890022034990c95e5c901d3dc
     m_Address: Assets/Pokemon/Sprites/Back/27.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2180563e7e6a52c41a169f9ece57f2c9
+    m_Address: Assets/Pokemon/Sprites/Box/487s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 218152ab29fc24f43a21002dbb017b7c
@@ -4713,6 +4921,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/white-herb.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 23a18836e84566248973b25e6c972b4c
+    m_Address: Assets/Pokemon/Sprites/Box/10160.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 23a51e6a2dc3f084483c25d0b3073658
     m_Address: Assets/Pokemon/Sprites/Back/142.png
     m_ReadOnly: 0
@@ -4801,6 +5013,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/64.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 244995a0d42c29d4c80825be725d0ad6
+    m_Address: Assets/Pokemon/Sprites/Box/710s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 2449a2e22f75cc14e8f57dcc9f6acc4b
     m_Address: Assets/Pokemon/Sprites/Overworld/252s.png
     m_ReadOnly: 0
@@ -4853,6 +5069,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/476s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 24b1ecfc9e5072f46bcf7820bd4e2ced
+    m_Address: Assets/Pokemon/Sprites/Box/10258.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 24b2e53d63fbe714d806bde5ca9016a4
     m_Address: Assets/Pokemon/Sprites/Back/147s.png
     m_ReadOnly: 0
@@ -4901,6 +5121,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/10069s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2545173fa84ba3d44a7361735246e58b
+    m_Address: Assets/Pokemon/Sprites/Box/642.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 2549da066ed882f4696436d4de1a59da
     m_Address: Assets/Pokemon/Sprites/Overworld/669s_1.png
     m_ReadOnly: 0
@@ -4933,6 +5157,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/600s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 25985168d91bbd749849d6ba826696b4
+    m_Address: Assets/Pokemon/Sprites/Back/10007.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 259ded4123b13a94b89e34c0dfac0c44
     m_Address: Assets/Pokemon/Sprites/Front/465f.png
     m_ReadOnly: 0
@@ -4943,6 +5171,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 25b045ac18ed2d249a375631fb4f36c5
     m_Address: Assets/Pokemon/Sprites/Box/179.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 25bcfce1cb5248e438a3df3d12ee5267
+    m_Address: Assets/Pokemon/Sprites/Box/645.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 25c0f01d5b5cd8f4f84ae521f19e098a
+    m_Address: Assets/Pokemon/Sprites/Box/10176s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 25c6ce444e620034295d43694c3526e8
@@ -5041,6 +5277,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/702s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 26505aea18df79f42b0d532cd8d52a74
+    m_Address: Assets/Pokemon/Sprites/Back/10018.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 26546a25f1d7acf42a56b2c956dcf55f
     m_Address: Assets/Pokemon/Sprites/Box/798s.png
     m_ReadOnly: 0
@@ -5065,6 +5305,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/65s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2665cdd5924eb2844990f88fc2389d95
+    m_Address: Assets/Pokemon/Sprites/Back/10054.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 266bc1df9413ff849845db5ea35221e2
     m_Address: Assets/Pokemon/Sprites/Overworld/479_2.png
     m_ReadOnly: 0
@@ -5087,6 +5331,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 268849716db76f640bc5e6d679b87956
     m_Address: Assets/Pokemon/Sprites/Front/729.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 269550f52527d4247a82f44bf83f281e
+    m_Address: Assets/Pokemon/Sprites/Back/10031s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 269fcf7e244022946b99a06ffde5d235
@@ -5501,6 +5749,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/039s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 298574bc7661f9e4a8129a68ef7e86e3
+    m_Address: Assets/DB/JSON/machines.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 298fbf23bb752a243a2a2c78b72d932d
     m_Address: Assets/Pokemon/Sprites/Front/740.png
     m_ReadOnly: 0
@@ -5607,6 +5859,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 2aa27cd4072f3b141a0c221998a9aa0f
     m_Address: Assets/Pokemon/Sprites/Overworld/811.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2aa4fa5a123a5ed4e9bf5c34d2e553b2
+    m_Address: Assets/Pokemon/Sprites/Box/413.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2aa5892244afea04697b886e8d20853a
@@ -5717,6 +5973,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/732s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2b5998dc0a7ef09458f4109455965e68
+    m_Address: Assets/Pokemon/Sprites/Box/10116s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 2b5f3ae2c900a1d4b9197c23f115059a
     m_Address: Assets/Pokemon/Sprites/Front/10100.png
     m_ReadOnly: 0
@@ -5759,6 +6019,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 2b95a2c33ad7b484bb03f242f0382f78
     m_Address: Assets/Items/Sprites/normalium-z--bag.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2baa26bb5ea9b2041b7261ed9b5001c8
+    m_Address: Assets/Pokemon/Sprites/Back/10038.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2bbfabf8d5e848144aa7b6ff6f96b994
@@ -5833,6 +6097,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/46s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2c8c0f96d1bb1a84584dcc9f2b993218
+    m_Address: Assets/Pokemon/Sprites/Back/10056.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 2c94ec52d75dca94b855e4d1ee3230f9
     m_Address: Assets/Pokemon/Sprites/Overworld/150_1.png
     m_ReadOnly: 0
@@ -5851,6 +6119,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 2ca2c308813452843a88d992e172e7d9
     m_Address: Assets/Pokemon/Sprites/Back/413.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ca2fa52773da9d40b3712d7342a146b
+    m_Address: Assets/Pokemon/Sprites/Box/10225s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2ca6ea73d9946524c9db673b23c48d20
@@ -5935,6 +6207,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 2d2ab7527f65ca64bb46c71aa52eb749
     m_Address: Assets/Pokemon/Sprites/Back/258s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2d36e179ecb452342847051b00d235ea
+    m_Address: Assets/Pokemon/Sprites/Back/10047.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2d4d867a2d0623848acf81b8ce59f5af
@@ -6077,6 +6353,14 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/757s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2e6cf2334f02be346ba807e65fea6367
+    m_Address: Assets/DB/JSON/exp_rates.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2e7667d55427e2a40a1a8ceca58d9c95
+    m_Address: Assets/Pokemon/Sprites/Box/10256.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 2e78b34466325fe459ec541b9c9f0fa1
     m_Address: Assets/Pokemon/Sprites/Box/718.png
     m_ReadOnly: 0
@@ -6127,6 +6411,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 2ecfb8b6b4f6e2d4896bd32f7eba64fe
     m_Address: Assets/Pokemon/Sprites/Box/10110.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ed370971897b5449b0b991131843c83
+    m_Address: Assets/Pokemon/Sprites/Box/10177.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2ed64b1f17b1d3a4fa68b602abd1af06
@@ -6181,6 +6469,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/695s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2f3cea4744048b148b69621e0ca3d9d6
+    m_Address: Assets/Pokemon/Sprites/Box/10245.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 2f3f11f89375b6648b519582dd8cdd9c
     m_Address: Assets/Pokemon/Sprites/Front/576s.png
     m_ReadOnly: 0
@@ -6195,6 +6487,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 2f55a05aecc18c945a97ff618b065c0a
     m_Address: Assets/Pokemon/Sprites/Overworld/353s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2f59e9bd5c15948489ebe0a87dbf1ddd
+    m_Address: Assets/Pokemon/Sprites/Box/10166s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2f60295f794da3a4392dc6dad72588ee
@@ -6233,6 +6529,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/592s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2fa5131b5d4f7be4bb2664aa1cb78eeb
+    m_Address: Assets/Pokemon/Sprites/Box/10225.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 2fa8bedeccce8c34582aaafc454413f5
     m_Address: Assets/Pokemon/Sprites/Back/65fs.png
     m_ReadOnly: 0
@@ -6263,6 +6563,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 2fdbbfb9d593aac479bb410725e6fbde
     m_Address: Assets/Pokemon/Sprites/Box/333.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2fec02f7c2a415d42a73bd72cb4d67ce
+    m_Address: Assets/Pokemon/Sprites/Box/10161.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2fedeefb610e34142b73caca9689b760
@@ -6433,6 +6737,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/595.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3102f021d3bffab4c82ef3ab6dd91a20
+    m_Address: Assets/Pokemon/Sprites/Back/10042.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3108331125c2f2a4eb6270619e206098
     m_Address: Assets/Items/Sprites/antidote.png
     m_ReadOnly: 0
@@ -6457,6 +6765,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/336s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 312855ccbf7c4274a82c80b442e0ebfc
+    m_Address: Assets/Pokemon/Sprites/Back/10044s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 313444798c1d31e4b9ff4181944d8398
     m_Address: Assets/Pokemon/Sprites/Front/471.png
     m_ReadOnly: 0
@@ -6479,6 +6791,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 315bc5fae02da8d4cb515ef07135e645
     m_Address: Assets/Pokemon/Sprites/Box/524.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 315fe646ed679764ca578aeff2835fee
+    m_Address: Assets/Pokemon/Sprites/Box/10213s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 316c835e8ccd8d045911bfe1af0c22c1
@@ -6571,6 +6887,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 324ca69c30c37724fb9da2081a5391f7
     m_Address: Assets/Pokemon/Sprites/Back/8.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 324cc720550c8694cb82b5bea8ba808e
+    m_Address: Assets/Pokemon/Sprites/Box/10093.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 324f61cd9604c21458ee222a5a1133ab
+    m_Address: Assets/Pokemon/Sprites/Box/10178.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 324fcaef02822034d81d8b99ac19acce
@@ -6813,6 +7137,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/544s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 343977e80d86f5a448c2d5fc7bb99f23
+    m_Address: Assets/Pokemon/Sprites/Box/10184s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 343d6d545d33b5e47999a2d4f5df18cd
     m_Address: Assets/Pokemon/Sprites/Box/553.png
     m_ReadOnly: 0
@@ -6843,6 +7171,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 348c51547c1505c43823722e0d8ae49a
     m_Address: Assets/Pokemon/Sprites/Front/10151.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 348f1bb28018cae428f5e3b9cdc1f4ef
+    m_Address: Assets/Pokemon/Sprites/Box/10239.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 348f9634263123945991c8749056da73
@@ -7433,6 +7765,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/267.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 38d3feefb79d59d42b40a5ae85ef84fb
+    m_Address: Assets/Pokemon/Sprites/Box/10149s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 38e321e2f69e9484686ab14f2f29f36a
     m_Address: Assets/Pokemon/Sprites/Back/300s.png
     m_ReadOnly: 0
@@ -7467,6 +7803,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 3902e8a08f82a9e45a0b213b4f1c2206
     m_Address: Assets/Pokemon/Sprites/Back/526s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3904252d074e40f4786a4f16ab39e3f0
+    m_Address: Assets/Pokemon/Sprites/Box/10255.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3907dd794ee07514d96331c1d9dd88fc
@@ -7517,6 +7857,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/773s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3934be5b0d646404989431b9fa62451e
+    m_Address: Assets/Pokemon/Sprites/Box/10266s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 393cdc732492c7b4bb1ac5bbdbc4365f
     m_Address: Assets/Items/Sprites/tm-steel.png
     m_ReadOnly: 0
@@ -7531,6 +7875,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 3946f738a1fea2e4b853fffc2cf957ba
     m_Address: Assets/Pokemon/Sprites/Box/10032s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3947436f3ee088f43b7cd5c7501dc65d
+    m_Address: Assets/Pokemon/Sprites/Back/10025.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 395a5932bbd667346ab2cb62b4dcc6d2
@@ -7575,6 +7923,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 39ae52219deb7ba4dbeea10238539e4b
     m_Address: Assets/Pokemon/Sprites/Front/522s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 39b0bcf462e807a49811b2bbae6677bc
+    m_Address: Assets/Pokemon/Sprites/Box/10175.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 39b8ce11a11680f4c9f48f989eb82edf
@@ -7657,8 +8009,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/598.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3a2958dd665708847ab7259dcace1f4d
+    m_Address: Assets/Pokemon/Sprites/Box/746s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3a2e4ac20be2b0441ba6ea869528daaa
     m_Address: Assets/Pokemon/Sprites/Front/514.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3a37d673c080d0a42907a03f0396ccfc
+    m_Address: Assets/Pokemon/Sprites/Box/492.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3a46200f684367e45b8d63cad4fa3661
@@ -7673,6 +8033,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/472.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3a60bdeefbe10724f9a36b53f5116546
+    m_Address: Assets/Pokemon/Sprites/Box/10248.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3a67852f30bfbfb4b8976330a6a6aeee
     m_Address: Assets/Pokemon/Sprites/Overworld/529s.png
     m_ReadOnly: 0
@@ -7681,8 +8045,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/579.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3a7344dbea097a9498a743f359b4096d
+    m_Address: Assets/Pokemon/Sprites/Box/10177s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3a7ea56d49cb4334ea94c1d069ea6ad9
     m_Address: Assets/Items/Sprites/tm-grass.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3a8366edc128a41469266077e162e555
+    m_Address: Assets/Pokemon/Sprites/Box/10093s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3a8c8d1730e02384dbd6f450f3a53211
@@ -7701,6 +8073,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/15.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3ab026e813808c24bb7060c59c8aebcb
+    m_Address: Assets/Pokemon/Sprites/Back/10064s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3ab7b6c133bcbb24f94c0ef6c50c7984
     m_Address: Assets/Items/Sprites/strange-souvenir.png
     m_ReadOnly: 0
@@ -7711,6 +8087,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 3acd883cc01e2c3478d8aa8c76a23cec
     m_Address: Assets/Items/Sprites/data-card-09.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3ad36f7c7dbf3ac459d5b69b6e60f1cf
+    m_Address: Assets/Pokemon/Sprites/Box/10144.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3adced1d2ccb30545820fdcbc65ce76d
@@ -8065,6 +8445,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/tm-poison.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3d875747658f55343b2f79dba05fd382
+    m_Address: Assets/Pokemon/Sprites/Box/716_form2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3d8c22544dcd4374c80f761930330705
     m_Address: Assets/Pokemon/Sprites/Back/402f.png
     m_ReadOnly: 0
@@ -8137,6 +8521,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/497.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3df1c398258ec5648b72267fa3ffd7d3
+    m_Address: Assets/Pokemon/Sprites/Back/10061.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3df518e995cfeb04898d4e9423bc54a8
     m_Address: Assets/Pokemon/Sprites/Overworld/354s.png
     m_ReadOnly: 0
@@ -8205,6 +8593,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/315.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3e5e3a0e2d5fb4346ade85542d87896e
+    m_Address: Assets/Pokemon/Sprites/Box/386.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3e86272de8283134db83f4cbdc0fc67f
     m_Address: Assets/Pokemon/Sprites/Overworld/018.png
     m_ReadOnly: 0
@@ -8239,6 +8631,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 3e95ceec19ef90e45a8aa44d9daedc33
     m_Address: Assets/Pokemon/Sprites/Front/192s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3e9885af4c08afe4fa8de8de59ffc47d
+    m_Address: Assets/Pokemon/Sprites/Box/10210s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3e9bde53906262045a2cec7114b2114c
@@ -8277,8 +8673,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/637.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3ed47f79493ed10469bc7697bd7c6d74
+    m_Address: Assets/Pokemon/Sprites/Box/10222s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3ed4b210a80d8534bb3214a8b71cfa3a
     m_Address: Assets/Pokemon/Sprites/Overworld/578s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3ed7962380513a049939ab1a7e827dfc
+    m_Address: Assets/Pokemon/Sprites/Back/10080.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3edc1247581794e4a9171ef86aa10680
@@ -8321,8 +8725,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/45.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3f1d25237d80f8f4e9b62190732e807d
+    m_Address: Assets/Pokemon/Sprites/Box/10240.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3f1ed93868ec7c246b17b3956895adc9
+    m_Address: Assets/Pokemon/Sprites/Box/10257.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 3f21fcc406a4cad49b98661ed969ab77
     m_Address: Assets/Pokemon/Sprites/Back/380.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3f264a03f16e26a46a47c642aa8abf6c
+    m_Address: Assets/Pokemon/Sprites/Box/10211s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3f2c9297583f23b4e93f0584d67d5744
@@ -8355,6 +8771,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 3f612b5811779c94e9cf8a51a9711421
     m_Address: Assets/Pokemon/Sprites/Front/10157.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3f62571f738111e4382cf695c2cf03b5
+    m_Address: Assets/Pokemon/Sprites/Box/10128s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3f71c5686e7f83f42b5e4bdbe32e3dbc
@@ -8395,6 +8815,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 3fc926b7bc37d0c48a2cacb5995a3bc8
     m_Address: Assets/Pokemon/Sprites/Front/512s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3fea494d108adb74a86eca15fd18ac3b
+    m_Address: Assets/Pokemon/Sprites/Box/745.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3fefcaa26b3a6b54991ad14378bd3252
@@ -8447,6 +8871,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4038d16109fec644895e53032e73c894
     m_Address: Assets/Pokemon/Sprites/Front/47s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 404369346a92c3e4eb5ee9aac3837ac3
+    m_Address: Assets/Pokemon/Sprites/Back/10046.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 405c2b9fbf741fe4e88acd49129a6fcb
@@ -8525,6 +8953,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/535s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 40e5ee817acfa4f42aac04577ebf3139
+    m_Address: Assets/Pokemon/Sprites/Box/10191.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 40ead20555c08af4ab17a5d100f7a65c
     m_Address: Assets/Pokemon/Sprites/Back/464s.png
     m_ReadOnly: 0
@@ -8549,12 +8981,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/10097s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 41246f1079111734d88b48d53dbcfc91
+    m_Address: Assets/Pokemon/Sprites/Back/10005.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 413d12c15fe363641bb99a60052edb60
     m_Address: Assets/Pokemon/Sprites/Overworld/548.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 41449b272c65d394abeba0fe20fb569f
     m_Address: Assets/Pokemon/Sprites/Overworld/358s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 414780458e466174bac40f78b66778ee
+    m_Address: Assets/DB/JSON/species.json
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4153a5b752eba7b4dbd72a5bd42fdd3a
@@ -8661,6 +9101,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/525s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 422902d199603be4daf19edbea138667
+    m_Address: Assets/Pokemon/Sprites/Back/10026s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 42376dfe277089c44bb450847021deaf
     m_Address: Assets/Pokemon/Sprites/Front/86.png
     m_ReadOnly: 0
@@ -8765,6 +9209,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/400s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 433019d0b10b75d42969d95a8e676a41
+    m_Address: Assets/Pokemon/Sprites/Box/10201.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 43323004720094e49be877f86e518252
     m_Address: Assets/Pokemon/Sprites/Front/396f.png
     m_ReadOnly: 0
@@ -8783,6 +9231,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4346b609ec60e794eb88c7fa138bd81a
     m_Address: Assets/Pokemon/Sprites/Front/218.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 434daee239d5e4c4fad808194fb2ee4b
+    m_Address: Assets/Pokemon/Sprites/Box/10184.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 43522f5259ce55349a1bb7f49e723ead
@@ -8843,6 +9295,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 43ba320c15289784ab641b708ccb72cc
     m_Address: Assets/Pokemon/Sprites/Front/516s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 43bb57c56a324f049a3affbd618f84f5
+    m_Address: Assets/Pokemon/Sprites/Box/10258s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 43bc4e3f199f27a45a66ebbd50a19851
+    m_Address: Assets/Pokemon/Sprites/Back/10024.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 43c1f3b558cad0f45b2d87ef586c412e
@@ -9209,6 +9669,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/40s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 4646c27ecabbb3c4ea22fd65fee58351
+    m_Address: Assets/Pokemon/Sprites/Back/10078s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 464f890c7ebd5744191aca9d102db611
     m_Address: Assets/Items/Sprites/muscle-wing.png
     m_ReadOnly: 0
@@ -9251,6 +9715,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 469275976f888114881de4184429f6b3
     m_Address: Assets/Items/Sprites/lava-cookie.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 46aa932d60a349143a9e9cdeb6997604
+    m_Address: Assets/DB/JSON/natures.json
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 46b70f3a4da2c1a43b94a906ad4d397e
@@ -9401,8 +9869,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/505s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 47b77ec421851504d91fbbb0e8552451
+    m_Address: Assets/Pokemon/Sprites/Box/10239s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 47bec19b249b34a41a2b0fad44c41d08
+    m_Address: Assets/Pokemon/Sprites/Back/10026.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 47cce86e2aa90fd4983d527550021e75
     m_Address: Assets/Pokemon/Sprites/Box/302.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 47d3effe2a3dd77428e9bcd5b624cdd8
+    m_Address: Assets/Pokemon/Sprites/Box/10186s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 47e1d2c5c28b54a41b08cd5063c7134e
@@ -9413,8 +9893,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/461f.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 47e86ef1b11aaff488cc4c1af9b039fb
+    m_Address: Assets/Pokemon/Sprites/Back/10020s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 47f304b995bdead44b1e77fbe3e24684
     m_Address: Assets/Items/Sprites/iron-ball.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 47ff3bba9d4079942a18abfaba4bfeee
+    m_Address: Assets/Pokemon/Sprites/Back/10038s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 47ffecd9bc709694f9fbe7c4d61fe7e3
@@ -9593,6 +10081,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/231s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 49aa8fec8645dae418c1c7f052a12f0d
+    m_Address: Assets/Pokemon/Sprites/Box/10129.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 49b64718b105d6041b657ba1067c4f54
     m_Address: Assets/Pokemon/Sprites/Box/770.png
     m_ReadOnly: 0
@@ -9629,8 +10121,16 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/iapapa-berry.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 49d92cfda974aaa45a4667c855410077
+    m_Address: Assets/Pokemon/Sprites/Box/10187.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 49dd3fbf44da54c43b9b85e65ed9d23d
     m_Address: Assets/Items/Sprites/cameruptite.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 49deec709958ab743b9638084cf11c61
+    m_Address: Assets/Pokemon/Sprites/Box/10200s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 49dfb3f57c7ae5546929fe6df115585f
@@ -9793,6 +10293,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/248s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 4b8fa560de4bb164e845daa57dea73b3
+    m_Address: Assets/Pokemon/Sprites/Box/10248s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 4b9023bec48b4174b9d48620aad6206b
     m_Address: Assets/Pokemon/Sprites/Back/459f.png
     m_ReadOnly: 0
@@ -9823,6 +10327,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4bc00befd731bf641aad439ce4b0f140
     m_Address: Assets/Pokemon/Sprites/Overworld/491s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4bc6b859a8e8a6f428d477d166dfd2e0
+    m_Address: Assets/Pokemon/Sprites/Back/10037s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4bcb7ff460cbba74481f2a36f9b8a54f
@@ -9863,6 +10371,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4c216e35828768745a7499174b09e231
     m_Address: Assets/Pokemon/Sprites/Front/785s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4c2b4e7f75daddc458b633cbc2f85374
+    m_Address: Assets/Pokemon/Sprites/Back/10017.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4c2c9d4f051a7a24d9113a2f1127b01a
@@ -9921,6 +10433,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/305s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 4c7efb9fe105b78409c4a78fc16d462f
+    m_Address: Assets/Pokemon/Sprites/Box/10227.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 4c86225fef84f064385626b9d3bbc8a2
     m_Address: Assets/Items/Sprites/mewnium-z--bag.png
     m_ReadOnly: 0
@@ -9947,6 +10463,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4ca8149c94e4f2042a81004355246906
     m_Address: Assets/Pokemon/Sprites/Overworld/296.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4caa8f94fac4ae241937f252b5f9d0f7
+    m_Address: Assets/Pokemon/Sprites/Box/10194.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4cae9e03745c8244b98a3711e1a3a5b4
@@ -9995,6 +10515,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4d09834bb8dbc634ab61736082ab4fc3
     m_Address: Assets/Pokemon/Sprites/Box/686.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4d0f7b7eed8284a409f79e9c57c85666
+    m_Address: Assets/Pokemon/Sprites/Box/10228s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4d12b5b7d2dca5741ad9e5b50af4b4e9
@@ -10151,6 +10675,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4e33b761ec74fff4f8fe75efb43d9ada
     m_Address: Assets/Pokemon/Sprites/Back/146s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4e3d5064fde346a47a374be2a04fc455
+    m_Address: Assets/Pokemon/Sprites/Box/550s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4e41ed3bc41ce7f4caf44dae86c0dec8
@@ -10311,6 +10839,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4f3def9ce19e6234ca50c8e90f4726a5
     m_Address: Assets/Pokemon/Sprites/Overworld/415.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4f45cdf13fb9f3142ba66af4c4064bc4
+    m_Address: Assets/Pokemon/Sprites/Box/10172s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4f49963bd7e6ccc4cb1e26ac76ad54ee
@@ -10479,6 +11011,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 50828ff20f7d50146b81c64df656f5b5
     m_Address: Assets/Pokemon/Sprites/Front/513.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 50841478bc1cf684bb2f53198beb6f18
+    m_Address: Assets/Pokemon/Sprites/Back/10054s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 50860794ad845fe469ec4e07fc1ceb69
@@ -10657,6 +11193,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/87s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 51d33918ee25cdd499a90ff9b5623d00
+    m_Address: Assets/Pokemon/Sprites/Box/egg.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 51d50d3e0bcb9294e9d0226b28e11a5f
     m_Address: Assets/Pokemon/Sprites/Box/10002s.png
     m_ReadOnly: 0
@@ -10703,6 +11243,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 52104e8c88316334f86a0daecab0aaba
     m_Address: Assets/Pokemon/Sprites/Overworld/741.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5210e36ef4408d547b5176598e686012
+    m_Address: Assets/Pokemon/Sprites/Box/10242.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 52127753db2406d449f6a29c2399e4c9
@@ -10857,6 +11401,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/512s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 52f8562561e26fc4f8b094b9c9863732
+    m_Address: Assets/Pokemon/Sprites/Box/681.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 52fc4f25a0a3fd44f9ba5ff34b635f5d
     m_Address: Assets/Pokemon/Sprites/Box/125s.png
     m_ReadOnly: 0
@@ -10891,6 +11439,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 533c8079ce7aeaa4ab78688b02605cfc
     m_Address: Assets/Pokemon/Sprites/Front/349s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 534b0ecaa17338449b118b96a010d0c2
+    m_Address: Assets/Pokemon/Sprites/Back/10062.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5353e9f3a30bd5c40b46f72fa47657bc
@@ -11149,6 +11701,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/374s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 55e303593d84557499ce1958d774a120
+    m_Address: Assets/Pokemon/Sprites/Box/10199s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 55f15bb8bfc82f84e8a495185b25c21c
     m_Address: Assets/Pokemon/Sprites/Back/284s.png
     m_ReadOnly: 0
@@ -11191,6 +11747,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 564e043a4b670c84a9bc1b18ef383466
     m_Address: Assets/Pokemon/Sprites/Front/12s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5656aff6a51603e42b2e5d45af307745
+    m_Address: Assets/Pokemon/Sprites/Box/10169.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 566bec49529a7804f9d976596d84e848
@@ -11259,6 +11819,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 56f0225d714d13041a0cc1d5c5ca6d14
     m_Address: Assets/Items/Sprites/pretty-wing.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5716f9777b547694681e51296c8e39f0
+    m_Address: Assets/Pokemon/Sprites/Back/10046s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 572e8151c7c6f31438b0321d04db66e5
@@ -11359,6 +11923,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 57bef30dc5bb23c4ebd19c12a84c4746
     m_Address: Assets/Pokemon/Sprites/Overworld/739s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 57cd2d22fd719564c86f8fc28b6f9537
+    m_Address: Assets/Pokemon/Sprites/Back/10040.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 57d1635cdbb005c4ab8ae5262f96a903
+    m_Address: Assets/Pokemon/Sprites/Back/10070.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 57d7f663590331149a666a4642869180
@@ -11569,6 +12141,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/54.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 592c224d365274c4fb0d6288e6fb643c
+    m_Address: Assets/Pokemon/Sprites/Back/10055s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 592e522f4e2c23a40801ebe566602cb9
     m_Address: Assets/Pokemon/Sprites/Box/10063s.png
     m_ReadOnly: 0
@@ -11689,6 +12265,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/241s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 59d3c13e512a0354290f4074787e2c25
+    m_Address: Assets/Pokemon/Sprites/Back/10077s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 59d906c631ca291498b2886767719c5c
     m_Address: Assets/Pokemon/Sprites/Overworld/409.png
     m_ReadOnly: 0
@@ -11743,6 +12323,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 5a578b5cfb0af74469f53b278a8d7aa3
     m_Address: Assets/Pokemon/Sprites/Front/405f.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5a5a19a16466a604083fbe9c6e4cb847
+    m_Address: Assets/Pokemon/Sprites/Back/10067s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5a6a030758819ab459624854251a9b96
@@ -11837,8 +12421,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/236s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 5afdf0759da2ff94c919d3edf8edb2f3
+    m_Address: Assets/Pokemon/Sprites/Box/10164.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 5afea025f6cf00149be5ed2012d6bdbd
     m_Address: Assets/Pokemon/Sprites/Back/383.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5afefc9872a79c947b7a5a7ef53c4df4
+    m_Address: Assets/Pokemon/Sprites/Box/10193s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5affc737c21f86143afaf95497eaee57
@@ -11953,6 +12545,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/666s_1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 5bcef463920902244862b7f342d284ce
+    m_Address: Assets/Pokemon/Sprites/Box/778.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 5bdaad044458aee409b385bb04caf881
     m_Address: Assets/Items/Sprites/secret-potion.png
     m_ReadOnly: 0
@@ -11991,6 +12587,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 5c280024a6e4b514988587d637989bf7
     m_Address: Assets/Pokemon/Sprites/Back/593f.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5c298aa14a0524d4f97fda5b3717b0fb
+    m_Address: Assets/Pokemon/Sprites/Back/10059.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5c29f17bff551864896ae1d584fdcb53
@@ -12035,6 +12635,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 5c7f0430c901b6949b8ce2ec1b0bae17
     m_Address: Assets/Pokemon/Sprites/Front/491s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5c7f820424162ec4596905d14d9c469b
+    m_Address: Assets/Pokemon/Sprites/Back/10072s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5c86d0aef566d7b4993d20bc06d9747e
@@ -12121,12 +12725,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/399f.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 5d0aa7f8b8a24ac4ea95104794179ab0
+    m_Address: Assets/Pokemon/Sprites/Box/10165.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 5d0b026e878ef92439aa414e17356f59
     m_Address: Assets/Pokemon/Sprites/Front/150s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5d13d170781a50944832406213818969
     m_Address: Assets/Pokemon/Sprites/Overworld/746s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5d1de08f2eb9aee4cb520df3785e458e
+    m_Address: Assets/Pokemon/Sprites/Back/10080s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5d24a3ec3710b28409788039640c7b57
@@ -12199,6 +12811,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 5d638d5b644ee0540a20ab15f750f58b
     m_Address: Assets/Pokemon/Sprites/Types/grass.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5d65c2835ed81fc468c6a3f8883f8f54
+    m_Address: Assets/Pokemon/Sprites/Box/10261s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5d6a2f1a7caf5a141ba0dbea57d4b836
@@ -12287,6 +12903,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 5df021631da27e249a3aaed83935f718
     m_Address: Assets/Pokemon/Sprites/Front/449s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5df649601b411644fae16b161288c553
+    m_Address: Assets/Pokemon/Sprites/Box/10169s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5dfb812dffbba144d9610e622ebd2ed7
@@ -12393,6 +13013,22 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/173s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 5e7af48be726205489f297d27471e5a2
+    m_Address: Assets/Pokemon/Sprites/Box/10162.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5e8bc0024a94b0d4a9a2e804bd8a58c7
+    m_Address: Assets/Pokemon/Sprites/Back/10083.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5e8d8cff2f22df7419f2072f6d49a4f4
+    m_Address: Assets/Pokemon/Sprites/Box/711.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5e96aff27cfad084cba44ae049fa8b87
+    m_Address: Assets/Pokemon/Sprites/Box/10162s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 5e9b7763b7d36a542901b6048beac464
     m_Address: Assets/Pokemon/Sprites/Front/618s.png
     m_ReadOnly: 0
@@ -12481,6 +13117,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/53s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 5f6ced583d1747b42821c5d997e80e66
+    m_Address: Assets/Pokemon/Sprites/Box/774s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 5f6f3d2b2d4c36548b07cdde0d3f6d33
     m_Address: Assets/Pokemon/Sprites/Front/600s.png
     m_ReadOnly: 0
@@ -12495,6 +13135,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 5f84e06d07b04e94a8887e52a1a7825e
     m_Address: Assets/Pokemon/Sprites/Front/236.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5f8c297b1b5fbef48ba0dd5373100262
+    m_Address: Assets/Pokemon/Sprites/Box/10154.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5f8f4de9650ca49498cad9a21a998374
@@ -12633,6 +13277,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/577.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 608b164bce771354a9948fdd911b4d39
+    m_Address: Assets/Pokemon/Sprites/Back/10068.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 60a0539eb82cb9846a8962e62db89d84
     m_Address: Assets/Pokemon/Sprites/Front/747s.png
     m_ReadOnly: 0
@@ -12677,6 +13325,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/508.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 60fedae904e864d4789dc7a37a482273
+    m_Address: Assets/Pokemon/Sprites/Box/10189.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 6101c6fecae03344984d2e07fe6f840b
     m_Address: Assets/Pokemon/Sprites/Back/479s.png
     m_ReadOnly: 0
@@ -12695,6 +13347,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 611c509a3e34fbc4d81865b44a631a95
     m_Address: Assets/Pokemon/Sprites/Box/608s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 611cf94189e8f9845932b083ecc1f09d
+    m_Address: Assets/Pokemon/Sprites/Back/10050.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 611fade62b68f554e9c10cd8e7211ab0
@@ -12985,6 +13641,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/716.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 633452a5bb9824d4dafe3d79930392cc
+    m_Address: Assets/Pokemon/Sprites/Back/10020.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 63465b3f6fb64494cb10038f1da06fc8
     m_Address: Assets/Pokemon/Sprites/Back/462s.png
     m_ReadOnly: 0
@@ -13109,6 +13769,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/relic-band.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6427eb5216840524a9333e4d0bafba97
+    m_Address: Assets/Pokemon/Sprites/Box/10201s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 642fe77065985d0499e4127d0b986a91
     m_Address: Assets/Pokemon/Sprites/Overworld/044.png
     m_ReadOnly: 0
@@ -13131,6 +13795,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 64430ca2c913fac41b5639f8879873c1
     m_Address: Assets/Pokemon/Sprites/Overworld/621s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 64476ae153efdc64a87335822ccda2ef
+    m_Address: Assets/Pokemon/Sprites/Back/10035.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 64476f4c6df033c4ea6b495c74aacaf3
@@ -13157,6 +13825,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/756.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6478d05f3cde23044b30f3dfb3dae969
+    m_Address: Assets/Pokemon/Sprites/Box/10133.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 647b60d7d69ba09409cb34e64ec26966
     m_Address: Assets/Pokemon/Sprites/Front/656.png
     m_ReadOnly: 0
@@ -13181,6 +13853,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/592s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 649929c4272d7ce40981111610ea6115
+    m_Address: Assets/Pokemon/Sprites/Box/10241s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 649cd2bb4a88af94187cded5f331cb8a
     m_Address: Assets/Pokemon/Sprites/Overworld/367.png
     m_ReadOnly: 0
@@ -13203,6 +13879,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 64d00d48236a5fc4aa72063839902cde
     m_Address: Assets/Pokemon/Sprites/Overworld/177.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 64d85a9548e4c064c835a114a1d4e5dc
+    m_Address: Assets/Pokemon/Sprites/Box/10190s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 64e78cbcfd1e2214a9f31280acfae188
@@ -13275,6 +13955,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 65a58c20d5ea1604e932fdb37c27570f
     m_Address: Assets/Pokemon/Sprites/Back/432s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 65ae13043f1215d4ab7b117fa6296ea7
+    m_Address: Assets/Pokemon/Sprites/Box/10244.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 65afffc10676db64f9592ed97f6f0665
@@ -13389,6 +14073,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/groundium-z--bag.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6683d6ce0bebd184db5b0ec90aed5ff6
+    m_Address: Assets/Pokemon/Sprites/Box/10315.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 6689f945ba4cd104c83456ea0c712a75
     m_Address: Assets/Pokemon/Sprites/Box/620s.png
     m_ReadOnly: 0
@@ -13415,6 +14103,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 66abbbbc487094c48bfb35a015f389ec
     m_Address: Assets/Pokemon/Sprites/Back/406s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 66b1bce842feb324a9bea490047bc451
+    m_Address: Assets/Pokemon/Sprites/Box/10255s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 66b729ead9551694db15d9c19c9df21b
@@ -13557,6 +14249,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/10137.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 67ccd9daf2b63974a81d3309fcad1863
+    m_Address: Assets/Pokemon/Sprites/Box/10228.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 67e24cf6e70fe004790ff7a64784279c
     m_Address: Assets/Pokemon/Sprites/Box/579.png
     m_ReadOnly: 0
@@ -13609,6 +14305,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/orange-mail.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 68573b73f157d074ba49fa2a7fca8858
+    m_Address: Assets/Pokemon/Sprites/Back/10050s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 68584232749c17741a202781be5a6b83
     m_Address: Assets/Pokemon/Sprites/Front/530.png
     m_ReadOnly: 0
@@ -13653,6 +14353,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/ss-ticket.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 68a077369a3235f41b7c68f22d189573
+    m_Address: Assets/Pokemon/Sprites/Box/10207.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 68ab62e6bbaafbc4b9548a5e98522ac0
     m_Address: Assets/Pokemon/Sprites/Back/41fs.png
     m_ReadOnly: 0
@@ -13685,6 +14389,14 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/47.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 68fab0765e0f6994f813ab080343a071
+    m_Address: Assets/Pokemon/Sprites/Box/10316.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6901a91a48228e74ab281929aca8659b
+    m_Address: Assets/Pokemon/Sprites/Box/492s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 690667e33488cdb429011b42cee7659b
     m_Address: Assets/Pokemon/Sprites/Back/221f.png
     m_ReadOnly: 0
@@ -13707,6 +14419,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 692ac2f4a5ad45c4eb83f9b2722a5553
     m_Address: Assets/Pokemon/Sprites/Box/48s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 692ba978da95fc14b89505174dba190d
+    m_Address: Assets/Pokemon/Sprites/Back/10003.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 69417eab46aef8e4db68d5c2774dbc2d
@@ -13771,6 +14487,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 69921bdff8748a34fb4d16ddb956dcfb
     m_Address: Assets/Pokemon/Sprites/Box/748s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 699d6dfdbae2ec1468e77f77a653cee2
+    m_Address: Assets/Pokemon/Sprites/Back/10082s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 69a5cfe489d6ca74ba6550a2f48b81ab
@@ -13905,8 +14625,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/222.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6ac5da2436638334e9b31d0f94e0530b
+    m_Address: Assets/Pokemon/Sprites/Back/10033s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 6acee1c5d8f6fc044a31ec4faf87d705
     m_Address: Assets/Pokemon/Sprites/Overworld/570s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6ad0aa3182813554dbc6d45b210b16d3
+    m_Address: Assets/Pokemon/Sprites/Back/10003s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6ad7ddf54cc0ec9409d8a77bd5374bb4
@@ -13963,6 +14691,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 6b241da904fc0ad4d9958e0d0fe64888
     m_Address: Assets/Pokemon/Sprites/Front/128.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6b281db67499ea94ea34afdf0bfe0508
+    m_Address: Assets/Pokemon/Sprites/Box/10205s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6b3080a5a8ea026488f762450034e3ca
@@ -14205,12 +14937,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/181.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6cf26cb7c2e572f42a8271600fd4a5e3
+    m_Address: Assets/Pokemon/Sprites/Back/10052.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 6cf329a3faf67f74686245af1af562c8
     m_Address: Assets/Pokemon/Sprites/Overworld/493s_6.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6d0eb96404d538d4882252a943941281
     m_Address: Assets/Pokemon/Sprites/Box/430.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6d1e4471ea5611d49807a43d06e96710
+    m_Address: Assets/Pokemon/Sprites/Box/10314s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6d23dc82394ae994ab4d62686fa4e15e
@@ -14273,6 +15013,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/228.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6d8c7c82366aa4248ac13e5d2eaa1e2a
+    m_Address: Assets/Pokemon/Sprites/Box/10176.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 6d8d5bdf909802d43bcb034abd1d5fd4
     m_Address: Assets/Pokemon/Sprites/Front/347s.png
     m_ReadOnly: 0
@@ -14331,6 +15075,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 6e00dfa2436aa574c8c98ba65451c95d
     m_Address: Assets/Pokemon/Sprites/Overworld/386s_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6e0b7d8f0d2e95a4da03090c545ccd17
+    m_Address: Assets/Pokemon/Sprites/Box/10215s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6e167d988823c2043bb7af3d982f5c90
@@ -14417,6 +15165,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/157s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6efe2d89ee69d1549b3b3cac2da63aeb
+    m_Address: Assets/Pokemon/Sprites/Box/10220.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 6f047d9e0235eae40b1da14bf7c35b01
     m_Address: Assets/Items/Sprites/honey.png
     m_ReadOnly: 0
@@ -14483,6 +15235,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 6f5e52082b7fdfd41b884c215c059266
     m_Address: Assets/Pokemon/Sprites/Overworld/492s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6f617d82844331e448199040ff84f8ca
+    m_Address: Assets/Pokemon/Sprites/Box/10150s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6f646810534bc6548acf39a917e4dc1c
@@ -14575,6 +15331,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 7071b1297ff557241917a2a1d9e7c80c
     m_Address: Assets/Pokemon/Sprites/Front/72.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7077475d9f44d62448808ce5145a8f3e
+    m_Address: Assets/Pokemon/Sprites/Back/10030s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 707e16d48749b9f4a98347945dd28095
@@ -14737,6 +15497,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/88s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 719ed0ee1b763c042877416552e187b3
+    m_Address: Assets/Pokemon/Sprites/Box/10237.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 71a53fd766777fc4b8aa2bb9e82b9d80
     m_Address: Assets/Pokemon/Sprites/Front/119f.png
     m_ReadOnly: 0
@@ -14837,12 +15601,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/410s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7294b9a8d7448c54591265b67c4eba1d
+    m_Address: Assets/Pokemon/Sprites/Box/10229.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 729c5ef7cc3f14544b9d4eae85e8d01a
     m_Address: Assets/Pokemon/Sprites/Front/7s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 72a7352866b21e443881145e08b50ce8
     m_Address: Assets/Pokemon/Sprites/Overworld/711.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 72a7d9e122825f94382e98069ac7badb
+    m_Address: Assets/Pokemon/Sprites/Box/555.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 72a9b292ba4733e48a827ef51b409b36
@@ -14889,6 +15661,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/82.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 72e721708b28f2140b56050d9a1579a4
+    m_Address: Assets/Pokemon/Sprites/Box/10146s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 72e9a94dca1997f41b5de2dbe7fd9bd4
     m_Address: Assets/Pokemon/Sprites/Back/10022s.png
     m_ReadOnly: 0
@@ -14927,6 +15703,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 7310841f9388a6248bc06c591e38a500
     m_Address: Assets/Pokemon/Sprites/Overworld/19s_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 731f88b63834efd43991f28351f52e48
+    m_Address: Assets/Pokemon/Sprites/Back/10049.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7321f35d530108c46a217cdefe2c1e66
@@ -14971,6 +15751,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 735f57c93eb56df4fba87684ef11c64b
     m_Address: Assets/Pokemon/Sprites/Front/799s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7360144ffbb834d4abcaecb472b2b52f
+    m_Address: Assets/Pokemon/Sprites/Box/10174.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 736f24b89e969c9458930d083d766b68
@@ -15087,6 +15871,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 740f4a0d216ce0043abd72d0f866334e
     m_Address: Assets/Pokemon/Sprites/Back/169.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 741ae89cc66177f42bd1e4a40d878078
+    m_Address: Assets/DB/JSON/abilities.json
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 74280a61dc84098459bff912758b22c7
@@ -15369,6 +16157,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/161.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 76407f106c6be5a4fb978b897a483ae7
+    m_Address: Assets/Pokemon/Sprites/Box/10168.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 76540d94c65ce0444aff1b1d96ea7d41
     m_Address: Assets/Pokemon/Sprites/Box/10057s.png
     m_ReadOnly: 0
@@ -15425,8 +16217,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/237s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 769fde43c52ec5345b191eb4697fab6a
+    m_Address: Assets/Pokemon/Sprites/Back/10005s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 76a14ff2c57e9c2458aa16fb4a0cafa7
     m_Address: Assets/Pokemon/Sprites/Overworld/545s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 76afd58ca248e724cbd810a45df0b5df
+    m_Address: Assets/Pokemon/Sprites/Ailments/paralysis.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 76c279ffdb72abc4ab61974bd1ebac33
@@ -15505,6 +16305,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/565.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7751a49bd4607ca40835b0572d9848c2
+    m_Address: Assets/Pokemon/Sprites/Box/10238.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 7760d06eacbff07408ab21c8ec67a0b7
     m_Address: Assets/Pokemon/Sprites/Front/183.png
     m_ReadOnly: 0
@@ -15549,6 +16353,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/776s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 77aa9747cc6e68d44a741a1e54d949da
+    m_Address: Assets/Pokemon/Sprites/Box/10238s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 77ad5401a7cdb1143946dc25206715ab
     m_Address: Assets/Pokemon/Sprites/Types/poison.png
     m_ReadOnly: 0
@@ -15589,12 +16397,24 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/272.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 77f3258b0b724f848959f5eed241352f
+    m_Address: Assets/Pokemon/Sprites/Ailments/freeze.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 77f88a76caf0e2445a21d98f0a84e5ff
+    m_Address: Assets/Pokemon/Sprites/Box/641.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 78034e4d922e63541b8a64345df2acc4
     m_Address: Assets/Pokemon/Sprites/Back/534.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 78097bae0c244e943a55d384b16322c4
     m_Address: Assets/Pokemon/Sprites/Front/580.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 780e915c823e39c419055453db06f916
+    m_Address: Assets/Pokemon/Sprites/Back/10039s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 780f28a92136330439bd6913f49301f9
@@ -15623,6 +16443,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 78355a7d53827ca4b90c168ee7ad4397
     m_Address: Assets/Pokemon/Sprites/Overworld/168s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7836dd0ff18acf74598b93e0298d8c04
+    m_Address: Assets/Pokemon/Sprites/Box/710.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 783aecc32f93af5479dc77184dc906b4
@@ -15707,6 +16531,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 79037a35aa15d634c8c2c70806f1294b
     m_Address: Assets/Pokemon/Sprites/Back/449s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 790f32b8ca9f66849a5dedcdc5ef33aa
+    m_Address: Assets/Pokemon/Sprites/Back/10081.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 791006d22baf5a34db48c8ef3a636f34
@@ -15833,6 +16661,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/571.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7a38cd62aff001049bbc5545d5378123
+    m_Address: Assets/Pokemon/Sprites/Box/10116.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 7a3ec31f92153b04f80d5591762cab27
     m_Address: Assets/Items/Sprites/blue-petal.png
     m_ReadOnly: 0
@@ -15873,6 +16705,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/451.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7a7ff0a8e29bb434081e022bcbbccf72
+    m_Address: Assets/Pokemon/Sprites/Back/10032.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 7a8b59dc22bc65841b22105fafe8ec5c
     m_Address: Assets/Pokemon/Sprites/Overworld/201_12.png
     m_ReadOnly: 0
@@ -15909,8 +16745,16 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/shell-bell.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7ae6709ae51b54746be352194a5ea0c3
+    m_Address: Assets/Pokemon/Sprites/Box/10196s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 7ae9111273fee014dbdd2e5d8302fc18
     m_Address: Assets/Pokemon/Sprites/Front/526s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7af3e2c6b86975146bae5d2bd7f06891
+    m_Address: Assets/Pokemon/Sprites/Back/10081s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7afe0553f16d41e44b1d3506d6668172
@@ -15951,6 +16795,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 7b52a339aa04a3540af17c7c35db076e
     m_Address: Assets/Pokemon/Sprites/Back/10023s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7b5e4f383a8c69d45b7b9311afc7d7a5
+    m_Address: Assets/Pokemon/Sprites/Box/10173.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7b5f3ddc6ab30294f86f2600a07cd503
@@ -16059,6 +16907,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 7c38bc2c06c6968479f6e4ab2ed6c83b
     m_Address: Assets/Pokemon/Sprites/Overworld/172s_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7c44db94077f562409e49cd16dac3634
+    m_Address: Assets/Pokemon/Sprites/Box/10197.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7c4880864e1caba4b991775218a26ae3
@@ -16185,6 +17037,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/474s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7d07ba2649c7fde4aa6ed56119299225
+    m_Address: Assets/Pokemon/Sprites/Box/10180.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 7d0a36cdc4e1144408d967b55ad9d486
     m_Address: Assets/Pokemon/Sprites/Overworld/666s_6.png
     m_ReadOnly: 0
@@ -16241,6 +17097,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/water-memory.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7d9ae92dac9910347801ef52a07664cf
+    m_Address: Assets/Pokemon/Sprites/Box/10267.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 7d9afa5e89e1e9d42a46c3069b3dd614
     m_Address: Assets/Pokemon/Sprites/Box/55s.png
     m_ReadOnly: 0
@@ -16277,6 +17137,14 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/734s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7dcf1a8a22169a54791147f2a234f7d1
+    m_Address: Assets/Pokemon/Sprites/Box/10188.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7dcf80363d3e30f40bab5fa881a5fb94
+    m_Address: Assets/Pokemon/Sprites/Back/10084s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 7dd7fd034ff94f046afeb42393c118c8
     m_Address: Assets/Pokemon/Sprites/Back/528.png
     m_ReadOnly: 0
@@ -16291,6 +17159,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 7defecca0272f974788e57df1878c8d1
     m_Address: Assets/Items/Sprites/stone-plate.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7e01ea25da03b354a872fc0b6dabbe48
+    m_Address: Assets/Pokemon/Sprites/Back/10045.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7e025f89df5bcd44c9b9b3a363fc54df
@@ -16369,6 +17241,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/334.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7e717393e86526f4da09059faa39e950
+    m_Address: Assets/Pokemon/Sprites/Back/10019.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 7e7ae374897838746ae3d86a95319ed8
     m_Address: Assets/Pokemon/Sprites/Front/211.png
     m_ReadOnly: 0
@@ -16405,8 +17281,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/358.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7ec2e7946c746af49b543fa219f889d4
+    m_Address: Assets/Pokemon/Sprites/Back/10002s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 7ec35896ff5e7424a8b07db6a064c82c
     m_Address: Assets/Pokemon/Sprites/Back/369fs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7ec4a50f4331d2b49a59428fe0d83b83
+    m_Address: Assets/DB/JSON/pokemon.json
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7ec65fe1b4a935b44ba85948e58e2d24
@@ -16427,6 +17311,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 7edd49ff7d9143c45ad500ecc7e09c1f
     m_Address: Assets/Pokemon/Sprites/Overworld/046.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7ee12f262babab445a8494dc5de80c69
+    m_Address: Assets/Pokemon/Sprites/Back/10043.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7ee5ffddf1ceb9f44887074b4d43e7b4
@@ -16603,6 +17491,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 7fd2a50d662bbcd4391d8ad81e95d4d8
     m_Address: Assets/Pokemon/Sprites/Front/34s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7fe664ae6bd3ca440a80b97f26b4524d
+    m_Address: Assets/Pokemon/Sprites/Back/10064.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 7feb8a474857db546a5280046ba9b7f4
@@ -16785,6 +17677,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/533.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 80ff952e099e44241b7a16720959d451
+    m_Address: Assets/Pokemon/Sprites/Box/10145.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 810787b86a8b7634a9933106ced15c38
     m_Address: Assets/Pokemon/Sprites/Front/365s.png
     m_ReadOnly: 0
@@ -16811,6 +17707,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 812e865b26b704e499fec6c69d260d4d
     m_Address: Assets/Pokemon/Sprites/Front/727s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 813c35f5cd8b2974babf94ea1243ecd0
+    m_Address: Assets/Pokemon/Sprites/Back/10069s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8145a1157c7095340b4769371863d514
@@ -16937,6 +17837,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/170s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 828a8b9abdb92e84a822fa70cac40aa1
+    m_Address: Assets/Pokemon/Sprites/Box/10233.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 828e6301dd42d65418b92e6c26e5f5db
     m_Address: Assets/Pokemon/Sprites/Overworld/538.png
     m_ReadOnly: 0
@@ -17037,6 +17941,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/air-balloon.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 830b6ebeb3d5add439816572537c0c70
+    m_Address: Assets/Pokemon/Sprites/Box/10149.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 830c7db86464c0346a220a86f18ad110
     m_Address: Assets/Pokemon/Sprites/Front/731s.png
     m_ReadOnly: 0
@@ -17129,6 +18037,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/6.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8404efedcf3460341a0ea2e78d1a6820
+    m_Address: Assets/Pokemon/Sprites/Box/10237s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8406f96e0a5728548aa763fe9dd50c04
     m_Address: Assets/Pokemon/Sprites/Overworld/370s.png
     m_ReadOnly: 0
@@ -17157,6 +18069,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/770.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 843d83e41cfa21843a7458817fed2811
+    m_Address: Assets/Pokemon/Sprites/Box/10216.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 845e3a0a517313341b5aa0420da3bc92
     m_Address: Assets/Items/Sprites/hyper-potion.png
     m_ReadOnly: 0
@@ -17167,6 +18083,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 8469460de1bd997478b49ef4eb953cca
     m_Address: Assets/Items/Sprites/pink-nectar.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 846a2d4dbbb84da41a8e08e2c2b21aaa
+    m_Address: Assets/Pokemon/Sprites/Box/10198.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 846ed262e04a37f44acf1196729dc26e
@@ -17235,6 +18155,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 84dd5506f2e6bba43a3bd5eb32af0d60
     m_Address: Assets/Pokemon/Sprites/Overworld/636s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 84df03df2d1c0934bab5f7e8498207c0
+    m_Address: Assets/Pokemon/Sprites/Ailments/poison.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 84e3ee73778cf1548acc932a6c03248e
@@ -17541,12 +18465,24 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/eon-ticket.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 87930d8cec814d444a77ef04a7753799
+    m_Address: Assets/Pokemon/Sprites/Back/10024s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8795623e7df2aae4e9fa4a6c83bf99b0
     m_Address: Assets/Items/Sprites/odd-incense.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 87a6f8507ea75bc42a3e9fc5a85ada79
+    m_Address: Assets/Pokemon/Sprites/Back/10043s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 87a9409b24013984eb1ca11e70f2acb7
     m_Address: Assets/Pokemon/Sprites/Front/243.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 87ad41428a9e30242b7f3d383ba59027
+    m_Address: Assets/Pokemon/Sprites/Back/10017s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 87b49d30475edee468e6b58cf8b70277
@@ -17589,12 +18525,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/317f.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8837e52348c9a8246af64b1bb74021c0
+    m_Address: Assets/Pokemon/Sprites/Box/10171.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8838062ccf525f64a9f7128d41d66f69
     m_Address: Assets/Pokemon/Sprites/Front/567s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 883a6ca0e153bf14db43664ca6bbeb17
     m_Address: Assets/Pokemon/Sprites/Front/643.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 883f8793eeb531449994a72ba4e3eb7b
+    m_Address: Assets/Pokemon/Sprites/Box/10198s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8842cadca4a17ad4780ee23b2dfafe8a
@@ -17607,6 +18551,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 88627cd541a87e64d8be590de90b4ad9
     m_Address: Assets/Pokemon/Sprites/Front/534.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 88672ac5fae71b846acc2dc7c8785fe1
+    m_Address: Assets/Pokemon/Sprites/Box/10244s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 88874fe086990c0459bd2ed38c5b5fd6
@@ -17697,6 +18645,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/10043s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 88f4928d72ef342409974b28120d5fe9
+    m_Address: Assets/Pokemon/Sprites/Box/10220s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 88f5199268a999f4182bd31b1dd4c44b
     m_Address: Assets/Pokemon/Sprites/Box/232s.png
     m_ReadOnly: 0
@@ -17707,6 +18659,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 88f91c5bac62c8d4b90a8e34ed163d3d
     m_Address: Assets/Pokemon/Sprites/Front/798s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 88ff89b8d305d2a41a019fa4892aabbc
+    m_Address: Assets/Pokemon/Sprites/Back/10076.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 890fa74ebd521be48b2a7f17223a3ca0
@@ -17913,6 +18869,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/753.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8a9f8ee192e81c74c9a37012d80068b9
+    m_Address: Assets/Pokemon/Sprites/Box/741.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8aa1466cca290fb4e8ffebd7d83ad939
     m_Address: Assets/Pokemon/Sprites/Back/272f.png
     m_ReadOnly: 0
@@ -17939,6 +18899,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 8ac99b1fb9e3ce44caf451620a6404cd
     m_Address: Assets/Pokemon/Sprites/Back/451s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8ad0fe64d483d19468f357c9a89552c5
+    m_Address: Assets/Pokemon/Sprites/Box/10203.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8ad587095e389784f89076838fee27d5
@@ -17977,6 +18941,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/176.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8b332338a70a7a1498a10bc9510b1905
+    m_Address: Assets/Pokemon/Sprites/Back/10001s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8b3801d96a3ce3d4aadcbef663709781
     m_Address: Assets/Items/Sprites/devon-scuba-gear.png
     m_ReadOnly: 0
@@ -18007,6 +18975,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 8b57b8eb9dea4724d978b7ffea45b45e
     m_Address: Assets/Pokemon/Sprites/Box/448.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8b5a718e927400241b27f81711f7f301
+    m_Address: Assets/Pokemon/Sprites/Back/10044.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8b686bd94d349d44aa064b7c5ef14d28
+    m_Address: Assets/Pokemon/Sprites/Box/10194s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8b6c4e055c69ea2448a234613ffe94cc
@@ -18059,6 +19035,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 8baf3060ed6f2ad4dadb8a977b1ab61e
     m_Address: Assets/Pokemon/Sprites/Box/210.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8bb66cf1d635af64b843ee9336eeb55a
+    m_Address: Assets/Pokemon/Sprites/Box/10214.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8bc4297f92e809f40a5c23dc176e36b0
@@ -18133,6 +19113,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/550s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8c2f4252be750304390a463695162e16
+    m_Address: Assets/Pokemon/Sprites/Box/10130.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8c30add18940ae749bd6a7473fd065cb
     m_Address: Assets/Pokemon/Sprites/Back/261s.png
     m_ReadOnly: 0
@@ -18143,6 +19127,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 8c3f066bb80a39c4bbbfb96d2f65f19b
     m_Address: Assets/Pokemon/Sprites/Back/411.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8c40564171a5fea4ca262ff4f05892a5
+    m_Address: Assets/Pokemon/Sprites/Box/10163s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8c46e1ce73986f743b73cbb129449803
@@ -18213,6 +19201,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/red-apricorn.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8cc8f89205d01ea4da562462c59908d5
+    m_Address: Assets/Pokemon/Sprites/Back/10053s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8ccfa49753812cc4c9e96f2f4ab6e59f
     m_Address: Assets/Pokemon/Sprites/Box/544s.png
     m_ReadOnly: 0
@@ -18257,6 +19249,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/153.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8d3c99db6e20a884baf4d8f68c90ea4e
+    m_Address: Assets/Pokemon/Sprites/Back/10021s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8d3cba201bb78e849924fc12ad61cdf5
     m_Address: Assets/Pokemon/Sprites/Overworld/799s.png
     m_ReadOnly: 0
@@ -18287,6 +19283,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 8d661495f85ab5a46878ba5a73ac3827
     m_Address: Assets/Pokemon/Sprites/Overworld/403.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8d66ee2056149cd4da80ef017efd34ae
+    m_Address: Assets/Pokemon/Sprites/Box/10144s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8d6798ea16603bb4db36cf861cbb3a92
+    m_Address: Assets/Pokemon/Sprites/Box/10242s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8d67c9f787660014ea451b11c8b94604
@@ -18465,6 +19469,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/38s_1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8e9a09aa4c14dd14c8b368c58b150122
+    m_Address: Assets/Pokemon/Sprites/Box/10185.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8e9d2a77a21627b46a594f621f340806
     m_Address: Assets/Pokemon/Sprites/Overworld/538s.png
     m_ReadOnly: 0
@@ -18537,6 +19545,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/79s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8f12bacc1587dc241a9cb1303cf0da63
+    m_Address: Assets/Pokemon/Sprites/Box/10202.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8f1575eb349158941a7e7c0f98463ca5
     m_Address: Assets/Pokemon/Sprites/Overworld/566.png
     m_ReadOnly: 0
@@ -18597,6 +19609,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/418s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8f63dca337ced1e4f8ed1516e20b9628
+    m_Address: Assets/Pokemon/Sprites/Box/10122s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8f670a4db8b4b4247917ec60ff845925
     m_Address: Assets/Pokemon/Sprites/Back/203fs.png
     m_ReadOnly: 0
@@ -18641,12 +19657,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/025s_1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8faa092bf3c0a004a9ca1626b419a0de
+    m_Address: Assets/DB/JSON/moves.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 8fb387cceae8ec443bd93e86e26dba44
     m_Address: Assets/Pokemon/Sprites/Box/210s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8fb4cb86a73fad347bd3ab2831782226
     m_Address: Assets/Pokemon/Sprites/Front/202fs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8fb727e0834803a48bdb48a868ce2821
+    m_Address: Assets/Pokemon/Sprites/Back/10079s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8fbed94d97aea2642a9ca51796c72d89
@@ -18671,6 +19695,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 8feb17825197ad14da030eef487684de
     m_Address: Assets/Pokemon/Sprites/Box/763s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8fef429cee0684a4bb6aee84d6791f0f
+    m_Address: Assets/Pokemon/Sprites/Back/10066s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8ff28fbc90a1fac41812a22afd01f55d
@@ -18735,6 +19763,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 90773145308aac54e997211a2aae8391
     m_Address: Assets/Pokemon/Sprites/Front/204.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 907f435164b414e429e7a7cf632edc25
+    m_Address: Assets/Pokemon/Sprites/Box/555s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9082cf4ba8a141541bef6e1ba6d61b7e
@@ -18853,6 +19885,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/579.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 918c377d5927a3e4d92f6f28dc2b3c78
+    m_Address: Assets/Pokemon/Sprites/Back/10060s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 91918dad01cd8454e9dd88352f4a9ba1
     m_Address: Assets/Pokemon/Sprites/Front/249s.png
     m_ReadOnly: 0
@@ -18871,6 +19907,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 91b678110ff00664e961a4d6426e5bc7
     m_Address: Assets/Pokemon/Sprites/Back/408s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 91cc50185439ccd4eb26e68ed0677e28
+    m_Address: Assets/Pokemon/Sprites/Box/mega.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 91ce414e0ad6728458ab2178e1eeac7e
@@ -18945,8 +19985,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/316s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9232fe7116423e245b86a8e0430355c0
+    m_Address: Assets/Pokemon/Sprites/Box/10119s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 924ce5fa21eee1246b60f3aa4ab1af8f
     m_Address: Assets/Pokemon/Sprites/Box/91.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9251f7a0c0b3654449b1683326796f00
+    m_Address: Assets/Pokemon/Sprites/Back/10033.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 925a0ca0464a17e43883c838f1535997
@@ -18973,6 +20021,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/rage-candy-bar.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 92835f4d7a942c64983f1f9a86fdba2c
+    m_Address: Assets/Pokemon/Sprites/Back/10041s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 92891ad37023e004cbb3f05826ec17c8
     m_Address: Assets/Pokemon/Sprites/Box/166.png
     m_ReadOnly: 0
@@ -18987,6 +20039,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 929a1b6940b2dd8488618d0125486359
     m_Address: Assets/Items/Sprites/old-rod.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 92b214512a7befa4fa159bb3b56dedfe
+    m_Address: Assets/Pokemon/Sprites/Back/10071s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 92b61985c7f75664e978529f3344e560
@@ -19177,6 +20233,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/449f.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 94161f68db4122746a092ddd059244fe
+    m_Address: Assets/Pokemon/Sprites/Box/10256s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 9422a1676cf54614e9699ed4adc99713
     m_Address: Assets/Pokemon/Sprites/Front/172s.png
     m_ReadOnly: 0
@@ -19233,6 +20293,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/journal.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 946ad23402453e9499eaaca7b7fd5491
+    m_Address: Assets/Pokemon/Sprites/Box/10212.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 946b89ca0903bcd4693e43ab9a0dac86
     m_Address: Assets/Pokemon/Sprites/Overworld/230s.png
     m_ReadOnly: 0
@@ -19247,6 +20311,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 94812b936d2bf5646a79733a42521750
     m_Address: Assets/Pokemon/Sprites/Overworld/193s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 94826db7b961e4947b91051cd11fb5a3
+    m_Address: Assets/Pokemon/Sprites/Box/10226s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9489574e735f8804da55d865e173dedb
@@ -19305,6 +20373,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/488.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 950597b4e9e5e0e41a015b5b4385086f
+    m_Address: Assets/Pokemon/Sprites/Box/10129s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 951978a41b827a44fa06b6f7448eda48
     m_Address: Assets/Pokemon/Sprites/Box/461.png
     m_ReadOnly: 0
@@ -19321,12 +20393,24 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/623s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9539cd43cfa0c3b4fbaaff69fbc0c1ef
+    m_Address: Assets/Pokemon/Sprites/Box/774.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 9546f0e22d4ec694595844cefbc60475
     m_Address: Assets/Pokemon/Sprites/Overworld/586s(sm).png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9554ed5f14a951545862e90ee0f44b55
     m_Address: Assets/Items/Sprites/grass-mail.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 95559b1a6eb1508489261e70e64600ff
+    m_Address: Assets/Pokemon/Sprites/Box/10130s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 955ade681c3b16342a6c11357224c86b
+    m_Address: Assets/Pokemon/Sprites/Box/10143s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9562fb0f5949c5741bc1826f1df94910
@@ -19461,6 +20545,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/10113.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9631a9a3a8f5ea04c866f14995ebe785
+    m_Address: Assets/Pokemon/Sprites/Back/10069.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 963428055be062d468b55863b7ba1190
     m_Address: Assets/Pokemon/Sprites/Box/152.png
     m_ReadOnly: 0
@@ -19483,6 +20571,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 96604f94f122fbb468a18d08d357247f
     m_Address: Assets/Pokemon/Sprites/Box/742.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 966a2314859b5f947a3815582a9db40f
+    m_Address: Assets/Pokemon/Sprites/Box/10229s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 966aa145a0baff34c9d292ad4773c4cc
+    m_Address: Assets/Pokemon/Sprites/Box/10150.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 966c1347f47f019459eb1825ff67fb51
@@ -19721,6 +20817,10 @@ MonoBehaviour:
     m_Address: Assets/Battle/Sprites/Backgrounds/mountain_volcano_night.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9844389bd9d20fa4f87538c8e15be11c
+    m_Address: Assets/Pokemon/Sprites/Back/10066.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 9849aa2f3405492449bdacf67ea7c94d
     m_Address: Assets/Pokemon/Sprites/Front/627s.png
     m_ReadOnly: 0
@@ -19731,6 +20831,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 985f75d2b55f38046972ec29a82ac446
     m_Address: Assets/Pokemon/Sprites/Box/534s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9864adfba7cdc904c8e82a061565854d
+    m_Address: Assets/Pokemon/Sprites/Back/10073s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9866219a942dd6e48b41a5a84a21bc55
@@ -19865,6 +20969,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/10010.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 992451ae4df6f5a429cad44546747459
+    m_Address: Assets/Pokemon/Sprites/Box/10188s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 992a280fe4aec1d4da6a48c9b147a541
     m_Address: Assets/Pokemon/Sprites/Overworld/163s.png
     m_ReadOnly: 0
@@ -19905,6 +21013,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/627s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 996457f243c2cce4c9e3581659a5da1f
+    m_Address: Assets/Pokemon/Sprites/Box/10246s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 996fa13dae9373542a0b130a9b25e40f
     m_Address: Assets/Items/Sprites/roto-bargain.png
     m_ReadOnly: 0
@@ -19919,6 +21031,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 9988de7fb97100441bc0a69b408cb79b
     m_Address: Assets/Pokemon/Sprites/Front/398fs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 998c38df1b0314b4d812b0a5fd01681c
+    m_Address: Assets/Pokemon/Sprites/Box/10151.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 998de70d18b06764e95641f63a8b0236
@@ -19965,6 +21081,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/238s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 99d38051f54898c499c92608dbc72f88
+    m_Address: Assets/Pokemon/Sprites/Back/10062s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 99da6645a0cb83b41abde098f570db83
     m_Address: Assets/Pokemon/Sprites/Back/269s.png
     m_ReadOnly: 0
@@ -19991,6 +21111,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 99fc39b9d74c96c45b62a11b22785574
     m_Address: Assets/Pokemon/Sprites/Box/574.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 99fd00c878f7bc240b09662a7b9c9994
+    m_Address: Assets/Pokemon/Sprites/Box/10159s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9a14df16cad70944d8c7945d9b1a1817
@@ -20177,6 +21301,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/665.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9b5c861ad5e720b4aa620da73ab4d90b
+    m_Address: Assets/Pokemon/Sprites/Box/10235s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 9b5cb94c8ff2b7d42b84c8390389a259
     m_Address: Assets/Pokemon/Sprites/Back/296s.png
     m_ReadOnly: 0
@@ -20211,6 +21339,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 9b84c78eedfd62649956ea22daaaca68
     m_Address: Assets/Pokemon/Sprites/Overworld/364.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9b857f3907bb1bd4dbc7aa0a544a73c3
+    m_Address: Assets/Pokemon/Sprites/Back/10021.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9b9310058d1a6b5408e8a2fcd0c8ca7c
@@ -20299,6 +21431,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 9c33dbdbd61fbf54997a82352e40b5b8
     m_Address: Assets/Pokemon/Sprites/Front/637s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9c3e948570df2414bbba741fcdb9eaa2
+    m_Address: Assets/Pokemon/Sprites/Box/unknown-gen5.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9c41fe0c053e06c4981088945d321c6e
@@ -20497,6 +21633,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/mystic-water.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9dab4b0579b4f1e4e88d42b0d687033e
+    m_Address: Assets/Pokemon/Sprites/Box/10179s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 9db226168e6a04e4b88ac46cf69aff4f
     m_Address: Assets/Pokemon/Sprites/Box/10156s.png
     m_ReadOnly: 0
@@ -20535,6 +21675,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 9df918ed905453c40a5f4bfb5f366a0d
     m_Address: Assets/Pokemon/Sprites/Overworld/393s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9e0aed5f389f8ec4badeb0a7060ceaf1
+    m_Address: Assets/Pokemon/Sprites/Back/10074.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9e0d903209f5e9e47bdd815154ad5a60
@@ -20825,6 +21969,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/buginium-z--bag.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a05d3bdc9a519e64f9bce37e6d7e7c6e
+    m_Address: Assets/Pokemon/Sprites/Box/10208.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: a0754dc025994a54fbbcdac48cb424d0
     m_Address: Assets/Pokemon/Sprites/Box/266.png
     m_ReadOnly: 0
@@ -20855,6 +22003,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: a0cebedb9c661204ab07a65077843f16
     m_Address: Assets/Pokemon/Sprites/Back/8s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a0f6b5e336d6f6d4a884740f24a16dae
+    m_Address: Assets/Pokemon/Sprites/Box/egg-manaphy.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: a0f9e108516c8ac44bdbe419d8c18332
@@ -20917,6 +22069,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/10147s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a17d7961023c8fd47bbdf84f19de15a3
+    m_Address: Assets/Pokemon/Sprites/Box/741s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: a18b3368e5e3e2e4a8878cf7865af26a
     m_Address: Assets/Pokemon/Sprites/Back/129s.png
     m_ReadOnly: 0
@@ -20933,12 +22089,24 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/664.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a19915e6a77834c45bca6bbb801d2a71
+    m_Address: Assets/DB/JSON/berries.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a19c8f8ed2a0d344b93a0c1824b517e1
+    m_Address: Assets/Pokemon/Sprites/Back/10027.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: a19c9cb9274ac204ebef9b5ac0efeb9f
     m_Address: Assets/Items/Sprites/clear-bell.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: a19ed5b6d159e42449d989ad0d5bf224
     m_Address: Assets/Pokemon/Sprites/Back/304.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a1a08c0bc78ba43438e3e2a681b4e96e
+    m_Address: Assets/Pokemon/Sprites/Box/10311.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: a1a1663b7a85fc84a9e597d5aaa8cae3
@@ -21213,6 +22381,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/653s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a35a456e873f422419b78bea2a6b0a2e
+    m_Address: Assets/Pokemon/Sprites/Box/647s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: a36037456a6064d43b0abe1525c4c27e
     m_Address: Assets/Pokemon/Sprites/Overworld/583s.png
     m_ReadOnly: 0
@@ -21429,6 +22601,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/nest-ball.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a5154bf9c7a454a44a01aebafdfe01de
+    m_Address: Assets/Pokemon/Sprites/Back/10045s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: a519c4dec05fd3d4aac3a812a129d551
     m_Address: Assets/Pokemon/Sprites/Front/277s.png
     m_ReadOnly: 0
@@ -21439,6 +22615,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: a51f6e26aeb7fd4428bb6311c1226d30
     m_Address: Assets/Pokemon/Sprites/Front/728s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a5247a2056349934ab701355b73a521f
+    m_Address: Assets/Pokemon/Sprites/Box/10233s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: a52acad07df813e4cb82be89e7f1c83d
@@ -21545,6 +22725,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/683.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a5f47f683880d5b4dbc014ac8c341e08
+    m_Address: Assets/Pokemon/Sprites/Back/10063s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: a5f6584efd51a754e83aa0499a2107f3
     m_Address: Assets/Pokemon/Sprites/Box/10059s.png
     m_ReadOnly: 0
@@ -21575,6 +22759,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: a6317844dae2ed24693fbff37e26e1f0
     m_Address: Assets/Pokemon/Sprites/Front/443f.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a633cc53ea06038489dd188bd809fd70
+    m_Address: Assets/Pokemon/Sprites/Back/10006.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: a6394a8389d33bf479e59c5fe22866a1
@@ -21663,6 +22851,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: a6da6ab6f042187419ce901950b21d8e
     m_Address: Assets/Pokemon/Sprites/Overworld/247s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a6de243f3c6104245ac3717825c761f4
+    m_Address: Assets/Pokemon/Sprites/Box/10191s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: a6f8e49df8595fb4091b2c55a0f84413
@@ -21785,6 +22977,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/601.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a7f092f09da1b51429f46174b8e29445
+    m_Address: Assets/Pokemon/Sprites/Box/10186.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: a809515d8f7d52f458b55424561e2776
     m_Address: Assets/Pokemon/Sprites/Front/428s.png
     m_ReadOnly: 0
@@ -21877,6 +23073,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/10012s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a89648ed4f561754e98773e478173e53
+    m_Address: Assets/Pokemon/Sprites/Box/10166.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: a89d627bfc2b3b844b13e6168edf427e
     m_Address: Assets/Pokemon/Sprites/Front/10077s.png
     m_ReadOnly: 0
@@ -21891,6 +23091,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: a8b58e7d1aa58ba4fbb40e3d838936d4
     m_Address: Assets/Pokemon/Sprites/Back/248.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a8b9c2b3533a4a9449e1e7d914b6150f
+    m_Address: Assets/Pokemon/Sprites/Box/10119.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: a8c1072d0757711449ab0bdb05a90ddc
@@ -22049,6 +23253,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/198s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: a9dc6d1e48275a045ab4622f2fb2e419
+    m_Address: Assets/Pokemon/Sprites/Box/681s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: a9df29a010ab4ee419a74369a00fde18
     m_Address: Assets/Pokemon/Sprites/Overworld/390s.png
     m_ReadOnly: 0
@@ -22069,12 +23277,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/687.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: aa075f0d96d420e4daaf4f6ebbbbd24f
+    m_Address: Assets/Pokemon/Sprites/Box/10267s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: aa07669a0e0d18c468693d2d9fe6e2eb
     m_Address: Assets/Pokemon/Sprites/Overworld/209s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: aa115fde302afb94cb204157ac95fb0c
     m_Address: Assets/Pokemon/Sprites/Box/344.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: aa145b7dfd9effc488384531fa8d6f35
+    m_Address: Assets/Pokemon/Sprites/Box/10182.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: aa21d09147d049a4b90eb9b6b39ccac9
@@ -22233,6 +23449,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/513s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ab5c572d7d3636c43a4a387f4a4db0b9
+    m_Address: Assets/Pokemon/Sprites/Back/10001.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: ab60468d5d75d9e45abaa73fa02361b8
     m_Address: Assets/Pokemon/Sprites/Back/528s.png
     m_ReadOnly: 0
@@ -22361,12 +23581,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/483.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ac814ac52cf412d4daf4de6bbaca142b
+    m_Address: Assets/Pokemon/Sprites/Back/10052s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: ac88d9f9189877f4397dc4e303339ad1
     m_Address: Assets/Pokemon/Sprites/Front/555.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ac8b6115859eb3f468edf12faf3d9c20
     m_Address: Assets/Pokemon/Sprites/Back/224s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ac92d457540bf8646829cebd2cb0066a
+    m_Address: Assets/Pokemon/Sprites/Box/10247.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ac92e51146e26c0419f5820be8c83f14
@@ -22461,6 +23689,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/778.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ad177060432e91649b049d1003f8464e
+    m_Address: Assets/Pokemon/Sprites/Back/10042s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: ad19d2ae820b2594fa6611eead295b0c
     m_Address: Assets/Pokemon/Sprites/Overworld/239.png
     m_ReadOnly: 0
@@ -22523,6 +23755,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: ad5e1ae03c83d0e4a9fa7ece65a56fc0
     m_Address: Assets/Pokemon/Sprites/Box/10079s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ad629fffdec723b4e988377dbd06a010
+    m_Address: Assets/Pokemon/Sprites/Box/10210.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ad6aee960e0520c4c9388142512f252e
@@ -22701,6 +23937,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/608.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: aee33045a136a2349a7d8c99025e9da5
+    m_Address: Assets/Pokemon/Sprites/Box/10209.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: aee9c6d4a11f5d244b3442afbe161953
     m_Address: Assets/Pokemon/Sprites/Back/110.png
     m_ReadOnly: 0
@@ -22801,6 +24041,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/379s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: af8519a9a9e28884b985227c0bd711af
+    m_Address: Assets/Pokemon/Sprites/Box/10222.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: af85b604b62db8e42b805cc0d5505e64
     m_Address: Assets/Pokemon/Sprites/Overworld/706.png
     m_ReadOnly: 0
@@ -22871,6 +24115,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b011532cf77b99649a078feb19b2f1e5
     m_Address: Assets/Items/Sprites/enigmatic-card.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b012c45cbca6a114aaba0b999536a7e4
+    m_Address: Assets/Pokemon/Sprites/Box/10121.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b014d709d05cb7045bb3cdd9ff894fb1
@@ -22981,6 +24229,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/276s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b0cfc93c00c24e346813509701d47d01
+    m_Address: Assets/Pokemon/Sprites/Box/10197s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b103e357c11265143bfec292b8c5c597
     m_Address: Assets/Pokemon/Sprites/Box/270.png
     m_ReadOnly: 0
@@ -22989,12 +24241,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/265s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b123ad1a6db8a384687ed3e74c4383d3
+    m_Address: Assets/Pokemon/Sprites/Box/10134s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b12540e64486a4247b9bd3c0b93d13ee
     m_Address: Assets/Pokemon/Sprites/Overworld/216s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b12e2f8fc8cae764fa2b3d12bc4c87e3
     m_Address: Assets/Pokemon/Sprites/Back/501.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b131db5d0deb90e42a7b9950fa04bd0e
+    m_Address: Assets/Pokemon/Sprites/Back/10071.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b14230d4fabd193489a7f30d32408508
@@ -23023,6 +24283,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b18e9113995c58e43936b3538494c7b7
     m_Address: Assets/Pokemon/Sprites/Overworld/420s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b193fa8e29df98944b4a003bc02a3174
+    m_Address: Assets/Pokemon/Sprites/Box/10234s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b19abf6f9d0abd846a899735ec4c0f3f
@@ -23057,6 +24321,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/roto-pp-restore.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b1cee62f3988b3f4884baacfb405c575
+    m_Address: Assets/Pokemon/Sprites/Box/10183.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b1d4039ad9e589845a2e2a601b16270f
     m_Address: Assets/Pokemon/Sprites/Overworld/143s.png
     m_ReadOnly: 0
@@ -23075,6 +24343,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b212711fd6a4ff54e93ac83a7e7b2476
     m_Address: Assets/Pokemon/Sprites/Overworld/201_26.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b21334326d4deb147acf34793cca4f88
+    m_Address: Assets/Pokemon/Sprites/Box/10241.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b218c4a74824dd44ea5b39ef843fdc69
@@ -23131,6 +24403,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b26a52e135b22ff45a02ae7090c434e5
     m_Address: Assets/Pokemon/Sprites/Back/633s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b273be447df113f4b8996b80cc211530
+    m_Address: Assets/Pokemon/Sprites/Box/10167.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b273f8ead83dad048a33f5355a23911e
@@ -23293,6 +24569,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/260.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b3b2ed7035ba32b40ad1042bd9c992a1
+    m_Address: Assets/Pokemon/Sprites/Back/10072.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b3c2212f153883b4fb97583c2cfd95ad
     m_Address: Assets/Pokemon/Sprites/Back/575s.png
     m_ReadOnly: 0
@@ -23347,6 +24627,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b41d476776fb5de4d9b516f771d3f127
     m_Address: Assets/Pokemon/Sprites/Front/511s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b42799a79a3e8484893ad9706cd44b96
+    m_Address: Assets/Pokemon/Sprites/Box/10311s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b42fbe16e30017844bdb37783cc23a3e
@@ -23513,6 +24797,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/271.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b5568ccdd5334f046bb404e94bf4c5b2
+    m_Address: Assets/Pokemon/Sprites/Box/10187s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b5692f56b00a2e042a2ed3d93ea22c1c
     m_Address: Assets/Pokemon/Sprites/Box/807s.png
     m_ReadOnly: 0
@@ -23529,8 +24817,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/200.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b587f92332529b1458a815fa4986a785
+    m_Address: Assets/Pokemon/Sprites/Back/10028s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b594bd77007ec6545bb3d42034fd20e4
     m_Address: Assets/Pokemon/Sprites/Overworld/755.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b59e5a49c7e017247a62216ff5de8437
+    m_Address: Assets/Pokemon/Sprites/Box/648.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b5a56565fdeeb6449a1b573e56e02fb5
@@ -23615,6 +24911,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b604dc6ae7e6cf542978d9c8e9c9f965
     m_Address: Assets/Pokemon/Sprites/Front/199.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b607fefdc06b5e24b88904988aad673f
+    m_Address: Assets/Pokemon/Sprites/Box/10247s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b62796deca0bcce48af56bb3f48db219
@@ -23713,6 +25013,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/615s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b6ce78f308813ea418894a1dcbdaab11
+    m_Address: Assets/Pokemon/Sprites/Back/10037.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b6d0b5f2241ec3e40ae5b1b28cf3e85d
     m_Address: Assets/Pokemon/Sprites/Front/416.png
     m_ReadOnly: 0
@@ -23777,6 +25081,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/683.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b75ee8bc9b80a4142a2c249b084e566b
+    m_Address: Assets/Pokemon/Sprites/Back/10057.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b764f999b25fa2e4ca33d265834cdf43
     m_Address: Assets/Pokemon/Sprites/Overworld/598s.png
     m_ReadOnly: 0
@@ -23805,8 +25113,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/10142.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b787e9921600f8e44973150d81134f28
+    m_Address: Assets/Pokemon/Sprites/Box/10243s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b79130d241dceb746be4dba21b1eee6f
     m_Address: Assets/Pokemon/Sprites/Overworld/126s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b7921f0d7aa99e148af8cc4f5883264e
+    m_Address: Assets/Pokemon/Sprites/Back/10051.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b79469fe0cf03ce45a3625f155dbaaa5
@@ -23841,6 +25157,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/27_1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b7aefc2e9bf2dcc41866fb96481ed323
+    m_Address: Assets/Pokemon/Sprites/Box/10135.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b7b0dd68f5e7dc74d9c98d6057869e31
     m_Address: Assets/Pokemon/Sprites/Box/154s.png
     m_ReadOnly: 0
@@ -23851,6 +25171,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b7be13fbc40bff94da325d5a06275eda
     m_Address: Assets/Pokemon/Sprites/Back/173.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b7c48d80fdc3b15418ea466d78376e10
+    m_Address: Assets/Pokemon/Sprites/Box/10154s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b7c857787a9d5a64aa7518bb1123f644
@@ -23911,6 +25235,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b82b7c045d832eb46b96643ccd65a0c5
     m_Address: Assets/Pokemon/Sprites/Back/29.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b836145ddca98d74fbeed4f598ef9000
+    m_Address: Assets/Pokemon/Sprites/Back/10084.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b83de7594e5715b428260444dd5bb48d
@@ -24057,6 +25385,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/680s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b98729141b6883d4bbbfba4534860d6e
+    m_Address: Assets/Pokemon/Sprites/Box/10178s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: b98d5994fe162914b9015236400932dd
     m_Address: Assets/Pokemon/Sprites/Back/604.png
     m_ReadOnly: 0
@@ -24123,6 +25455,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b9fe63c395d9cfe49ae37d7d7d4df8c5
     m_Address: Assets/Pokemon/Sprites/Overworld/201s_23.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ba038bbd6ed9cbc4ea0e0393d40d9a31
+    m_Address: Assets/Pokemon/Sprites/Box/10232s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ba183470719b6314f8d511b61ba52f98
@@ -24195,6 +25531,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: ba8092a58b2e8fa42ab27e0a096a37d0
     m_Address: Assets/Pokemon/Sprites/Front/184.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ba85e2fba968486468a6851c94367bc9
+    m_Address: Assets/Pokemon/Sprites/Box/10181s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ba889bedf491a244bb3d543d8a7f7047
@@ -24361,6 +25701,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/098.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bb932d8f201e390469e19bdd56f9e51c
+    m_Address: Assets/Pokemon/Sprites/Box/10121s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: bb9654adac2bc4d49b5fdae3e7272e39
     m_Address: Assets/Items/Sprites/data-card-13.png
     m_ReadOnly: 0
@@ -24497,6 +25841,14 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/432.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bc91e9942d60064459876845f5097b23
+    m_Address: Assets/Pokemon/Sprites/Box/678s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bc9c9ace03d2d5343be8b08184247d11
+    m_Address: Assets/Pokemon/Sprites/Box/10236s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: bc9ca134581f3814ca7b3e2dd18c01d0
     m_Address: Assets/Pokemon/Sprites/Overworld/788s.png
     m_ReadOnly: 0
@@ -24613,6 +25965,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/578.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bd80ceb9e69c92b468ef9b98a61fb36d
+    m_Address: Assets/Pokemon/Sprites/Back/10034s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: bd82fd889a47dbb47a29c63fdf0adcd5
     m_Address: Assets/Pokemon/Sprites/Overworld/640.png
     m_ReadOnly: 0
@@ -24667,6 +26023,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: bdcfff7a3b4d30e4cbf4534e22567b92
     m_Address: Assets/Pokemon/Sprites/Back/153.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bde2e32c77fd64a4f8f5fb00b4bdabd8
+    m_Address: Assets/Pokemon/Sprites/Box/10180s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: bdea5bb8795bb8147b1c90a73c0573a8
@@ -24765,8 +26125,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/262s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: be88645f0aab0da4a951d2a3d1889f52
+    m_Address: Assets/Pokemon/Sprites/Box/10172.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: be9b7b507b8eb8441a0f6e748aecead6
     m_Address: Assets/Pokemon/Sprites/Back/275fs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bea0c5c90d943e64ca8bd9476fc1dea7
+    m_Address: Assets/Pokemon/Sprites/Back/10018s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: bea60e8732448dc45ad1625a8866dff4
@@ -24779,6 +26147,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: beafaaf5876550947846d0775d60e3d6
     m_Address: Assets/Pokemon/Sprites/Overworld/670s_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: beb6ec348a647774cb79f6d1905c48a1
+    m_Address: Assets/Pokemon/Sprites/Back/10039.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: bec244e338c299145ad78323803cf1c9
@@ -24909,6 +26281,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/gram-3.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bfa57dcf0e5f9b14a9a3b23dc2920fd4
+    m_Address: Assets/Pokemon/Sprites/Box/10151s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: bfa6117cccc4f4948bc92b561c96ffa1
     m_Address: Assets/Items/Sprites/toxic-plate.png
     m_ReadOnly: 0
@@ -24923,6 +26299,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: bfd84ea04fcfb5443b68d4748fa825bc
     m_Address: Assets/Pokemon/Sprites/Overworld/128s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bfdb067d0c0f20d43801be69336ff3fe
+    m_Address: Assets/Pokemon/Sprites/Box/10158.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: bfe07bca2cf21b846b635c7bbe82d544
@@ -24955,6 +26335,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: c0179661201521140883e3b4a5d04f9a
     m_Address: Assets/Pokemon/Sprites/Front/30.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c01ee4f7f0b0196428a8be5cde3a7993
+    m_Address: Assets/Pokemon/Sprites/Back/10053.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c01ff678d316ebb478d854cd0b949c0a
@@ -25015,6 +26399,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: c08662464af1b3c48a588c972099157d
     m_Address: Assets/Pokemon/Sprites/Box/249.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c08c45d55bfb2b64b9fc234ed0a81a2b
+    m_Address: Assets/Pokemon/Sprites/Box/10243.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c099c3596cd3d374db32d755d1fcc957
@@ -25181,6 +26569,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/535s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c1ac0d62dde29934c82795036a6f6882
+    m_Address: Assets/Pokemon/Sprites/Box/10143.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: c1b392da0068c574baf94093476ba726
     m_Address: Assets/Pokemon/Sprites/Back/486s.png
     m_ReadOnly: 0
@@ -25245,6 +26637,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/728s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c22952133e3fd2545ae820177a3b2163
+    m_Address: Assets/Pokemon/Sprites/Back/10060.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: c22e071564631554391436dd2e0b04c9
     m_Address: Assets/Pokemon/Sprites/Front/342s.png
     m_ReadOnly: 0
@@ -25303,6 +26699,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: c297117f8eaffd6468ab875e67e1b65c
     m_Address: Assets/Pokemon/Sprites/Overworld/189s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c29a2ce814651a34385402484e00ffa7
+    m_Address: Assets/Pokemon/Sprites/Box/10189s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c2a67a81cb89e0746a007bf586228e40
@@ -25433,6 +26833,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/376.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c39373ffdce404c429d358fb107936e8
+    m_Address: Assets/Pokemon/Sprites/Back/10025s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: c39c3921c62ec84408e32209a1cf38f2
     m_Address: Assets/Pokemon/Sprites/Back/76s.png
     m_ReadOnly: 0
@@ -25501,6 +26905,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/cherish-ball.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c40c27b56844ec44d8cc00c059127173
+    m_Address: Assets/Pokemon/Sprites/Box/10257s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: c414f4868d6a1874ebc4ddea6c051e54
     m_Address: Assets/Pokemon/Sprites/Overworld/737s.png
     m_ReadOnly: 0
@@ -25545,6 +26953,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/369s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c45df2254469c774eba5c817052f043b
+    m_Address: Assets/Pokemon/Sprites/Back/10082.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: c47018042f0b4654fb5fda304686ec9a
     m_Address: Assets/Pokemon/Sprites/Overworld/547.png
     m_ReadOnly: 0
@@ -25571,6 +26983,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: c486855564c393d45ab1b43de275dbbf
     m_Address: Assets/Pokemon/Sprites/Front/225.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c488500992700e74fa7ff41a52fc9fd3
+    m_Address: Assets/Pokemon/Sprites/Back/10028.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c48f14cc5fd1bbf41b3252fde2c376a8
@@ -25793,6 +27209,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/26.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c613ad3c9df29f046921eb267ae6504e
+    m_Address: Assets/Pokemon/Sprites/Back/10063.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: c613b5ad2e570184fb99cd127cc16fb2
     m_Address: Assets/Pokemon/Sprites/Overworld/787.png
     m_ReadOnly: 0
@@ -25807,6 +27227,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: c63392c4e787db34189968cf6e578e92
     m_Address: Assets/Items/Sprites/misty-seed.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c635bbedcc8e8684f8a40185c10e8d64
+    m_Address: Assets/Pokemon/Sprites/Box/10170.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c63a1726b3e858d47a5192b7b3f766fe
@@ -25851,6 +27275,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: c673108e3bedd7447b6da063213a57bd
     m_Address: Assets/Pokemon/Sprites/Front/178fs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c679714607639694596cd59645f3871f
+    m_Address: Assets/Pokemon/Sprites/Box/647.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c67e78d1c6f293849a574fca590da482
+    m_Address: Assets/Pokemon/Sprites/Box/10219s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c689b7bf1a3ab6d41a45550116ba6c73
@@ -25911,6 +27343,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: c718d03de69f1364c9d32b945f324c8d
     m_Address: Assets/Pokemon/Sprites/Overworld/222.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c728eb3a84225284ebb27e0e8f77be83
+    m_Address: Assets/Pokemon/Sprites/Box/550.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c729fd3aa45e3fc4c9c5cd00a3666b0a
@@ -26073,6 +27509,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/359.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c88d005a83a1390489f6c8bcd33c4ee4
+    m_Address: Assets/Pokemon/Sprites/Back/10007s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: c88e9c3063d3163498652f379ce5d11b
     m_Address: Assets/Pokemon/Sprites/Overworld/661.png
     m_ReadOnly: 0
@@ -26169,6 +27609,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/766.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c937d8c349608a741bb4284449d56ee0
+    m_Address: Assets/Pokemon/Sprites/Box/10192.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: c939d52da554cbb48a8b6859d87e0107
     m_Address: Assets/Pokemon/Sprites/Overworld/731s.png
     m_ReadOnly: 0
@@ -26211,6 +27655,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: c99265ff9d83a7648969fbda5663c9be
     m_Address: Assets/Pokemon/Sprites/Front/433s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c9b8b5a37321ddb46a37c7b85a1e4ebf
+    m_Address: Assets/Pokemon/Sprites/Back/10058.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c9bbe27031a91e34aae9e45417833552
@@ -26549,6 +27997,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/10s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: cc64b3a1e1dc31f41816f4381f10b34b
+    m_Address: Assets/Pokemon/Sprites/Box/10259.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: cc658030c3199fe4e863e8a3ba722441
     m_Address: Assets/Pokemon/Sprites/Overworld/519s.png
     m_ReadOnly: 0
@@ -26595,6 +28047,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: ccbb46a1a2cfb404f9904bbaea1fb0f0
     m_Address: Assets/Pokemon/Sprites/Front/297.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ccbc1a46bc613e949ba7777794831507
+    m_Address: Assets/Pokemon/Sprites/Back/10070s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ccc1f3074617cfd42b0ed49c6be4973a
@@ -26687,6 +28143,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: cd5d3250ab039ec4b92fd1bc9b2669c0
     m_Address: Assets/Pokemon/Sprites/Box/10034s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cd64df62c1164a345b4d7e0b68056922
+    m_Address: Assets/Pokemon/Sprites/Back/10029s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cd6c7c9556146c547a53e8f3f2b0334b
@@ -26813,8 +28273,16 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/dark-memory.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ce5aa2d6a9027204784b069e5fb34506
+    m_Address: Assets/Pokemon/Sprites/Box/10025.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: ce5f371a4718ba641824722c6b39ad54
     m_Address: Assets/Pokemon/Sprites/Overworld/458.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ce64bf9d59522a84c8d751cc0918b5df
+    m_Address: Assets/Pokemon/Sprites/Box/10168s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ce6deea05e7d1694ca5e63f0ca331f96
@@ -26843,6 +28311,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: ce990b3c26e05eb4ca1068e2850f3156
     m_Address: Assets/Pokemon/Sprites/Front/85.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ce9d7e9455125994abbf8779ebaf27fb
+    m_Address: Assets/Pokemon/Sprites/Back/10068s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cea706ad583ca5b4f9704497590461e9
@@ -26877,12 +28349,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/269fs.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: cee91f4bb48272e4aa50d022718ed944
+    m_Address: Assets/Pokemon/Sprites/Back/10075s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: ceeaf110a6635534c828f90e95d4b505
     m_Address: Assets/Pokemon/Sprites/Back/285s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cf01c20340928284e8fb349a76d412eb
     m_Address: Assets/Pokemon/Sprites/Front/574.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cf06a5fa59150e045a24dc60afbcd0d9
+    m_Address: Assets/Pokemon/Sprites/Box/10217.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cf0d04f87e8dc304aadbf2305fc28e5a
@@ -26919,6 +28399,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: cf5d1d72fc28f564fb5bc3d6efd57cde
     m_Address: Assets/Pokemon/Sprites/Back/472.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cf69af74b7b05a04eb4be07dd1d71ab4
+    m_Address: Assets/Pokemon/Sprites/Ailments/burn.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cf6bf8c6d6ac3a0489aa93000aa84d7c
@@ -27101,6 +28585,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/376s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d1253739959c38a4ebd7f18145639e5c
+    m_Address: Assets/Pokemon/Sprites/Box/10212s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: d13afb03b30cb4443b4a3b9a8e4e683d
     m_Address: Assets/Pokemon/Sprites/Front/230.png
     m_ReadOnly: 0
@@ -27155,6 +28643,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d18d70343ef3dc444970ec98e2eae23a
     m_Address: Assets/Items/Sprites/x-defense-2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d18e7841c64f7c744896145a857b8e14
+    m_Address: Assets/Pokemon/Sprites/Box/10202s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d18ed0702e3945841a8af349a087698e
@@ -27231,6 +28723,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d22341db5d1d1f64baedc02c85215728
     m_Address: Assets/Pokemon/Sprites/Front/11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d225fd5fafc898c4abcd669f84c56e2b
+    m_Address: Assets/Pokemon/Sprites/Box/10235.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d22d78fc44d6a6049973be13dc452af7
@@ -27345,6 +28841,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/466.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d32708dff73997842bf89ce622f973f6
+    m_Address: Assets/Pokemon/Sprites/Box/413s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: d327471aafcdbbd45a69c18c34f42de1
     m_Address: Assets/Pokemon/Sprites/Back/166f.png
     m_ReadOnly: 0
@@ -27363,6 +28863,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d33894abc27a43e4aa5a30071331c53d
     m_Address: Assets/Pokemon/Sprites/Front/454s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d3396729dea35894a982ec2341f0168c
+    m_Address: Assets/Pokemon/Sprites/Box/10316s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d343fe913ea17ff40809122ae40f83b0
@@ -27415,6 +28919,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d3a043496e93a274bb0a03900821c0fa
     m_Address: Assets/Pokemon/Sprites/Box/300.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d3ab187077cbd534cbc3489aaf3bc28e
+    m_Address: Assets/Pokemon/Sprites/Box/10145s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d3b577d8ef4ace547853c1a741634cbd
@@ -27479,6 +28987,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d3ff261b26f1422488e11b81dad7da69
     m_Address: Assets/Pokemon/Sprites/Overworld/079s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d4084470d5e166f45acfd5ea9cc60c1b
+    m_Address: Assets/Pokemon/Sprites/Back/10079.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d40939fa43628264898b986aefc40055
@@ -27617,6 +29129,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/ground-memory.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d5199fc0f09a39347ba85d295f4fa479
+    m_Address: Assets/Pokemon/Sprites/Box/10171s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: d51ba3fd4563df54380889e5113b88f6
     m_Address: Assets/Pokemon/Sprites/Front/653s.png
     m_ReadOnly: 0
@@ -27655,6 +29171,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d571c5ad30611ef49b3962737dfa709e
     m_Address: Assets/Pokemon/Sprites/Back/317.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d57471d9084b92642abf8e2189210469
+    m_Address: Assets/DB/JSON/items.json
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d5779d45c116e0845b610516c94863c5
@@ -27963,6 +29483,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d776ec8d5bd32874f9692261c85edee0
     m_Address: Assets/Pokemon/Sprites/Front/10041.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d7784dd6f0c44514eb2335e21c19027d
+    m_Address: Assets/Pokemon/Sprites/Box/10227s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d77aa89d039f5624da0ac5697b3ab2f1
@@ -28345,6 +29869,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/639.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d9ca4ad3b7a7b5a46bc2d1b14d398d9c
+    m_Address: Assets/Pokemon/Sprites/Box/678.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: d9ccaad5a71824f4f974278b58d7f3af
     m_Address: Assets/Pokemon/Sprites/Front/597s.png
     m_ReadOnly: 0
@@ -28629,6 +30157,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/717s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: dbd5665305fd2ae46a5dde09ac06ab71
+    m_Address: Assets/Pokemon/Sprites/Back/10006s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: dbdda0672eb2cea4f852668804762512
     m_Address: Assets/Pokemon/Sprites/Box/803s.png
     m_ReadOnly: 0
@@ -28659,6 +30191,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: dc2ec347f9090ab40891f16a65dc348f
     m_Address: Assets/Pokemon/Sprites/Front/748s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dc39d3275f114e24fa80ecda8f31d152
+    m_Address: Assets/Pokemon/Sprites/Box/10259s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: dc3bb3d6c0b4e404a9710a35e72ee3ff
@@ -28735,6 +30271,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: dcb47a41c3758c64b97d42cc75618201
     m_Address: Assets/Pokemon/Sprites/Front/578s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dcb50b6903082c64b943d562d1bcc814
+    m_Address: Assets/DB/JSON/types.json
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: dcbdeb8fa7b09ed4fb9070672ccef4e0
@@ -28957,6 +30497,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/quick-claw.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: de3930533d1ea7c4e9b5503425c484f2
+    m_Address: Assets/Pokemon/Sprites/Ailments/sleep.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: de44caa8b8b12ac47a0398021c2f560d
     m_Address: Assets/Pokemon/Sprites/Front/345s.png
     m_ReadOnly: 0
@@ -28967,6 +30511,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: de60b0aea808bf043a89cf2ca587e456
     m_Address: Assets/Items/Sprites/focus-band.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: de6d3d80919248e4495999783abf528e
+    m_Address: Assets/Pokemon/Sprites/Back/10077.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: de6e0fd6a918d6f48a91207d12b9c201
@@ -29265,6 +30813,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/201s_25.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e0933e789369dd7478fd67588ab78ab4
+    m_Address: Assets/Pokemon/Sprites/Box/10167s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e0a2d2e1495cc0040aa03351f07a473e
     m_Address: Assets/Pokemon/Sprites/Overworld/279.png
     m_ReadOnly: 0
@@ -29275,6 +30827,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: e0b0c4f397d4c0b45ac0f4162eae1df7
     m_Address: Assets/Pokemon/Sprites/Front/20f.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e0b105898e862284d9076554b1966767
+    m_Address: Assets/Pokemon/Sprites/Box/10193.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e0b40c5b015b2d143a22df77565c660c
@@ -29391,6 +30947,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: e19f490f8fcc4df4f9856955230340f2
     m_Address: Assets/Items/Sprites/space-mail.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e1a343418a5747f4493cd82593ef317e
+    m_Address: Assets/Pokemon/Sprites/Back/10049s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e1b0d806b7a55b24897d8ba305f1d261
@@ -29565,6 +31125,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/351s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e2b65e937c46c534d8ac0e3f2b8d53fb
+    m_Address: Assets/Pokemon/Sprites/Box/746.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e2c2e5587a64bb846bf29e0d3c132f9f
     m_Address: Assets/Pokemon/Sprites/Front/137.png
     m_ReadOnly: 0
@@ -29645,6 +31209,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/449fs.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e38f706df650fcf4f9a1f5c6e1f53d2c
+    m_Address: Assets/Pokemon/Sprites/Ailments/badly_poison.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e392968149d6a594191d1fb31d91f129
     m_Address: Assets/Pokemon/Sprites/Overworld/328.png
     m_ReadOnly: 0
@@ -29681,8 +31249,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/10107s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e3db562773290e94c9e406d3c90130ef
+    m_Address: Assets/Pokemon/Sprites/Back/10019s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e3e444d3c5ca99e4faca9ce1c4aca90e
     m_Address: Assets/Pokemon/Sprites/Overworld/719.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e3e8baf641c96264eb921b3f824a45b1
+    m_Address: Assets/Pokemon/Sprites/Box/10196.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e3ea0f2b447335d4bb13dc55cd40d9e1
@@ -29773,6 +31349,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/245s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e495b3f3ea69aee4e84cf756ca842086
+    m_Address: Assets/Pokemon/Sprites/Back/10076s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e497e8884d894574fa26b7910023ad69
     m_Address: Assets/Pokemon/Sprites/Front/399fs.png
     m_ReadOnly: 0
@@ -29813,12 +31393,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/133s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e4d8df9893684d14885b1f03c03b3515
+    m_Address: Assets/Pokemon/Sprites/Box/10122.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e4ddba37b6861b047ab2fde1fb0175d8
     m_Address: Assets/Pokemon/Sprites/Box/119.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e4e20e426f40cd84e93b408e923b908d
     m_Address: Assets/Pokemon/Sprites/Front/10090.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e4e4c17b773c51f49aef039529c165a1
+    m_Address: Assets/Pokemon/Sprites/Back/10036.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e50596064a1407449ad25ba7a413b541
@@ -29857,6 +31445,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/180s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e5669d48cd293574ba38c5e44c8b68c6
+    m_Address: Assets/Pokemon/Sprites/Back/10067.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e568713f603c95d40aafa69069bc286a
     m_Address: Assets/Pokemon/Sprites/Box/229s.png
     m_ReadOnly: 0
@@ -29889,12 +31481,20 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/386_3.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e5c61e42682d91845a681dd85cc004c1
+    m_Address: Assets/Pokemon/Sprites/Back/10047s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e5c860be3b96941449138bc64eac3480
     m_Address: Assets/Pokemon/Sprites/Back/293s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e5d72f7193d644642b34e05a386036b5
     m_Address: Assets/Pokemon/Sprites/Back/149s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e5ea8d5f85d9eaa43be0b69caf1d1a86
+    m_Address: Assets/Pokemon/Sprites/Back/10004s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e5eb7fbcbd185dc43b9b6146cd598ffd
@@ -29911,6 +31511,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: e604c774460010a4aa813ad8b0482ad8
     m_Address: Assets/Pokemon/Sprites/Box/302s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e6171aeb102381a4984bbaa5ecbcf12a
+    m_Address: Assets/Pokemon/Sprites/Back/10031.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e620ff08ab7d7824eb6d9f873bad6aab
@@ -29953,12 +31557,24 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/688s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e65daa33220d10c43b40418b75df3bb6
+    m_Address: Assets/Pokemon/Sprites/Back/0.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e66e6e2ec7ba9cc4d8e86aa391e5dbcf
     m_Address: Assets/Pokemon/Sprites/Overworld/588.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e6710ab1a01af4e46a402a572bf63fa0
     m_Address: Assets/Pokemon/Sprites/Back/459.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e673e78cd7747204fba43adef5ae4af8
+    m_Address: Assets/Pokemon/Sprites/Box/745s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e67aa39d9b5b1a24f9ea98c613aa856c
+    m_Address: Assets/Pokemon/Sprites/Back/10055.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e67b2495572c62346b4da013d3d3ef62
@@ -29971,6 +31587,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: e693d3c99e61f0848aecdbc6fef8de91
     m_Address: Assets/Pokemon/Sprites/Box/705s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e69f8a83b7747c3489b1e567b25419de
+    m_Address: Assets/Pokemon/Sprites/Box/10211.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e6a6f85e595947f4c89da7ec64ccbe93
@@ -30073,6 +31693,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/393.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e719b96de33a0d14299e88d6d3920885
+    m_Address: Assets/Pokemon/Sprites/Box/678fs.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e7284decc99079e41b97538a9f363ec5
     m_Address: Assets/Pokemon/Sprites/Overworld/726.png
     m_ReadOnly: 0
@@ -30105,6 +31729,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/535.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e75df4b435cb9124fa52650488148379
+    m_Address: Assets/Pokemon/Sprites/Box/10200.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e76142d5ae077874cb44cdfbe88b616c
     m_Address: Assets/Pokemon/Sprites/Overworld/095s.png
     m_ReadOnly: 0
@@ -30115,6 +31743,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: e77ea39b1890abf4e9173a0af5d64c79
     m_Address: Assets/Pokemon/Sprites/Back/143s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e78c2e34c52458b4d859356fefa42143
+    m_Address: Assets/Pokemon/Sprites/Back/10034.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e79dafab4816480458a7e1dd6c7ea430
@@ -30149,6 +31781,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/713s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e7d83867a31404446856727ed7a3569c
+    m_Address: Assets/Pokemon/Sprites/Box/10240s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e7dc0f258b6ac7b4a901ebd5fdb3bdb5
     m_Address: Assets/Pokemon/Sprites/Front/29.png
     m_ReadOnly: 0
@@ -30167,6 +31803,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: e7f85880c9a2df24cbfc69d6fdc9da15
     m_Address: Assets/Items/Sprites/like-mail.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e7fac62bc11d14344861f42e7c785778
+    m_Address: Assets/Pokemon/Sprites/Back/10048.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e80855731fc2d2b4abd523a685a49d43
@@ -30269,6 +31909,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/557.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e8dcaa7433a220b468c6df14495f1054
+    m_Address: Assets/Pokemon/Sprites/Back/10056s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e8ddf4afabff99d4cb4206681277572d
     m_Address: Assets/Pokemon/Sprites/Front/760.png
     m_ReadOnly: 0
@@ -30333,6 +31977,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/564s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e95c924a5d918c544b0db05f8362b7fb
+    m_Address: Assets/Pokemon/Sprites/Back/10035s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: e961bc23386bfdf4890a2ad6730de1ba
     m_Address: Assets/Pokemon/Sprites/Box/217.png
     m_ReadOnly: 0
@@ -30343,6 +31991,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: e9690c03edadfb14da0269d106af5bdb
     m_Address: Assets/Pokemon/Sprites/Front/701.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e96ab493f65eabc43bdbeb86ef01e95d
+    m_Address: Assets/Pokemon/Sprites/Box/10208s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e96b4d3cbad184f4f8a919ec7d5417e9
@@ -30359,6 +32011,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: e992d9dd031f07340a6f10d5ddf53b66
     m_Address: Assets/Pokemon/Sprites/Back/373s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e995a36cabfff1244907144f2a4e065a
+    m_Address: Assets/DB/JSON/stats.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e9982b9b28e4d1b409d8c4f5848b2776
+    m_Address: Assets/Pokemon/Sprites/Box/10199.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e9a32da3fd15afb40a7e92daf525e270
@@ -30395,6 +32055,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: e9ca5b8f224123f419d14d6c670aa6d6
     m_Address: Assets/Pokemon/Sprites/Back/208f.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e9d102e2d892ac54c8b12d45f18916e7
+    m_Address: Assets/Pokemon/Sprites/Box/10205.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e9d3b96b15471ed4ca597dda68524647
@@ -30455,6 +32119,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: ea4e31034ecd7be4496d206069c90b88
     m_Address: Assets/Pokemon/Sprites/Box/619s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ea4ed9236a07e1a42bae224bbb683b5d
+    m_Address: Assets/Pokemon/Sprites/Box/678f.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ea5ec94280ed632429c2a4601901e9ed
@@ -30525,6 +32193,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/644.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: eaec8b9f95ddfdb45b7008acd89bce3e
+    m_Address: Assets/Pokemon/Sprites/Box/10163.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: eaed81dd7b35e8f4895dd717dbea00f6
     m_Address: Assets/Pokemon/Sprites/Front/96s.png
     m_ReadOnly: 0
@@ -30553,6 +32225,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/677.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: eb236ffad9726c74c88343e2d2802c1e
+    m_Address: Assets/Pokemon/Sprites/Box/10245s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: eb321192c998c254784bea8bb828ce7b
     m_Address: Assets/Pokemon/Sprites/Back/319s.png
     m_ReadOnly: 0
@@ -30563,6 +32239,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: eb5397d35cad9974fbeb2bc6c4ea76be
     m_Address: Assets/Pokemon/Sprites/Box/578s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eb5805ef2ede00a48b2fe59d66f50b89
+    m_Address: Assets/Pokemon/Sprites/Box/10204s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: eb593365cc7ba06438c0c92dfea51063
@@ -30881,6 +32561,10 @@ MonoBehaviour:
     m_Address: Assets/Items/Sprites/dna-splicers--merge.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: edcef32658444744594a4b583339d990
+    m_Address: Assets/Pokemon/Sprites/Box/10128.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: edd210d956a56fc4ea2cc2cc93bc80e1
     m_Address: Assets/Pokemon/Sprites/Overworld/106.png
     m_ReadOnly: 0
@@ -30903,6 +32587,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: edf910400c2fb7849afd10beeaeb98b7
     m_Address: Assets/Pokemon/Sprites/Box/497.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: edffc33cab8b7894da05aa79fbb0f7a7
+    m_Address: Assets/Pokemon/Sprites/Back/10004.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ee0033e2c944fa9478d3d8a7ffcc1bb2
@@ -30975,6 +32663,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: ee58766c5cb5e4b4b8eb3f338e1bbab1
     m_Address: Assets/Pokemon/Sprites/Box/661s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ee65a651445a09447a6e358700528fd4
+    m_Address: Assets/Pokemon/Sprites/Box/642s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ee67b77db04e31542ba237082fb65496
@@ -31073,6 +32765,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/10101s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ef009cb67a6e92f4581a7532dc8f82b2
+    m_Address: Assets/Pokemon/Sprites/Box/10214s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: ef034d03d684d334398efbafe475aa82
     m_Address: Assets/Items/Sprites/magma-suit.png
     m_ReadOnly: 0
@@ -31125,8 +32821,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/680.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ef82100e49b248c428f69ff2bfcd49ef
+    m_Address: Assets/Pokemon/Sprites/Back/10016.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: ef8e9893731606d4f85b8b0d5879c389
     m_Address: Assets/Pokemon/Sprites/Back/430.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ef9a0b91cdabe454db197a53e4fb8c45
+    m_Address: Assets/Pokemon/Sprites/Box/10209s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: efad6efa0eaa53d4992080e372a20d4a
@@ -31149,6 +32853,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/757s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: efe2cc95b3a10f345847e3bcdf363397
+    m_Address: Assets/Pokemon/Sprites/Back/10016s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: effd6979a85a08143a7bbbcad0aefda4
     m_Address: Assets/Pokemon/Sprites/Front/25.png
     m_ReadOnly: 0
@@ -31163,6 +32871,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: f011235e9c38c374084815e1bac3ca17
     m_Address: Assets/Pokemon/Sprites/Front/133s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f019e8be23849c042ba7136659aeeb49
+    m_Address: Assets/Pokemon/Sprites/Box/10158s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f01d122c9c2b46049946df230906e138
@@ -31201,6 +32913,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/287.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f06e5449e9178e54b841991689fc7610
+    m_Address: Assets/Pokemon/Sprites/Box/10216s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f070098011a2a134bbb568ac0013c3eb
     m_Address: Assets/Pokemon/Sprites/Box/511s.png
     m_ReadOnly: 0
@@ -31217,6 +32933,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/657s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f085be0fe87b3664ca7ed014dcc5b1b1
+    m_Address: Assets/Pokemon/Sprites/Box/10183s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f086a1ccb0c15ce4bba1bc4e9dc2a802
     m_Address: Assets/Pokemon/Sprites/Overworld/550bs.png
     m_ReadOnly: 0
@@ -31231,6 +32951,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: f0ac1cbaf3312e946b070881b168bc59
     m_Address: Assets/Items/Sprites/bridge-mail-t.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f0b78a11fcd7a194983e0fe3c54e49ea
+    m_Address: Assets/Pokemon/Sprites/Box/10246.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f0c18c62e85cb884e9b660e43651b248
@@ -31273,6 +32997,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/211s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f106a8f9955ff144fa35c7db11e4d57b
+    m_Address: Assets/Pokemon/Sprites/Box/10260s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f10e3aed8f0eb37489afa4fe124e76f7
     m_Address: Assets/Pokemon/Sprites/Overworld/354.png
     m_ReadOnly: 0
@@ -31303,6 +33031,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: f140485882ac25145913b2259f9cb35c
     m_Address: Assets/Pokemon/Sprites/Box/743s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f15c8bb9738715f4092dfb527d88d884
+    m_Address: Assets/Pokemon/Sprites/Box/10190.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f1604454755480c459a5058b916a5777
@@ -31399,6 +33131,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: f221e293c3d29a34187149b41cf699fe
     m_Address: Assets/Pokemon/Sprites/Box/63.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f22942a06ddd73a4c8a0a50d9946388e
+    m_Address: Assets/Pokemon/Sprites/Back/10030.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f22c995b6ef0f2f4bb1d86c850516417
@@ -31625,6 +33361,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/342.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f43f878615c540b4f8fdba15acde2691
+    m_Address: Assets/Pokemon/Sprites/Back/10051s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f449157624c675f4d980a8b69f69e215
     m_Address: Assets/Pokemon/Sprites/Overworld/272s.png
     m_ReadOnly: 0
@@ -31729,6 +33469,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/323f.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f4da339e492fc744a9ec7d45e12cc237
+    m_Address: Assets/Pokemon/Sprites/Back/0s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f4e47ab95f9a63241b82e00ea655f4d1
     m_Address: Assets/Pokemon/Sprites/Box/67.png
     m_ReadOnly: 0
@@ -31751,6 +33495,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: f50841c1365970946aa0c1e4aeb0a027
     m_Address: Assets/Pokemon/Sprites/Overworld/201_15.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f50ec2da33c1f1a4c881961edb6b77f6
+    m_Address: Assets/Pokemon/Sprites/Box/10164s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f50ed69b229f23742852841049fdd30e
@@ -31889,6 +33637,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/417.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f616b58811091634785d229a2a024031
+    m_Address: Assets/Pokemon/Sprites/Box/10135s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f62177ec60b322545badf5654252b0fb
     m_Address: Assets/Pokemon/Sprites/Front/774s.png
     m_ReadOnly: 0
@@ -31977,6 +33729,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/505.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f6966fdebb32bbd47ba425391034b0ee
+    m_Address: Assets/Pokemon/Sprites/Box/10134.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f69787f98b3122e4bb5506df9220c8ed
     m_Address: Assets/Pokemon/Sprites/Back/175.png
     m_ReadOnly: 0
@@ -32031,6 +33787,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: f6e3a37b8f1ad724da26d39ec52deccd
     m_Address: Assets/Items/Sprites/icicle-plate.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f6eee0d6fac72054fa1ac8975896c603
+    m_Address: Assets/Pokemon/Sprites/Box/10170s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f6f81fcc862fc674299b07b734b6b9f5
@@ -32317,6 +34077,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Overworld/539s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f8d50359c3e7c034689a1604e4e03728
+    m_Address: Assets/Pokemon/Sprites/Box/10185s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f8d72f32a8fbfe840ade8d34dbda5d71
     m_Address: Assets/Pokemon/Sprites/Box/244.png
     m_ReadOnly: 0
@@ -32353,6 +34117,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/726s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f90a2b3f4e2a47c4da8b164e4dee7235
+    m_Address: Assets/Pokemon/Sprites/Box/711s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f90a6f3c4ca84c146a7a3e65a57e8c2b
     m_Address: Assets/Pokemon/Sprites/Back/405f.png
     m_ReadOnly: 0
@@ -32363,6 +34131,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: f914137ff216ea24abe8925a0f103ebd
     m_Address: Assets/Pokemon/Sprites/Box/10018s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f91e0a238c0855f49938430d0bb2c1ab
+    m_Address: Assets/Pokemon/Sprites/Box/10146.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f920eb94955f9de4d939a231ae4ad25b
@@ -32443,6 +34215,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: f9dc6e45d2f7fde48bf5056c5652c3aa
     m_Address: Assets/Pokemon/Sprites/Front/758s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f9dd0b013a6ed5f47905ae5ad2e1853b
+    m_Address: Assets/Pokemon/Sprites/Box/778s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f9df0a74d32b5d04cbe3058af19b7408
@@ -32561,6 +34337,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/13.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: fabe87f76fb2a6448b263d13865608d6
+    m_Address: Assets/Pokemon/Sprites/Back/10036s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: fac1b600440020445b7f943253c54ea0
     m_Address: Assets/Items/Sprites/lum-berry.png
     m_ReadOnly: 0
@@ -32599,6 +34379,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: faf079f168ac753489ac0fd889608bdf
     m_Address: Assets/Items/Sprites/light-ball.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: faf12ea72ccc4d1469cf520eb077df58
+    m_Address: Assets/Pokemon/Sprites/Back/10040s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: faf177b480e03ff43a155cf2448eadc2
+    m_Address: Assets/Pokemon/Sprites/Box/641s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: faf4a90b16e0bc040afac4ff44993235
@@ -32641,8 +34429,16 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Back/445f.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: fb7ae6cadccd2ad47a8906a08863742e
+    m_Address: Assets/Pokemon/Sprites/Back/10078.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: fb8d9906caf3d6144b67c90bcad5a0b8
     m_Address: Assets/Pokemon/Sprites/Front/804s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fb8edfc49bc2e43489330a3f1198a9a8
+    m_Address: Assets/Pokemon/Sprites/Box/10217s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: fba8029d120745949b4b4d9e3de8dc6d
@@ -32933,6 +34729,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Box/13.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: fe72671874c20134085253510c6dc27b
+    m_Address: Assets/Pokemon/Sprites/Back/10027s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: fe78ee34ef7e80f468d16cf66573204c
     m_Address: Assets/Pokemon/Sprites/Overworld/021s.png
     m_ReadOnly: 0
@@ -32963,6 +34763,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: feaf6c1012f5e4b4084d7c4fab6a4362
     m_Address: Assets/Pokemon/Sprites/Overworld/351.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: feb66d4b6820c654ead1c603b4b2761f
+    m_Address: Assets/Pokemon/Sprites/Box/10203s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: febe3a730ccfbc848ba5db4a5d83528a
@@ -33053,6 +34857,10 @@ MonoBehaviour:
     m_Address: Assets/Pokemon/Sprites/Front/638s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ff91741194f42c447bd12e77aae6807d
+    m_Address: Assets/Pokemon/Sprites/Box/10161s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: ff99879d8bde9db4ab22f3a690f83ea4
     m_Address: Assets/Pokemon/Sprites/Box/735s.png
     m_ReadOnly: 0
@@ -33095,6 +34903,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: ffd8a8481c36ac14ebf7bfb2c4e89d50
     m_Address: Assets/Pokemon/Sprites/Overworld/663s.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ffd8ab9b81c97ce40b50949851d3c3e6
+    m_Address: Assets/Pokemon/Sprites/Box/10174s.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: ffe63c2a527f20a4bbc763dcfdec05f1
