@@ -26,7 +26,7 @@ Unless otherwise specified, other assets in the game are our own and are not fre
 
 ## Intellectual Property
 
-All data and assets referencing Pokémon belong to the original creators:
+Pokémon belongs to the original creators:
 
 © 2020 Pokémon. 
 
